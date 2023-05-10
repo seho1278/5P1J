@@ -123,8 +123,6 @@ def index(request):
 
         genre_response = requests.get(genre_url, params=params)
         genre_data = genre_response.json()
-        print("--------------------------------")
-        # pprint.pprint(genre_data['results'])
         genre = sorted(genre_data['results'], key=lambda x:x['vote_average'], reverse=True)
         genre_movie_list.append(genre)
 
@@ -158,4 +156,3 @@ def index(request):
     }
     return render(request, 'movies/index.html', context)
 
- 
