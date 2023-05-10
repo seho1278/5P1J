@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block style %}{% endblock style %}  
+
+{% block content %}
+<h1>INDEX</h1>
+
+ {% for movie in now_playing %}
+    <article class="movie">
+        <a class="movie-link" href="#">
+        <div class="movie-poster">
+            <img src="https://image.tmdb.org/t/p/w300{{ movie.poster_path }}" alt="">
+            <div class="movie-ranking">
+            <p class="movie-ranking-number"></p>
+            </div>
+        </div>
+        <div class="movie-info">
+            <div class="d-flex justify-content-between mb-1 px-1">
+            <p class="title">{{ movie.title }}</p>
+            <span class="rating"><i class="bi bi-star-fill"></i>{{ movie.rating }}</span>
+            </div>
+            <p>{{movie.description}}</p>
+            {{movie.released_date}}
+            <div class="movie-category">
+            <p>{{movie.category}}</p>
+            <p>{{genre_dicts}}</p>
+                
+            </div>
+        </div>
+        </a>
+    </article>
+{% endfor %}
+<h1>top rated</h1>
+{% for movie in top_rated %}
+<p>{{movie.title}}</p>
+{% endfor %}
+
+{% comment %} <h1>최신순</h1>
+{% for movie in latest %}
+<p>{{movie.title}}</p>
+{% endfor %}
+
+<h1>인기순</h1>
+{% for movie in popular %}
+<p>{{movie.title}}</p>
+{% endfor %} {% endcomment %}
+
+<h1>장르순</h1>
+{% for movie in genre %}
+<p>{{movie.genre_ids}}</p>
+<p>{{movie.title}}</p>
+{% endfor %}
+
+
+
+
+
+{% endblock content %}
+{% block script %}{% endblock script %}
