@@ -1,31 +1,14 @@
 [
 \t{
-\t\t"pk": 758323,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 758323,
-\t\t\t"title": "The Pope's Exorcist",
-\t\t\t"released_date": "2023-04-05",
-\t\t\t"rating": 7.4,
-\t\t\t"description": "Father Gabriele Amorth, Chief Exorcist of the Vatican, investigates a young boy's terrifying possession and ends up uncovering a centuries-old conspiracy the Vatican has desperately tried to keep hidden.",
-\t\t\t"poster_path": "/9JBEPLTPSm0d1mbEcLxULjJq9Eh.jpg",
-\t\t\t"category": [
-\t\t\t\t27,
-\t\t\t\t9648,
-\t\t\t\t53
-\t\t\t]
-\t\t}
-\t},
-\t{
 \t\t"pk": 640146,
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 640146,
-\t\t\t"title": "Ant-Man and the Wasp: Quantumania",
+\t\t\t"title": "앤트맨과 와스프: 퀀텀매니아",
 \t\t\t"released_date": "2023-02-15",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.",
-\t\t\t"poster_path": "/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg",
+\t\t\t"description": "슈퍼히어로 파트너인 스캇 랭과 호프 반 다인, 호프의 부모 재닛 반 다인과 행크 핌, 그리고 스캇의 딸 캐시 랭까지 미지의 양자 영역 세계 속에 빠져버린 앤트맨 패밀리. 그 곳에서 새로운 존재들과 무한한 우주를 다스리는 정복자 캉을 만나며, 그 누구도 예상 못 한 모든 것의 한계를 뛰어넘는 모험을 시작하게 되는데…",
+\t\t\t"poster_path": "/sz6mTIDDQmR3DYgJudiTmoW2gR5.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -34,15 +17,32 @@
 \t\t}
 \t},
 \t{
+\t\t"pk": 758323,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 758323,
+\t\t\t"title": "엑소시스트: 더 바티칸",
+\t\t\t"released_date": "2023-04-05",
+\t\t\t"rating": 7.4,
+\t\t\t"description": "바티칸이 인정한 공식 수석 엑소시스트이자 최고의 구마사제 '가브리엘 아모르트’ 신부(러셀 크로우)는 한 어린 소년에게 들린 악마를 구마하기 위해 스페인으로 향한다. 그리고 그곳에서 바티칸이 숨겨온 충격적인 비밀과 마주하고, '토마스 에스퀴벨’ 신부(다니엘 조바토)와 함께 진실을 파헤치게 되는데...",
+\t\t\t"poster_path": "/fA1xRPplBqW87wWh0hO1pwbQmX8.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t9648,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
 \t\t"pk": 502356,
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 502356,
-\t\t\t"title": "The Super Mario Bros. Movie",
+\t\t\t"title": "슈퍼 마리오 브라더스",
 \t\t\t"released_date": "2023-04-05",
 \t\t\t"rating": 7.5,
-\t\t\t"description": "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
-\t\t\t"poster_path": "/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+\t\t\t"description": "따단-딴-따단-딴 ♫ 전 세계를 열광시킬 올 타임 슈퍼 어드벤처의 등장! 뉴욕의 평범한 배관공 형제 '마리오'와 ‘루이지’는 배수관 고장으로 위기에 빠진 도시를 구하려다 미스터리한 초록색 파이프 안으로 빨려 들어가게 된다. 파이프를 통해 새로운 세상으로 차원 이동하게 된 형제. 형 '마리오'는 뛰어난 리더십을 지닌 '피치'가 통치하는 버섯왕국에 도착하지만 동생 '루이지'는 빌런 '쿠파'가 있는 다크랜드로 떨어지며 납치를 당하고 ‘마리오’는 동생을 구하기 위해 ‘피치’와 ‘키노피오’의 도움을 받아 '쿠파'에 맞서기로 결심한다. 그러나 슈퍼스타로 세상을 지배하려는 그의 강력한 힘 앞에 이들은 예기치 못한 위험에 빠지게 되는데...!",
+\t\t\t"poster_path": "/dlGyzCxbBQK1U2O5o31Z1hB6erc.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t12,
@@ -57,11 +57,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 868759,
-\t\t\t"title": "Ghosted",
+\t\t\t"title": "고스팅",
 \t\t\t"released_date": "2023-04-18",
 \t\t\t"rating": 7.2,
-\t\t\t"description": "Salt-of-the-earth Cole falls head over heels for enigmatic Sadie — but then makes the shocking discovery that she’s a secret agent. Before they can decide on a second date, Cole and Sadie are swept away on an international adventure to save the world.",
-\t\t\t"poster_path": "/liLN69YgoovHVgmlHJ876PKi5Yi.jpg",
+\t\t\t"description": "선량한 남자 콜은 수수께끼 같은 세이디에게 푹 빠지지만 곧 그녀가 비밀 요원이라는 충격적인 사실을 알게 된다. 두 번째 데이트 약속을 하기도 전에 콜과 세이디는 세상을 구하기 위한 국제적 모험에 휩쓸린다.",
+\t\t\t"poster_path": "/zCsg0CgncQkLiAgk1zkmt15OhM8.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t35,
@@ -74,11 +74,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 594767,
-\t\t\t"title": "Shazam! Fury of the Gods",
+\t\t\t"title": "샤잠! 신들의 분노",
 \t\t\t"released_date": "2023-03-15",
 \t\t\t"rating": 6.8,
-\t\t\t"description": "Billy Batson and his foster siblings, who transform into superheroes by saying \"Shazam!\", are forced to get back into action and fight the Daughters of Atlas, who they must stop from using a weapon that could destroy the world.",
-\t\t\t"poster_path": "/2VK4d3mqqTc7LVZLnLPeRiPaJ71.jpg",
+\t\t\t"description": "신들의 힘을 갖게 된 빌리(애셔 앤젤)와 친구들은 각자의 방법으로 슈퍼히어로의 삶을 즐기게 된다. 그러던 그들 앞에 잃어버린 힘을 되찾고자 그리스 여신 헤스페라(헬렌 미렌)와 칼립소(루시 리우)가 나타나게 되고, 세상은 혼돈에 빠지게 되는데…",
+\t\t\t"poster_path": "/f5907P7GdAGI22PHNRfqoKCAcDR.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t35,
@@ -92,11 +92,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 447365,
-\t\t\t"title": "Guardians of the Galaxy Volume 3",
+\t\t\t"title": "가디언즈 오브 갤럭시: Volume 3",
 \t\t\t"released_date": "2023-05-03",
 \t\t\t"rating": 8.3,
-\t\t\t"description": "Peter Quill, still reeling from the loss of Gamora, must rally his team around him to defend the universe along with protecting one of their own. A mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.",
-\t\t\t"poster_path": "/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+\t\t\t"description": "가모라를 잃고 슬픔에 빠져 있던 피터 퀼이 위기에 처한 은하계와 동료를 지키기 위해 다시 한 번 가디언즈 팀과 힘을 모으고, 성공하지 못할 경우 그들의 마지막이 될지도 모르는 미션에 나서는 이야기.",
+\t\t\t"poster_path": "/2LfL0flDTgwJgoEhO9NhDLeDTTK.jpg",
 \t\t\t"category": [
 \t\t\t\t878,
 \t\t\t\t12,
@@ -109,11 +109,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 76600,
-\t\t\t"title": "Avatar: The Way of Water",
+\t\t\t"title": "아바타: 물의 길",
 \t\t\t"released_date": "2022-12-14",
 \t\t\t"rating": 7.7,
-\t\t\t"description": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
-\t\t\t"poster_path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+\t\t\t"description": "판도라 행성에서 제이크 설리와 네이티리가 이룬 가족이 겪게 되는 무자비한 위협과 살아남기 위해 떠나야 하는 긴 여정과 전투, 그리고 견뎌내야 할 상처에 대한 이야기를 그렸다. 살아남기 위해 설리 가족이 숲에서 바다로 터전을 옮기면서 겪게 되는 화합의 과정, 그리고 곳곳에서 도사리는 새로운 위협까지 역경 속에서 더 아름답게 펼쳐진다.",
+\t\t\t"poster_path": "/z56bVX93oRG6uDeMACR7cXCnAbh.jpg",
 \t\t\t"category": [
 \t\t\t\t878,
 \t\t\t\t12,
@@ -122,15 +122,32 @@
 \t\t}
 \t},
 \t{
+\t\t"pk": 1102776,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1102776,
+\t\t\t"title": "에이전트 A.K.A.",
+\t\t\t"released_date": "2023-04-28",
+\t\t\t"rating": 7,
+\t\t\t"description": "한 치도 흔들림이 없는 특수 작전 요원. 하지만 범죄 조직 침투 임무 중, 우연히 상관의 어린 아들과 가까워지면서 굳은 신념이 시험대에 오른다.",
+\t\t\t"poster_path": "/zLQc0AF6yWkW6piLlFvjDU8FznN.jpg",
+\t\t\t"category": [
+\t\t\t\t53,
+\t\t\t\t28,
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
 \t\t"pk": 677179,
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 677179,
-\t\t\t"title": "Creed III",
+\t\t\t"title": "크리드 3",
 \t\t\t"released_date": "2023-03-01",
 \t\t\t"rating": 7.3,
-\t\t\t"description": "After dominating the boxing world, Adonis Creed has been thriving in both his career and family life. When a childhood friend and former boxing prodigy, Damian Anderson, resurfaces after serving a long sentence in prison, he is eager to prove that he deserves his shot in the ring. The face-off between former friends is more than just a fight. To settle the score, Adonis must put his future on the line to battle Damian — a fighter who has nothing to lose.",
-\t\t\t"poster_path": "/cvsXj3I9Q2iyyIo95AecSd1tad7.jpg",
+\t\t\t"description": "록키의 후계자인 크리드는 월드 챔피언으로 권투계를 장악한 후 완벽한 삶을 살던 중 과거 친형제 같았던 데미안과 재회한다. 오랜 시간 감옥 생활을 마치고 나온 데미안은 그가 꿈꾸던 인생을 사는 크리드와 충돌하며 그의 모든 것을 빼앗으려 하고, 크리드는 이에 맞서 자신의 미래를 지키기 위한 일생일대의 대결을 준비하는데…",
+\t\t\t"poster_path": "/56HGRCoEY2OmO1yZro77IvldDpE.jpg",
 \t\t\t"category": [
 \t\t\t\t18,
 \t\t\t\t28
@@ -142,10 +159,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 934433,
-\t\t\t"title": "Scream VI",
+\t\t\t"title": "스크림 6",
 \t\t\t"released_date": "2023-03-08",
 \t\t\t"rating": 7.3,
-\t\t\t"description": "Following the latest Ghostface killings, the four survivors leave Woodsboro behind and start a fresh chapter.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
@@ -155,32 +172,15 @@
 \t\t}
 \t},
 \t{
-\t\t"pk": 493529,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 493529,
-\t\t\t"title": "Dungeons & Dragons: Honor Among Thieves",
-\t\t\t"released_date": "2023-03-23",
-\t\t\t"rating": 7.5,
-\t\t\t"description": "A charming thief and a band of unlikely adventurers undertake an epic heist to retrieve a lost relic, but things go dangerously awry when they run afoul of the wrong people.",
-\t\t\t"poster_path": "/v7UF7ypAqjsFZFdjksjQ7IUpXdn.jpg",
-\t\t\t"category": [
-\t\t\t\t12,
-\t\t\t\t14,
-\t\t\t\t35
-\t\t\t]
-\t\t}
-\t},
-\t{
 \t\t"pk": 948713,
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 948713,
-\t\t\t"title": "The Last Kingdom: Seven Kings Must Die",
+\t\t\t"title": "세븐 킹스 머스트 다이",
 \t\t\t"released_date": "2023-04-14",
 \t\t\t"rating": 7.3,
-\t\t\t"description": "In the wake of King Edward's death, Uhtred of Bebbanburg and his comrades adventure across a fractured kingdom in the hopes of uniting England at last.",
-\t\t\t"poster_path": "/7yyFEsuaLGTPul5UkHc5BhXnQ0k.jpg",
+\t\t\t"description": "에드워드 왕이 서거하자 뜻을 모으는 베반버그의 우트레드와 그의 동지들. 마침내 잉글랜드 통일이라는 꿈을 이루기 위해 분열된 왕국을 뒤흔들 모험에 뛰어든다.",
+\t\t\t"poster_path": "/ddt9jdbkjjBh3ezUejJlY6Dho6l.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -191,32 +191,15 @@
 \t\t}
 \t},
 \t{
-\t\t"pk": 1102776,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 1102776,
-\t\t\t"title": "AKA",
-\t\t\t"released_date": "2023-04-28",
-\t\t\t"rating": 7,
-\t\t\t"description": "A steely special ops agent finds his morality put to the test when he infiltrates a crime syndicate and unexpectedly bonds with the boss' young son.",
-\t\t\t"poster_path": "/3BSxAjiporlwQTWzaHZ9Yrl5C9D.jpg",
-\t\t\t"category": [
-\t\t\t\t53,
-\t\t\t\t28,
-\t\t\t\t80
-\t\t\t]
-\t\t}
-\t},
-\t{
 \t\t"pk": 420808,
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 420808,
-\t\t\t"title": "Peter Pan & Wendy",
+\t\t\t"title": "피터팬 & 웬디",
 \t\t\t"released_date": "2023-04-20",
 \t\t\t"rating": 5.9,
-\t\t\t"description": "Wendy Darling, a young girl afraid to leave her childhood home behind, meets Peter Pan, a boy who refuses to grow up. Alongside her brothers and a tiny fairy, Tinker Bell, she travels with Peter to the magical world of Neverland. There, she encounters an evil pirate captain, Captain Hook, and embarks on a thrilling adventure that will change her life forever.",
-\t\t\t"poster_path": "/9NXAlFEE7WDssbXSMgdacsUD58Y.jpg",
+\t\t\t"description": "어느 날, 모험을 꿈꾸는 소녀 ‘웬디’의 창문으로 우연히 찾아온 ‘피터팬’. 신비로운 요정의 도움으로 ‘웬디’는 밤하늘을 날아 새로운 친구들과 놀라운 모험이 가득한 마법의 땅 ‘네버랜드’에 도착하게 되는데… 오늘 밤 , 창문을 닫지 마세요! 당신에게도 피터팬이 찾아올지 모르니",
+\t\t\t"poster_path": "/x5ex5Dk1jekuOHy7BBrX4jJ0csO.jpg",
 \t\t\t"category": [
 \t\t\t\t10751,
 \t\t\t\t14,
@@ -226,15 +209,32 @@
 \t\t}
 \t},
 \t{
+\t\t"pk": 493529,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 493529,
+\t\t\t"title": "던전 앤 드래곤 - 도적들의 명예",
+\t\t\t"released_date": "2023-03-23",
+\t\t\t"rating": 7.5,
+\t\t\t"description": "한때는 명예로운 기사였지만, 어떤 사건 이후 홀가, 사이먼, 포지와 함께 도적질을 하게 된 에드긴. 소피나의 제안으로 부활의 서판을 얻기 위해 코린의 성에 잠입하지만 포지와 소피나의 배신으로 실패하고 감옥에 갇힌다. 기발한 방법으로 탈옥에 성공한 에드긴과 홀가는 소중한 사람들과 다시 만나고, 부활의 서판도 되찾기 위해  자신만의 팀을 꾸리기 시작한다. 옛 동료인 소질 없는 소서러 사이먼과 새롭게 합류한 변신 천재 드루이드 도릭, 재미 빼고 다 가진 팔라딘 젠크까지 어딘가 2% 부족한 오합지졸로 가득한 이 팀, 과연 무사히 모험을 끝마칠 수 있을까?",
+\t\t\t"poster_path": "/eg4vGqZo1BpjY3ZoCUAGk09Pq7T.jpg",
+\t\t\t"category": [
+\t\t\t\t12,
+\t\t\t\t14,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
 \t\t"pk": 603692,
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 603692,
-\t\t\t"title": "John Wick: Chapter 4",
+\t\t\t"title": "존 윅 4",
 \t\t\t"released_date": "2023-03-22",
 \t\t\t"rating": 7.9,
-\t\t\t"description": "With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
-\t\t\t"poster_path": "/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+\t\t\t"description": "죽을 위기에서 살아난 존 윅은 최고 회의를 쓰러트릴 방법을 찾아낸다. 비로소 완전한 자유의 희망을 보지만, 빌런 그라몽 후작과 전 세계의 최강 연합은 존 윅의 오랜 친구까지 적으로 만들어 버리고, 새로운 위기에 놓인 존 윅은 최후의 반격을 준비하는데...",
+\t\t\t"poster_path": "/9WF6TxCYwdiZw51NM92ConaQz1w.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t53,
@@ -247,10 +247,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 713704,
-\t\t\t"title": "Evil Dead Rise",
+\t\t\t"title": "이블 데드 라이즈",
 \t\t\t"released_date": "2023-04-12",
 \t\t\t"rating": 7.1,
-\t\t\t"description": "Two sisters find an ancient vinyl that gives birth to bloodthirsty demons that run amok in a Los Angeles apartment building and thrusts them into a primal battle for survival as they face the most nightmarish version of family imaginable.",
+\t\t\t"description": "길바닥에서 지친 베스가 비좁은 아파트에서 세 아이를 키우는 엘리를 뒤늦게 찾아간다. 아파트에서 신비로운 책이 발견되며 육체에 사로잡힌 악마가 발견되며, 베스가 가장 악몽 같은 버전의 모성애에 직면하게 되면서 생존에 위한 원초적인 싸움에 내몰리게 되는데...",
 \t\t\t"poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
 \t\t\t"category": [
 \t\t\t\t27
@@ -262,11 +262,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 315162,
-\t\t\t"title": "Puss in Boots: The Last Wish",
+\t\t\t"title": "장화신은 고양이: 끝내주는 모험",
 \t\t\t"released_date": "2022-12-07",
 \t\t\t"rating": 8.3,
-\t\t\t"description": "Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.",
-\t\t\t"poster_path": "/kuf6dutpsT0vSVehic3EZIqkOBt.jpg",
+\t\t\t"description": "아홉 개의 목숨 중 단 하나의 목숨만 남은 장화신은 고양이.  마지막 남은 목숨을 지키기 위해 히어로의 삶 대신 반려묘의 삶을 선택한 그에게 찾아온 마지막 기회, 바로 소원을 들어주는 소원별이 있는 곳을 알려주는 지도!  잃어버린 목숨을 되찾고 다시 히어로가 되기를 꿈꾸는 장화신은 고양이는 뜻밖에 동료가 된 앙숙 파트너 '키티 말랑손', 그저 친구들과 함께라면 모든 게 행복한 강아지 '페로'와 함께 소원별을 찾기 위해 길을 떠난다.  그리고 소원별을 노리는 또 다른 빌런들과 마주치게 되는데…",
+\t\t\t"poster_path": "/rKgvctIuPXyuqOzCQ16VGdnHxKx.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t10751,
@@ -282,11 +282,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 638974,
-\t\t\t"title": "Murder Mystery 2",
+\t\t\t"title": "머더 미스터리 2",
 \t\t\t"released_date": "2023-03-28",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "After starting their own detective agency, Nick and Audrey Spitz land a career-making case when their billionaire pal is kidnapped from his wedding.",
-\t\t\t"poster_path": "/s1VzVhXlqsevi8zeCMG9A16nEUf.jpg",
+\t\t\t"description": "결혼식에서 억만장자 신랑이 납치당한 사건. 탐정 사무소를 차린 닉과 오드리 스피츠에게 이보다 더 대박인 사건은 없을 것.",
+\t\t\t"poster_path": "/fLuop1cvcHaZ4ayyzC8SqrUiCX.jpg",
 \t\t\t"category": [
 \t\t\t\t35,
 \t\t\t\t80
@@ -298,10 +298,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 804150,
-\t\t\t"title": "Cocaine Bear",
+\t\t\t"title": "코카인 베어",
 \t\t\t"released_date": "2023-02-22",
 \t\t\t"rating": 6.4,
-\t\t\t"description": "Inspired by a true story, an oddball group of cops, criminals, tourists and teens converge in a Georgia forest where a 500-pound black bear goes on a murderous rampage after unintentionally ingesting cocaine.",
+\t\t\t"description": "1985년 마약 밀매업자의 비행기 추락 사고로 인해 비행기에 실려있던 코카인이 조지아주 채터후치 국유림에 떨어지고 코카인을 손에 넣기 위한 마약상들과 관광객들이 코카인을 먹은 흑곰에 의해 처참하게 죽임을 당한다는 내용의 실화를 바탕으로 한 영화",
 \t\t\t"poster_path": "/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg",
 \t\t\t"category": [
 \t\t\t\t53,
@@ -315,10 +315,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 946310,
-\t\t\t"title": "Pirates Down the Street II: The Ninjas from Across",
+\t\t\t"title": "De Piraten van Hiernaast II: De Ninja's van de Overkant",
 \t\t\t"released_date": "2022-04-20",
 \t\t\t"rating": 7.1,
-\t\t\t"description": "The pirates feel right at home in Sandborough, but the atmosphere cools right down when the ninjas come to live in the street. After all, pirates and ninjas are sworn enemies!  While pirate captain Hector Blunderbuss struggles to get rid of his new neighbours, son Billy and ninja daughter Yuka become friends. The pirates challenge the ninjas to the ultimate battle at the village's annual hexathlon. Who will win the match? Ninjas are faster and more agile of course, but pirates are the best cheats in all of the seven seas...",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/uDsvma9dAwnDPVuCFi99YpWvBk0.jpg",
 \t\t\t"category": [
 \t\t\t\t10751,
@@ -332,11 +332,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 385687,
-\t\t\t"title": "Fast X",
+\t\t\t"title": "분노의 질주: 라이드 오어 다이",
 \t\t\t"released_date": "2023-05-17",
 \t\t\t"rating": 0,
-\t\t\t"description": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.",
-\t\t\t"poster_path": "/1E5baAaEse26fej7uHcjOgEE2t2.jpg",
+\t\t\t"description": "돔과 그의 패밀리 앞에 나타난 운명의 적 단테. 과거의 그림자는 돔의 모든 것을 파괴하기 위해 달려온다. 단테에 의해 산산히 흩어진 패밀리들은 모두 목숨을 걸고 맞서야 하는 함정에 빠지고 마는데...",
+\t\t\t"poster_path": "/3JT1oE0JIA6CQJaZDG00y3S0kP3.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t80,
@@ -352,7 +352,7 @@
 \t\t\t"title": "Adrenaline",
 \t\t\t"released_date": "2022-12-15",
 \t\t\t"rating": 5.9,
-\t\t\t"description": "A female FBI agent holidaying in Eastern Europe with her family gets her life upside down when her daughter is kidnapped. She has to team up with a criminal on the run to save her daughter before time runs out.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/mSgqZlz7umts77mEhmEhv9piUKv.jpg",
 \t\t\t"category": [
 \t\t\t\t28
@@ -367,8 +367,8 @@
 \t\t\t"title": "65",
 \t\t\t"released_date": "2023-03-02",
 \t\t\t"rating": 6.3,
-\t\t\t"description": "65 million years ago, the only 2 survivors of a spaceship from Somaris that crash-landed on Earth must fend off dinosaurs and reach the escape vessel in time before an imminent asteroid strike threatens to destroy the planet.",
-\t\t\t"poster_path": "/rzRb63TldOKdKydCvWJM8B6EkPM.jpg",
+\t\t\t"description": "우주 비행 중 행성과의 치명적인 충돌이 일어난 후, 조종사 밀스와 유일한 탑승 생존자 코아는 6,500만 년 전 공룡의 시대 지구에 불시착한다.  모든 것이 위험과 죽음과 맞닿아 있는 상황, 그들은 거대한 행성과의 충돌 전, 반드시 지구를 탈출해야만 한다!",
+\t\t\t"poster_path": "/o9ItQpKVvhGcAcJFyIpFM7YYKuv.jpg",
 \t\t\t"category": [
 \t\t\t\t878,
 \t\t\t\t12,
@@ -381,11 +381,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1008005,
-\t\t\t"title": "The Communion Girl",
+\t\t\t"title": "La niña de la comunión",
 \t\t\t"released_date": "2023-02-10",
 \t\t\t"rating": 6.2,
-\t\t\t"description": "Spain, late 1980s. Newcomer Sara tries to fit in with the other teens in this tight-knit small town in the province of Tarragona. If only she were more like her extroverted best friend, Rebe. They go out one night at a nightclub, on the way home, they come upon a little girl holding a doll, dressed for her first communion. And that's when the nightmare begins.",
-\t\t\t"poster_path": "/uYxrWr9o44yO0HvVfFFHGu01gfX.jpg",
+\t\t\t"description": "",
+\t\t\t"poster_path": "/sGSzha9K65abyvzBwXXnSV2sHWV.jpg",
 \t\t\t"category": [
 \t\t\t\t27
 \t\t\t]
@@ -396,11 +396,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 505642,
-\t\t\t"title": "Black Panther: Wakanda Forever",
+\t\t\t"title": "블랙 팬서: 와칸다 포에버",
 \t\t\t"released_date": "2022-11-09",
 \t\t\t"rating": 7.3,
-\t\t\t"description": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death.  As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
-\t\t\t"poster_path": "/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+\t\t\t"description": "국왕이자 블랙 팬서인 티찰라의 죽음 이후 수많은 강대국으로부터 위협을 받게 된 와칸다. 라몬다, 슈리 그리고 나키아, 오코예, 음바쿠는 각자 사명감을 갖고 와칸다를 지키기 위해 외로운 싸움을 이어간다. 한편, 비브라늄의 패권을 둘러싼 미스터리한 음모와 함께 깊은 해저에서 모습을 드러낸 최강의 적 네이머와 탈로칸의 전사들은 와칸다를 향해 무차별 공격을 퍼붓기 시작하는데…",
+\t\t\t"poster_path": "/nPpS4H39AhDD8g5VPt6tQcFJNtL.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -416,7 +416,7 @@
 \t\t\t"title": "Justice League x RWBY: Super Heroes & Huntsmen, Part One",
 \t\t\t"released_date": "2023-04-25",
 \t\t\t"rating": 7.9,
-\t\t\t"description": "Superman, Batman, Wonder Woman, Flash, Cyborg, Green Lantern and Vixen are transported to the strange world of Remnant and find themselves turned into teenagers. Meanwhile, Remnant heroes Ruby, Weiss, Blake and Yang must combine forces with the Justice League to uncover why their planet has been mysteriously altered before a superpowered Grimm destroys everything.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/sjBFnG8DpouuWi161KbjbAER235.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
@@ -430,11 +430,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 849869,
-\t\t\t"title": "Kill Boksoon",
+\t\t\t"title": "길복순",
 \t\t\t"released_date": "2023-02-17",
 \t\t\t"rating": 7,
-\t\t\t"description": "At work, she's a renowned assassin. At home, she's a single mom to a teenage daughter. Killing? That's easy. It's parenting that's the hard part.",
-\t\t\t"poster_path": "/taYgn3RRpCGlTGdaGQvnSIOzXFy.jpg",
+\t\t\t"description": "청부살인이 본업이지만 겉으로 보기에는 평범한 이벤트 회사인 MK 소속 킬러 길복순은 작품은 반드시 완수해 내는 성공률 100%의 킬러이자, 10대 딸을 둔 엄마다. 업계에서는 아무도 범접할 수 없는 에이스지만, 딸 재영과의 관계는 서툴기만 한 싱글맘인 그는 자신과 딸 사이의 벽을 허물기 위해 퇴사까지 결심한다. MK 대표 차민규의 재계약 제안의 답을 미룬 채, 마지막 작품에 들어간 복순은 임무에 숨겨진 진실을 알게 된 후, 회사가 허가한 일은 반드시 시도해야 한다는 규칙을 어기게 된다. 그 소식을 들은 MK는 물론, 모든 킬러들의 타겟이 되고야 마는데…",
+\t\t\t"poster_path": "/1MQoYvEIvsCZMpTuBlWfbaliJes.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t80,
@@ -447,11 +447,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 816904,
-\t\t\t"title": "Mummies",
+\t\t\t"title": "머미즈",
 \t\t\t"released_date": "2023-01-05",
 \t\t\t"rating": 7.1,
-\t\t\t"description": "Through a series of unfortunate events, three mummies end up in present-day London and embark on a wacky and hilarious journey in search of an old ring belonging to the Royal Family, stolen by ambitious archaeologist Lord Carnaby.",
-\t\t\t"poster_path": "/qVdrYN8qu7xUtsdEFeGiIVIaYd.jpg",
+\t\t\t"description": "고대 세 명의 미라가 고고학자 카나비 경이 훔친 왕실 소유의 오래된 반지를 찾기 위해 런던으로 떠난 여정을 그린 애니메이션",
+\t\t\t"poster_path": "/g5vkJAPj4XFlaOXZMYE97LZ7lns.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t35,
@@ -466,11 +466,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 436270,
-\t\t\t"title": "Black Adam",
+\t\t\t"title": "블랙 아담",
 \t\t\t"released_date": "2022-10-19",
 \t\t\t"rating": 7.1,
-\t\t\t"description": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
-\t\t\t"poster_path": "/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg",
+\t\t\t"description": "기원전 가장 번성하고 위대한 고대 국가였지만 현재는 국제 군사 조직 인터갱의 독재 국가로 전락한 칸다크. 인터갱의 눈을 피해 고대 유물을 찾던 '아드리아나'는 우연히 5000년 동안 잠들어 있던 '블랙 아담'을 깨우게 된다.  엄청난 괴력과 스피드, 방탄 능력과 자유자재의 고공비행, 번개를 쏘는 능력까지. 온몸이 무기인 '블랙 아담'은 자신의 앞을 막아서는 인터갱들을 모조리 쓸어버리고 칸다크 국민들은 이에 열광한다. 한편, 그의 폭주를 막기 위해 호크맨, 닥터 페이트, 아톰 스매셔, 사이클론으로 구성된 히어로 군단 '저스티스 소사이어티'가 칸다크에 나타나는데...",
+\t\t\t"poster_path": "/mEdMHGy1FfCUc7PskFO0tibm8jp.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -487,7 +487,7 @@
 \t\t\t"title": "Attack on Titan",
 \t\t\t"released_date": "2022-09-30",
 \t\t\t"rating": 6,
-\t\t\t"description": "As viable water is depleted on Earth, a mission is sent to Saturn's moon Titan to retrieve sustainable H2O reserves from its alien inhabitants. But just as the humans acquire the precious resource, they are attacked by Titan rebels, who don't trust that the Earthlings will leave in peace.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/qNz4l8UgTkD8rlqiKZ556pCJ9iO.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
@@ -503,7 +503,7 @@
 \t\t\t"title": "Ripper's Revenge",
 \t\t\t"released_date": "2023-04-03",
 \t\t\t"rating": 5.3,
-\t\t\t"description": "One year on from the notorious Ripper murders, London is terrorised once again by a series of brutal killings. When gruesome letters from the Ripper begin landing on his desk, an innocent reporter finds himself drawn into a deadly mystery, threatening the lives of everyone around him.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/cuEIBHTWAvaYkhhS8HfOkhce2MB.jpg",
 \t\t\t"category": [
 \t\t\t\t27
@@ -515,11 +515,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 994128,
-\t\t\t"title": "The Elderly",
+\t\t\t"title": "엘더리",
 \t\t\t"released_date": "2023-04-21",
 \t\t\t"rating": 6.4,
-\t\t\t"description": "An octogenarian named Manuel falls into a state of dementia after the sudden suicide of his wife, sparking a series of paranormal events that will put his family’s lives at risk.",
-\t\t\t"poster_path": "/88f35mGJOIE1nXgst5o4FvEDVzr.jpg",
+\t\t\t"description": "",
+\t\t\t"poster_path": "/31W5qM3rfsdJwQCWjDRXa00T8xJ.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
 \t\t\t\t53,
@@ -532,11 +532,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 736790,
-\t\t\t"title": "Chupa",
+\t\t\t"title": "내 친구 추파카브라",
 \t\t\t"released_date": "2023-04-07",
 \t\t\t"rating": 6.5,
-\t\t\t"description": "While visiting family in Mexico, a lonely boy befriends a mythical creature hiding on his grandfather's ranch and embarks on the adventure of a lifetime.",
-\t\t\t"poster_path": "/ra3xm8KFAkwK0CdbPRkfYADJYTB.jpg",
+\t\t\t"description": "멕시코에 사는 가족을 방문한 10대 소년 알렉스는 할아버지의 헛간에 숨어 있는 신비한 생명체, 어린 추파카브라를 발견한다. 그리고 뜻밖에 만나게 된 이 친구를 구하기 위해 사촌들과 함께 일생일대의 모험을 떠나기로 한다.",
+\t\t\t"poster_path": "/onSDW6Obvkh5RKGXMrS6i8YI9Aw.jpg",
 \t\t\t"category": [
 \t\t\t\t12,
 \t\t\t\t14,
@@ -549,10 +549,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 842945,
-\t\t\t"title": "Supercell",
+\t\t\t"title": "슈퍼셀",
 \t\t\t"released_date": "2023-03-17",
 \t\t\t"rating": 6.3,
-\t\t\t"description": "Good-hearted teenager William always lived in hope of following in his late father’s footsteps and becoming a storm chaser. His father’s legacy has now been turned into a storm-chasing tourist business, managed by the greedy and reckless Zane Rogers, who is now using William as the main attraction to lead a group of unsuspecting adventurers deep into the eye of the most dangerous supercell ever seen.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/gbGHezV6yrhua0KfAgwrknSOiIY.jpg",
 \t\t\t"category": [
 \t\t\t\t28
@@ -564,11 +564,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 283995,
-\t\t\t"title": "Guardians of the Galaxy Vol. 2",
+\t\t\t"title": "가디언즈 오브 갤럭시 Vol. 2",
 \t\t\t"released_date": "2017-04-19",
 \t\t\t"rating": 7.6,
-\t\t\t"description": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage.",
-\t\t\t"poster_path": "/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg",
+\t\t\t"description": "타노스에 맞서 은하계를 구하고 최고의 해결사로 등극한 스타로드 일행. 하지만 소버린 행성의 여사제 아이샤를 돕던 중 옛버릇을 고치지 못하고 행성의 배터리를 훔쳤다가 소버린 종족에 쫓기는 신세가 된다. 그 과정에서 피터의 아버지 에고가 그들을 돕는다. 아픈 엄마와 어린 자신을 버리고 떠난 아버지에 대한 원망이 컸던 피터는 에고의 행성에서 아버지의 능력을 확인하곤 그 힘에 이끌린다. 하지만 가모라는 에고의 행성에서 이상한 기운을 감지한다. 한편 반란군에 의해 위기에 처한 욘두는 로켓과 그루트의 도움으로 목숨을 구한다.",
+\t\t\t"poster_path": "/uDuwGhQgffd5GQ695oUfy5oZGqP.jpg",
 \t\t\t"category": [
 \t\t\t\t12,
 \t\t\t\t28,
@@ -581,11 +581,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 980078,
-\t\t\t"title": "Winnie the Pooh: Blood and Honey",
+\t\t\t"title": "곰돌이 푸: 피와 꿀",
 \t\t\t"released_date": "2023-01-27",
 \t\t\t"rating": 5.7,
-\t\t\t"description": "Christopher Robin is headed off to college and he has abandoned his old friends, Pooh and Piglet, which then leads to the duo embracing their inner monsters.",
-\t\t\t"poster_path": "/ewF3IlGscc7FjgGEPcQvZsAsgAW.jpg",
+\t\t\t"description": "어릴 적 친구로부터 버림받은 곰돌이 ‘푸’와 ‘피글렛’  참을 수 없는 분노와 배신감을 느끼며 잔혹한 복수를 시작한다.",
+\t\t\t"poster_path": "/fcCbzcEbAEQ5gWzx7EX78qLEVFw.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
 \t\t\t\t53
@@ -597,11 +597,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 536554,
-\t\t\t"title": "M3GAN",
+\t\t\t"title": "메간",
 \t\t\t"released_date": "2022-12-28",
 \t\t\t"rating": 7.4,
-\t\t\t"description": "A brilliant toy company roboticist uses artificial intelligence to develop M3GAN, a life-like doll programmed to emotionally bond with her newly orphaned niece. But when the doll's programming works too well, she becomes overprotective of her new friend with terrifying results.",
-\t\t\t"poster_path": "/d9nBoowhjiiYc4FBNtQkPY7c11H.jpg",
+\t\t\t"description": "교통사고로 부모를 잃고 혼자가 된 소녀 ‘케이디’. 로봇 엔지니어이자, ‘케이디’의 보호자가 된 ‘젬마’는 ‘케이디’를 안전하게 지켜야 하는 프로그램이 입력된 AI 로봇 ‘메간’을 선물한다. 메간은 언제나 ‘케이디’의 곁을 지켜주며 함께 웃고, 힘들 땐 위로해주는 둘도 없는 친구가 된다. 어느 날, ‘케이디’가 위험에 처하자 ‘메간’은 예측할 수 없는 방향으로 업그레이드되며 감당할 수 없는 일들이 벌어지는데…",
+\t\t\t"poster_path": "/v0TtgXaZZ6NeDxKackgQK9byEDL.jpg",
 \t\t\t"category": [
 \t\t\t\t878,
 \t\t\t\t27,
@@ -614,10 +614,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1104040,
-\t\t\t"title": "Gangs of Lagos",
+\t\t\t"title": "갱스 오브 라고스",
 \t\t\t"released_date": "2023-04-07",
 \t\t\t"rating": 6.1,
-\t\t\t"description": "A group of friends who each have to navigate their own destiny, growing up on the bustling streets and neighborhood of Isale Eko, Lagos.",
+\t\t\t"description": "절친 오발롤라, 이피, 기프트는 정치판과 연계한 갱들이 거리를 지배하는 곳, 이살레 에코에서 나고 자랐다. 라이벌 갱들이 거리를 피로 붉게 물들이는 가운데, 오발롤라, 이피, 기프트는 갱단 간의 전쟁에 말려든다. 이 전쟁을 통해 이살레 에코의 기반을 뒤흔드는 비밀이 밝혀지고, 최종적으로 세 사람은 자신들의 운명을 깨닫게 된다.",
 \t\t\t"poster_path": "/nGwFsB6EXUCr21wzPgtP5juZPSv.jpg",
 \t\t\t"category": [
 \t\t\t\t80
@@ -629,11 +629,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 840326,
-\t\t\t"title": "Sisu",
+\t\t\t"title": "시수",
 \t\t\t"released_date": "2023-01-27",
 \t\t\t"rating": 7.3,
-\t\t\t"description": "Deep in the wilderness of Lapland, Aatami Korpi is searching for gold but after he stumbles upon Nazi patrol, a breathtaking and gold-hungry chase through the destroyed and mined Lapland wilderness begins.",
-\t\t\t"poster_path": "/dHx5yuBb05U9vNaNhIBD7jWyxPk.jpg",
+\t\t\t"description": "",
+\t\t\t"poster_path": "/uCAaaAQEDrTllYR4dtsEsfQa8We.jpg",
 \t\t\t"category": [
 \t\t\t\t10752,
 \t\t\t\t28
@@ -645,10 +645,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 296271,
-\t\t\t"title": "The Devil Conspiracy",
+\t\t\t"title": "더 데빌 컨스피러시",
 \t\t\t"released_date": "2023-01-13",
 \t\t\t"rating": 6.2,
-\t\t\t"description": "The hottest biotech company in the world has discovered they can clone history’s most influential people from the dead. Now, they are auctioning clones of Michelangelo, Galileo, Vivaldi, and others for tens of millions of dollars to the world’s ultra-rich. But when they steal the Shroud of Turin and clone the DNA of Jesus Christ, all hell breaks loose.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/2lUYbD2C3XSuwqMUbDVDQuz9mqz.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
@@ -663,11 +663,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 876792,
-\t\t\t"title": "That Time I Got Reincarnated as a Slime the Movie: Scarlet Bond",
+\t\t\t"title": "극장판 전생했더니 슬라임이었던 건에 대하여: 홍련의 인연편",
 \t\t\t"released_date": "2022-11-25",
 \t\t\t"rating": 7.7,
-\t\t\t"description": "A long-running conspiracy is swirling over a mysterious power wielded by the Queen in Raja, a small country west of Tempest. When a slime who evolved into a Demon Lord named Rimuru Tempest crosses paths with Hiiro, a survivor of the Ogre race, an incredible adventure packed with new characters begins. The power of bonds will be put to the test!",
-\t\t\t"poster_path": "/xITip9n9uMAUA0TU6niMXU2tbh0.jpg",
+\t\t\t"description": "[템페스트]의 서쪽에 위치한 [라자 소아국]. 한때는 금 채굴로 번영했지만 지금은 번영의 그림자는 찾아볼 수조차 없고, 호수는 광산의 독에 오염되어 나라는 위기 상황에 처했다. 여왕 '토와'는 왕가에 대대로 전해 오는 왕관의 마력을 사용해 독을 제거하며 백성을 지키고 있었지만, 그 대가로 왕관에 걸려 있던 저주가 온몸에 퍼져 수명이 단축되고 있었다. 그러던 중, 템페스트에 갑자기 나타난 오거의 생존자 '히이로'. 베니마루 일행의 형님뻘이었다는 히이로는, 토와의 도움으로 살아남았던 것이었다. 자신을 구해 준 토와와 [라자 소아국]을 지키기 위해, 템페스트의 리무루에게 도움을 청하기 위해 온 히이로는 베니마루와 운명의 재회를 한다. 라자를 위기에서 구하기 위해, 그리고 토와에게 걸린 저주의 수수께끼를 풀기 위해, 리무루는 라자로 향하는데...... 그곳에는 놀라운 음모가 기다리고 있었다!",
+\t\t\t"poster_path": "/kHeX34lOrTM793hCiCS72cIYY6i.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t14,
@@ -680,11 +680,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 631842,
-\t\t\t"title": "Knock at the Cabin",
+\t\t\t"title": "똑똑똑",
 \t\t\t"released_date": "2023-02-01",
 \t\t\t"rating": 6.4,
-\t\t\t"description": "While vacationing at a remote cabin, a young girl and her two fathers are taken hostage by four armed strangers who demand that the family make an unthinkable choice to avert the apocalypse. With limited access to the outside world, the family must decide what they believe before all is lost.",
-\t\t\t"poster_path": "/dm06L9pxDOL9jNSK4Cb6y139rrG.jpg",
+\t\t\t"description": "휴가를 떠난 한 가족은 별장에 무단침입한 낯선 방문자들과 대치하게 된다. ‘레너드’(데이브 바티스타)와 낯선 방문자들은 세상의 종말을 막으러 왔다며, 가족 중 한 명을 희생시켜야만 인류의 멸망을 막을 수 있다는 잔혹한 선택을 하게 하는데… 가족을 살리면 인류가 멸망하고, 인류를 살리면 가족이 죽는다!",
+\t\t\t"poster_path": "/mCDSOfcVJfMkGUNrNpXWFO7oNBY.jpg",
 \t\t\t"category": [
 \t\t\t\t27
 \t\t\t]
@@ -698,7 +698,7 @@
 \t\t\t"title": "The Park",
 \t\t\t"released_date": "2023-03-02",
 \t\t\t"rating": 6,
-\t\t\t"description": "A dystopian coming-of-age movie focused on three kids who find themselves in an abandoned amusement park, aiming to unite whoever remains. With dangers lurking around every corner, they will do whatever it takes to survive their hellish Neverland.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/hR1jdCw0A9czgsbp45TASkjjBhA.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
@@ -714,11 +714,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1085103,
-\t\t\t"title": "Clock",
+\t\t\t"title": "클록",
 \t\t\t"released_date": "2023-03-28",
 \t\t\t"rating": 6,
-\t\t\t"description": "On the eve of her 38th birthday, a woman desperately attempts to fix her broken biological clock.",
-\t\t\t"poster_path": "/m6Yt77C9u7Aume9dTJMCSRzWDED.jpg",
+\t\t\t"description": "떠오르는 스타 디자이너 엘라. 호화로운 집에 다정한 남편까지, 모든 걸 가진 그녀에겐 한 가지 고민이 있다. 바로 아이를 원하는 마음이 전혀 생기지 않는 것. 사회적 압박에 시달리던 그녀는 새로운 각도로 임신 문제를 다루는 임상시험에 지원하고. 놀랍게도 치료는 효과를 보이지만, 엘라는 어떤 대가를 치러야 할까?",
+\t\t\t"poster_path": "/3TLFdU75guGAh6qIqumvtKrzhji.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
 \t\t\t\t9648,
@@ -731,10 +731,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 869626,
-\t\t\t"title": "Marcel the Shell with Shoes On",
+\t\t\t"title": "마르셀, 신발 신은 조개",
 \t\t\t"released_date": "2022-06-24",
 \t\t\t"rating": 7.8,
-\t\t\t"description": "Marcel is an adorable one-inch-tall shell who ekes out a colorful existence with his grandmother Connie and their pet lint, Alan. Once part of a sprawling community of shells, they now live alone as the sole survivors of a mysterious tragedy. But when a documentary filmmaker discovers them amongst the clutter of his Airbnb, the short film he posts online brings Marcel millions of passionate fans, as well as unprecedented dangers and a new hope at finding his long-lost family.",
+\t\t\t"description": "마르셀은 키가 1인치밖에 안 되는 귀여운 조개껍데기로, 할머니 코니, 애완용 보푸라기 앨런과 함께 다채로운 삶을 살아가고 있습니다. 한때는 거대한 조개 공동체의 일원이었지만, 지금은 미스터리한 비극의 유일한 생존자로 홀로 살아가고 있습니다. 하지만 한 다큐멘터리 영화감독이 에어비앤비 숙소의 어수선함 속에서 이들을 발견하고 온라인에 올린 단편 영화는 마르셀에게 수백만 명의 열렬한 팬을 확보하는 동시에 전례 없는 위험과 오랫동안 잃어버린 가족을 찾을 수 있다는 새로운 희망을 선사합니다.",
 \t\t\t"poster_path": "/jaYmP4Ct8YLnxWAW2oYkUjeXtzm.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
@@ -750,10 +750,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1023313,
-\t\t\t"title": "The Exorcist",
+\t\t\t"title": "La Exorcista",
 \t\t\t"released_date": "2022-11-02",
 \t\t\t"rating": 5.9,
-\t\t\t"description": "Ophelia, a young nun recently arriving in the town of San Ramon, is forced to perform an exorcism on a pregnant woman in danger of dying. Just when she thinks her possession has ended, she discovers that the evil presence hasn't disappeared yet. The director of the award-winning Here Comes the Devil and Late Phases adds a new twist to possession movies in one of this year's Latin American horror surprises.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/d07xtqwq1uriQ1hda6qeu8Skt5m.jpg",
 \t\t\t"category": [
 \t\t\t\t27
@@ -765,11 +765,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 646389,
-\t\t\t"title": "Plane",
+\t\t\t"title": "플레인",
 \t\t\t"released_date": "2023-01-12",
 \t\t\t"rating": 6.9,
-\t\t\t"description": "After a heroic job of successfully landing his storm-damaged aircraft in a war zone, a fearless pilot finds himself between the agendas of multiple militias planning to take the plane and its passengers hostage.",
-\t\t\t"poster_path": "/qi9r5xBgcc9KTxlOLjssEbDgO0J.jpg",
+\t\t\t"description": "평소와 다를 것 없던 어느 날, 기장 토렌스는 비행기 운행 중 거대한 폭풍우를 만나 정체모를 섬에 불시착한다. 살아남았다는 기쁨도 잠시, 비행기를 탈취하려는 무장단체의 인질극이 시작되고 토렌스는 탑승객 중 가장 피해야 할 의문의 살인범 가스파레와 손을 잡고 승객들과 함께 탈출을 시도하는데… 무장단체의 표적은 단 하나, 토렌스와 탑승객들! 목숨을 건 위험한 탈출 작전이 시작된다!",
+\t\t\t"poster_path": "/8XDLgSlM6hb01iEWNRbqxKdFnGD.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -785,7 +785,7 @@
 \t\t\t"title": "Black Warrant",
 \t\t\t"released_date": "2023-01-09",
 \t\t\t"rating": 5.3,
-\t\t\t"description": "A semi-retired special ops assassin and a DEA agent cross paths on separate missions to stop a cyber terrorist organization that has built a dangerous machine threatening to attack the power grid and bring catastrophe to the world.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/A7vFFZHbDyxfjuYKzJwruTnwwjT.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
@@ -798,11 +798,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 758009,
-\t\t\t"title": "Shotgun Wedding",
+\t\t\t"title": "샷건 웨딩",
 \t\t\t"released_date": "2022-12-28",
 \t\t\t"rating": 6.3,
-\t\t\t"description": "Darcy and Tom gather their families for the ultimate destination wedding but when the entire party is taken hostage, “’Til Death Do Us Part” takes on a whole new meaning in this hilarious, adrenaline-fueled adventure as Darcy and Tom must save their loved ones—if they don’t kill each other first.",
-\t\t\t"poster_path": "/t79ozwWnwekO0ADIzsFP1E5SkvR.jpg",
+\t\t\t"description": "‘다아시’(제니퍼 로페즈)와 ‘톰’(조쉬 더하멜)의 결혼식 당일, 우여곡절 끝에 결혼식에 참석할 모두가 섬에 모인다. 모든 게 순조로워 보이던 그때!  갑자기 들이닥친 해적으로 인해 결혼식장의 모두가 인질이 되고… ‘다아시’와 ‘톰’은 무사히 혼인서약을 마치기 위해 목숨을 건 버진 로드를 걷게 되는데…  죽이든가, 죽든가! 2023년 3월, 가장 화X한 웨딩이 온다!",
+\t\t\t"poster_path": "/aGhII6CTTvpZwnElzAUB7ZbgjTN.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t35,
@@ -815,10 +815,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 943822,
-\t\t\t"title": "Prizefighter: The Life of Jem Belcher",
+\t\t\t"title": "프라이즈파이터: 더 라이프 오브 젬 벨처",
 \t\t\t"released_date": "2022-06-30",
 \t\t\t"rating": 6.2,
-\t\t\t"description": "At the turn of the 19th century, Pugilism was the sport of kings and a gifted young boxer fought his way to becoming champion of England.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/x3PIk93PTbxT88ohfeb26L1VpZw.jpg",
 \t\t\t"category": [
 \t\t\t\t18,
@@ -831,10 +831,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 455476,
-\t\t\t"title": "Knights of the Zodiac",
+\t\t\t"title": "세인트 세이야: 더 비기닝",
 \t\t\t"released_date": "2023-04-27",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "When a headstrong street orphan, Seiya, in search of his abducted sister unwittingly taps into hidden powers, he discovers he might be the only person alive who can protect a reincarnated goddess, sent to watch over humanity. Can he let his past go and embrace his destiny to become a Knight of the Zodiac?",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/tBiUXvCqz34GDeuY7jK14QQdtat.jpg",
 \t\t\t"category": [
 \t\t\t\t14,
@@ -848,11 +848,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 873256,
-\t\t\t"title": "Kiss, Kiss!",
+\t\t\t"title": "키스, 키스!",
 \t\t\t"released_date": "2023-04-26",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "Convinced he can charm any woman, a tenacious flirt sets his sights on a headstrong bride-to-be engaged to the son of an ambitious politician.",
-\t\t\t"poster_path": "/kqltY4yywn4ex1Cht6f4lercrW4.jpg",
+\t\t\t"description": "어떤 여자라도 매료시킬 수 있다고 확신하는 집념의 바람둥이. 그가 야심 많은 정치인의 아들과 결혼을 앞둔 완고한 여자에게 단단히 꽂힌다.",
+\t\t\t"poster_path": "/sJ7uqEbmE9U1Z2G1boys1mpvW0k.jpg",
 \t\t\t"category": [
 \t\t\t\t10749,
 \t\t\t\t35
@@ -864,10 +864,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 876969,
-\t\t\t"title": "Assassin Club",
+\t\t\t"title": "어쎄신 클럽",
 \t\t\t"released_date": "2023-02-24",
 \t\t\t"rating": 7.1,
-\t\t\t"description": "In this world of contract killers, Morgan Gaines is the best of the best. When Morgan is hired to kill six people around the world, he soon discovers all the targets are also assassins unknowingly hired to kill each other.",
+\t\t\t"description": "오랫동안 킬러 생활을 하면서 무의미한 삶을 살던 모건은 소피를 만나면서부터 인간다운 인생을 꿈꾸기 시작한다. 그래서 고민 끝에 킬러 생활을 청산하려고 하지만, 자신도 모르는 사이에 자신이 누군가 설계한 킬러들의 RPG 게임에 합류했다는 사실을 깨닫는다. 플레이어는 총 7명. 처음에는 영문을 몰라 어리둥절해 하던 킬러들. 하지만 곧 전투본능을 되살려 돈과 목숨을 지키기 위해서 치열한 사투를 벌인다. 그렇게 죽고 죽이는 게임 끝에 마침내 단 두 명의 킬러만이 남는다. 바로 모건과 정체불명의 인물 포크! 포크는 게임 설계자를 찾아 제거하자고 하면서 모건에게 접근하는데... 과연 모건은 최후의 승리자가 되고 킬러들의 세계에서 벗어날 수 있을까?",
 \t\t\t"poster_path": "/y2d2SBqK33mGOG2CqAYMo3YbWE4.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
@@ -880,11 +880,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 649609,
-\t\t\t"title": "Renfield",
+\t\t\t"title": "렌필드",
 \t\t\t"released_date": "2023-04-07",
 \t\t\t"rating": 7.2,
-\t\t\t"description": "Having grown sick and tired of his centuries as Dracula's lackey, Renfield finds a new lease on life — and maybe even redemption — when he falls for feisty, perennially angry traffic cop Rebecca Quincy.",
-\t\t\t"poster_path": "/p6yUjhvNGQpFZilKwOKbxQ1eHlo.jpg",
+\t\t\t"description": "정년 보장 + 평생 직장의 대가는 밤낮없는 24시간 FULL 근무? 사내 복지는 만성 피로, 불면증, 소화불량, 짙은 다크서클입니다! 불멸의 삶과 폭발적인 힘의 대가는 악당용 배민이 되는 것?! ‘드라큘라’에게 취업 사기를 당하고 24시간 밤낮없이 그에게 순결한 제물을 바치는 직속비서 ‘렌필드’는 남들과 다른 특별한 꼰대 상사에 점차 피폐해져 간다. 그러던 어느 날, 여느 때처럼 ‘드라큘라’에게 바칠 제물을 찾던 중 자신의 인생을 뒤바꿔줄 친구 ‘레베카’를 만나게 되고 지금껏 가슴 한 켠에 숨 죽여 있었던 퇴사의 희망을 발견하게 되는데.. 과연 퇴사 없는 종신계약에서 ‘렌필드’는 벗어날 수 있을까?  슈퍼 을(乙) ‘렌필드’, 자네 꿈이 뭔가? “이 지독한 관계에서 벗어나고 싶어요! 퇴사하겠습니다!”",
+\t\t\t"poster_path": "/wJXgQ3FgVIyVUwdoaKoeobET3po.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
 \t\t\t\t35,
@@ -897,11 +897,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 676710,
-\t\t\t"title": "The Amazing Maurice",
+\t\t\t"title": "어메이징 모리스",
 \t\t\t"released_date": "2022-12-16",
 \t\t\t"rating": 7,
-\t\t\t"description": "Maurice is a streetwise ginger cat who comes up with a money-making scam by befriending a group of self-taught talking rats. When Maurice and the rodents meet a bookworm called Malicia, their little con soon goes down the drain.",
-\t\t\t"poster_path": "/ydhZeUjbzVEFclUpMhLfDZSavUY.jpg",
+\t\t\t"description": "신기한 능력으로 성공적인 사기 행각을 이어가던 모리스와 친구들! 4차원 소녀 ‘멜리시아’에게 정체가 탄로나 어쩔 수 없이 그녀를 도와 마을에 숨겨진 비밀을 찾아 나선 그들은 세상을 지배하려는 절대악 ‘쥐마왕’의 음모를 알아채지만 뜻하지 않은 위험에 처한다. 가까스로 잡혀있던 ‘복숭아’를 구해낸 모리스와 친구들은 마을에서 탈출을 시도하고, 멜리시아는 허당 피리꾼 ‘키이스’와 함께 쥐마왕에게 맞서기 위해 진짜 마술피리를 찾아나서는데..  쥐마왕의 정체는 과연 무엇? 그리고 모리스와 친구들은 무사히 마을에서 벗어날 수 있을 것인가?!",
+\t\t\t"poster_path": "/m4gi3r7JizAaURreUqjCk306vxz.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t12,
@@ -916,11 +916,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 985939,
-\t\t\t"title": "Fall",
+\t\t\t"title": "폴: 600미터",
 \t\t\t"released_date": "2022-08-11",
 \t\t\t"rating": 7.3,
-\t\t\t"description": "For best friends Becky and Hunter, life is all about conquering fears and pushing limits. But after they climb 2,000 feet to the top of a remote, abandoned radio tower, they find themselves stranded with no way down. Now Becky and Hunter’s expert climbing skills will be put to the ultimate test as they desperately fight to survive the elements, a lack of supplies, and vertigo-inducing heights",
-\t\t\t"poster_path": "/v28T5F1IygM8vXWZIycfNEm3xcL.jpg",
+\t\t\t"description": "내려갈 길이 끊겨버린 600미터 TV 타워 위에서  두 명의 친구가 살아남기 위해 펼치는 사상 최초의 고공 서바이벌 여기에서",
+\t\t\t"poster_path": "/8huJowZK1t7MNLEKo3dgLAxmiLW.jpg",
 \t\t\t"category": [
 \t\t\t\t53
 \t\t\t]
@@ -931,10 +931,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 747355,
-\t\t\t"title": "Swapping: A Divorce Trip Between Two Couples",
+\t\t\t"title": "스와핑: 두 부부의 이혼여행",
 \t\t\t"released_date": "2020-08-28",
 \t\t\t"rating": 8,
-\t\t\t"description": "Yong-ho and Seong-ho decide to organize their marriage and leave the last memories. He decides to go on a trip to the sea where four people went together at the beginning of the wedding. In fact, they liked each other's opponents. In the open sea, each person begins to exude their hidden emotions...​",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/wESfP4ZeBbwjjFw2tql4Bqx101Q.jpg",
 \t\t\t"category": [
 \t\t\t\t18
@@ -949,7 +949,7 @@
 \t\t\t"title": "The Mummy Resurrection",
 \t\t\t"released_date": "2023-01-02",
 \t\t\t"rating": 5.6,
-\t\t\t"description": "When an infamous \"cursed\" Egyptian sarcophagus falls into the hands of unscrupulous huckster Everett Randolph, he becomes obsessed with resurrecting the mummified princess held within it.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/d0pt6KlVvmtG0uhccWjgWfIqJee.jpg",
 \t\t\t"category": [
 \t\t\t\t27
@@ -961,11 +961,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 616037,
-\t\t\t"title": "Thor: Love and Thunder",
+\t\t\t"title": "토르: 러브 앤 썬더",
 \t\t\t"released_date": "2022-07-06",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor Odinson enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late.",
-\t\t\t"poster_path": "/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
+\t\t\t"description": "이너피스를 위해 자아 찾기 여정을 떠난 천둥의 신 토르. 그러나 우주의 모든 신들을 몰살하려는 신 도살자 고르의 등장으로 토르의 안식년 계획은 산산조각 나 버린다. 토르는새로운 위협에 맞서기 위해 킹 발키리, 코르그, 그리고 전 여자친구 제인과 재회하게 되고, 그녀가 묠니르를 휘두르는 마이티 토르가 되어 나타나 모두를 놀라게 한다. 이제 팀 토르는 고르의 복수에 얽힌 미스터리를 밝히고 더 큰 전쟁을 막기 위한 전 우주적 스케일의 모험을 시작하는데...",
+\t\t\t"poster_path": "/un8ZDtx2SMwNwXRYy65aItnNjab.jpg",
 \t\t\t"category": [
 \t\t\t\t14,
 \t\t\t\t28,
@@ -978,11 +978,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 820067,
-\t\t\t"title": "The Quintessential Quintuplets Movie",
+\t\t\t"title": "극장판 5등분의 신부",
 \t\t\t"released_date": "2022-05-20",
 \t\t\t"rating": 8.6,
-\t\t\t"description": "When five lovely young girls who hate studying hire part-time tutor Futaro, he guides not only their education but also their hearts. Time spent has brought them all closer, with feelings growing within the girls and Futaro. As they finish their third year of high school and their last school festival approaches, they set their sights on what’s next. Is there a future with one of them and Futaro?",
-\t\t\t"poster_path": "/sg7klpt1xwK1IJirBI9EHaqQwJ5.jpg",
+\t\t\t"description": "「낙제 직전」「공부가 싫은」미소녀 다섯 쌍둥이를  아르바이트 가정 교사로서 「졸업」까지 이끈 후타로.  배우에 전념하기 위해 휴학하기로 한 이치카의 공부를 봐주면서  「학교 축제」 준비에 힘쓰는 후타로와,  후회 없는 「학교 축제」를 만들기 위해 평소 이상으로 노력하는 요츠바.  어지러운 날들이 지나고 정신을 차려보니 「학교 축제」 전날.  후타로는 포기하지 않고 힘쓰는 이츠키의 모습에 힘입어,  니노의 각오와 미쿠의 결의, 그리고 이치카·요츠바·이츠키에 대한 마음의 답을 찾는다.  저마다의 생각을 안고 있는 와중,  드디어 시작된 고교 생활 최후의(마지막) 이벤트인 「학교 축제」 첫날.  『학교 축제 첫날 15시에 교실에 와줘』  교실에 모인 다섯 쌍둥이는, 후타로에게 어떠한 마음을 고백 받게 될까?",
+\t\t\t"poster_path": "/63SDXxNKOA4ZfXvRCkF9B1y14Us.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t35,
@@ -995,10 +995,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1011679,
-\t\t\t"title": "Shark Side of the Moon",
+\t\t\t"title": "샤크 사이드 오브 더 문",
 \t\t\t"released_date": "2022-08-12",
 \t\t\t"rating": 5.3,
-\t\t\t"description": "Decades ago, the USSR developed unkillable sharks and launched them to the moon. Today, a team of American astronauts will endure the fight of their lives.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/v5CfpzxoJDkZxjZAizClFdlEF0U.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
@@ -1013,10 +1013,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 676841,
-\t\t\t"title": "Unhappily Ever After",
+\t\t\t"title": "Infelices para Siempre",
 \t\t\t"released_date": "2023-01-26",
 \t\t\t"rating": 7,
-\t\t\t"description": "María José and Alfredo are about to celebrate their 20th anniversary and their children give them a trip to the hotel where they celebrated their honeymoon, but a spell will make them repeat the same day.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/qiAM7Y8xF8wJDDsjeSuLgzyFGmd.jpg",
 \t\t\t"category": [
 \t\t\t\t35,
@@ -1029,10 +1029,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 989473,
-\t\t\t"title": "Invitation to a Murder",
+\t\t\t"title": "살인 초대장",
 \t\t\t"released_date": "2023-05-05",
 \t\t\t"rating": 6.1,
-\t\t\t"description": "1934. South of England. For no apparent reason and like five other unrelated people, Miranda, a 28-year-old florist, is invited for the weekend in the mansion of billionaire Lewis Findley",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/8OyzvMrVx2tXjyJiE3GZpvaXE2T.jpg",
 \t\t\t"category": [
 \t\t\t\t9648,
@@ -1045,11 +1045,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 361743,
-\t\t\t"title": "Top Gun: Maverick",
+\t\t\t"title": "탑건: 매버릭",
 \t\t\t"released_date": "2022-05-24",
 \t\t\t"rating": 8.3,
-\t\t\t"description": "After more than thirty years of service as one of the Navy’s top aviators, and dodging the advancement in rank that would ground him, Pete “Maverick” Mitchell finds himself training a detachment of TOP GUN graduates for a specialized mission the likes of which no living pilot has ever seen.",
-\t\t\t"poster_path": "/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+\t\t\t"description": "최고의 파일럿이자 전설적인 인물 매버릭은 자신이 졸업한 훈련학교 교관으로 발탁된다. 그의 명성을 모르던 팀원들은 매버릭의 지시를 무시하지만 실전을 방불케 하는 상공 훈련에서 눈으로 봐도 믿기 힘든 전설적인 조종 실력에 모두가 압도된다. 매버릭의 지휘 아래 견고한 팀워크를 쌓아가던 팀원들에게 국경을 뛰어넘는 위험한 임무가 주어지자 매버릭은 자신이 가르친 동료들과 함께 마지막이 될지 모를 하늘 위 비행에 나서는데...",
+\t\t\t"poster_path": "/jeqXUwNilvNqNXqAHsdwm5pEfae.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t18
@@ -1061,11 +1061,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 766507,
-\t\t\t"title": "Prey",
+\t\t\t"title": "프레이",
 \t\t\t"released_date": "2022-08-02",
 \t\t\t"rating": 7.8,
-\t\t\t"description": "When danger threatens her camp, the fierce and highly skilled Comanche warrior Naru sets out to protect her people. But the prey she stalks turns out to be a highly evolved alien predator with a technically advanced arsenal.",
-\t\t\t"poster_path": "/ujr5pztc1oitbe7ViMUOilFaJ7s.jpg",
+\t\t\t"description": "300년 전 아메리카, 용맹한 전사를 꿈꾸는 원주민 소녀 나루는 갑작스러운 곰의 습격으로 절체절명의 위기에 놓인 순간, 정체를 알 수 없는 외계 포식자 프레데터를 목격하게 된다.  자신보다 강한 상대를 향한 무자비한 사냥을 시작한 프레데터. 최첨단 기술과 무기로 진화된 외계 포식자 프레데터의 위협이 점점 다가오고 나루는 부족을 지키기 위해 자신만의 기지와 무기로 생존을 건 사투를 시작하는데…",
+\t\t\t"poster_path": "/eicYAopFKOL3orcNTJZ4TGtZQQ1.jpg",
 \t\t\t"category": [
 \t\t\t\t53,
 \t\t\t\t28,
@@ -1078,10 +1078,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1003579,
-\t\t\t"title": "Batman: The Doom That Came to Gotham",
+\t\t\t"title": "배트맨: 고담에 찾아온 운명",
 \t\t\t"released_date": "2023-03-10",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "Explorer Bruce Wayne accidentally unleashes an ancient evil, and returns to Gotham after being away for two decades. There, Batman battles Lovecraftian supernatural forces and encounters allies and enemies such as Green Arrow, Ra's al Ghul, Mr. Freeze, Killer Croc, Two-Face and James Gordon.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/hrATQE8ScQceohwInaMluluNEaf.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
@@ -1100,7 +1100,7 @@
 \t\t\t"title": "Cazadora",
 \t\t\t"released_date": "2023-01-19",
 \t\t\t"rating": 6.2,
-\t\t\t"description": "In a dystopian future, a mother and her teenage son go hunting in the mountains and encounter a stranger who threatens to upend their relationship.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/8QxCd3pSSrj6QqaG4fkNkaJmUa.jpg",
 \t\t\t"category": [
 \t\t\t\t53
@@ -1112,11 +1112,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 634649,
-\t\t\t"title": "Spider-Man: No Way Home",
+\t\t\t"title": "스파이더맨: 노 웨이 홈",
 \t\t\t"released_date": "2021-12-15",
 \t\t\t"rating": 8,
-\t\t\t"description": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
-\t\t\t"poster_path": "/uJYYizSuA9Y3DCs0qS4qWvHfZg4.jpg",
+\t\t\t"description": "미스테리오의 계략으로 세상에 정체가 탄로난 스파이더맨 피터 파커는 하루 아침에 평범한 일상을 잃게 된다. 문제를 해결하기 위해 닥터 스트레인지를 찾아가 도움을 청하지만 뜻하지 않게 멀티버스가 열리면서 각기 다른 차원의 불청객들이 나타난다. 닥터 옥토퍼스를 비롯해 스파이더맨에게 깊은 원한을 가진 숙적들의 강력한 공격에 피터 파커는 사상 최악의 위기를 맞게 되는데…",
+\t\t\t"poster_path": "/voddFVdjUoAtfoZZp2RUmuZILDI.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -1129,11 +1129,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 736526,
-\t\t\t"title": "Troll",
+\t\t\t"title": "트롤의 습격",
 \t\t\t"released_date": "2022-12-01",
 \t\t\t"rating": 6.7,
-\t\t\t"description": "Deep inside the mountain of Dovre, something gigantic awakens after being trapped for a thousand years. Destroying everything in its path, the creature is fast approaching the capital of Norway. But how do you stop something you thought only existed in Norwegian folklore?",
-\t\t\t"poster_path": "/9z4jRr43JdtU66P0iy8h18OyLql.jpg",
+\t\t\t"description": "고대의 전설이 깨어났다! 아주 오랜 세월, 노르웨이의 산에 잠들어 있던 트롤. 녀석이 세상을 파괴하기 전에 막아야 한다. 골칫덩어리 영웅들이 힘을 합쳐야 가능하지만.",
+\t\t\t"poster_path": "/6MEYnNtvyctpshK0nIi6Kor9Av9.jpg",
 \t\t\t"category": [
 \t\t\t\t14,
 \t\t\t\t28,
@@ -1147,11 +1147,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 820232,
-\t\t\t"title": "Demon Slayer: Kimetsu no Yaiba Sibling's Bond",
+\t\t\t"title": "귀멸의 칼날: 남매의 연",
 \t\t\t"released_date": "2019-03-29",
 \t\t\t"rating": 8,
-\t\t\t"description": "Tanjiro finds his family slaughtered and the lone survivor, his sister Nezuko Kamado, turned into a Demon. To his surprise, however, Nezuko still shows signs of human emotion and thought. Thus begins Tanjiro's journey to seek out the Demon who killed their family and turn his sister human again. A recap film of Kimetsu no Yaiba, covering episodes 1-5 with extra footage.",
-\t\t\t"poster_path": "/vJUDoYNNKvBqbEPUskgvzPXGEFz.jpg",
+\t\t\t"description": "혈귀의 습격으로 가족을 잃은 소년 ‘탄지로’. 유일하게 살아남은 여동생 ‘네즈코’마저 혈귀로 변해 버리고 마는데…. ‘탄지로’는 ‘네즈코’를 인간으로 되돌리기 위해- 그리고 가족을 죽인 혈귀를 심판하기 위해- ‘귀살대’의 길을 가기로 결의한다. 혹독한 훈련 끝에 귀살대 대원으로 거듭난 ‘탄지로’는 복수의 칼날을 들고 목숨 건 사투를 시작하는데… 소년이여, 여동생을 구하기 위해 칼날을 들어라! 인간과 혈귀가 엮어낸 애절한 오누이의 이야기가 지금 시작된다-!",
+\t\t\t"poster_path": "/3vlBg3kTsHioTy7owIDXFHNXBNk.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t16,
@@ -1164,11 +1164,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 966220,
-\t\t\t"title": "Sniper: The White Raven",
+\t\t\t"title": "스나이퍼: 화이트 레이븐",
 \t\t\t"released_date": "2022-05-03",
 \t\t\t"rating": 7.5,
-\t\t\t"description": "Mykola is an eccentric pacifist who wants to be useful to humanity. When the war begins at Donbass, Mykola’s naive world is collapsing as the militants kill his pregnant wife and burn his home to the ground. Recovered, he makes a cardinal decision and gets enlisted in a sniper company. Having met his wife’s killers, he emotionally breaks down and arranges “sniper terror” for the enemy. He’s saved from a senseless death by his instructor who himself gets mortally wounded. The death of a friend leaves a “scar” and Mykola is ready to sacrifice his life.",
-\t\t\t"poster_path": "/295gZzTXMvuiIG0U19h4M44PXxI.jpg",
+\t\t\t"description": "미콜라는 친환경적인 삶을 살기 위해 아내와 시골로 내려와 물리 교사를 하며 지내던 중, 러시아 무장 단체의 공격을 받아 임신한 아내가 사망하게 된다. 쓰러진 미콜라를 발견한 우크라이나 군은 군대에 미콜라를 데려가고, 분노에 찬 미콜라는 복수를 위해 저격수가 될 결심을 하는데…",
+\t\t\t"poster_path": "/66mrr3AK6grmkfGJ1wlCP8dkzjM.jpg",
 \t\t\t"category": [
 \t\t\t\t10752,
 \t\t\t\t28,
@@ -1181,11 +1181,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 635302,
-\t\t\t"title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+\t\t\t"title": "극장판 귀멸의 칼날: 무한열차 편",
 \t\t\t"released_date": "2020-10-16",
 \t\t\t"rating": 8.3,
-\t\t\t"description": "Tanjiro Kamado, joined with Inosuke Hashibira, a boy raised by boars who wears a boar's head, and Zenitsu Agatsuma, a scared boy who reveals his true power when he sleeps, boards the Infinity Train on a new mission with the Fire Hashira, Kyojuro Rengoku, to defeat a demon who has been tormenting the people and killing the demon slayers who oppose it!",
-\t\t\t"poster_path": "/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg",
+\t\t\t"description": "혈귀로 변해버린 여동생 네즈코를 인간으로 되돌릴 단서를 찾아 비밀조직 귀살대에 들어간 탄지로. 젠이츠, 이노스케와 새로운 임무 수행을 위해 무한열차에 탑승 후 귀살대 최강 검사 염주 렌고쿠와 합류한다. 달리는 무한열차에서 승객들이 하나 둘 흔적 없이 사라지자 숨어있는 식인 혈귀의 존재를 직감하는 렌고쿠. 귀살대 탄지로 일행과 최강 검사 염주 렌고쿠는 어둠 속을 달리는 무한열차에서 모두의 목숨을 구하기 위해 예측불가능한 능력을 가진 혈귀와 목숨을 건 혈전을 시작하는데...",
+\t\t\t"poster_path": "/mxdVTei65ymzhJlalIEtR1qSgV2.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t28,
@@ -1200,11 +1200,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 118340,
-\t\t\t"title": "Guardians of the Galaxy",
+\t\t\t"title": "가디언즈 오브 갤럭시",
 \t\t\t"released_date": "2014-07-30",
 \t\t\t"rating": 7.9,
-\t\t\t"description": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
-\t\t\t"poster_path": "/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+\t\t\t"description": "자칭 전설의 무법자 스타로드, 그러나 현실은 우주를 떠도는 그저그런 좀도둑에 불과한 피터 퀼은 무엇인지도 모른 채 오브를 훔쳤다가 생고생의 길로 접어든다. 값나가는 유물인 줄 알았던 오브가 실은 어마어마한 힘을 지닌 인피니티 스톤이었던 것. 뜻하지 않게 갤럭시의 절대악 타노스와 로난의 타겟이 된 그는 감옥에서 만난 암살자 가모라, 거구의 파이터 드랙스, 현상금 사냥꾼 로켓과 그루트 콤비와 불편한 동맹을 맺고 일명 가디언즈 오브 갤럭시를 결성하는데...",
+\t\t\t"poster_path": "/w1NRMKrB4jytLgBgfA1CEuMBgBf.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t878,
@@ -1217,11 +1217,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 32516,
-\t\t\t"title": "The Forbidden Legend: Sex & Chopsticks 2",
+\t\t\t"title": "금병매2",
 \t\t\t"released_date": "2009-03-04",
 \t\t\t"rating": 6.2,
-\t\t\t"description": "Rich and powerful Simon Qing has been schooled in the ways of sex by his virile father, but is still a virgin. That is, until he meets his first love Violetta who has fun with him all over his father’s estate. Their love does not last, so Simon embarks on a journey. Along the way he meets the comely nun Moon whom Simon deflowers and then marries. He then becomes enamored of Golden Lotus but she is married to dwarf Wu Da-Lang.",
-\t\t\t"poster_path": "/A1yymig7S0FTWv9cTtOwdI1cH5V.jpg",
+\t\t\t"description": "어린 시절 서문경은 호색한이자 엄청난 정력의 소유자인 아버지와 미모의 어머니 사이에서 부유한 집안의 자식으로 자란다. 어머니가 돌아가시던 날부터 당대 최고의 성(性)연구가인 아버지에게 ‘대물철권’, ‘풍차돌리기’, ‘벽타기’ 등의 최고의 성교의 기술과 강철 같은 성기를 단련하며 자란 문경은 자신의 남근을 붓(?)대용으로 사용할 정도로 장성하게 되고, 나날이 늘어만 가는 자신의 성욕을 주체하지 못하여 힘든 나날을 보내는데……  중국의 4대 기서인 소설 ‘금병매’가 원작으로, 전문기 감독 특유의 유머와 해학을 곁들여 블록버스터 에로틱 환타지 영화가 탄생되었다. 원작에 충실하면서도 현대인의 기호에 맞는 유머와 교훈(?)까지 심어주는 영화 ‘금병매’는 보는 이에게 잊지 못할 '쾌락으로의 여행'을 선사한다.",
+\t\t\t"poster_path": "/rUv3JCETD0FsZepmcRuXXhHmqpC.jpg",
 \t\t\t"category": [
 \t\t\t\t35,
 \t\t\t\t18,
@@ -1234,11 +1234,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 676547,
-\t\t\t"title": "Prey for the Devil",
+\t\t\t"title": "프레이 포 더 데블",
 \t\t\t"released_date": "2022-10-23",
 \t\t\t"rating": 7.1,
-\t\t\t"description": "In response to a global rise in demonic possessions, the Catholic Church reopens exorcism schools to train priests in the Rite of Exorcism. On this spiritual battlefield, an unlikely warrior rises: a young nun, Sister Ann. Thrust onto the spiritual frontline with fellow student Father Dante, Sister Ann finds herself in a battle for the soul of a young girl and soon realizes the Devil has her right where he wants her.",
-\t\t\t"poster_path": "/iCvgemXf2Kpr2LvpDmt5J9NhjKM.jpg",
+\t\t\t"description": "과거의 트라우마로 여전히 고통 받고 있는 수녀 앤  구마 의식 학교에서 특별한 재능을 인정받으며 남성 사제에게만 허용되었던 구마 의식 훈련을 받게 되고  그곳에서 만난 환자들을 통해 어릴 적부터 그녀를 괴롭혀 왔던 존재의 실체와 만나게 되는데...",
+\t\t\t"poster_path": "/zNFUrnycnAFp7xukctFg1Ey7YBH.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
 \t\t\t\t53
@@ -1250,11 +1250,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 874745,
-\t\t\t"title": "To Me, the One Who Loved You",
+\t\t\t"title": "너를 사랑했던 한 사람의 나에게",
 \t\t\t"released_date": "2022-10-07",
 \t\t\t"rating": 6,
-\t\t\t"description": "Koyomi Hidaka and Shiori Sato meet at his father’s research center and begin to fall in love, but so do their parents, who eventually marry. To avoid becoming stepsiblings, they decide to run away to a parallel universe. Traveling between dimensions is common in their world, but not without repercussions. Does a universe exist for the young couple, and what will it cost them to find it?",
-\t\t\t"poster_path": "/gt7kD8MjObtgQYH130pZiLTN0qx.jpg",
+\t\t\t"description": "",
+\t\t\t"poster_path": "/fcxJCxRSJQ9XLJUjjDdHJvuLYWm.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t10749,
@@ -1267,11 +1267,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1073413,
-\t\t\t"title": "Phenomena",
+\t\t\t"title": "페노메나스",
 \t\t\t"released_date": "2023-04-14",
 \t\t\t"rating": 5.9,
-\t\t\t"description": "Madrid, Spain, 1998. The many resources and skills of Gloria, Paz and Sagrario, three middle-aged women investigating paranormal events, are put to the test when their leader, Father Pilón, has an unpleasant encounter.",
-\t\t\t"poster_path": "/liosTyTUf0ObasR2HLTOrHQlzth.jpg",
+\t\t\t"description": "스페인 마드리드, 1998년. 초자연적인 사건을 조사하는 세 명의 중년 여성 글로리아, 파즈, 사그라리오의 많은 자원과 기술은 그들의 리더인 필론 신부와 불쾌한 만남을 겪으면서 시험대에 오르게 됩니다.",
+\t\t\t"poster_path": "/lv0r75CdCOUhYq57eJbxvPV091s.jpg",
 \t\t\t"category": [
 \t\t\t\t35,
 \t\t\t\t27,
@@ -1284,11 +1284,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 874743,
-\t\t\t"title": "To Every You I've Loved Before",
+\t\t\t"title": "내가 사랑했던 모든 너에게",
 \t\t\t"released_date": "2022-10-07",
 \t\t\t"rating": 6.5,
-\t\t\t"description": "While struggling to make friends after his parents’ divorce, Koyomi Takasaki meets Kazune Takigawa, but apparently, they already have. Kazune reveals that she’s from World Line 85, an alternate universe in which she and Koyomi are lovers. But in a reality where moving between dimensions is natural, could Koyomi be the one from another world?",
-\t\t\t"poster_path": "/yl4WOrXTVFihtd6wcxpwkKD7xoP.jpg",
+\t\t\t"description": "",
+\t\t\t"poster_path": "/zQqUvA1rxSceehwoChsKB780plX.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t10749,
@@ -1301,10 +1301,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 884184,
-\t\t\t"title": "Consecration",
+\t\t\t"title": "칸시크레이션",
 \t\t\t"released_date": "2023-02-09",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "After the alleged suicide of her priest brother, Grace travels to the remote Scottish convent where he fell to his death. Distrusting the Church's account, she uncovers murder, sacrilege and a disturbing truth about herself.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/yQTRmPzKAdLodknnPVtImm6FWPZ.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
@@ -1317,11 +1317,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 843794,
-\t\t\t"title": "JUNG_E",
+\t\t\t"title": "정이",
 \t\t\t"released_date": "2023-01-20",
 \t\t\t"rating": 6.3,
-\t\t\t"description": "On an uninhabitable 22nd-century Earth, the outcome of a civil war hinges on cloning the brain of an elite soldier to create a robot mercenary.",
-\t\t\t"poster_path": "/z2nfRxZCGFgAnVhb9pZO87TyTX5.jpg",
+\t\t\t"description": "급격한 기후변화로 지구는 폐허가 되고 인류는 우주에 새로운 터전 쉘터를 만들어 이주한다. 수십 년째 이어지는 내전에서 윤정이는 수많은 작전의 승리를 이끌며 전설의 용병으로 거듭난다. 하지만 단 한 번의 작전 실패로 식물인간이 되고, 군수 A.I. 개발 회사 크로노이드는 그녀의 뇌를 복제해 최고의 A.I. 전투 용병 개발을 시작한다. 35년 후, 정이의 딸 윤서현은 정이 프로젝트의 연구팀장이 되어 전투 A.I. 개발에 힘쓴다. 끝없는 복제와 계속되는 시뮬레이션에도 연구에 진전이 없자, 크로노이드는 정이를 두고 또 다른 프로젝트를 준비한다. 이를 알게 된 서현은 정이를 구하기 위한 계획을 세우는데…",
+\t\t\t"poster_path": "/qEkatvFb6hrebLBAanb25ea26yh.jpg",
 \t\t\t"category": [
 \t\t\t\t878
 \t\t\t]
@@ -1332,10 +1332,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 842544,
-\t\t\t"title": "Transfusion",
+\t\t\t"title": "트랜스퓨전",
 \t\t\t"released_date": "2023-01-05",
 \t\t\t"rating": 6.4,
-\t\t\t"description": "Ryan Logan, a former Special Forces operative, is battling to cope with life after the loss of his wife.  He is thrusted into the criminal underworld to keep his only son from being taken from him.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/bxh5xCCW9Ynfg6EZJWUkc1zqTnr.jpg",
 \t\t\t"category": [
 \t\t\t\t80
@@ -1347,11 +1347,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 265712,
-\t\t\t"title": "Stand by Me Doraemon",
+\t\t\t"title": "도라에몽: 스탠바이미",
 \t\t\t"released_date": "2014-08-08",
 \t\t\t"rating": 7.3,
-\t\t\t"description": "Sewashi and Doraemon find themselves way back in time and meet Nobita. It is up to Doraemon to take care of Nobita or else he will not return to the present.",
-\t\t\t"poster_path": "/wc7XQbfx6EIQqCuvmBMt3aisb2Y.jpg",
+\t\t\t"description": "공부도 꽝, 운동도 꽝, 무얼해도 덜렁대고 소심한 소년 진구.  그런 진구에게 행복한 꿈과 미래를 선물하는 임무를 받고 22세기에서 날아온 최고의 친구, 도라에몽!  대나무 헬리콥터, 어디로든 문, 투명망토, 암기빵, 그리고 타임머신까지!  도라에몽은 온갖 미래의 비밀도구로 오직 진구만을 위한 노력에 나선다.  마지못해 임무를 부여 받고 미래에서 끌려온 도라에몽은 누구보다 착한 마음씨를 지닌 진구와 점차 특별한 우정을 나누게 되지만,  언제까지나 함께할 것 같던 두 단짝에게도 이별의 순간이 찾아오는데..  과연 도라에몽은 진구의 꿈과 행복을 이뤄줄 수 있을까?  우리가 몰랐던 도라에몽의 처음, 그리고 마지막 이야기가 펼쳐진다!",
+\t\t\t"poster_path": "/q7YdWMCizuWCXsJkP7dQ7ASW7DJ.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t10751,
@@ -1365,11 +1365,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 675353,
-\t\t\t"title": "Sonic the Hedgehog 2",
+\t\t\t"title": "수퍼 소닉 2",
 \t\t\t"released_date": "2022-04-08",
 \t\t\t"rating": 7.6,
-\t\t\t"description": "After settling in Green Hills, Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns, this time with a new partner, Knuckles, in search for an emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.",
-\t\t\t"poster_path": "/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg",
+\t\t\t"description": "강력한 파워의 ‘너클즈’와 함께 돌아온 천재 과학자 ‘닥터 로보트닉’에 맞서 지구를 구하기 위해 ‘소닉’과 새로운 파트너 ‘테일즈’가 전 세계를 누비는 스피드 액션 블록버스터.",
+\t\t\t"poster_path": "/arCDDZdvamNY628gWJVjlCycf69.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -1383,10 +1383,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1003580,
-\t\t\t"title": "Legion of Super-Heroes",
+\t\t\t"title": "리전 오브 슈퍼 히어로즈",
 \t\t\t"released_date": "2023-02-07",
 \t\t\t"rating": 6.3,
-\t\t\t"description": "Kara, devastated by the loss of Krypton, struggles to adjust to her new life on Earth. Her cousin, Superman, mentors her and suggests she leave their space-time to attend the Legion Academy in the 31st century, where she makes new friends and a new enemy: Brainiac 5. Meanwhile, she must contend with a mysterious group called the Dark Circle as it searches for a powerful weapon held in the Academy’s vault.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/8M6bA5t2q5u1nWDTEIXuGDwvboW.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
@@ -1400,11 +1400,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 774752,
-\t\t\t"title": "The Guardians of the Galaxy Holiday Special",
+\t\t\t"title": "가디언즈 오브 갤럭시 홀리데이 스페셜",
 \t\t\t"released_date": "2022-11-25",
 \t\t\t"rating": 7.3,
-\t\t\t"description": "On a mission to make Christmas unforgettable for Quill, the Guardians head to Earth in search of the perfect present.",
-\t\t\t"poster_path": "/8dqXyslZ2hv49Oiob9UjlGSHSTR.jpg",
+\t\t\t"description": "퀼에게 잊지 못할 크리스마스를 선사하기 위해 가디언즈가 완벽한 선물을 찾아 지구로 향한다.",
+\t\t\t"poster_path": "/hh1kvVSc1kl3Ub5klMao6Gi5i5Q.jpg",
 \t\t\t"category": [
 \t\t\t\t35,
 \t\t\t\t878,
@@ -1417,11 +1417,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 650270,
-\t\t\t"title": "Ryoma! The Prince of Tennis",
+\t\t\t"title": "료마! 테니스의 왕자: 디사이드",
 \t\t\t"released_date": "2021-11-11",
 \t\t\t"rating": 2,
-\t\t\t"description": "Inspired by his tennis champion father, Ryoma is determined to take his game to the next level and train in the US. But in the middle of an intense tennis battle to save his classmate Sakuno from dangerous villains, they somehow find themselves transported back to the past, just as Ryoma’s father is about to undertake his final championship match at the US Open – when he was mysteriously forced to retire.",
-\t\t\t"poster_path": "/i3uOi1yikhDZP6VbA2lgsztBLCj.jpg",
+\t\t\t"description": "전국 테니스대회 우승자 '료마'가 과거로 타임슬립하게 되면서 벌어지는 이야기를 그린 애니메이션 영화",
+\t\t\t"poster_path": "/8GT56fW9PIMBKFO5ygNMN4xm4bT.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t35
@@ -1436,7 +1436,7 @@
 \t\t\t"title": "Disquiet",
 \t\t\t"released_date": "2023-02-10",
 \t\t\t"rating": 7,
-\t\t\t"description": "After a near-fatal car accident, Sam wakes to discover he is trapped in an abandoned hospital by mysterious and sinister forces that have no intention of letting him leave…",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/fKuyTfzKMOdwQi150Zu3DVXwi7J.jpg",
 \t\t\t"category": [
 \t\t\t\t53,
@@ -1446,14 +1446,32 @@
 \t\t}
 \t},
 \t{
+\t\t"pk": 1114905,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1114905,
+\t\t\t"title": "죽음의 룰렛",
+\t\t\t"released_date": "2023-05-05",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "가족 3명과 서로 일면식 없는 4명의 인물이 갑자기 납치되어 외딴 섬의 큰 별장에 갇힌 채 깨어나게 된 이후, 알 수 없는 범인의 지시에 의해 서로를 죽여야만 하는 살인 게임을 펼치게 되는 내용",
+\t\t\t"poster_path": "/tP0xZWNqNNM0PEhkURsKriTQT9j.jpg",
+\t\t\t"category": [
+\t\t\t\t53,
+\t\t\t\t9648,
+\t\t\t\t18,
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
 \t\t"pk": 724495,
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 724495,
-\t\t\t"title": "The Woman King",
+\t\t\t"title": "더 우먼 킹",
 \t\t\t"released_date": "2022-09-16",
 \t\t\t"rating": 7.8,
-\t\t\t"description": "The story of the Agojie, the all-female unit of warriors who protected the African Kingdom of Dahomey in the 1800s with skills and a fierceness unlike anything the world has ever seen, and General Nanisca as she trains the next generation of recruits and readies them for battle against an enemy determined to destroy their way of life.",
+\t\t\t"description": "1800년대 아프리카 다호메이 왕국을 전례 없는 기술과 용맹함으로 지켜낸 여성 전사 부대 아고지에와 그들의 삶의 방식을 파괴하려는 적에 맞서 차세대 신병들을 훈련하고 전투를 준비하는 나니스카 장군의 이야기",
 \t\t\t"poster_path": "/438QXt1E3WJWb3PqNniK0tAE5c1.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
@@ -1467,10 +1485,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1111140,
-\t\t\t"title": "Two Sinners and a Mule",
+\t\t\t"title": "투 시너스 앤드 어 뮬",
 \t\t\t"released_date": "2023-04-21",
 \t\t\t"rating": 5.7,
-\t\t\t"description": "Kicked out of a small Western town for sinful behavior, free-spirited Alice and Nora set out for Virginia City to pursue their dream of opening a restaurant. Out on the prairie, they come across an injured bounty hunter named Elden. Hoping to share in the reward, they nurse Elden back to health and help him stalk his prey, Grimes. But as Nora and Alice both develop feelings for Elden, no one notices that Grimes is now on their tail, and the hunters become the hunted…",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/icL1zn5z1L5ULIpxkuOLjeUgURY.jpg",
 \t\t\t"category": [
 \t\t\t\t37,
@@ -1483,11 +1501,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 458156,
-\t\t\t"title": "John Wick: Chapter 3 - Parabellum",
+\t\t\t"title": "존 윅 3: 파라벨룸",
 \t\t\t"released_date": "2019-05-15",
 \t\t\t"rating": 7.4,
-\t\t\t"description": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn.",
-\t\t\t"poster_path": "/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg",
+\t\t\t"description": "사랑하는 아내와 반려견이 죽은 후 복수를 위해 돌아온 전설의 킬러, 존 윅은 성역 콘티넨탈 호텔에서는 살인하면 안 된다는 룰을 깨면서 전세계 킬러들의 표적이 된다. 전편에서 존 윅이 국제암살자연맹에서 파문당한 직후 1시간 동안 도망갈 시간을 내어 준 윈스턴은 최고회의로부터 그를 도왔다는 이유로 자리에서 물러날 것을 요구받는다. 현상금이 1400만달러로 불어난 존 윅은 옛 동료이자 현재 카사블랑카 콘티넨탈 호텔의 지점장인 소피아에게 도움을 청한다.",
+\t\t\t"poster_path": "/judgsR2sH5kie1mTW94LWaebWLK.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t53,
@@ -1500,10 +1518,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1026563,
-\t\t\t"title": "13 Exorcisms",
+\t\t\t"title": "13 exorcismos",
 \t\t\t"released_date": "2022-11-04",
 \t\t\t"rating": 5.6,
-\t\t\t"description": "After participating in a séance, young Laura begins to behave strangely. Alarmed, her parents ask Father Olmedo, one of the few exorcists authorized by the Vatican to intervene in cases of demonic possession, for help.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/8LpnMIqpRiwxpbGR33ALCmVl7gj.jpg",
 \t\t\t"category": [
 \t\t\t\t18,
@@ -1519,7 +1537,7 @@
 \t\t\t"title": "Solo Somos Carne",
 \t\t\t"released_date": "2022-10-13",
 \t\t\t"rating": 7.2,
-\t\t\t"description": "A regular day for Bans and Uzu, little did they know a series of events would bring them face to face with an alternate reality and their chance to confront Dixon, a disturbed psychopath with blood on his hands and demons in his mind.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/9eVqMhZEbq53VFbmRNqh3yzT0xM.jpg",
 \t\t\t"category": [
 \t\t\t\t27
@@ -1531,30 +1549,13 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 663712,
-\t\t\t"title": "Terrifier 2",
+\t\t\t"title": "테리파이어 2",
 \t\t\t"released_date": "2022-10-06",
 \t\t\t"rating": 6.9,
-\t\t\t"description": "After being resurrected by a sinister entity, Art the Clown returns to Miles County where he must hunt down and destroy a teenage girl and her younger brother on Halloween night.  As the body count rises, the siblings fight to stay alive while uncovering the true nature of Art's evil intent.",
+\t\t\t"description": "악의 주체에 의해 부활한 아트 더 클라운은 마일즈 카운티로 돌아와 할로윈 밤에 10대 소녀와 그녀의 남동생을 사냥하고 살해한다. 시체의 수가 증가함에 따라 형제자매들은 아트 더 클라운의 악한 의도의 진면목을 들춰내면서 생존을 위해 싸운다.",
 \t\t\t"poster_path": "/8gLhu8UFPZfH2Hv11JhTZkb9CVl.jpg",
 \t\t\t"category": [
 \t\t\t\t27
-\t\t\t]
-\t\t}
-\t},
-\t{
-\t\t"pk": 667538,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 667538,
-\t\t\t"title": "Transformers: Rise of the Beasts",
-\t\t\t"released_date": "2023-06-07",
-\t\t\t"rating": 0,
-\t\t\t"description": "A ‘90s globetrotting adventure that introduces the Maximals, Predacons, and Terrorcons to the existing battle on earth between Autobots and Decepticons.",
-\t\t\t"poster_path": "/aY2hzOLuHTxKev5bWnC05ZjxtrB.jpg",
-\t\t\t"category": [
-\t\t\t\t28,
-\t\t\t\t12,
-\t\t\t\t878
 \t\t\t]
 \t\t}
 \t},
@@ -1563,10 +1564,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1077280,
-\t\t\t"title": "Die Hart",
+\t\t\t"title": "다이 하트",
 \t\t\t"released_date": "2023-02-22",
 \t\t\t"rating": 6.1,
-\t\t\t"description": "Kevin Hart - playing a version of himself - is on a death-defying quest to become an action star. And with a little help from John Travolta, Nathalie Emmanuel, and Josh Hartnett - he just might pull it off.",
+\t\t\t"description": "자기 자신으로 나오는 케빈 하트가 액션 스타가 되기 위해 목숨을 건 사투를 벌인다. 케빈 하트는 존 트라볼타와 내털리 이매뉴얼, 조시 하트넷의 도움을 받아 성공할 수 있을까?",
 \t\t\t"poster_path": "/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
@@ -1580,11 +1581,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 964426,
-\t\t\t"title": "Gold Run",
+\t\t\t"title": "Gulltransporten",
 \t\t\t"released_date": "2022-12-15",
 \t\t\t"rating": 6.8,
-\t\t\t"description": "Fredrik isn’t the bravest of men, but now he is faced with a great responsibility and an enormous task - to get the entire Norwegian gold reserve away from the Nazis during the invasion of Norway.",
-\t\t\t"poster_path": "/6E4LopmCMUXcMLIv7o3jw1xQrgJ.jpg",
+\t\t\t"description": "",
+\t\t\t"poster_path": "/xzP0WmdTac9Pl9hgBqwii9iuTlZ.jpg",
 \t\t\t"category": [
 \t\t\t\t10752,
 \t\t\t\t28,
@@ -1598,11 +1599,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 447277,
-\t\t\t"title": "The Little Mermaid",
+\t\t\t"title": "인어공주",
 \t\t\t"released_date": "2023-05-18",
 \t\t\t"rating": 0,
-\t\t\t"description": "The youngest of King Triton’s daughters, and the most defiant, Ariel longs to find out more about the world beyond the sea, and while visiting the surface, falls for the dashing Prince Eric. With mermaids forbidden to interact with humans, Ariel makes a deal with the evil sea witch, Ursula, which gives her a chance to experience life on land, but ultimately places her life – and her father’s crown – in jeopardy.",
-\t\t\t"poster_path": "/kMsNcjyYRPoKFp617BKvPum2Iiw.jpg",
+\t\t\t"description": "늘 바다 너머의 세상을 꿈꾸던 모험심 가득한 인어공주 에리얼이 조난당한 에릭 왕자를 구해주며 자신의 마음의 소리를 따라 금지된 인간 세상으로 나아가는 모험을 그린 작품",
+\t\t\t"poster_path": "/542sSHOPh18wjt2nB6whOiaAKrO.jpg",
 \t\t\t"category": [
 \t\t\t\t12,
 \t\t\t\t10751,
@@ -1616,10 +1617,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1087040,
-\t\t\t"title": "Money Shot: The Pornhub Story",
+\t\t\t"title": "머니 샷: 폰허브를 말하다",
 \t\t\t"released_date": "2023-03-15",
 \t\t\t"rating": 5.8,
-\t\t\t"description": "Featuring interviews with performers, activists and past employees, this documentary offers a deep dive into the successes and scandals of Pornhub.",
+\t\t\t"description": "폰허브의 성공과 추문에 대해 깊숙이 파헤친다. 배우, 운동가 그리고 전직 직원들의 인터뷰로 이루어진 다큐멘터리.",
 \t\t\t"poster_path": "/kpTqWqLYcf1uErnx5VXLah4EWJZ.jpg",
 \t\t\t"category": [
 \t\t\t\t99
@@ -1631,11 +1632,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 776835,
-\t\t\t"title": "The Magician's Elephant",
+\t\t\t"title": "마술사의 코끼리",
 \t\t\t"released_date": "2023-03-10",
 \t\t\t"rating": 7.1,
-\t\t\t"description": "Peter is searching for his long-lost sister when he crosses paths with a fortune teller in the market square. His one one question is: is his sister still alive? The answer, that he must find a mysterious elephant and the magician who will conjure it, sets Peter off on a journey to complete three seemingly impossible tasks that will change the face of his town forever.",
-\t\t\t"poster_path": "/cAoAgzOCxSytYBqqCQulhXNR3LB.jpg",
+\t\t\t"description": "오래전 잃어버린 여동생 아델을 찾고 있는 피터가 시장에서 점술가를 만난다. 피터의 마음속에는 단 한 가지 질문밖에 없다. 동생이 아직 살아있을까? 점술가는 그에 대한 답으로 신비한 코끼리와 그 코끼리를 불러낼 마술사를 찾아야 한다고 말한다. 그 후로 불가능해 보이는 세 가지 과제를 완수하기 위해 험난한 여정에 오르는 피터. 이제 마을의 모습은 영원히 바뀌고, 피터에게는 일생일대의 모험이 펼쳐진다.",
+\t\t\t"poster_path": "/4GolfoFs5QbvAmY2DM6msueAoSd.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t12,
@@ -1649,11 +1650,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 875104,
-\t\t\t"title": "Ip Man: The Awakening",
+\t\t\t"title": "엽문: 종사각성",
 \t\t\t"released_date": "2023-05-05",
 \t\t\t"rating": 5.6,
-\t\t\t"description": "When a young Master Ip stops a kidnapping, he ignites a turf war with a ruthless human-trafficking ring. In retaliation, the gang kidnaps one of Ip Man's close friends, forcing him to face the group's brutal boxing champion head-on.",
-\t\t\t"poster_path": "/A7vhdyGrpPMKXsuFBZzxmave94F.jpg",
+\t\t\t"description": "1915년, 고향 불산을 떠나 홍콩에서 학교를 다니게 된 엽문은 예전 고향 집에서 일하던 호보풍과 재회한다. 어느 날, 엽문과 호보풍은 인신매매 현장을 목격하고 영국인 악당 무리와 싸움을 벌이게 된다. 영국인 악당 우두머리인 스타크는 호보풍의 여동생을 납치하고서 인질을 풀어주는 대가로 중국 무술인 영춘권과 영국 무술인 바티츠의 공개 대결을 제안하는데...",
+\t\t\t"poster_path": "/u5inEFexijeDQdytlkoSspIoWsU.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -1670,10 +1671,27 @@
 \t\t\t"title": "H.P. Lovecraft's Witch House",
 \t\t\t"released_date": "2022-06-29",
 \t\t\t"rating": 5.8,
-\t\t\t"description": "Determined to prove the possibility of alternate dimensions, a graduate student unknowingly unlocks a gateway to unimaginable horror. Based on the H.P. Lovecraft's short story The Dreams in the Witch House.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/5KmscR49WkmuPJKjmK4OUmsRn5C.jpg",
 \t\t\t"category": [
 \t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 667538,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 667538,
+\t\t\t"title": "트랜스포머: 비스트의 서막",
+\t\t\t"released_date": "2023-06-07",
+\t\t\t"rating": 0,
+\t\t\t"description": "화려한 액션과 스펙터클로 전 세계를 사로잡은 영화 <트랜스포머> 시리즈의 신작 <트랜스포머: 비스트의 서막>은 1990년대의 지구를 배경으로 벌어지는 오토봇과 디셉티콘의 전투 그리고 새롭게 등장하는 캐릭터들인 맥시멀을 선보일 예정이다.",
+\t\t\t"poster_path": "/chUZNPNd7EiETSB4xBGykXhuXRr.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t878
 \t\t\t]
 \t\t}
 \t},
@@ -1682,11 +1700,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 507086,
-\t\t\t"title": "Jurassic World Dominion",
+\t\t\t"title": "쥬라기 월드: 도미니언",
 \t\t\t"released_date": "2022-06-01",
 \t\t\t"rating": 6.9,
-\t\t\t"description": "Four years after the destruction of Isla Nublar, Biosyn operatives attempt to track down Maisie Lockwood, while Dr Ellie Sattler investigates a genetically engineered swarm of giant insects.",
-\t\t\t"poster_path": "/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg",
+\t\t\t"description": "공룡들의 터전이었던 이슬라 누블라 섬이 파괴된 후,  마침내 공룡들은 섬을 벗어나 세상 밖으로 출몰한다. 지상에 함께 존재해선 안 될 위협적 생명체인 공룡의 등장으로 인류 역사상 겪어보지 못한 사상 최악의 위기를 맞이한 인간들. 지구의 최상위 포식자 자리를 걸고 인간과 공룡의 최후의 사투가 펼쳐진다.",
+\t\t\t"poster_path": "/odxdUZWZ7fBfy3ZRj063wuJnZvo.jpg",
 \t\t\t"category": [
 \t\t\t\t12,
 \t\t\t\t28,
@@ -1699,10 +1717,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 668482,
-\t\t\t"title": "Roald Dahl's Matilda the Musical",
+\t\t\t"title": "로알드 달의 뮤지컬 마틸다",
 \t\t\t"released_date": "2022-11-25",
 \t\t\t"rating": 6.8,
-\t\t\t"description": "An extraordinary young girl discovers her superpower and summons the remarkable courage, against all odds, to help others change their stories, whilst also taking charge of her own destiny. Standing up for what's right, she's met with miraculous results.",
+\t\t\t"description": "명석한 두뇌와 풍부한 상상력을 지닌 특별한 소녀. 자신의 이야기를 바꾸려 당당히 나서자 기적과도 같은 결과가 찾아오는데. 용감한 소녀 마틸다를 만나보세요!",
 \t\t\t"poster_path": "/ga8R3OiOMMgSvZ4cOj8x7prUNYZ.jpg",
 \t\t\t"category": [
 \t\t\t\t10751,
@@ -1716,10 +1734,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1013860,
-\t\t\t"title": "R.I.P.D. 2: Rise of the Damned",
+\t\t\t"title": "R.I.P.D.:알.아이.피.디.  2",
 \t\t\t"released_date": "2022-11-15",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "When Sheriff Roy Pulsipher finds himself in the afterlife, he joins a special police force and returns to Earth to save humanity from the undead.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/g4yJTzMtOBUTAR2Qnmj8TYIcFVq.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
@@ -1734,10 +1752,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 829410,
-\t\t\t"title": "Sick",
+\t\t\t"title": "식",
 \t\t\t"released_date": "2022-09-11",
 \t\t\t"rating": 6.3,
-\t\t\t"description": "In the midst of the pandemic, college student Parker and her best friend Miri decide to self-quarantine at her family's lake house, where they will be alone — or so they think.",
+\t\t\t"description": "파커와 미리는 호숫가집에서 전염병의 유행을 피하고자 격리하기로 한다.",
 \t\t\t"poster_path": "/nBgxSimgLMGYCQckRQw7C2f7row.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
@@ -1750,11 +1768,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 988233,
-\t\t\t"title": "Hex",
+\t\t\t"title": "파라노말 데드점프",
 \t\t\t"released_date": "2022-11-01",
 \t\t\t"rating": 5.9,
-\t\t\t"description": "Following a mysterious disappearance on a jump, a group of skydivers experiences paranormal occurrences that leave them fighting for their lives.",
-\t\t\t"poster_path": "/mFukGiFZaVYoXIR8nrE95LlfbHG.jpg",
+\t\t\t"description": "스카이다이빙 팀의 리더 ‘페이슨’은  ‘세라’의 합류로 팀원이 6명이 되자 최고 난이도 점프대형 ‘헥스’를 시도하자고 말한다.  ‘헥스’의 저주에 대해 익히 알고 있던 멤버들은 내키지 않지만 그의 완강한 태도에 결국 다같이 헬기에 오른다.  수 천 미터 상공에서 뛰어내린 순간 기적과 같이 ‘헥스’를 성공한 기쁨도 잠시 ‘페이슨’이 공중에서 감쪽같이 사라지고 지상 어디에서도 그의 모습을 찾을 수 없는데…",
+\t\t\t"poster_path": "/dqsmNztytQzUXZgfKK5QaoZzcsS.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t27,
@@ -1767,11 +1785,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 299536,
-\t\t\t"title": "Avengers: Infinity War",
+\t\t\t"title": "어벤져스: 인피니티 워",
 \t\t\t"released_date": "2018-04-25",
 \t\t\t"rating": 8.3,
-\t\t\t"description": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
-\t\t\t"poster_path": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+\t\t\t"description": "타노스는 6개의 인피니티 스톤을 획득해 신으로 군림하려 한다. 그것은 곧 인류의 절반을 학살해 우주의 균형을 맞추겠다는 뜻. 타노스는 닥터 스트레인지가 소유한 타임 스톤, 비전의 이마에 박혀 있는 마인드 스톤을 차지하기 위해 지구를 침략한다. 아이언맨과 스파이더맨은 가디언즈 오브 갤럭시의 멤버들과 타노스를 상대한다. 지구에선 캡틴 아메리카, 완다, 블랙 위도우, 블랙 팬서 등이 비전을 지키기 위해 뭉친다.",
+\t\t\t"poster_path": "/kmP6viwzcEkZeoi1LaVcQemcvZh.jpg",
 \t\t\t"category": [
 \t\t\t\t12,
 \t\t\t\t28,
@@ -1784,11 +1802,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 882598,
-\t\t\t"title": "Smile",
+\t\t\t"title": "스마일",
 \t\t\t"released_date": "2022-09-23",
 \t\t\t"rating": 6.8,
-\t\t\t"description": "After witnessing a bizarre, traumatic incident involving a patient, Dr. Rose Cotter starts experiencing frightening occurrences that she can't explain. As an overwhelming terror begins taking over her life, Rose must confront her troubling past in order to survive and escape her horrifying new reality.",
-\t\t\t"poster_path": "/aPqcQwu4VGEewPhagWNncDbJ9Xp.jpg",
+\t\t\t"description": "기괴한 미소를 지으며 자신의 눈 앞에서 목숨을 끊는 환자를 목격한 정신과 의사 ‘로즈’. 그날 이후로 ‘로즈’의 일상에 설명할 수 없는 끔찍한 일들이 잇따라 발생한다. 일상을 덮친 공포에 발버둥치던 ‘로즈’는 이전에도 자신과 같은 일을 겪은 사람들이 있었고 그들 모두 끔찍한 죽음을 피할 수 없었다는 사실을 알게 된다. 시시각각 다가오는 죽음에서 벗어나기 위해 사투를 벌이던 로즈는 잊고 싶던 과거와 마주하게 되는데…",
+\t\t\t"poster_path": "/8ncuVFt4e0M2NTTsoPtbxfWN5dO.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
 \t\t\t\t9648,
@@ -1801,11 +1819,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 646385,
-\t\t\t"title": "Scream",
+\t\t\t"title": "스크림",
 \t\t\t"released_date": "2022-01-12",
 \t\t\t"rating": 6.7,
-\t\t\t"description": "Twenty-five years after a streak of brutal murders shocked the quiet town of Woodsboro, a new killer has donned the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town’s deadly past.",
-\t\t\t"poster_path": "/nD4M4Bx457ryLuKYpxFwQ2IBJ5w.jpg",
+\t\t\t"description": "잔혹한 살인 사건으로 우즈보로 마을이 충격에 휩싸인 지 25년이 지난 후,  고스트 페이스를 한 새로운 살인마가 다시 십대들을 노리면서 마을의 어두운 비밀이 다시 수면 위로 떠오르는데…",
+\t\t\t"poster_path": "/tk5i99DjBAYTxbdBGAPIBkP6wID.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
 \t\t\t\t9648,
@@ -1818,11 +1836,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1101799,
-\t\t\t"title": "Queens on the Run",
+\t\t\t"title": "퀸스 온 더 런",
 \t\t\t"released_date": "2023-04-14",
 \t\t\t"rating": 7,
-\t\t\t"description": "When four women finally take the road trip they planned in high school, they have no idea of the things they'll bump into sometimes literally.",
-\t\t\t"poster_path": "/oUmuwUIofGsgOr05kieD3Q8ELEO.jpg",
+\t\t\t"description": "",
+\t\t\t"poster_path": "/3raY76KtEzSHya5rcC2j37qGI9L.jpg",
 \t\t\t"category": [
 \t\t\t\t35,
 \t\t\t\t28
@@ -1834,11 +1852,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 67308,
-\t\t\t"title": "3-D Sex and Zen: Extreme Ecstasy",
+\t\t\t"title": "옥보단 3D",
 \t\t\t"released_date": "2011-04-14",
 \t\t\t"rating": 4.8,
-\t\t\t"description": "Loosely based on a 17th century erotic Chinese story named The Carnal Prayer Mat, the story follows a young scholar named Yangsheng who gets married to the beautiful daughter of a local merchant. When their sex life proves unsatisfactory, Yangsheng leaves home and journeys to the Pavilion of Ultimate Bliss.",
-\t\t\t"poster_path": "/mmvFokJgpFmNt522Hfpq3Zfs2Ra.jpg",
+\t\t\t"description": "뛰어난 재주와 매력적인 외모, 호방한 성격의 미앙생은 에로 지상주의를 꿈꾸지만, 사실은 제대로 기 한번 못 펴본 고개 숙인 남자. 지고지순한 옥향의 매력에 첫눈에 반해 결혼을 하지만, 부족한 물건 탓에 굴욕적인 첫날 밤을 보내고 점점 무기력해진다. 그러던 어느 날, 술과 여자로 가득한 지상최대의 낙원에 가게 된 미앙생은 음기충만 절세미인들을 만나 매일 밤 황홀경에 빠져든다. 하지만 화려한 몸놀림과 현란한 테크닉의 그녀들을 상대하기에는 자신의 물건이 턱없이 작다는 걸 깨닫고 자책에 빠진 미앙생. 이윽고 음양통달의 고수를 찾아가 특단의 비책을 마련하기로 결심한다. 바로 자신의 물건을 더욱 강력하게 업그레이드 시키는 것. 마침내 누구도 무시할 수 없는 막강한 파워의 거물이 되어 나타난 미앙생은 날이 갈수록 쾌락의 절정에 빠져들고, 그의 부인 옥향은 점점 잊혀져만 가는데… 과연, 미앙생은 이대로 황홀한 밤을 지배하는 천하제일 고수가 될 수 있을까?",
+\t\t\t"poster_path": "/44qdUtA6f3y7daHwo4z3RPRYoKk.jpg",
 \t\t\t"category": [
 \t\t\t\t18,
 \t\t\t\t12,
@@ -1853,11 +1871,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 453395,
-\t\t\t"title": "Doctor Strange in the Multiverse of Madness",
+\t\t\t"title": "닥터 스트레인지: 대혼돈의 멀티버스",
 \t\t\t"released_date": "2022-05-04",
 \t\t\t"rating": 7.4,
-\t\t\t"description": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-\t\t\t"poster_path": "/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
+\t\t\t"description": "아메리카는 어느 날 멀티버스 사이를 오갈 수 있는 힘에 눈을 뜨지만 완전히 제어하지 못한다. 정체불명의 악마가 아메리카를 죽이려 하자 다른 우주의 스트레인지가 이를 막아보지만 결국 살해당한다. 우여곡절 끝에 우리가 알고 있는 우주로 넘어온 아메리카는 어벤져스 멤버인 닥터 스트레인지의 도움과 보호를 받는다. 닥터 스트레인지는 웨스트뷰 사건 이후 잠적한 완다에게 도움을 청하지만 곧바로 그녀가 사건의 진정한 흑막, 스칼렛 위치임이 드러난다. 스칼렛 위치는 자신의 원하는 멀티버스로 가기 위해 아메리카의 힘을 흡수하려 한다. 닥터 스트레인지와 아메리카는 압도적인 힘을 지닌 스칼렛 위치를 피해 또 한번 다른 멀티버스로 도망치지만 그의 끈질긴 추격을 받는다.",
+\t\t\t"poster_path": "/vL5ktZauR0fZMDOHKjakb1idhuU.jpg",
 \t\t\t"category": [
 \t\t\t\t14,
 \t\t\t\t28,
@@ -1870,10 +1888,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 850871,
-\t\t\t"title": "Sayen",
+\t\t\t"title": "사옌",
 \t\t\t"released_date": "2023-03-03",
 \t\t\t"rating": 6.2,
-\t\t\t"description": "Sayen is hunting down the men who murdered her grandmother. Using her training and knowledge of nature, she is able to turn the tables on them, learning of a conspiracy from a corporation that threatens her people's ancestral lands.",
+\t\t\t"description": "칠레 남부, 사옌이라는 젊은 마푸체 여성이 할머니를 죽인 용병들을 추적하러 길을 떠난다. 지금껏 받은 훈련을 통해 침입자들을 상대로 살아남고 보복할 수 있게 되는데… 사악한 기업이 땅과 생계를 위협하는 가운데 그냥 떠날 것인가, 아니면 자신을 비롯한 다른 토착민들을 지킬 것인가.",
 \t\t\t"poster_path": "/aCy61aU7BMG7SfhkaAaasS0KzUO.jpg",
 \t\t\t"category": [
 \t\t\t\t28
@@ -1885,11 +1903,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 384018,
-\t\t\t"title": "Fast & Furious Presents: Hobbs & Shaw",
+\t\t\t"title": "분노의 질주: 홉스 & 쇼",
 \t\t\t"released_date": "2019-08-01",
 \t\t\t"rating": 6.9,
-\t\t\t"description": "Ever since US Diplomatic Security Service Agent Hobbs and lawless outcast Shaw first faced off, they just have traded smack talk and body blows. But when cyber-genetically enhanced anarchist Brixton's ruthless actions threaten the future of humanity, they join forces to defeat him.",
-\t\t\t"poster_path": "/qRyy2UmjC5ur9bDi3kpNNRCc5nc.jpg",
+\t\t\t"description": "이상한 약물에 의해 강력한 파워를 얻게 된 아나키스트 브릭스턴 로어는 인류를 천천히, 그리고 영원히 다른 존재로 바꿔버릴 수 있는 생화학무기를 손에 넣고 자신은 진화형 인간이 된다. 그런데 데카드 쇼의 동생이자 M16 요원인 해티 쇼가 치명적인 병원균이 들어 있는 실린더를 브릭스턴의 손에서 훔쳐 달아난다. 양국으로부터 해티의 행방을 찾아달라는 명령을 받은 루크와 데카드는 유전자 조작으로 사실상 파괴 불가능한 존재가 되어버린 브릭스턴을 상대로 힘겨운 싸움도 이겨나가야 하는데...",
+\t\t\t"poster_path": "/8MdVJYHKp7JFvTMkLkZOou13LYV.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -1902,10 +1920,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1041513,
-\t\t\t"title": "Encanto at the Hollywood Bowl",
+\t\t\t"title": "엔칸토 할리우드 볼",
 \t\t\t"released_date": "2022-12-28",
 \t\t\t"rating": 7.1,
-\t\t\t"description": "A taped performance of the Encanto Live-to-Film Concert Experience at the Hollywood Bowl. The original cast puts on a miracle of a concert as they sing the favorite songs, accompanied by a full orchestra and 50 person ensemble, and the Hollywood Bowl transforms into Casita!",
+\t\t\t"description": "월트 디즈니 애니메이션 스튜디오의 '엔칸토 할리우드 볼'의 성우가 카사 마드리갈로 돌아온다.  스테파니 베아트리스, 어대사, 캐롤라이나 가이탄, 제시카 대로, 다이앤 게레로, 마우로 카스티요, 앤지 세페다, 올가 메레다이즈가 콜롬비아의 카를로스 비베스 등의 특별 게스트와 출연하는 이 라이브를 영화화한 콘서트는 '엔칸토 할리우드 볼'의 세계, 캐릭터, 노래를 기념한다.",
 \t\t\t"poster_path": "/sa3Ku5yNVjp8NloWxJoI9dQjvOi.jpg",
 \t\t\t"category": [
 \t\t\t\t10402
@@ -1917,10 +1935,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 109428,
-\t\t\t"title": "Evil Dead",
+\t\t\t"title": "이블 데드",
 \t\t\t"released_date": "2013-04-05",
 \t\t\t"rating": 6.5,
-\t\t\t"description": "Five young friends find the mysterious and fiercely powerful Book of the Dead, and unable to resist its temptation, release a violent demon on a bloodthirsty quest to possess them all.",
+\t\t\t"description": "샘 레이미의 이블데드(1981) 의 리메이크 작품이다.  애쉬에 해당되는 데이빗의 여동생 미아의 마약 중독을 끊기 위해 산장으로 온 다섯명의 친구들이 산장에서 네크로노미콘을 발견하면서 생기는 참극을 다루고 있다.",
 \t\t\t"poster_path": "/1gDV0Lm9y8ufIKzyf0h0GBgb9Zj.jpg",
 \t\t\t"category": [
 \t\t\t\t27
@@ -1932,11 +1950,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 947704,
-\t\t\t"title": "Yuku et la fleur de l’Himalaya",
+\t\t\t"title": "유쿠와 히말라야 꽃",
 \t\t\t"released_date": "2022-10-19",
 \t\t\t"rating": 2,
-\t\t\t"description": "Yuku is a young mouse who lives with her family in the cellar of a castle. Her grandmother passes on the family values by telling her timeless folk tales. Injured in a tussle with a cat, the old mouse is bedridden and she tells her children that she will have to leave them to follow the little blind mole into the Earth’s tunnels. In one of her grandmother’s storybooks, Yuku learns that the flower of the Himalayas can bring her eternal light. She leaves on a journey of discovery to find the flower.",
-\t\t\t"poster_path": "/8bBmqaVxQFtdLJYB0CCcuwnhptc.jpg",
+\t\t\t"description": "유쿠는 가족과 함께 어느 성 지하실에 사는 어린 쥐다. 그녀의 할머니는 옛날부터 전해 내려오는 이야기를 들려주며 가족의 가치를 알려준다. 고양이와 몸싸움을 하다가 다쳐 몸져누운 할머니는 작은 눈먼 두더지를 따라 땅굴로 들어가려면 곧 자식들과 이별해야 한다고 말한다. 할머니의 이야기책에서 유쿠는 히말라야 꽃이 할머니에게 영원한 빛을 줄 수 있다는 것을 알게 되고, 꽃을 찾기 위해 여행을 떠난다.",
+\t\t\t"poster_path": "/aAttBA1b14xMKlM6dZKOcZGN2q0.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t10751,
@@ -1949,10 +1967,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 325358,
-\t\t\t"title": "Superfast!",
+\t\t\t"title": "슈퍼패스트!",
 \t\t\t"released_date": "2015-03-05",
 \t\t\t"rating": 5,
-\t\t\t"description": "Undercover cop Lucas White joins Vin Serento's LA gang of illegal street racers. They are fast and they are furious and they plan to double cross LA crime kingpin Juan Carlos de la Sol who hides his cash in a downtown Taco Bell. The gang's outrageous plan is as daring as it is ridiculous and will see them towing the whole restaurant, at crazy speeds.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/iuIWl90qCpoxv6g775JB6Kg0m86.jpg",
 \t\t\t"category": [
 \t\t\t\t35,
@@ -1965,11 +1983,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 937278,
-\t\t\t"title": "A Man Called Otto",
+\t\t\t"title": "오토라는 남자",
 \t\t\t"released_date": "2022-12-28",
 \t\t\t"rating": 7.9,
-\t\t\t"description": "When a lively young family moves in next door, grumpy widower Otto Anderson meets his match in a quick-witted, pregnant woman named Marisol, leading to an unlikely friendship that turns his world upside down.",
-\t\t\t"poster_path": "/130H1gap9lFfiTF9iDrqNIkFvC9.jpg",
+\t\t\t"description": "모든 것을 포기하려는 ‘오토’(톰 행크스)는 죽고 싶을 타이밍마다 이를 방해하는 이웃들로 분노가 치밀어 오른다. 인생 최악의 순간, 뜻하지 않은 이웃들과의 사건들로 인해 상황은 생각지도 못한 방향으로 흘러가는데…",
+\t\t\t"poster_path": "/bC0e8GRmi8pHnkXHPbKqUKo9Kxr.jpg",
 \t\t\t"category": [
 \t\t\t\t35,
 \t\t\t\t18
@@ -1981,10 +1999,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1058732,
-\t\t\t"title": "The Simpsons Meet the Bocellis in Feliz Navidad",
+\t\t\t"title": "심슨 가족과 안드레아 보첼리의 \"메리 크리스마스\"",
 \t\t\t"released_date": "2022-12-15",
 \t\t\t"rating": 5.2,
-\t\t\t"description": "This Christmas, Homer surprises Marge with the ultimate gift: an unforgettable performance from Italian opera superstar Andrea Bocelli and his children Matteo and Virginia.",
+\t\t\t"description": "이번 크리스마스에는 호머가 마지를 위해서, 오페라 스타 안드레아 보첼리와 그의 아이들인 마테오와 버지니아가 선사하는 잊지 못할 공연으로 깜짝 선물을 한다.",
 \t\t\t"poster_path": "/9rJFKvYvSyQ3HoTl1gcU55FOzYi.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
@@ -1998,11 +2016,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 414906,
-\t\t\t"title": "The Batman",
+\t\t\t"title": "더 배트맨",
 \t\t\t"released_date": "2022-03-01",
 \t\t\t"rating": 7.7,
-\t\t\t"description": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
-\t\t\t"poster_path": "/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+\t\t\t"description": "지난 2년 간 고담시의 어둠 속에서 범법자들을 응징하며 배트맨으로 살아온 브루스 웨인. 알프레드와 제임스 고든 경위의 도움 아래 그는 도시의 부패한 공직자들과 고위 관료들 사이에서 복수의 화신으로 활약한다. 고담의 시장 선거를 앞두고 고담의 엘리트 집단을 목표로 잔악한 연쇄살인을 저지르는 수수께끼 킬러 리들러가 나타나자, 최고의 탐정 브루스 웨인이 수사에 나서고 남겨진 단서를 풀어가며 캣우먼, 펭귄, 카마인 팔코네, 리들러를 차례대로 만난다. 사이코 범인의 미스터리를 수사하면서 그 모든 증거가 자신을 향한 의도적인 메시지였음을 깨닫고,  리들러에게 농락 당한 배트맨은 광기에 사로잡힌다. 범인의 무자비한 계획을 막고 오랫동안 고담시를 썩게 만든 권력 부패의 고리를 끊어야 하지만, 부모님의 죽음에 얽힌 진실이 밝혀지자 복수와 정의 사이에서 갈등하는데...",
+\t\t\t"poster_path": "/zGgrDMJCnE0s4EDX0L4X1wXFgZv.jpg",
 \t\t\t"category": [
 \t\t\t\t80,
 \t\t\t\t9648,
@@ -2015,11 +2033,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 916224,
-\t\t\t"title": "Suzume",
+\t\t\t"title": "스즈메의 문단속",
 \t\t\t"released_date": "2022-11-11",
 \t\t\t"rating": 8,
-\t\t\t"description": "Suzume, 17, lost her mother as a little girl. On her way to school, she meets a mysterious young man. But her curiosity unleashes a calamity that endangers the entire population of Japan, and so Suzume embarks on a journey to set things right.",
-\t\t\t"poster_path": "/vIeu8WysZrTSFb2uhPViKjX9EcC.jpg",
+\t\t\t"description": "큐슈의 작은 마을에서 살고 있는 소녀 ‘스즈메’는 어느 날, 여행을 하며 ‘문’을 찾고 있는 한 청년을 만난다. 그의 뒤를 쫓아간 소녀는 산속 폐허에서 덩그러니 남겨진 낡은 문을 발견한다. 무언가에 이끌린 듯 ‘스즈메’는 문으로 손을 뻗는데…",
+\t\t\t"poster_path": "/kVS51ssZF1y0IXF342h54cIJ0EK.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t18,
@@ -2033,11 +2051,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 385128,
-\t\t\t"title": "F9",
+\t\t\t"title": "분노의 질주: 더 얼티메이트",
 \t\t\t"released_date": "2021-05-19",
 \t\t\t"rating": 7.2,
-\t\t\t"description": "Dominic Toretto and his crew battle the most skilled assassin and high-performance driver they've ever encountered: his forsaken brother.",
-\t\t\t"poster_path": "/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg",
+\t\t\t"description": "평화로운 은둔생활을 즐기고 있는 도미닉에게 또 다른 적이 나타난다. 미스터 노바디가 실종되면서 남긴 마지막 메시지를 쫓아가던 돔 패밀리 앞에 돔의 친동생 제이콥이 나타나 비밀이 담긴 박스를 탈취해간 것이다. 제이콥이 테러리스트 사이퍼를 이용해 전세계를 위험에 빠트릴 계획을 꾸미고 있음을 알게 된 도미닉은 동생의 폭주를 막고 잘못된 과거를 바로잡기 위해 일어선다. 돌아온 오리지널 멤버 한 등과 함께 다시 부활한 돔 패밀리의 반격의 막이 오른다.",
+\t\t\t"poster_path": "/tVkqaX34vKpprUn5As1kJeYPunr.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -2051,11 +2069,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 846433,
-\t\t\t"title": "The Enforcer",
+\t\t\t"title": "인포서",
 \t\t\t"released_date": "2022-09-22",
 \t\t\t"rating": 7.4,
-\t\t\t"description": "A noir thriller set in Miami, the film follows an enforcer who discovers his femme fatale boss has branched out into cyber sex trafficking, putting a young runaway he’s befriended at risk. He sacrifices everything to save the young girl from the deadly organization he’s spent his life building.",
-\t\t\t"poster_path": "/pXC8JJbfnRWtbD8i2yKFqqWEO4X.jpg",
+\t\t\t"description": "마피아의 집행자로 일했던 바라쿠다가 어느날 돌아온다. 길거리 싸움판에서 유명한 젊은 남자를 영입한 에스텔은 바라쿠다에게 스트레이를 붙인다. 바라쿠다는 16살이 된 딸에게 잘해주고 싶지만 딸과 부인이 거부하고, 이내 소매치기를 하던 빌리를 챙겨주게 된다. 그러던 어느 날 빌리가 사라지고, 이상한 점을 발견한 바라쿠다는 에스텔의 심부름으로 찾아간 웹캠 공장에서 빌리를 보고 구해야겠다고 마음먹는데…",
+\t\t\t"poster_path": "/jzAW5kCRWJuBbsdFSGGcG0dj28K.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t80,
@@ -2069,11 +2087,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 19995,
-\t\t\t"title": "Avatar",
+\t\t\t"title": "아바타",
 \t\t\t"released_date": "2009-12-15",
 \t\t\t"rating": 7.6,
-\t\t\t"description": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
-\t\t\t"poster_path": "/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
+\t\t\t"description": "가까운 미래, 지구는 에너지 고갈 문제를 해결하기 위해 머나먼 행성 판도라에서 대체 자원을 채굴하기 시작한다. 하지만 판도라의 독성을 지닌 대기로 인해 자원 획득에 어려움을 겪게 된 인류는 판도라의 토착민 나비의 외형에 인간의 의식을 주입, 원격 조종이 가능한 새로운 생명체를 탄생시키는 프로그램을 개발한다. 한편 하반신이 마비된 전직 해병대원 제이크 설리는 아바타 프로그램에 참가할 것을 제안받는다. 그 곳에서 자신의 아바타를 통해 자유롭게 걸을 수 있게 된 제이크는 자원 채굴을 막으려는 나비의 무리에 침투하라는 임무를 부여받는데...",
+\t\t\t"poster_path": "/zygmx5abXeDpr3fWYX4jlXFZ1wh.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -2087,10 +2105,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 842942,
-\t\t\t"title": "Bandit",
+\t\t\t"title": "뱅크 맨",
 \t\t\t"released_date": "2022-09-23",
 \t\t\t"rating": 6.2,
-\t\t\t"description": "After escaping a Michigan prison, a charming career criminal assumes a new identity in Canada and goes on to rob a record 59 banks and jewellery stores while being hunted by a rogue task force. Based on the story of The Flying Bandit.",
+\t\t\t"description": "1985년, 길버트 갈반 주니어는 미국 미시간의 감옥을 탈옥해 캐나다로 넘어가 로버트 화이트만의 신분으로 산다. 그곳에서 사회복지가인 앤드레아를 만나 사랑에 빠진 로버트는 돈을 마련하려 은행을 털기 시작하고 그쪽으로 소질이 있음을 알게 된다. 그 후 보안 분석가로 위장한 로버트는 하루 만에 여러 도시의 은행을 털고 비행기로 곳곳을 누빈다. 결국 로버트는 ‘날아다니는 강도’라는 별칭을 얻으며 전국 언론 매체의 주목을 받게 된다. 그 뒤로 이중생활을 하며 흥분과 돈에 빠지게 된 로버트는 더 큰 건을 잡으려고 장물아비인 토미 케이를 만나 손을 잡는다. 결국 형사 존은 날이 갈수록 기세등등하게 유명세를 타는 로버트를 잡으려고 특별 팀을 꾸리는데...",
 \t\t\t"poster_path": "/yph9PAbmjYPvyvbeZvdYIhCZHEu.jpg",
 \t\t\t"category": [
 \t\t\t\t80,
@@ -2104,10 +2122,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 573171,
-\t\t\t"title": "A Frozen Rooster",
+\t\t\t"title": "Huevitos Congelados",
 \t\t\t"released_date": "2022-12-14",
 \t\t\t"rating": 7.8,
-\t\t\t"description": "Follow the adventures of Toto and his family, who will have to travel to the South Pole to fulfill their promise to return a polar bear and some Spanish penguins to their home. In order to fulfill the promise, they will have to overcome some obstacles that will teach them how important teamwork is.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/d7i9UXE7IfPx2uYtYKzgjs6zYzR.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
@@ -2122,11 +2140,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 324552,
-\t\t\t"title": "John Wick: Chapter 2",
+\t\t\t"title": "존 윅: 리로드",
 \t\t\t"released_date": "2017-02-08",
 \t\t\t"rating": 7.3,
-\t\t\t"description": "John Wick is forced out of retirement by a former associate looking to seize control of a shadowy international assassins’ guild. Bound by a blood oath to aid him, Wick travels to Rome and does battle against some of the world’s most dangerous killers.",
-\t\t\t"poster_path": "/hXWBc0ioZP3cN4zCu6SN3YHXZVO.jpg",
+\t\t\t"description": "업계 최고의 레전드 킬러 존 윅은 과거를 뒤로 한 채 평화로운 삶을 꿈꾸며 은퇴를 선언하지만, 과거 자신의 목숨을 구해 줬던 옛 동료 산티노와의 피로 맺은 암살자들의 룰에 발목을 잡히고 만다. 피의 맹세에 대한 선택권 없이 산티노의 청을 들어줘야만 하는 존 윅은 산티노의 지시대로 로마로 향한다. 국제 암살자 연합의 최고 자리를 탈취하기 위해 자신의 친누나를 대신 암살하라는 산티노의 계획으로 인해 존 윅은 위험에 빠지게 되고, 무려 700만 달러의 현상금에 눈이 먼 전 세계의 암살자들의 총구는 그를 향하는데...",
+\t\t\t"poster_path": "/yF41NLIYplr6ilBAF1KvEUny7DO.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t53,
@@ -2139,11 +2157,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 899112,
-\t\t\t"title": "Violent Night",
+\t\t\t"title": "바이올런트 나이트",
 \t\t\t"released_date": "2022-11-30",
 \t\t\t"rating": 7.5,
-\t\t\t"description": "When a team of mercenaries breaks into a wealthy family compound on Christmas Eve, taking everyone inside hostage, the team isn’t prepared for a surprise combatant: Santa Claus is on the grounds, and he’s about to show why this Nick is no saint.",
-\t\t\t"poster_path": "/1XSYOP0JjjyMz1irihvWywro82r.jpg",
+\t\t\t"description": "크리스마스 이브에 부유한 가정에 침입한 용병들이 가족을 인질로 삼아 많은 돈을 요구하지만, 산타클로스의 등장으로 행복한 크리스마스를 지켜내려는 산타의 활약을 그린 코미디 장르의 액션 영화",
+\t\t\t"poster_path": "/th7vBsAm616HTSqFtxWuZJAmN3E.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t35,
@@ -2160,7 +2178,7 @@
 \t\t\t"title": "The Stranger in Our Bed",
 \t\t\t"released_date": "2022-08-26",
 \t\t\t"rating": 6.2,
-\t\t\t"description": "A newly married woman leaves her wealthy husband for a lover who mysteriously disappears. Things start to unravel and become life-threatening on a trip to the husband's family estate.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/9bX57QlmpI1DcWLkggGmg5guqJx.jpg",
 \t\t\t"category": [
 \t\t\t\t53,
@@ -2173,10 +2191,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 551271,
-\t\t\t"title": "Medieval",
+\t\t\t"title": "미디벌",
 \t\t\t"released_date": "2022-09-08",
 \t\t\t"rating": 7.2,
-\t\t\t"description": "The story of 14th century Czech icon and warlord Jan Zizka who defeated armies of the Teutonic Order and the Holy Roman Empire.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/eeUNWsdoiOijOZAMaWFDA5Pb1n8.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
@@ -2190,10 +2208,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 931954,
-\t\t\t"title": "Venus",
+\t\t\t"title": "비너스",
 \t\t\t"released_date": "2022-12-02",
 \t\t\t"rating": 5.6,
-\t\t\t"description": "Lucía, a club dancer on the run, takes refuge in a sinister building on the outskirts of Madrid where her sister Rocío lives with her daughter Alba.",
+\t\t\t"description": "도주 중인 클럽 댄서 루시아는 여동생 로시오가 딸 알바와 함께 살고 있는 마드리드 외곽의 불길한 건물로 피신합니다.",
 \t\t\t"poster_path": "/vyQmDx5CF8x9T6WKCLuoFotGpjf.jpg",
 \t\t\t"category": [
 \t\t\t\t18,
@@ -2207,10 +2225,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1058949,
-\t\t\t"title": "Little Dixie",
+\t\t\t"title": "리틀 딕시",
 \t\t\t"released_date": "2023-02-03",
 \t\t\t"rating": 6,
-\t\t\t"description": "Erstwhile Special Forces operative Doc Alexander is asked to broker a truce with the Mexican drug cartel in secrecy. When Oklahoma Governor Richard Jeffs celebrates the execution of a high-ranking cartel member on TV, his Chief of Staff and Doc inform him about the peace he just ended. But it’s too late, as Cuco, the cartel’s hatchet man, has set his vengeful sights on Doc’s daughter Dixie.",
+\t\t\t"description": "부패한 주지사와 무자비한 마약왕 사이의 거래가 실패로 돌아가자 전직 특수부대 요원 닥(그릴로)이 용의선상에 오르게 됩니다. 이제 닥은 가족이 위험에 처한 상황에서 멕시코 마약 카르텔을 소탕하고 자신의 인생에서 유일하게 긍정적인 존재인 어린 딸 '리틀 딕시'를 지키기 위해 무엇이든 해야 합니다.",
 \t\t\t"poster_path": "/cmWTZj9zzT9KFt3XyL0gssL7Ig8.jpg",
 \t\t\t"category": [
 \t\t\t\t53,
@@ -2225,11 +2243,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 106646,
-\t\t\t"title": "The Wolf of Wall Street",
+\t\t\t"title": "더 울프 오브 월 스트리트",
 \t\t\t"released_date": "2013-12-25",
 \t\t\t"rating": 8,
-\t\t\t"description": "A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort's autobiography.",
-\t\t\t"poster_path": "/34m2tygAYBGqA9MXKhRDtzYd4MR.jpg",
+\t\t\t"description": "부자가 되는 게 꿈인 22살의 조던 벨포트(레오나르도 디카프리오)는 꿈을 실현코자 월스트리트에 발을 들인다. 고객의 돈을 내 주머니로 끌어들이는 비법은 코카인과 마스터베이션에 있다고 말하는 괴짜들이 하루 종일 전화기를 붙들고 사기치는 곳, 조던에게 월스트리트의 첫인상은 그랬다. 첫 직장에 몸담은 지 1년 만에 블랙 먼데이를 경험하고 실직자가 된 조던은 현란한 언변을 무기로 위기를 기회로 만들어버린다. 친구들을 불러모아 스트래튼 오크몬트사를 세운 그는 수수료가 비싼 투기적 저가주을 팔아 돈을 긁어모으고, 주가 조작으로 억만장자가 된 후 술과 마약, 여자를 탐닉한다. 그사이 FBI는 그의 뒤를 캐기 시작하는데...",
+\t\t\t"poster_path": "/g4WhlVecCbBNhVT67ootHe6oe4A.jpg",
 \t\t\t"category": [
 \t\t\t\t80,
 \t\t\t\t18,
@@ -2242,11 +2260,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 575322,
-\t\t\t"title": "Project Gemini",
+\t\t\t"title": "제미나이: 지구 최후의 날",
 \t\t\t"released_date": "2022-01-06",
 \t\t\t"rating": 5.8,
-\t\t\t"description": "After depleting Earth's resources for centuries, humankind's survival requires an exodus to outer space. An international expedition is quickly formed to find a suitable new planet, but when plans go awry, the crew is suddenly stranded without power on a strange planet, where something unimaginable lies in wait.",
-\t\t\t"poster_path": "/rFljUdOozFEv6HDHIFpFvcYW0ec.jpg",
+\t\t\t"description": "치명적인 바이러스로 지구의 식물들이 파괴된 지 3년 후 산소가 부족해지고 과학자들은 전 인류를 구하기 위해 새로운 행성을 찾는 미션을 받고 우주로 떠난다. 하지만, 우주선은 입력한 궤도와는 전혀 다른 방향으로 이끌려가 알 수 없는 행성에 고립되고 비행 멤버들은 상상할 수 없는 존재로부터 공격을 받기 시작하는데…!",
+\t\t\t"poster_path": "/iVwd4NKcvWIfxP36DsCBHd7lqEE.jpg",
 \t\t\t"category": [
 \t\t\t\t878,
 \t\t\t\t27
@@ -2258,11 +2276,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 653851,
-\t\t\t"title": "Devotion",
+\t\t\t"title": "디보션",
 \t\t\t"released_date": "2022-11-23",
 \t\t\t"rating": 7.3,
-\t\t\t"description": "The harrowing true story of two elite US Navy fighter pilots during the Korean War. Their heroic sacrifices would ultimately make them the Navy's most celebrated wingmen.",
-\t\t\t"poster_path": "/26yQPXymbWeCLKwcmyL8dRjAzth.jpg",
+\t\t\t"description": "미 해군 최초의 흑인 파일럿 제시 브라운. 한국 전쟁에서 위험을 무릅쓴 비행에 나선다. 그리고 그의 곁에는 생사를 함께하는 윙맨 톰 허드너가 있다.",
+\t\t\t"poster_path": "/hr3pwgybefqvtrGJ57mu1MmMdWu.jpg",
 \t\t\t"category": [
 \t\t\t\t10752,
 \t\t\t\t36,
@@ -2275,11 +2293,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 555604,
-\t\t\t"title": "Guillermo del Toro's Pinocchio",
+\t\t\t"title": "기예르모 델토로의 피노키오",
 \t\t\t"released_date": "2022-11-09",
 \t\t\t"rating": 8.2,
-\t\t\t"description": "During the rise of fascism in Mussolini's Italy, a wooden boy brought magically to life struggles to live up to his father's expectations.",
-\t\t\t"poster_path": "/vx1u0uwxdlhV2MUzj4VlcMB0N6m.jpg",
+\t\t\t"description": "많은 이들의 사랑을 받은 목각 인형 피노키오의 마법 같은 모험. 현실의 한계를 뛰어넘어, 새 생명을 불어넣는 강력한 사랑의 힘이 펼쳐진다. 이탈리아 고전 동화 \"피노키오\"가 스톱모션 뮤지컬로 재탄생한다. 말썽꾸러기 피노키오는 과연 인간 소년이 될 수 있을까? 그 여정을 따라가 보자.",
+\t\t\t"poster_path": "/6bdUtxydFXLtgcxHMMvlkNnRZWg.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t14,
@@ -2296,7 +2314,7 @@
 \t\t\t"title": "Beautiful Disaster",
 \t\t\t"released_date": "2023-04-04",
 \t\t\t"rating": 5.7,
-\t\t\t"description": "Bad-boy Travis is exactly what college freshman Abby needs and wants to avoid. He spends his nights fighting in underground boxing matches, and his days as the ultimate college campus charmer. But Abby wants nothing to do with Travis. Intrigued by Abby’s resistance, Travis offers her a simple bet: if he loses his next fight, he must remain sex-free for a month. If he wins, Abby must live in his apartment for the same amount of time. Either way, Travis has no idea that Abby’s dark past is about to emerge, and he may have finally met his match.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/bwdLflvCcOCRPqb1x13KPuYIzVx.jpg",
 \t\t\t"category": [
 \t\t\t\t10749,
@@ -2310,11 +2328,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 585511,
-\t\t\t"title": "Luck",
+\t\t\t"title": "럭",
 \t\t\t"released_date": "2022-08-05",
 \t\t\t"rating": 7.9,
-\t\t\t"description": "Suddenly finding herself in the never-before-seen Land of Luck, the unluckiest person in the world must unite with the magical creatures there to turn her luck around.",
-\t\t\t"poster_path": "/1HOYvwGFioUFL58UVvDRG6beEDm.jpg",
+\t\t\t"description": "불운의 아이콘 '샘 그린필드'는 어디에서도 본 적 없는 운의 왕국을 우연히 발견하고, 가장 친한 친구에게 행운을 가져다주기 위해 그곳으로의 여행을 계획한다. 하지만 운의 왕국은 인간의 접근을 허락하지 않고, '샘 그린필드'는 여행을 실행에 옮기기 위한 유일한 방법으로 마법의 생명체들로부터 도움을 받게 된다.",
+\t\t\t"poster_path": "/nN2iHej7TyISjXC6Jl577aqpDHJ.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t12,
@@ -2328,11 +2346,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1012404,
-\t\t\t"title": "Sword Art Online: Extra Edition",
+\t\t\t"title": "ソードアート・オンライン Extra Edition",
 \t\t\t"released_date": "2013-12-31",
 \t\t\t"rating": 6,
-\t\t\t"description": "Kirito and some of his new friends look back at the events of season one. Kirito recalls his defining moments while Suguha learns to swim with the help of Asuna and other girls who fought alongside Kirito.",
-\t\t\t"poster_path": "/nWr2GUTKRR4d8aCApF93OzBfq3e.jpg",
+\t\t\t"description": "",
+\t\t\t"poster_path": "/cf3ng86XjmAG9TOmA6j6yQVJyO7.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t14,
@@ -2345,11 +2363,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 876797,
-\t\t\t"title": "The Last 10 Years",
+\t\t\t"title": "남은 인생 10년",
 \t\t\t"released_date": "2022-03-04",
 \t\t\t"rating": 7,
-\t\t\t"description": "The 20-year-old heroine learns that she only has 10 years to live due to an incurable disease of 1 in tens of thousands. She decided not to fall in love and not to be obsessed with living. But then, she met the hero at a local alumni association.",
-\t\t\t"poster_path": "/yJFUBE5VGjQaTLuyhf4Hb926mn4.jpg",
+\t\t\t"description": "스무 살이 되던 해, 수 만명 중 1명이 걸리는 난치병으로 10년의 삶을 선고받은 ‘마츠리’는 삶의 의지를 잃은 ‘카즈토’를 만나 사랑에 빠진다. 처음 만난 봄, 즐거운 여름, 아름답던 가을, 깊어진 겨울까지 하루하루 애틋하게 사랑한 두 사람 하지만 쌓이는 추억만큼 줄어드는 시간 앞에 결국 ‘마츠리’는 ‘카즈토’를 떠나기로 결심하는데…",
+\t\t\t"poster_path": "/y2Ucvit19UUfsdLKlYyDz2ZfToS.jpg",
 \t\t\t"category": [
 \t\t\t\t18,
 \t\t\t\t10749
@@ -2361,11 +2379,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 739405,
-\t\t\t"title": "Operation Fortune: Ruse de Guerre",
+\t\t\t"title": "스파이 코드명 포춘",
 \t\t\t"released_date": "2023-01-04",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "Special agent Orson Fortune and his team of operatives recruit one of Hollywood's biggest movie stars to help them on an undercover mission when the sale of a deadly new weapons technology threatens to disrupt the world order.",
-\t\t\t"poster_path": "/uo7vWfQUlVwueYTDRicXOJa8Oow.jpg",
+\t\t\t"description": "꿀성대, 수트 핏, 어나더 레벨 액션, 모든 것이 완벽한 스파이 ‘포춘’과 전 세계 최고 요원들이 뭉쳐 세계 평화를 지키기 위해 고군분투하는 첩보 액션 블록버스터",
+\t\t\t"poster_path": "/gEFzlw5tnkJYthVfDS8WuIDZAhU.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t35,
@@ -2378,11 +2396,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 785084,
-\t\t\t"title": "The Whale",
+\t\t\t"title": "더 웨일",
 \t\t\t"released_date": "2022-12-09",
 \t\t\t"rating": 8,
-\t\t\t"description": "A reclusive English teacher suffering from severe obesity attempts to reconnect with his estranged teenage daughter for one last chance at redemption.",
-\t\t\t"poster_path": "/jQ0gylJMxWSL490sy0RrPj1Lj7e.jpg",
+\t\t\t"description": "272kg의 거구로 세상을 거부한 채 살아가는 대학 강사 찰리는 남은 시간이 얼마 없음을 느끼고 오랫동안 만나지 못한 10대 딸 엘리를 집으로 초대한다. 그리고, 매일 자신을 찾아와 에세이 한 편을 완성하면 전 재산을 주겠다고 제안한다.",
+\t\t\t"poster_path": "/q0xV5Lnq30JiegbVGBOvVwrgUDT.jpg",
 \t\t\t"category": [
 \t\t\t\t18
 \t\t\t]
@@ -2393,11 +2411,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 49046,
-\t\t\t"title": "All Quiet on the Western Front",
+\t\t\t"title": "서부 전선 이상 없다",
 \t\t\t"released_date": "2022-10-07",
 \t\t\t"rating": 7.8,
-\t\t\t"description": "Paul Baumer and his friends Albert and Muller, egged on by romantic dreams of heroism, voluntarily enlist in the German army. Full of excitement and patriotic fervour, the boys enthusiastically march into a war they believe in. But once on the Western Front, they discover the soul-destroying horror of World War I.",
-\t\t\t"poster_path": "/2IRjbi9cADuDMKmHdLK7LaqQDKA.jpg",
+\t\t\t"description": "제1차 세계대전 당시 서부전선에서 싸운 독일군 청년의 강렬한 이야기.  젊은 사병과 전우들은 참호 속에서 사투를 벌이며,  처음 전쟁에 대해 느꼈던 환상과 도취감이  어떻게 절망과 공포로 변해가는지를 생생하게 체험한다.",
+\t\t\t"poster_path": "/gH4UTm1wY6HWiv1UBkT7IkiIxjD.jpg",
 \t\t\t"category": [
 \t\t\t\t18,
 \t\t\t\t10752,
@@ -2410,11 +2428,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 599019,
-\t\t\t"title": "Big Trip 2: Special Delivery",
+\t\t\t"title": "빅트립2: 아기곰 배달 대작전",
 \t\t\t"released_date": "2022-10-07",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "It has been a year since Mic Mic and Oscar returned from their incredible adventure. And now, after a diabolical plan by Vulture to sabotage the delivery of the Grizzly cub to his opponent in the American presidential elections, Mic Mic, Oscar, Panda teenager and Stork set off on another great adventure as they ride a zeppelin to return little Grizzly to its rightful parents and save the American elections and the whole continent from an erupting volcano.",
-\t\t\t"poster_path": "/dabXVfrAFfhDte8XVemom3mTJog.jpg",
+\t\t\t"description": "아기 팬더를 배달한 게 엊그제 같은데, 이번엔 아기 반달곰이 뚝! 떨어졌다. 그런데 무려, 동물왕국 대통령 후보의 아들이라고?! ‘믹믹’과 ‘오스카’는 동물왕국의 평화를 위해, 다시 한번 아기를 배달하기로 결심한다. 애니멀 특송단, 배달 시작합니다!",
+\t\t\t"poster_path": "/t4KQRvKUsRTw66cRiGD2w65oKdo.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t10751,
@@ -2428,11 +2446,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 947938,
-\t\t\t"title": "Dolphin Boy",
+\t\t\t"title": "돌핀보이",
 \t\t\t"released_date": "2022-04-07",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "When a plane crashes at sea, dolphins rescue a little boy and raise him as family. He lives a carefree life beneath the waves until an evil monster seizes power over the underwater world. The boy is banished to dry land, where a kind-hearted captain takes him in. With the captain’s help, the boy sets out on a journey to solve the mystery of his true identity.",
-\t\t\t"poster_path": "/gISoDEiaUH9BNEunmLC7FgUVaia.jpg",
+\t\t\t"description": "돌고래야, 사람이야?! 정체를 알 수 없는 녀석이 온다! 바다 속 돌고래와 함께 자란 소년 ‘보이’ 어느 날 친엄마의 존재를 알게 된 ‘보이’는 자신의 뿌리를 궁금해하기 시작하고 … 혼란스러운 상황 속 ‘보이’는 악당 ‘옥토퍼스’로 인해 엄마 돌고래 ‘나나’를 잃고 해안가로 떠밀려간다. 평생을 자신이 돌고래인 줄 알고 살던 ‘보이’는 해안가에 사는 ‘머버리드 선장’의 도움으로 친엄마를 찾아내기로 결심하는데 … 2023년, 올겨울 유일무이 오션 어드벤처가 온다!",
+\t\t\t"poster_path": "/Aif2IsFGCur5KoXnjkXyAhishMj.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t12,
@@ -2449,7 +2467,7 @@
 \t\t\t"title": "Lord of the Streets",
 \t\t\t"released_date": "2022-04-22",
 \t\t\t"rating": 5.2,
-\t\t\t"description": "When Jason Dyson refuses to make his prized fighter throw an MMA match, a notorious gangster collects his debt by killing the fighter and kidnapping Jason's daughter. Now he must train a prisoner to endure five consecutive underground fights to save her.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/n9YWVQRc0zw0nwrFcOkOpffZxjc.jpg",
 \t\t\t"category": [
 \t\t\t\t28
@@ -2461,11 +2479,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 772515,
-\t\t\t"title": "Huesera: The Bone Woman",
+\t\t\t"title": "납골당",
 \t\t\t"released_date": "2023-02-10",
 \t\t\t"rating": 5.8,
-\t\t\t"description": "Valeria's joy at becoming a first-time mother is quickly taken away when she's cursed by a sinister entity. As danger closes in, she's forced deeper into a chilling world of dark magic that threatens to consume her.",
-\t\t\t"poster_path": "/zgpj76z9byUgcWnxLDmtZ3XqfvN.jpg",
+\t\t\t"description": "첫 아이를 임신하게 된 발레리아는 사악한 존재에게 저주를 받는다. 끔찍하고 위험한 세계에 휩쓸리게 된 그녀가 마주친 한 무리의 마녀들은 그녀의 유일한 희망이자 구원으로 떠올랐지만 그렇다고 마냥 안심할 수는 없는데…모성과 욕망, 불안과 악령이 여성의 시선을 통해 기묘하게 결합된다.",
+\t\t\t"poster_path": "/aVw74MES2R0kdSN8JhbJC8Xpne9.jpg",
 \t\t\t"category": [
 \t\t\t\t18,
 \t\t\t\t27,
@@ -2478,10 +2496,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 823999,
-\t\t\t"title": "Diabolik - Ginko Attacks",
+\t\t\t"title": "Diabolik - Ginko all'attacco!",
 \t\t\t"released_date": "2022-11-17",
 \t\t\t"rating": 6,
-\t\t\t"description": "Diabolik nearly gets caught in Inspector Ginko's latest trap, leaving his partner in crime Eva Kant behind in the escape. Furious, Eva offers Ginko her help in capturing the King of Terror, but the former has to face the return of an old flame of his.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/8QVbWBv94BAT9u1q9uJccwOxMzt.jpg",
 \t\t\t"category": [
 \t\t\t\t80,
@@ -2490,33 +2508,15 @@
 \t\t}
 \t},
 \t{
-\t\t"pk": 1114905,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 1114905,
-\t\t\t"title": "Death's Roulette",
-\t\t\t"released_date": "2023-05-05",
-\t\t\t"rating": 6.6,
-\t\t\t"description": "Seven strangers wake up in a mansion in the middle of nowhere to discover they are part of a twisted game. They will have 60 minutes to choose one person to die; otherwise, all of them will be murdered. As the clock ticks down, the most lurid secrets will come to light, and they’ll discover they are all connected by a dark past.",
-\t\t\t"poster_path": "/yMeKoe3ui4Pad8FUOJwCby3SOWe.jpg",
-\t\t\t"category": [
-\t\t\t\t53,
-\t\t\t\t9648,
-\t\t\t\t18,
-\t\t\t\t27
-\t\t\t]
-\t\t}
-\t},
-\t{
 \t\t"pk": 568124,
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 568124,
-\t\t\t"title": "Encanto",
+\t\t\t"title": "엔칸토: 마법의 세계",
 \t\t\t"released_date": "2021-10-13",
 \t\t\t"rating": 7.6,
-\t\t\t"description": "The tale of an extraordinary family, the Madrigals, who live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place called an Encanto. The magic of the Encanto has blessed every child in the family—every child except one, Mirabel. But when she discovers that the magic surrounding the Encanto is in danger, Mirabel decides that she, the only ordinary Madrigal, might just be her exceptional family's last hope.",
-\t\t\t"poster_path": "/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg",
+\t\t\t"description": "콜롬비아의 깊은 산 속, 놀라운 마법과 활기찬 매력이 넘치는 세계 엔칸토. 이곳을 만든 장본인은 마드리갈 가문의 기둥인 알마 할머니다. 그녀는 젊었을 때 세 쌍둥이를 데리고 이곳으로 오던 중에 위기를 맞았다. 그때 그녀가 들고 있던 촛불에 기적이 일어났고 그이후로 마법의 능력이 손주 세대까지 대물림된다. 3대에 걸친 이대가족은 음식으로 병을 고치는 능력, 꽃을 피우는 능력, 날씨를 조종 하는 능력 등 저마다 독특한 능력을 지니게 됐다. 하지만 가족 중 유일하게 미라벨만 아무런 능력이 없다. 어느 날 엔칸토가 지닌 마법의 힘이 위험에 처하고 가족들은 점차 자신의 능력을 잃어가기 시작한다. 이를 감지한 미라벨은 유일하게 평범한 자신이 특별한 이 가족의 마지막 희망일지 모른다고 생각하는데...",
+\t\t\t"poster_path": "/b8gz7UKMwMz39mz6EH5Jjicjdth.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t35,
@@ -2530,10 +2530,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 230622,
-\t\t\t"title": "Rain Town",
+\t\t\t"title": "비오는 마을",
 \t\t\t"released_date": "2011-03-02",
 \t\t\t"rating": 6.7,
-\t\t\t"description": "In this town, since who knows when, rain has never stopped. Residents moved out to suburbs and high ground around. People’s memories are now deeply submerged. But into this forgotten rainy town sometimes, someone wanders.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/zfeOjiQWXIAaxCYwUrPzoy1poXy.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
@@ -2546,11 +2546,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 337339,
-\t\t\t"title": "The Fate of the Furious",
+\t\t\t"title": "분노의 질주: 더 익스트림",
 \t\t\t"released_date": "2017-04-12",
 \t\t\t"rating": 6.9,
-\t\t\t"description": "When a mysterious woman seduces Dom into the world of crime and a betrayal of those closest to him, the crew face trials that will test them as never before.",
-\t\t\t"poster_path": "/dImWM7GJqryWJO9LHa3XQ8DD5NH.jpg",
+\t\t\t"description": "마침내 평화로운 일상으로 돌아온 리더 도미닉(빈 디젤)과 멤버들. 하지만 레티(미셸 로드리게스)와 쿠바에서 신혼을 만끽 중인 도미닉(빈 디젤)에게 불청객이 찾아온다. 전설적인 해커이자 테러 조직의 리더 사이퍼(샤를리즈 테론)는 도미닉을 협박해 자신의 명령을 따르게 한다. 멤버들은 도미닉이 사이퍼와 함께  사상 최악의 테러를 계획하고 있음을 알게 된다.  리더의 배신으로 위기에 놓인 멤버들은 한때 팀을 모두 전멸시키려 했던 데카드 쇼(제이슨 스타뎀)까지 영입해  최악의 적이 되어버린 도미닉과의 피할 수 없는 대결을 앞두게 되는데...",
+\t\t\t"poster_path": "/h7tvYU9kN4pKjCIzUhf6PLNhQHT.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t80,
@@ -2563,11 +2563,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 438148,
-\t\t\t"title": "Minions: The Rise of Gru",
+\t\t\t"title": "미니언즈 2",
 \t\t\t"released_date": "2022-06-29",
 \t\t\t"rating": 7.4,
-\t\t\t"description": "A fanboy of a supervillain supergroup known as the Vicious 6, Gru hatches a plan to become evil enough to join them, with the backup of his followers, the Minions.",
-\t\t\t"poster_path": "/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg",
+\t\t\t"description": "세계 최고의 슈퍼 악당을 꿈꾸는 미니보스 ‘그루’와 그를 따라다니는 미니언들. 어느 날 그루는 최고의 악당 조직 ‘빌런6’의 마법 스톤을 훔치는 데 성공하지만 뉴페이스 미니언 ‘오토’의 실수로 스톤을 잃어버리고 빌런6에게 납치까지 당한다. 미니보스를 구하기 위해 잃어버린 스톤을 되찾아야 하는 ‘오토’, 그리고 쿵푸를 마스터해야 하는 ‘케빈’, ‘스튜어트’, ‘밥’! 올 여름 극장가를 점령할 MCU(미니언즈 시네마틱 유니버스)가 돌아온다!",
+\t\t\t"poster_path": "/1heBUD8o0sgdqLWyeXkylR2POKb.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t35,
@@ -2580,10 +2580,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 813726,
-\t\t\t"title": "A Tourist's Guide to Love",
+\t\t\t"title": "가이드 투 러브",
 \t\t\t"released_date": "2023-04-21",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "After an unexpected break up, a travel executive accepts an assignment to go undercover and learn about the tourist industry in Vietnam. Along the way, she finds adventure and romance with her Vietnamese expat tour guide and they decide to hijack the tour bus in order to explore life and love off the beaten path.",
+\t\t\t"description": "뜻밖의 이별을 겪은 여행사의 고위 간부가 베트남의 관광 산업에 대해 알아보기 위해 잠입 출장을 간다. 그곳에서 그녀를 맞이한 것은 이방인으로 지내던 베트남 투어 가이드. 두 사람은 틀에 박히지 않은 방식으로 사랑과 인생을 즐겨보고자 투어버스의 코스를 바꾸기로 하고, 그렇게 모험과 로맨스가 가득한 여정을 함께한다.",
 \t\t\t"poster_path": "/uWkpjbBe4gRZilXRXbYfsMUZMhz.jpg",
 \t\t\t"category": [
 \t\t\t\t10749,
@@ -2597,10 +2597,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 845659,
-\t\t\t"title": "Perfect Addiction",
+\t\t\t"title": "퍼펙트 어딕션",
 \t\t\t"released_date": "2023-02-16",
 \t\t\t"rating": 6.6,
-\t\t\t"description": "A female boxing trainer discovers that her champion cage-fighter boyfriend has been cheating on her with her sister and decides to seek revenge by training up his arch-rival to challenge him.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/3wkrRKMFRwCpjp1U27914oRbcqH.jpg",
 \t\t\t"category": [
 \t\t\t\t18,
@@ -2614,11 +2614,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 438695,
-\t\t\t"title": "Sing 2",
+\t\t\t"title": "씽2게더",
 \t\t\t"released_date": "2021-12-01",
 \t\t\t"rating": 8,
-\t\t\t"description": "Buster and his new cast now have their sights set on debuting a new show at the Crystal Tower Theater in glamorous Redshore City. But with no connections, he and his singers must sneak into the Crystal Entertainment offices, run by the ruthless wolf mogul Jimmy Crystal, where the gang pitches the ridiculous idea of casting the lion rock legend Clay Calloway in their show. Buster must embark on a quest to find the now-isolated Clay and persuade him to return to the stage.",
-\t\t\t"poster_path": "/aWeKITRFbbwY8txG5uCj4rMCfSP.jpg",
+\t\t\t"description": "대국민 오디션 이후 각자의 자리에서 꿈을 이루고 있는 버스터 문(매튜 맥커너히)과 크루들에게 레드 쇼어 시티에서 전 세계가 주목하는 사상 최고의 쇼가 펼쳐진다는 소식이 들려오고 버스터 문과 크루들은 도전에 나선다. 그러나 최고의 스테이지에 서기 위한 경쟁은 이전과는 비교도 할 수 없을 만큼 치열하고, 버스터 문은 완벽한 라이브를 위해 종적을 감춘 레전드 뮤지션 클레이(보노)를 캐스팅하겠다는 파격 선언을 하는데!",
+\t\t\t"poster_path": "/xe8dVB2QiCxLWFV77V4dpZcOvYB.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t10751
@@ -2630,11 +2630,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 829560,
-\t\t\t"title": "The Next 365 Days",
+\t\t\t"title": "또 다른 365일",
 \t\t\t"released_date": "2022-08-19",
 \t\t\t"rating": 6.5,
-\t\t\t"description": "Laura and Massimo's relationship hangs in the balance as they try to overcome trust issues while a tenacious Nacho works to push them apart.",
-\t\t\t"poster_path": "/6FsGeIp7heHm5eh4tIxTzHIRxmt.jpg",
+\t\t\t"description": "신뢰 문제를 극복하려 애쓰는 라우라와 마시모의 관계가 흔들리는 가운데, 끈질긴 나초가 둘을 갈라놓으려 한다.",
+\t\t\t"poster_path": "/4N9BqdesW3YD7ZM2dlTOYefkCEM.jpg",
 \t\t\t"category": [
 \t\t\t\t10749,
 \t\t\t\t18
@@ -2646,11 +2646,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 508947,
-\t\t\t"title": "Turning Red",
+\t\t\t"title": "메이의 새빨간 비밀",
 \t\t\t"released_date": "2022-03-10",
 \t\t\t"rating": 7.5,
-\t\t\t"description": "Thirteen-year-old Mei is experiencing the awkwardness of being a teenager with a twist – when she gets too excited, she transforms into a giant red panda.",
-\t\t\t"poster_path": "/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg",
+\t\t\t"description": "엄마의 착한 딸, 아니면 미운 13살? 성적도 우수하고 친구들과 사이도 좋은 데다 부모와도 친밀한 관계를 유지하고 있는, 똑 부러지면서도 엉뚱한 매력의 소유자 메이는 요즘 질풍노도의 시기를 겪느라 고민이 많다. 이 나이에 엄마의 과잉보호를 받자니 스트레스가 이만저만이 아닌 데다, 관심사, 인간관계, 신체 등 그녀의 모든 것이 변하고 있기 때문. 그런데 이 와중에 흥분하면 거대한 레서판다로 변신하는 비밀까지 떠안게 되다니! 아침도 먹어야 하고 학교도 가야 하는데, 이 엄청난 비밀을 어떻게 숨겨야 할까?",
+\t\t\t"poster_path": "/hsOhOcX7qDy7bPwbrt1OoITngrf.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t10751,
@@ -2664,11 +2664,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 717728,
-\t\t\t"title": "Jeepers Creepers: Reborn",
+\t\t\t"title": "지퍼스 크리퍼스: 리본",
 \t\t\t"released_date": "2022-09-15",
 \t\t\t"rating": 5.7,
-\t\t\t"description": "Forced to travel with her boyfriend to a horror festival, Laine begins to experience disturbing visions associated with the urban legend of The Creeper. As the festival arrives and the blood-soaked entertainment builds to a frenzy, she becomes the center of it while something unearthly has been summoned.",
-\t\t\t"poster_path": "/aGBuiirBIQ7o64FmJxO53eYDuro.jpg",
+\t\t\t"description": "무시무시한 살인마 ‘크리퍼’의 존재에 푹 빠져 있는 호러 마니아 ‘체이스’와 그의 여자친구 ‘레인’. 그들은 마을에서 열리는 호러 마니아들의 축제, 호러 하운드 페스티벌에 참석한다. 순간 계속해서 떠오르는 정체 모를 기억과 소름 돋는 느낌에 레인은 혼란스러움을 느끼지만, 페스티벌 속 호러 이벤트에 당첨되어 신난 체이스를 따라 호러 저택 탐험을 떠난다. 한껏 고대하던 저택 탐험을 하게 된 설렘도 잠시, 무언가가 레인을 덮치고 체이스와 탐험 일행들은 피 비린내 나는 저택에 갇히게 되는데... 공포를 쫓던 호러 매니아들, 진짜 공포 ‘크리퍼’에게 쫓기다!",
+\t\t\t"poster_path": "/yt0lsyn7ortWByXrHRScEmSisvO.jpg",
 \t\t\t"category": [
 \t\t\t\t27,
 \t\t\t\t53,
@@ -2681,11 +2681,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 411,
-\t\t\t"title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+\t\t\t"title": "나니아 연대기: 사자, 마녀 그리고 옷장",
 \t\t\t"released_date": "2005-12-07",
 \t\t\t"rating": 7.1,
-\t\t\t"description": "Siblings Lucy, Edmund, Susan and Peter step through a magical wardrobe and find the land of Narnia. There, they discover a charming, once peaceful kingdom that has been plunged into eternal winter by the evil White Witch, Jadis. Aided by the wise and magnificent lion, Aslan, the children lead Narnia into a spectacular, climactic battle to be free of the Witch's glacial powers forever.",
-\t\t\t"poster_path": "/iREd0rNCjYdf5Ar0vfaW32yrkm.jpg",
+\t\t\t"description": "제2차 세계대전 중의 영국. 공습을 피해 디고리 교수의 시골 별장으로 간 페번시가의 네 남매인 피터, 수잔, 에드먼드, 루시는 마법의 옷장을 통해 신비로운 나라 나니아로 들어선다. 말하는 동물들과 켄타우로스, 거인들이 평화롭게 어울려 사는 땅이었던 나니아는 사악한 하얀 마녀 제이디스에 의해 긴 겨울에 감금되어 있다. 게다가 이 겨울에는 크리스마스도 없다. 호기심 많은 루시, 퉁명스러운 에드먼드, 신중한 수잔, 분별 있는 맏이 피터는 고귀한 사자 아슬란의 인도로 제이디스의 싸늘한 주문을 깨는 싸움에 가담한다.",
+\t\t\t"poster_path": "/vSY6MgDWD5Ch5I87X8BaxZyydCI.jpg",
 \t\t\t"category": [
 \t\t\t\t12,
 \t\t\t\t10751,
@@ -2698,11 +2698,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 808,
-\t\t\t"title": "Shrek",
+\t\t\t"title": "슈렉",
 \t\t\t"released_date": "2001-05-18",
 \t\t\t"rating": 7.7,
-\t\t\t"description": "It ain't easy bein' green -- especially if you're a likable (albeit smelly) ogre named Shrek. On a mission to retrieve a gorgeous princess from the clutches of a fire-breathing dragon, Shrek teams up with an unlikely compatriot -- a wisecracking donkey.",
-\t\t\t"poster_path": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg",
+\t\t\t"description": "성 밖 늪지대에 사는 엄청나게 못생기고 무지무지 큰 괴물 슈렉. 지저분한 진흙으로 샤워를 즐기고 동화책은 화장실 휴지 삼아 쓰는 그는 혼자만의 시간을 즐긴다.  그러던 어느 날, 자신만의 고요한 안식처에 백설공주, 신데렐라, 빗자루를 타고 다니는 마녀, 피리부는 아저씨, 피터팬, 피노키오 등등.. 동화속의 주인공들이 모두 쳐들어온다. 그 중에서도 가장 귀찮은 건 쉴새없이 떠들어대는 당나귀 덩키. 알고보니 얼굴이 몸의 반을 차지하는 1m도 안되는 숏다리 파콰드영주가 동화속의 주인공들을 다 쫓아낸것. 결국 슈렉은 파콰드영주와 담판을 지으러 떠난다.  하지만 일은 이상하게 꼬여 결국 파콰드영주 대신 불뿜는 용의 성에 갇힌 피오나 공주를 구하러 떠나게 되는데..",
+\t\t\t"poster_path": "/hABnmgdAU3u6Nu61b9GUGaOseVl.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t35,
@@ -2717,11 +2717,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1071806,
-\t\t\t"title": "Hunger",
+\t\t\t"title": "헝거",
 \t\t\t"released_date": "2023-04-04",
 \t\t\t"rating": 7.5,
-\t\t\t"description": "A talented young street-food cook pushes herself to the limit after accepting an invitation to train under an infamous and ruthless chef.",
-\t\t\t"poster_path": "/rNYHsKHFP3AY2PIDZgz3AuY7QoC.jpg",
+\t\t\t"description": "뛰어난 재능을 지닌 젊은 길거리 음식점 요리사. 인정사정없는 유명 셰프에게서 트레이닝을 받을 수 있는 기회에 응하면서 자신의 한계에 도전한다.",
+\t\t\t"poster_path": "/qDRWAYcZYcwtUcfZvCxVZLLIxo.jpg",
 \t\t\t"category": [
 \t\t\t\t18,
 \t\t\t\t53
@@ -2733,11 +2733,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 727340,
-\t\t\t"title": "Hunt",
+\t\t\t"title": "헌트",
 \t\t\t"released_date": "2022-08-10",
 \t\t\t"rating": 6.9,
-\t\t\t"description": "After a high-ranking North Korean official requests asylum, KCIA Foreign Unit chief Park Pyong-ho and Domestic Unit chief Kim Jung-do are tasked with uncovering a North Korean spy, known as Donglim, who is deeply embedded within their agency. When the spy begins leaking top secret intel that could jeopardize national security, the two units are each assigned to investigate each other.",
-\t\t\t"poster_path": "/tDe5eLxAbeK7sYckUn5aH3ngWnn.jpg",
+\t\t\t"description": "북한 고위 관리가 망명을 요청한 이후, 안기부 해외팀 차장 박평호와 국내팀 차장 김정도는 동림으로 알려진 안기부 내 스파이, 남파간첩 총책임자를 밝혀내는 임무를 맡는다. 이윽고 동림이 국가 안보를 위태롭게 할 1급 비밀 정보를 누설하기 시작하고 안기부의 해외팀과 국내팀은 서로를 조사하기에 이른다. 당장 스파이를 밝혀내지 못하면 자신이 혐의를 받을 수 있는 일촉즉발의 상황에서 평호와 정도는 서서히 진실을 찾아내고, 마침내 대한민국 1호 암살 작전이라는 거대한 사건과 직면하게 되는데...",
+\t\t\t"poster_path": "/zI0rMYcSUx16pHnsegWExPf1kDF.jpg",
 \t\t\t"category": [
 \t\t\t\t53,
 \t\t\t\t28
@@ -2749,11 +2749,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 168259,
-\t\t\t"title": "Furious 7",
+\t\t\t"title": "분노의 질주: 더 세븐",
 \t\t\t"released_date": "2015-04-01",
 \t\t\t"rating": 7.2,
-\t\t\t"description": "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
-\t\t\t"poster_path": "/ktofZ9Htrjiy0P6LEowsDaxd3Ri.jpg",
+\t\t\t"description": "도미닉과 멤버들은 범죄조직 소탕 후 모든 전과를 사면 받고 평범한 일상으로 돌아간다. 하지만 평화도 잠시, 전작에서 처리한 범죄조직의 리더 오웬 쇼의 형 데카드 쇼가 동생의 복수를 위해 멤버들을 차례로 공격한다. 특수부대 출신 용병 데카드 쇼의 난입으로 한이 갑작스레 사망하게 되고, 도미닉의 집은 순식간에 폭파당한다. 이에 맞서는 정부요원 페티는 도미닉을 돕는 조건으로 납치당한 해커 램지의 구출을 의뢰하고, 도미닉은 멤버들을 다시 모아 숨막히는 반격을 시작한다.",
+\t\t\t"poster_path": "/cuQdgDYANbKA46e4va2fz6fODkc.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t53,
@@ -2766,11 +2766,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 728754,
-\t\t\t"title": "Stand by Me Doraemon 2",
+\t\t\t"title": "도라에몽: 스탠바이미 2",
 \t\t\t"released_date": "2020-11-20",
 \t\t\t"rating": 7.7,
-\t\t\t"description": "Nobita travels to the future to show his beloved grandma his bride, but adult Nobita has fled his own wedding.",
-\t\t\t"poster_path": "/vBv8iOFPLnXmtELUjcFc7OKHsR4.jpg",
+\t\t\t"description": "어느 날 진구는 돌아가신 할머니와의 추억이 담긴 낡은 곰 인형을 발견하고 할머니가 보고 싶은 마음에 도라에몽의 4차원 비밀도구 타임머신을 타고 과거로 향한다. 느닷없이 찾아온 소년을 금세 진구라고 믿어주시는 할머니는 한 가지 소원을 말씀하시는데…",
+\t\t\t"poster_path": "/3YST9Tnkt69FY2sinyJquVxVHcB.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
 \t\t\t\t10751,
@@ -2783,11 +2783,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 118412,
-\t\t\t"title": "Berserk: The Golden Age Arc II - The Battle for Doldrey",
+\t\t\t"title": "베르세르크 황금시대편 II - 돌도레이 공략",
 \t\t\t"released_date": "2012-06-23",
 \t\t\t"rating": 7.5,
-\t\t\t"description": "The Band of the Hawk participates in the Midland war campaign. On the bloody battlefield, they conquer decisive victories that lead them to Doldrey, an old fortress that will decide the outcome of the war.",
-\t\t\t"poster_path": "/gzVQQaDazukAcmiFx6l9WLj1kwo.jpg",
+\t\t\t"description": "매의 단의 일원이 된 후, 3년의 시간이 흘렀다. 힘든 전쟁과 고난 속에서도 그리피스와 함께 그의 꿈을 추구해 나가는 것이 그의 임무라 생각했던 가츠는 그리피스의 말에 충격을 받게 되고, 그와 동등한 위치에 서기 위해 매의 단의 탈퇴를 결심한다. 그 무렵, 미들랜드의 백호기사단은 뚫기 어려운 돌도레이 요새 공략을 시도하지만, 튜터 최강의 보스콘 장군이 이끄는 자서성 기사단을 직면하고 전멸하게 된다. 매의 단의 발전을 위해 이번 전쟁이 기회라고 생각한 그리피스는 미들랜드 왕에게 요새 공략을 위해 매의 단을 보낼 것을 제안하고, 가츠는 매의 단을 탈퇴하기 전 그리피스와 함께하는 마지막 싸움을 준비하는데... 3만 명의 적군과 5천 명의 매의 단의 싸움. 이제 피비린내 나는 전쟁이 시작된다!  (2012년 14회 부천국제학생애니메이션페스티벌)",
+\t\t\t"poster_path": "/knfUd4ZGufuAu1duiVoOHphwich.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t12,
@@ -2802,10 +2802,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 790409,
-\t\t\t"title": "The Last Heretic",
+\t\t\t"title": "El último hereje",
 \t\t\t"released_date": "2022-11-09",
 \t\t\t"rating": 5.6,
-\t\t\t"description": "Juan Conte is a world-renowned spokesman of the new atheism. After suffering a heart attack, he receives a transplant and a change in his personal life begins, opening up to the possibility of being in a couple for the first time. Juan will go on a journey of horror and pain, in which his vision of reality will be put to the test.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/1j9B1iao0kqZnfSUqPadfXDdWNg.jpg",
 \t\t\t"category": [
 \t\t\t\t53,
@@ -2818,10 +2818,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 785759,
-\t\t\t"title": "Two Witches",
+\t\t\t"title": "투 위치스",
 \t\t\t"released_date": "2023-03-02",
 \t\t\t"rating": 6.3,
-\t\t\t"description": "A matriarchal witch passes on her sinister inheritance to her grand-daughter, triggering the most horrific curses.",
+\t\t\t"description": "임신한 새라는 식당에서 사악한 눈빛으로 노려보는 늙은 마녀와 마주친다. 그 후 새라는 아기가 잡아 먹히는 끔찍한 환상과 악몽에 시달린다. 늙은 마녀는 남편의 친구 더스틴의 집으로 가는 새라를 뒤따른다. 새라는 남편 사이먼과 함께 더스틴과 멜리사 부부의 외딴집에 도착한다. 주술에 빠져 있는 멜리사는 새라를 위해 위자 보드로 영을 소환한다. 얼마 후 나쁜 기운을 없애는 양초의 촛불이 저절로 꺼지고 화장실 앞에서 넋을 잃고 서 있던 새라는 아무것도 기억하지 못한다. 어둠 속에서 늙은 마녀가 아기를 먹는 모습을 본 사이먼은 심장마비로 사망한다. 새라가 어딘가로 사라지고 더스틴과 멜리사가 혼란에 빠진 가운데 경찰은 사이먼의 죽음과 새라의 실종을 가정폭력 때문이라고 발표한다. 악마가 새라의 태아를 먹은 늙은 마녀에게 안식을 허락하는데...",
 \t\t\t"poster_path": "/uL9fFTdNmUUlKIJfHJclN5X3bxH.jpg",
 \t\t\t"category": [
 \t\t\t\t27
@@ -2833,10 +2833,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 782936,
-\t\t\t"title": "Nocebo",
+\t\t\t"title": "노시보",
 \t\t\t"released_date": "2022-11-03",
 \t\t\t"rating": 6.2,
-\t\t\t"description": "A fashion designer hires a nanny from the Philippines to assist her in caring for her family while she is suffering from what she believes is a tick-related illness. The nanny uses traditional Filipino folk healing techniques to help her, but in the process of doing so, she uncovers a horrifying truth about why she is there and why her employer is actually sick.",
+\t\t\t"description": "불가사의한 질병에 시달리는 패션 디자이너에게 어느 날 필리핀 간병인이 찾아오면서 전통적인 민간요법을 사용해 얽힌 과거와 함께 소름끼치는 과거의 진실이 밝혀지는 초자연적인 공포스릴러물",
 \t\t\t"poster_path": "/3FPnDTlX0LsaU4VD5mc82BMbchA.jpg",
 \t\t\t"category": [
 \t\t\t\t9648,
@@ -2853,7 +2853,7 @@
 \t\t\t"title": "Sex Games",
 \t\t\t"released_date": "2023-04-28",
 \t\t\t"rating": 6.5,
-\t\t\t"description": "A rich couple often spices up their sexual relationship by doing their so-called Sex Games. But when they meet a new set of \"playmates\"- a conservative couple, their game becomes more challenging.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/9U47u3cDXTPgxAFqns0Sur9DvyV.jpg",
 \t\t\t"category": [
 \t\t\t\t18
@@ -2868,7 +2868,7 @@
 \t\t\t"title": "Strays",
 \t\t\t"released_date": "2023-08-17",
 \t\t\t"rating": 0,
-\t\t\t"description": "When Reggie, a naïve, relentlessly optimistic Border Terrier, is abandoned on the mean city streets by his lowlife owner, Doug, Reggie is certain that his beloved owner would never leave him on purpose. But once Reggie falls in with a fast-talking, foul-mouthed Boston Terrier named Bug, a stray who loves his freedom and believes that owners are for suckers, Reggie finally realizes he was in a toxic relationship and begins to see Doug for the heartless sleazeball that he is. Determined to seek revenge, Reggie, Bug and Bug’s pals together hatch a plan and embark on an epic adventure to help Reggie find his way home … and make Doug pay by biting off the appendage he loves the most. (Hint: It’s not his foot).",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/wDyIj84k4zpEMbhNbX4zaUW0Jkj.jpg",
 \t\t\t"category": [
 \t\t\t\t35,
@@ -2881,10 +2881,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1100962,
-\t\t\t"title": "One More Time",
+\t\t\t"title": "원 모어 타임",
 \t\t\t"released_date": "2023-04-21",
 \t\t\t"rating": 5.9,
-\t\t\t"description": "On her 40th birthday, Amelia makes a fateful wish to be 18 again back in 2002 but soon regrets it when she's stuck reliving the day over and over again.",
+\t\t\t"description": "마흔 번째 생일. 아멜리아는 열여덟 살이었던 2002년으로 돌아가고 싶다는 운명적인 소원을 빈다. 하지만 진짜로 그날을 반복해서 살게 되자 곧 후회가 몰려오는데.",
 \t\t\t"poster_path": "/wUVuJXnBfNpSwvSDGnqzZ5VUBwP.jpg",
 \t\t\t"category": [
 \t\t\t\t35,
@@ -2897,11 +2897,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 671,
-\t\t\t"title": "Harry Potter and the Philosopher's Stone",
+\t\t\t"title": "해리 포터와 마법사의 돌",
 \t\t\t"released_date": "2001-11-16",
 \t\t\t"rating": 7.9,
-\t\t\t"description": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths—and about the villain who's to blame.",
-\t\t\t"poster_path": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+\t\t\t"description": "해리 포터는 위압적인 버논 숙부와 냉담한 이모 페투니아, 욕심 많고 버릇없는 사촌 더즐리 밑에서 갖은 구박을 견디며 계단 밑 벽장에서 생활한다. 이모네 식구들 역시 해리와의 동거가 불편하기는 마찬가지. 이모 페투니아에겐 해리가 이상한 언니 부부에 관한 기억을 떠올리게 만드는 달갑지 않은 존재다. 11살 생일이 며칠 앞으로 다가왔지만 한번도 생일파티를 치르거나 제대로 된 생일선물을 받아 본 적이 없는 해리로서는 특별히 신날 것도 기대 할 것도 없다. 11살 생일을 며칠 앞둔 어느 날 해리에게 초록색 잉크로 쓰여진 한 통의 편지가 배달된다. 그 편지의 내용은 다름 아닌 해리의 11살 생일을 맞이하여 호그와트에서 보낸 입학 초대장이었다. 그리고 해리의 생일을 축하하러 온 거인 해그리드는 해리가 모르고 있었던 해리의 진정한 정체를 알려주는데...",
+\t\t\t"poster_path": "/unEtC8uWn2lcQLnwKG9PZJX0h0c.jpg",
 \t\t\t"category": [
 \t\t\t\t12,
 \t\t\t\t14
@@ -2913,10 +2913,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1035806,
-\t\t\t"title": "Detective Knight: Independence",
+\t\t\t"title": "디텍티브 나이트: 인디펜던스",
 \t\t\t"released_date": "2023-01-20",
 \t\t\t"rating": 5.5,
-\t\t\t"description": "Detective James Knight 's last-minute assignment to the Independence Day shift turns into a race to stop an unbalanced ambulance EMT from imperiling the city's festivities. The misguided vigilante, playing cop with a stolen gun and uniform, has a bank vault full of reasons to put on his own fireworks show... one that will strike dangerously close to Knight's home.",
+\t\t\t"description": "",
 \t\t\t"poster_path": "/jrPKVQGjc3YZXm07OYMriIB47HM.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
@@ -2930,11 +2930,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 399566,
-\t\t\t"title": "Godzilla vs. Kong",
+\t\t\t"title": "고질라 VS. 콩",
 \t\t\t"released_date": "2021-03-24",
 \t\t\t"rating": 7.7,
-\t\t\t"description": "In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.",
-\t\t\t"poster_path": "/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
+\t\t\t"description": "콩과 보호자들은 정착할 수 있는 곳을 찾아 특별하고 강력한 유대감을 형성하고 있는 지아와 함께 여정을 떠나게 된다. 그러던 중 지구 파괴를 위한 회심의 날을 휘두르는 고질라와 마주하게 되고, 보이지 않는 힘에 의해 맞붙게 된 두 전설의 대결은 지구 깊은 곳에 도사린 수수께끼의 시작에 불과할 뿐이었는데…",
+\t\t\t"poster_path": "/sqo672rKMXiLRC5kVcGvBRebkp.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t14,
@@ -2947,11 +2947,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 613504,
-\t\t\t"title": "After We Collided",
+\t\t\t"title": "애프터: 그 후",
 \t\t\t"released_date": "2020-09-02",
 \t\t\t"rating": 7.2,
-\t\t\t"description": "Tessa finds herself struggling with her complicated relationship with Hardin; she faces a dilemma that could change their lives forever.",
-\t\t\t"poster_path": "/kiX7UYfOpYrMFSAGbI6j1pFkLzQ.jpg",
+\t\t\t"description": "\"너만의 테사는 더 이상 없어!\"  첫사랑 하딘이 자신과의 연애를 내기에 걸었다는 비밀을 알게 된 '테사'  둘은 헤어지지만 서로의 살결과 숨결을 끊지 못하며 아슬아슬한 썸을 이어간다. 이후 대학 졸업을 앞둔 취준생 테사는 대형 출판사의 인턴십에 합격하고  거친 하딘과는 180도 다른 젠틀한 직장 남사친 '트레버'를 만나게 된다. \"테사의 두 번째 남자를 만났다\" 런던으로 떠나기 전에 테사를 향한 진심을 전하고 싶었던 '하딘' 테사의 용서를 기다리며 과거의 잘못을 하나씩 고쳐나간다.  워크숍 파티에서 취한 테사의 연락에 하딘은 기대 반, 걱정 반 마음으로 결국 테사의 호텔 룸에 찾아가고, 샤워실에서 그녀석 '트레버'와 마주치는데…",
+\t\t\t"poster_path": "/d45gDeSa3eDpYo2Aj6AJ7SeHx0t.jpg",
 \t\t\t"category": [
 \t\t\t\t10749,
 \t\t\t\t18
@@ -2963,10 +2963,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 955991,
-\t\t\t"title": "The Offering",
+\t\t\t"title": "디 오퍼링",
 \t\t\t"released_date": "2022-09-23",
 \t\t\t"rating": 5.7,
-\t\t\t"description": "In the wake of a young Jewish girl’s disappearance, the son of a Hasidic funeral director returns home with his pregnant wife in hopes of reconciling with his father. Little do they know that directly beneath them in the family morgue, an ancient evil with sinister plans for the unborn child lurks inside a mysterious corpse.",
+\t\t\t"description": "유대인 율법학자 요실러는 죽은 아내 아이다를 보기 위해 사악한 악령 아비주를 소환한다. 의도치 않게 어린 소녀 사라를 제물로 바치게 된 요실러는 신성한 주문과 펜던트로 아이를 빼앗는 악령을 자신의 육체에 봉인하는 의식을 행한다. 한편 아서는 임신한 클레어와 함께 소원했던 유대인 아버지 사울을 방문한다. 사울은 종교와 인종이 다르다는 이유로 결혼을 반대한 잘못에 대해 사과한다. 요실러의 시신이 사울과 헤이미시가 관리하는 파인버그 장례식장에 도착한다. 아서는 탐나는 요실러의 펜던트를 실수로 떨어뜨리고 하수구에 숨긴다. 그 후 악령의 속삭임이 아서를 괴롭히고 클레어는 아비주의 악몽에 시달린다. 아서가 아버지 건물을 담보로 은행 대출을 받기 원한다는 사실이 밝혀진다. 거대한 염소 형상의 악마가 상처받은 사울에게 모습을 드러낸다. 사울은 아들을 위해 서명한 담보 계약서를 남기고 심장마비로 쓰러지는데...",
 \t\t\t"poster_path": "/tbaTFgGIaTL1Uhd0SMob6Dhi5cK.jpg",
 \t\t\t"category": [
 \t\t\t\t18,
@@ -2979,10 +2979,10 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1045944,
-\t\t\t"title": "The Boss Baby: Christmas Bonus",
+\t\t\t"title": "보스 베이비: 크리스마스 보너스",
 \t\t\t"released_date": "2022-12-06",
 \t\t\t"rating": 6.8,
-\t\t\t"description": "Christmas Eve takes a twisty turn when the Boss Baby accidentally swaps places with one of Santa's elves and gets stranded at the North Pole.",
+\t\t\t"description": "어쩌다 산타의 요정 중 한명과 뒤바뀌어 북극에 온 보스 베이비. 크리스마스이브 전통을 바꿔놓는다. 보스 베이비 방식으로!",
 \t\t\t"poster_path": "/iMmMxF6f2OonUrXrHKBLSYAhXly.jpg",
 \t\t\t"category": [
 \t\t\t\t16,
@@ -2996,11 +2996,11 @@
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 718930,
-\t\t\t"title": "Bullet Train",
+\t\t\t"title": "불릿 트레인",
 \t\t\t"released_date": "2022-07-03",
 \t\t\t"rating": 7.5,
-\t\t\t"description": "Unlucky assassin Ladybug is determined to do his job peacefully after one too many gigs gone off the rails. Fate, however, may have other plans, as Ladybug's latest mission puts him on a collision course with lethal adversaries from around the globe—all with connected, yet conflicting, objectives—on the world's fastest train.",
-\t\t\t"poster_path": "/tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg",
+\t\t\t"description": "운이 없기로 유명한 킬러 레이디버그는 초고속 열차에 탑승해 의문의 서류 가방을 가져오라는 미션을 받는다. 생각보다 쉽게 미션을 클리어한 후 열차에서 내리려는 그를 가로막는 것이 있었으니,  그것은 바로 전세계에서 몰려든 초특급 킬러들. 열차에서 내릴 수 없다면 목숨을 걸고 가방을 지켜야만 한다. 과연 레이디버그는 무사히 열차에서 내려 미션을 완수할 수 있을까?",
+\t\t\t"poster_path": "/msh4N8dxHk4FeEPZ8VBqHQFQYjI.jpg",
 \t\t\t"category": [
 \t\t\t\t28,
 \t\t\t\t35,

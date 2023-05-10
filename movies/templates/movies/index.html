@@ -38,12 +38,7 @@
 {% endfor %}
 
 {% comment %} <h1>최신순</h1>
-{% for movie in latest %}
-<p>{{movie.title}}</p>
-{% endfor %}
-
-<h1>인기순</h1>
-{% for movie in popular %}
+{% for movie in latest_movie_list %}
 <p>{{movie.title}}</p>
 {% endfor %} {% endcomment %}
 

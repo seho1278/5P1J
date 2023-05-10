@@ -8,9 +8,9 @@ TMDB_API_KEY = 'dfc02edc73a8a31017aeb0d746f5753d'
 
 def index(request):
 # 플랫폼별 TOP10
-# 최신 상영작 - 완
+# 최신 상영작 
 # 많이 본 순 - 완 
-# 별점 높은 순 
+# 별점 높은 순 - 완
 # 장르별 추천영화 - 완 
 # 태그별 추천영화 
 # 검색
@@ -28,39 +28,41 @@ def index(request):
     now_playing_data = now_playing_response.json()
     now_playing = sorted(now_playing_data['results'], key=lambda x:x['vote_average'], reverse=True)[:5]
 
-    total_data = []
-        
     # popular 순위 (1페이지~ 10페이지, 페이지당 20개, 총 200개)
-    
-    # for i in range(1, 10):
-    #     popular_url = f"https://api.themoviedb.org/3/movie/popular?api_key={TMDB_API_KEY}&language=en-US&page={i}"
-    #     popular = requests.get(popular_url).json()
+    total_data = []   
 
-    #     for movie in popular['results']:
-    #         if movie.get("release_date") is not None:
-    #             fields = {
-    #                 'movie_id': movie['id'],
-    #                 'title': movie['title'],
-    #                 'released_date': movie['release_date'],
-    #                 'rating': movie['vote_average'],
-    #                 'description': movie['overview'],
-    #                 'poster_path': movie['poster_path'],
-    #                 'category': movie['genre_ids'],
-    #                 # 'nation': movie['production_countries'],
-    #                 # 'runnigtime': movie['runtime'],
+    for i in range(1, 10):
+        popular_url = f"https://api.themoviedb.org/3/movie/popular?api_key={TMDB_API_KEY}&language=ko-KR&page={i}"
+        popular = requests.get(popular_url).json()
 
-    #             }
+        for movie in popular['results']:
+            if movie.get("release_date") is not None:
+                fields = {
+                    'movie_id': movie['id'],
+                    'title': movie['title'],
+                    'released_date': movie['release_date'],
+                    'rating': movie['vote_average'],
+                    'description': movie['overview'],
+                    'poster_path': movie['poster_path'],
+                    'category': movie['genre_ids'],
+                    # 'nation': movie['production_countries'],
+                    # 'runnigtime': movie['runtime'],
 
-    #             data = {
-    #                 "pk": movie['id'],
-    #                 "model": "movies.movie",
-    #                 "fields": fields
-    #             }
+                }
 
-    #             total_data.append(data)
+                # movie['tags'] = ['#손에 땀을 쥐게 하는', '#결말이 아름다운']
 
-    # with open("movie_data.json", "w", encoding="utf-8") as w:
-    #     json.dump(total_data, w, indent="\\t", ensure_ascii=False)
+                data = {
+                    "pk": movie['id'],
+                    "model": "movies.movie",
+                    "fields": fields
+                }
+
+                total_data.append(data)
+
+    # json 파일 생성
+    with open("movie_data.json", "w", encoding="utf-8") as w:
+        json.dump(total_data, w, indent="\\t", ensure_ascii=False)
 
 
     # # 최신순 
@@ -76,10 +78,12 @@ def index(request):
 
     #     latest_response = requests.get(latest_url, params=params)
     #     latest_data = latest_response.json()
-    #     latest = sorted(latest_data['results'], key=lambda x:x['vote_average'], reverse=True)
-       
-        # print("--------------------------------")
-        # pprint.pprint(latest_movie_list)
+    #     print("--------------------------------")
+    #     pprint.pprint(latest_data)
+    #     # latest = sorted(latest_data, key=lambda x:x['vote_average'], reverse=True)
+    #     latest_movie_list.append(latest_data)
+    #     # print("--------------------------------")
+    #     # pprint.pprint(latest_movie_list)
         
 
     #장르번호 딕셔너리
@@ -119,7 +123,8 @@ def index(request):
 
         genre_response = requests.get(genre_url, params=params)
         genre_data = genre_response.json()
-        pprint.pprint(genre_data)
+        print("--------------------------------")
+        # pprint.pprint(genre_data['results'])
         genre = sorted(genre_data['results'], key=lambda x:x['vote_average'], reverse=True)
         genre_movie_list.append(genre)
 
@@ -140,16 +145,17 @@ def index(request):
         top_rated = sorted(top_rated_data['results'], key=lambda x:x['vote_average'], reverse=True)
         top_rated_movie_list.append(top_rated)
     
+
+
     context={
         'now_playing': now_playing,
         'total': total_data,
-        # 'popular' : popular,
+        'popular' : popular,
         'genre_dict' : genre_dict, 
         'genre': genre,
-        # 'latest' : latest,
         'top_rated': top_rated,
-        # 'latest_movie_list' : latest_movie_list,
+       
     }
     return render(request, 'movies/index.html', context)
 
-
+ 
