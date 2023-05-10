@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block style %}{% endblock style %}  
+
+{% block content %}
+  <div>
+    <h1>회원정보 수정</h1>
+    <form action="{% url 'accounts:update' %}" method="POST" enctype='multipart/form-data'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Save">
+      <h1>왜 안뜨지</h1>
+    </form>
+    <a href="{% url 'accounts:change_password' %}">Password</a>
+    
+  </div>
+{% endblock content %}
+
+{% block script %}{% endblock script %}

@@ -1,0 +1,3011 @@
+[
+\t{
+\t\t"pk": 758323,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 758323,
+\t\t\t"title": "The Pope's Exorcist",
+\t\t\t"released_date": "2023-04-05",
+\t\t\t"rating": 7.4,
+\t\t\t"description": "Father Gabriele Amorth, Chief Exorcist of the Vatican, investigates a young boy's terrifying possession and ends up uncovering a centuries-old conspiracy the Vatican has desperately tried to keep hidden.",
+\t\t\t"poster_path": "/9JBEPLTPSm0d1mbEcLxULjJq9Eh.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t9648,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 640146,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 640146,
+\t\t\t"title": "Ant-Man and the Wasp: Quantumania",
+\t\t\t"released_date": "2023-02-15",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.",
+\t\t\t"poster_path": "/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 502356,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 502356,
+\t\t\t"title": "The Super Mario Bros. Movie",
+\t\t\t"released_date": "2023-04-05",
+\t\t\t"rating": 7.5,
+\t\t\t"description": "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+\t\t\t"poster_path": "/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t12,
+\t\t\t\t10751,
+\t\t\t\t14,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 868759,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 868759,
+\t\t\t"title": "Ghosted",
+\t\t\t"released_date": "2023-04-18",
+\t\t\t"rating": 7.2,
+\t\t\t"description": "Salt-of-the-earth Cole falls head over heels for enigmatic Sadie — but then makes the shocking discovery that she’s a secret agent. Before they can decide on a second date, Cole and Sadie are swept away on an international adventure to save the world.",
+\t\t\t"poster_path": "/liLN69YgoovHVgmlHJ876PKi5Yi.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t35,
+\t\t\t\t10749
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 594767,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 594767,
+\t\t\t"title": "Shazam! Fury of the Gods",
+\t\t\t"released_date": "2023-03-15",
+\t\t\t"rating": 6.8,
+\t\t\t"description": "Billy Batson and his foster siblings, who transform into superheroes by saying \"Shazam!\", are forced to get back into action and fight the Daughters of Atlas, who they must stop from using a weapon that could destroy the world.",
+\t\t\t"poster_path": "/2VK4d3mqqTc7LVZLnLPeRiPaJ71.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t35,
+\t\t\t\t14,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 447365,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 447365,
+\t\t\t"title": "Guardians of the Galaxy Volume 3",
+\t\t\t"released_date": "2023-05-03",
+\t\t\t"rating": 8.3,
+\t\t\t"description": "Peter Quill, still reeling from the loss of Gamora, must rally his team around him to defend the universe along with protecting one of their own. A mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.",
+\t\t\t"poster_path": "/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+\t\t\t"category": [
+\t\t\t\t878,
+\t\t\t\t12,
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 76600,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 76600,
+\t\t\t"title": "Avatar: The Way of Water",
+\t\t\t"released_date": "2022-12-14",
+\t\t\t"rating": 7.7,
+\t\t\t"description": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+\t\t\t"poster_path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+\t\t\t"category": [
+\t\t\t\t878,
+\t\t\t\t12,
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 677179,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 677179,
+\t\t\t"title": "Creed III",
+\t\t\t"released_date": "2023-03-01",
+\t\t\t"rating": 7.3,
+\t\t\t"description": "After dominating the boxing world, Adonis Creed has been thriving in both his career and family life. When a childhood friend and former boxing prodigy, Damian Anderson, resurfaces after serving a long sentence in prison, he is eager to prove that he deserves his shot in the ring. The face-off between former friends is more than just a fight. To settle the score, Adonis must put his future on the line to battle Damian — a fighter who has nothing to lose.",
+\t\t\t"poster_path": "/cvsXj3I9Q2iyyIo95AecSd1tad7.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 934433,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 934433,
+\t\t\t"title": "Scream VI",
+\t\t\t"released_date": "2023-03-08",
+\t\t\t"rating": 7.3,
+\t\t\t"description": "Following the latest Ghostface killings, the four survivors leave Woodsboro behind and start a fresh chapter.",
+\t\t\t"poster_path": "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t9648,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 493529,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 493529,
+\t\t\t"title": "Dungeons & Dragons: Honor Among Thieves",
+\t\t\t"released_date": "2023-03-23",
+\t\t\t"rating": 7.5,
+\t\t\t"description": "A charming thief and a band of unlikely adventurers undertake an epic heist to retrieve a lost relic, but things go dangerously awry when they run afoul of the wrong people.",
+\t\t\t"poster_path": "/v7UF7ypAqjsFZFdjksjQ7IUpXdn.jpg",
+\t\t\t"category": [
+\t\t\t\t12,
+\t\t\t\t14,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 948713,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 948713,
+\t\t\t"title": "The Last Kingdom: Seven Kings Must Die",
+\t\t\t"released_date": "2023-04-14",
+\t\t\t"rating": 7.3,
+\t\t\t"description": "In the wake of King Edward's death, Uhtred of Bebbanburg and his comrades adventure across a fractured kingdom in the hopes of uniting England at last.",
+\t\t\t"poster_path": "/7yyFEsuaLGTPul5UkHc5BhXnQ0k.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t36,
+\t\t\t\t18,
+\t\t\t\t10752
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1102776,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1102776,
+\t\t\t"title": "AKA",
+\t\t\t"released_date": "2023-04-28",
+\t\t\t"rating": 7,
+\t\t\t"description": "A steely special ops agent finds his morality put to the test when he infiltrates a crime syndicate and unexpectedly bonds with the boss' young son.",
+\t\t\t"poster_path": "/3BSxAjiporlwQTWzaHZ9Yrl5C9D.jpg",
+\t\t\t"category": [
+\t\t\t\t53,
+\t\t\t\t28,
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 420808,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 420808,
+\t\t\t"title": "Peter Pan & Wendy",
+\t\t\t"released_date": "2023-04-20",
+\t\t\t"rating": 5.9,
+\t\t\t"description": "Wendy Darling, a young girl afraid to leave her childhood home behind, meets Peter Pan, a boy who refuses to grow up. Alongside her brothers and a tiny fairy, Tinker Bell, she travels with Peter to the magical world of Neverland. There, she encounters an evil pirate captain, Captain Hook, and embarks on a thrilling adventure that will change her life forever.",
+\t\t\t"poster_path": "/9NXAlFEE7WDssbXSMgdacsUD58Y.jpg",
+\t\t\t"category": [
+\t\t\t\t10751,
+\t\t\t\t14,
+\t\t\t\t28,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 603692,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 603692,
+\t\t\t"title": "John Wick: Chapter 4",
+\t\t\t"released_date": "2023-03-22",
+\t\t\t"rating": 7.9,
+\t\t\t"description": "With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+\t\t\t"poster_path": "/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t53,
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 713704,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 713704,
+\t\t\t"title": "Evil Dead Rise",
+\t\t\t"released_date": "2023-04-12",
+\t\t\t"rating": 7.1,
+\t\t\t"description": "Two sisters find an ancient vinyl that gives birth to bloodthirsty demons that run amok in a Los Angeles apartment building and thrusts them into a primal battle for survival as they face the most nightmarish version of family imaginable.",
+\t\t\t"poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+\t\t\t"category": [
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 315162,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 315162,
+\t\t\t"title": "Puss in Boots: The Last Wish",
+\t\t\t"released_date": "2022-12-07",
+\t\t\t"rating": 8.3,
+\t\t\t"description": "Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.",
+\t\t\t"poster_path": "/kuf6dutpsT0vSVehic3EZIqkOBt.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t10751,
+\t\t\t\t14,
+\t\t\t\t12,
+\t\t\t\t35,
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 638974,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 638974,
+\t\t\t"title": "Murder Mystery 2",
+\t\t\t"released_date": "2023-03-28",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "After starting their own detective agency, Nick and Audrey Spitz land a career-making case when their billionaire pal is kidnapped from his wedding.",
+\t\t\t"poster_path": "/s1VzVhXlqsevi8zeCMG9A16nEUf.jpg",
+\t\t\t"category": [
+\t\t\t\t35,
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 804150,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 804150,
+\t\t\t"title": "Cocaine Bear",
+\t\t\t"released_date": "2023-02-22",
+\t\t\t"rating": 6.4,
+\t\t\t"description": "Inspired by a true story, an oddball group of cops, criminals, tourists and teens converge in a Georgia forest where a 500-pound black bear goes on a murderous rampage after unintentionally ingesting cocaine.",
+\t\t\t"poster_path": "/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg",
+\t\t\t"category": [
+\t\t\t\t53,
+\t\t\t\t35,
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 946310,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 946310,
+\t\t\t"title": "Pirates Down the Street II: The Ninjas from Across",
+\t\t\t"released_date": "2022-04-20",
+\t\t\t"rating": 7.1,
+\t\t\t"description": "The pirates feel right at home in Sandborough, but the atmosphere cools right down when the ninjas come to live in the street. After all, pirates and ninjas are sworn enemies!  While pirate captain Hector Blunderbuss struggles to get rid of his new neighbours, son Billy and ninja daughter Yuka become friends. The pirates challenge the ninjas to the ultimate battle at the village's annual hexathlon. Who will win the match? Ninjas are faster and more agile of course, but pirates are the best cheats in all of the seven seas...",
+\t\t\t"poster_path": "/uDsvma9dAwnDPVuCFi99YpWvBk0.jpg",
+\t\t\t"category": [
+\t\t\t\t10751,
+\t\t\t\t28,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 385687,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 385687,
+\t\t\t"title": "Fast X",
+\t\t\t"released_date": "2023-05-17",
+\t\t\t"rating": 0,
+\t\t\t"description": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.",
+\t\t\t"poster_path": "/1E5baAaEse26fej7uHcjOgEE2t2.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t80,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1048300,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1048300,
+\t\t\t"title": "Adrenaline",
+\t\t\t"released_date": "2022-12-15",
+\t\t\t"rating": 5.9,
+\t\t\t"description": "A female FBI agent holidaying in Eastern Europe with her family gets her life upside down when her daughter is kidnapped. She has to team up with a criminal on the run to save her daughter before time runs out.",
+\t\t\t"poster_path": "/mSgqZlz7umts77mEhmEhv9piUKv.jpg",
+\t\t\t"category": [
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 700391,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 700391,
+\t\t\t"title": "65",
+\t\t\t"released_date": "2023-03-02",
+\t\t\t"rating": 6.3,
+\t\t\t"description": "65 million years ago, the only 2 survivors of a spaceship from Somaris that crash-landed on Earth must fend off dinosaurs and reach the escape vessel in time before an imminent asteroid strike threatens to destroy the planet.",
+\t\t\t"poster_path": "/rzRb63TldOKdKydCvWJM8B6EkPM.jpg",
+\t\t\t"category": [
+\t\t\t\t878,
+\t\t\t\t12,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1008005,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1008005,
+\t\t\t"title": "The Communion Girl",
+\t\t\t"released_date": "2023-02-10",
+\t\t\t"rating": 6.2,
+\t\t\t"description": "Spain, late 1980s. Newcomer Sara tries to fit in with the other teens in this tight-knit small town in the province of Tarragona. If only she were more like her extroverted best friend, Rebe. They go out one night at a nightclub, on the way home, they come upon a little girl holding a doll, dressed for her first communion. And that's when the nightmare begins.",
+\t\t\t"poster_path": "/uYxrWr9o44yO0HvVfFFHGu01gfX.jpg",
+\t\t\t"category": [
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 505642,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 505642,
+\t\t\t"title": "Black Panther: Wakanda Forever",
+\t\t\t"released_date": "2022-11-09",
+\t\t\t"rating": 7.3,
+\t\t\t"description": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death.  As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+\t\t\t"poster_path": "/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 997776,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 997776,
+\t\t\t"title": "Justice League x RWBY: Super Heroes & Huntsmen, Part One",
+\t\t\t"released_date": "2023-04-25",
+\t\t\t"rating": 7.9,
+\t\t\t"description": "Superman, Batman, Wonder Woman, Flash, Cyborg, Green Lantern and Vixen are transported to the strange world of Remnant and find themselves turned into teenagers. Meanwhile, Remnant heroes Ruby, Weiss, Blake and Yang must combine forces with the Justice League to uncover why their planet has been mysteriously altered before a superpowered Grimm destroys everything.",
+\t\t\t"poster_path": "/sjBFnG8DpouuWi161KbjbAER235.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t28,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 849869,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 849869,
+\t\t\t"title": "Kill Boksoon",
+\t\t\t"released_date": "2023-02-17",
+\t\t\t"rating": 7,
+\t\t\t"description": "At work, she's a renowned assassin. At home, she's a single mom to a teenage daughter. Killing? That's easy. It's parenting that's the hard part.",
+\t\t\t"poster_path": "/taYgn3RRpCGlTGdaGQvnSIOzXFy.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t80,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 816904,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 816904,
+\t\t\t"title": "Mummies",
+\t\t\t"released_date": "2023-01-05",
+\t\t\t"rating": 7.1,
+\t\t\t"description": "Through a series of unfortunate events, three mummies end up in present-day London and embark on a wacky and hilarious journey in search of an old ring belonging to the Royal Family, stolen by ambitious archaeologist Lord Carnaby.",
+\t\t\t"poster_path": "/qVdrYN8qu7xUtsdEFeGiIVIaYd.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t35,
+\t\t\t\t10751,
+\t\t\t\t12,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 436270,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 436270,
+\t\t\t"title": "Black Adam",
+\t\t\t"released_date": "2022-10-19",
+\t\t\t"rating": 7.1,
+\t\t\t"description": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+\t\t\t"poster_path": "/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t878,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1033219,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1033219,
+\t\t\t"title": "Attack on Titan",
+\t\t\t"released_date": "2022-09-30",
+\t\t\t"rating": 6,
+\t\t\t"description": "As viable water is depleted on Earth, a mission is sent to Saturn's moon Titan to retrieve sustainable H2O reserves from its alien inhabitants. But just as the humans acquire the precious resource, they are attacked by Titan rebels, who don't trust that the Earthlings will leave in peace.",
+\t\t\t"poster_path": "/qNz4l8UgTkD8rlqiKZ556pCJ9iO.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1105014,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1105014,
+\t\t\t"title": "Ripper's Revenge",
+\t\t\t"released_date": "2023-04-03",
+\t\t\t"rating": 5.3,
+\t\t\t"description": "One year on from the notorious Ripper murders, London is terrorised once again by a series of brutal killings. When gruesome letters from the Ripper begin landing on his desk, an innocent reporter finds himself drawn into a deadly mystery, threatening the lives of everyone around him.",
+\t\t\t"poster_path": "/cuEIBHTWAvaYkhhS8HfOkhce2MB.jpg",
+\t\t\t"category": [
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 994128,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 994128,
+\t\t\t"title": "The Elderly",
+\t\t\t"released_date": "2023-04-21",
+\t\t\t"rating": 6.4,
+\t\t\t"description": "An octogenarian named Manuel falls into a state of dementia after the sudden suicide of his wife, sparking a series of paranormal events that will put his family’s lives at risk.",
+\t\t\t"poster_path": "/88f35mGJOIE1nXgst5o4FvEDVzr.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t53,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 736790,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 736790,
+\t\t\t"title": "Chupa",
+\t\t\t"released_date": "2023-04-07",
+\t\t\t"rating": 6.5,
+\t\t\t"description": "While visiting family in Mexico, a lonely boy befriends a mythical creature hiding on his grandfather's ranch and embarks on the adventure of a lifetime.",
+\t\t\t"poster_path": "/ra3xm8KFAkwK0CdbPRkfYADJYTB.jpg",
+\t\t\t"category": [
+\t\t\t\t12,
+\t\t\t\t14,
+\t\t\t\t10751
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 842945,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 842945,
+\t\t\t"title": "Supercell",
+\t\t\t"released_date": "2023-03-17",
+\t\t\t"rating": 6.3,
+\t\t\t"description": "Good-hearted teenager William always lived in hope of following in his late father’s footsteps and becoming a storm chaser. His father’s legacy has now been turned into a storm-chasing tourist business, managed by the greedy and reckless Zane Rogers, who is now using William as the main attraction to lead a group of unsuspecting adventurers deep into the eye of the most dangerous supercell ever seen.",
+\t\t\t"poster_path": "/gbGHezV6yrhua0KfAgwrknSOiIY.jpg",
+\t\t\t"category": [
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 283995,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 283995,
+\t\t\t"title": "Guardians of the Galaxy Vol. 2",
+\t\t\t"released_date": "2017-04-19",
+\t\t\t"rating": 7.6,
+\t\t\t"description": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage.",
+\t\t\t"poster_path": "/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg",
+\t\t\t"category": [
+\t\t\t\t12,
+\t\t\t\t28,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 980078,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 980078,
+\t\t\t"title": "Winnie the Pooh: Blood and Honey",
+\t\t\t"released_date": "2023-01-27",
+\t\t\t"rating": 5.7,
+\t\t\t"description": "Christopher Robin is headed off to college and he has abandoned his old friends, Pooh and Piglet, which then leads to the duo embracing their inner monsters.",
+\t\t\t"poster_path": "/ewF3IlGscc7FjgGEPcQvZsAsgAW.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 536554,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 536554,
+\t\t\t"title": "M3GAN",
+\t\t\t"released_date": "2022-12-28",
+\t\t\t"rating": 7.4,
+\t\t\t"description": "A brilliant toy company roboticist uses artificial intelligence to develop M3GAN, a life-like doll programmed to emotionally bond with her newly orphaned niece. But when the doll's programming works too well, she becomes overprotective of her new friend with terrifying results.",
+\t\t\t"poster_path": "/d9nBoowhjiiYc4FBNtQkPY7c11H.jpg",
+\t\t\t"category": [
+\t\t\t\t878,
+\t\t\t\t27,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1104040,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1104040,
+\t\t\t"title": "Gangs of Lagos",
+\t\t\t"released_date": "2023-04-07",
+\t\t\t"rating": 6.1,
+\t\t\t"description": "A group of friends who each have to navigate their own destiny, growing up on the bustling streets and neighborhood of Isale Eko, Lagos.",
+\t\t\t"poster_path": "/nGwFsB6EXUCr21wzPgtP5juZPSv.jpg",
+\t\t\t"category": [
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 840326,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 840326,
+\t\t\t"title": "Sisu",
+\t\t\t"released_date": "2023-01-27",
+\t\t\t"rating": 7.3,
+\t\t\t"description": "Deep in the wilderness of Lapland, Aatami Korpi is searching for gold but after he stumbles upon Nazi patrol, a breathtaking and gold-hungry chase through the destroyed and mined Lapland wilderness begins.",
+\t\t\t"poster_path": "/dHx5yuBb05U9vNaNhIBD7jWyxPk.jpg",
+\t\t\t"category": [
+\t\t\t\t10752,
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 296271,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 296271,
+\t\t\t"title": "The Devil Conspiracy",
+\t\t\t"released_date": "2023-01-13",
+\t\t\t"rating": 6.2,
+\t\t\t"description": "The hottest biotech company in the world has discovered they can clone history’s most influential people from the dead. Now, they are auctioning clones of Michelangelo, Galileo, Vivaldi, and others for tens of millions of dollars to the world’s ultra-rich. But when they steal the Shroud of Turin and clone the DNA of Jesus Christ, all hell breaks loose.",
+\t\t\t"poster_path": "/2lUYbD2C3XSuwqMUbDVDQuz9mqz.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t14,
+\t\t\t\t878,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 876792,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 876792,
+\t\t\t"title": "That Time I Got Reincarnated as a Slime the Movie: Scarlet Bond",
+\t\t\t"released_date": "2022-11-25",
+\t\t\t"rating": 7.7,
+\t\t\t"description": "A long-running conspiracy is swirling over a mysterious power wielded by the Queen in Raja, a small country west of Tempest. When a slime who evolved into a Demon Lord named Rimuru Tempest crosses paths with Hiiro, a survivor of the Ogre race, an incredible adventure packed with new characters begins. The power of bonds will be put to the test!",
+\t\t\t"poster_path": "/xITip9n9uMAUA0TU6niMXU2tbh0.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t14,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 631842,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 631842,
+\t\t\t"title": "Knock at the Cabin",
+\t\t\t"released_date": "2023-02-01",
+\t\t\t"rating": 6.4,
+\t\t\t"description": "While vacationing at a remote cabin, a young girl and her two fathers are taken hostage by four armed strangers who demand that the family make an unthinkable choice to avert the apocalypse. With limited access to the outside world, the family must decide what they believe before all is lost.",
+\t\t\t"poster_path": "/dm06L9pxDOL9jNSK4Cb6y139rrG.jpg",
+\t\t\t"category": [
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1084225,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1084225,
+\t\t\t"title": "The Park",
+\t\t\t"released_date": "2023-03-02",
+\t\t\t"rating": 6,
+\t\t\t"description": "A dystopian coming-of-age movie focused on three kids who find themselves in an abandoned amusement park, aiming to unite whoever remains. With dangers lurking around every corner, they will do whatever it takes to survive their hellish Neverland.",
+\t\t\t"poster_path": "/hR1jdCw0A9czgsbp45TASkjjBhA.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t18,
+\t\t\t\t27,
+\t\t\t\t878,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1085103,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1085103,
+\t\t\t"title": "Clock",
+\t\t\t"released_date": "2023-03-28",
+\t\t\t"rating": 6,
+\t\t\t"description": "On the eve of her 38th birthday, a woman desperately attempts to fix her broken biological clock.",
+\t\t\t"poster_path": "/m6Yt77C9u7Aume9dTJMCSRzWDED.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t9648,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 869626,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 869626,
+\t\t\t"title": "Marcel the Shell with Shoes On",
+\t\t\t"released_date": "2022-06-24",
+\t\t\t"rating": 7.8,
+\t\t\t"description": "Marcel is an adorable one-inch-tall shell who ekes out a colorful existence with his grandmother Connie and their pet lint, Alan. Once part of a sprawling community of shells, they now live alone as the sole survivors of a mysterious tragedy. But when a documentary filmmaker discovers them amongst the clutter of his Airbnb, the short film he posts online brings Marcel millions of passionate fans, as well as unprecedented dangers and a new hope at finding his long-lost family.",
+\t\t\t"poster_path": "/jaYmP4Ct8YLnxWAW2oYkUjeXtzm.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t35,
+\t\t\t\t10751,
+\t\t\t\t18,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1023313,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1023313,
+\t\t\t"title": "The Exorcist",
+\t\t\t"released_date": "2022-11-02",
+\t\t\t"rating": 5.9,
+\t\t\t"description": "Ophelia, a young nun recently arriving in the town of San Ramon, is forced to perform an exorcism on a pregnant woman in danger of dying. Just when she thinks her possession has ended, she discovers that the evil presence hasn't disappeared yet. The director of the award-winning Here Comes the Devil and Late Phases adds a new twist to possession movies in one of this year's Latin American horror surprises.",
+\t\t\t"poster_path": "/d07xtqwq1uriQ1hda6qeu8Skt5m.jpg",
+\t\t\t"category": [
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 646389,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 646389,
+\t\t\t"title": "Plane",
+\t\t\t"released_date": "2023-01-12",
+\t\t\t"rating": 6.9,
+\t\t\t"description": "After a heroic job of successfully landing his storm-damaged aircraft in a war zone, a fearless pilot finds himself between the agendas of multiple militias planning to take the plane and its passengers hostage.",
+\t\t\t"poster_path": "/qi9r5xBgcc9KTxlOLjssEbDgO0J.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 983768,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 983768,
+\t\t\t"title": "Black Warrant",
+\t\t\t"released_date": "2023-01-09",
+\t\t\t"rating": 5.3,
+\t\t\t"description": "A semi-retired special ops assassin and a DEA agent cross paths on separate missions to stop a cyber terrorist organization that has built a dangerous machine threatening to attack the power grid and bring catastrophe to the world.",
+\t\t\t"poster_path": "/A7vFFZHbDyxfjuYKzJwruTnwwjT.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 758009,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 758009,
+\t\t\t"title": "Shotgun Wedding",
+\t\t\t"released_date": "2022-12-28",
+\t\t\t"rating": 6.3,
+\t\t\t"description": "Darcy and Tom gather their families for the ultimate destination wedding but when the entire party is taken hostage, “’Til Death Do Us Part” takes on a whole new meaning in this hilarious, adrenaline-fueled adventure as Darcy and Tom must save their loved ones—if they don’t kill each other first.",
+\t\t\t"poster_path": "/t79ozwWnwekO0ADIzsFP1E5SkvR.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t35,
+\t\t\t\t10749
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 943822,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 943822,
+\t\t\t"title": "Prizefighter: The Life of Jem Belcher",
+\t\t\t"released_date": "2022-06-30",
+\t\t\t"rating": 6.2,
+\t\t\t"description": "At the turn of the 19th century, Pugilism was the sport of kings and a gifted young boxer fought his way to becoming champion of England.",
+\t\t\t"poster_path": "/x3PIk93PTbxT88ohfeb26L1VpZw.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t36
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 455476,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 455476,
+\t\t\t"title": "Knights of the Zodiac",
+\t\t\t"released_date": "2023-04-27",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "When a headstrong street orphan, Seiya, in search of his abducted sister unwittingly taps into hidden powers, he discovers he might be the only person alive who can protect a reincarnated goddess, sent to watch over humanity. Can he let his past go and embrace his destiny to become a Knight of the Zodiac?",
+\t\t\t"poster_path": "/tBiUXvCqz34GDeuY7jK14QQdtat.jpg",
+\t\t\t"category": [
+\t\t\t\t14,
+\t\t\t\t28,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 873256,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 873256,
+\t\t\t"title": "Kiss, Kiss!",
+\t\t\t"released_date": "2023-04-26",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "Convinced he can charm any woman, a tenacious flirt sets his sights on a headstrong bride-to-be engaged to the son of an ambitious politician.",
+\t\t\t"poster_path": "/kqltY4yywn4ex1Cht6f4lercrW4.jpg",
+\t\t\t"category": [
+\t\t\t\t10749,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 876969,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 876969,
+\t\t\t"title": "Assassin Club",
+\t\t\t"released_date": "2023-02-24",
+\t\t\t"rating": 7.1,
+\t\t\t"description": "In this world of contract killers, Morgan Gaines is the best of the best. When Morgan is hired to kill six people around the world, he soon discovers all the targets are also assassins unknowingly hired to kill each other.",
+\t\t\t"poster_path": "/y2d2SBqK33mGOG2CqAYMo3YbWE4.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 649609,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 649609,
+\t\t\t"title": "Renfield",
+\t\t\t"released_date": "2023-04-07",
+\t\t\t"rating": 7.2,
+\t\t\t"description": "Having grown sick and tired of his centuries as Dracula's lackey, Renfield finds a new lease on life — and maybe even redemption — when he falls for feisty, perennially angry traffic cop Rebecca Quincy.",
+\t\t\t"poster_path": "/p6yUjhvNGQpFZilKwOKbxQ1eHlo.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t35,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 676710,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 676710,
+\t\t\t"title": "The Amazing Maurice",
+\t\t\t"released_date": "2022-12-16",
+\t\t\t"rating": 7,
+\t\t\t"description": "Maurice is a streetwise ginger cat who comes up with a money-making scam by befriending a group of self-taught talking rats. When Maurice and the rodents meet a bookworm called Malicia, their little con soon goes down the drain.",
+\t\t\t"poster_path": "/ydhZeUjbzVEFclUpMhLfDZSavUY.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t12,
+\t\t\t\t35,
+\t\t\t\t10751,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 985939,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 985939,
+\t\t\t"title": "Fall",
+\t\t\t"released_date": "2022-08-11",
+\t\t\t"rating": 7.3,
+\t\t\t"description": "For best friends Becky and Hunter, life is all about conquering fears and pushing limits. But after they climb 2,000 feet to the top of a remote, abandoned radio tower, they find themselves stranded with no way down. Now Becky and Hunter’s expert climbing skills will be put to the ultimate test as they desperately fight to survive the elements, a lack of supplies, and vertigo-inducing heights",
+\t\t\t"poster_path": "/v28T5F1IygM8vXWZIycfNEm3xcL.jpg",
+\t\t\t"category": [
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 747355,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 747355,
+\t\t\t"title": "Swapping: A Divorce Trip Between Two Couples",
+\t\t\t"released_date": "2020-08-28",
+\t\t\t"rating": 8,
+\t\t\t"description": "Yong-ho and Seong-ho decide to organize their marriage and leave the last memories. He decides to go on a trip to the sea where four people went together at the beginning of the wedding. In fact, they liked each other's opponents. In the open sea, each person begins to exude their hidden emotions...​",
+\t\t\t"poster_path": "/wESfP4ZeBbwjjFw2tql4Bqx101Q.jpg",
+\t\t\t"category": [
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 984105,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 984105,
+\t\t\t"title": "The Mummy Resurrection",
+\t\t\t"released_date": "2023-01-02",
+\t\t\t"rating": 5.6,
+\t\t\t"description": "When an infamous \"cursed\" Egyptian sarcophagus falls into the hands of unscrupulous huckster Everett Randolph, he becomes obsessed with resurrecting the mummified princess held within it.",
+\t\t\t"poster_path": "/d0pt6KlVvmtG0uhccWjgWfIqJee.jpg",
+\t\t\t"category": [
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 616037,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 616037,
+\t\t\t"title": "Thor: Love and Thunder",
+\t\t\t"released_date": "2022-07-06",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor Odinson enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late.",
+\t\t\t"poster_path": "/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
+\t\t\t"category": [
+\t\t\t\t14,
+\t\t\t\t28,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 820067,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 820067,
+\t\t\t"title": "The Quintessential Quintuplets Movie",
+\t\t\t"released_date": "2022-05-20",
+\t\t\t"rating": 8.6,
+\t\t\t"description": "When five lovely young girls who hate studying hire part-time tutor Futaro, he guides not only their education but also their hearts. Time spent has brought them all closer, with feelings growing within the girls and Futaro. As they finish their third year of high school and their last school festival approaches, they set their sights on what’s next. Is there a future with one of them and Futaro?",
+\t\t\t"poster_path": "/sg7klpt1xwK1IJirBI9EHaqQwJ5.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t35,
+\t\t\t\t10749
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1011679,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1011679,
+\t\t\t"title": "Shark Side of the Moon",
+\t\t\t"released_date": "2022-08-12",
+\t\t\t"rating": 5.3,
+\t\t\t"description": "Decades ago, the USSR developed unkillable sharks and launched them to the moon. Today, a team of American astronauts will endure the fight of their lives.",
+\t\t\t"poster_path": "/v5CfpzxoJDkZxjZAizClFdlEF0U.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t878,
+\t\t\t\t53,
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 676841,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 676841,
+\t\t\t"title": "Unhappily Ever After",
+\t\t\t"released_date": "2023-01-26",
+\t\t\t"rating": 7,
+\t\t\t"description": "María José and Alfredo are about to celebrate their 20th anniversary and their children give them a trip to the hotel where they celebrated their honeymoon, but a spell will make them repeat the same day.",
+\t\t\t"poster_path": "/qiAM7Y8xF8wJDDsjeSuLgzyFGmd.jpg",
+\t\t\t"category": [
+\t\t\t\t35,
+\t\t\t\t10749
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 989473,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 989473,
+\t\t\t"title": "Invitation to a Murder",
+\t\t\t"released_date": "2023-05-05",
+\t\t\t"rating": 6.1,
+\t\t\t"description": "1934. South of England. For no apparent reason and like five other unrelated people, Miranda, a 28-year-old florist, is invited for the weekend in the mansion of billionaire Lewis Findley",
+\t\t\t"poster_path": "/8OyzvMrVx2tXjyJiE3GZpvaXE2T.jpg",
+\t\t\t"category": [
+\t\t\t\t9648,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 361743,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 361743,
+\t\t\t"title": "Top Gun: Maverick",
+\t\t\t"released_date": "2022-05-24",
+\t\t\t"rating": 8.3,
+\t\t\t"description": "After more than thirty years of service as one of the Navy’s top aviators, and dodging the advancement in rank that would ground him, Pete “Maverick” Mitchell finds himself training a detachment of TOP GUN graduates for a specialized mission the likes of which no living pilot has ever seen.",
+\t\t\t"poster_path": "/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 766507,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 766507,
+\t\t\t"title": "Prey",
+\t\t\t"released_date": "2022-08-02",
+\t\t\t"rating": 7.8,
+\t\t\t"description": "When danger threatens her camp, the fierce and highly skilled Comanche warrior Naru sets out to protect her people. But the prey she stalks turns out to be a highly evolved alien predator with a technically advanced arsenal.",
+\t\t\t"poster_path": "/ujr5pztc1oitbe7ViMUOilFaJ7s.jpg",
+\t\t\t"category": [
+\t\t\t\t53,
+\t\t\t\t28,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1003579,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1003579,
+\t\t\t"title": "Batman: The Doom That Came to Gotham",
+\t\t\t"released_date": "2023-03-10",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "Explorer Bruce Wayne accidentally unleashes an ancient evil, and returns to Gotham after being away for two decades. There, Batman battles Lovecraftian supernatural forces and encounters allies and enemies such as Green Arrow, Ra's al Ghul, Mr. Freeze, Killer Croc, Two-Face and James Gordon.",
+\t\t\t"poster_path": "/hrATQE8ScQceohwInaMluluNEaf.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t14,
+\t\t\t\t27,
+\t\t\t\t28,
+\t\t\t\t9648
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1076605,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1076605,
+\t\t\t"title": "Cazadora",
+\t\t\t"released_date": "2023-01-19",
+\t\t\t"rating": 6.2,
+\t\t\t"description": "In a dystopian future, a mother and her teenage son go hunting in the mountains and encounter a stranger who threatens to upend their relationship.",
+\t\t\t"poster_path": "/8QxCd3pSSrj6QqaG4fkNkaJmUa.jpg",
+\t\t\t"category": [
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 634649,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 634649,
+\t\t\t"title": "Spider-Man: No Way Home",
+\t\t\t"released_date": "2021-12-15",
+\t\t\t"rating": 8,
+\t\t\t"description": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+\t\t\t"poster_path": "/uJYYizSuA9Y3DCs0qS4qWvHfZg4.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 736526,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 736526,
+\t\t\t"title": "Troll",
+\t\t\t"released_date": "2022-12-01",
+\t\t\t"rating": 6.7,
+\t\t\t"description": "Deep inside the mountain of Dovre, something gigantic awakens after being trapped for a thousand years. Destroying everything in its path, the creature is fast approaching the capital of Norway. But how do you stop something you thought only existed in Norwegian folklore?",
+\t\t\t"poster_path": "/9z4jRr43JdtU66P0iy8h18OyLql.jpg",
+\t\t\t"category": [
+\t\t\t\t14,
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 820232,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 820232,
+\t\t\t"title": "Demon Slayer: Kimetsu no Yaiba Sibling's Bond",
+\t\t\t"released_date": "2019-03-29",
+\t\t\t"rating": 8,
+\t\t\t"description": "Tanjiro finds his family slaughtered and the lone survivor, his sister Nezuko Kamado, turned into a Demon. To his surprise, however, Nezuko still shows signs of human emotion and thought. Thus begins Tanjiro's journey to seek out the Demon who killed their family and turn his sister human again. A recap film of Kimetsu no Yaiba, covering episodes 1-5 with extra footage.",
+\t\t\t"poster_path": "/vJUDoYNNKvBqbEPUskgvzPXGEFz.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t16,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 966220,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 966220,
+\t\t\t"title": "Sniper: The White Raven",
+\t\t\t"released_date": "2022-05-03",
+\t\t\t"rating": 7.5,
+\t\t\t"description": "Mykola is an eccentric pacifist who wants to be useful to humanity. When the war begins at Donbass, Mykola’s naive world is collapsing as the militants kill his pregnant wife and burn his home to the ground. Recovered, he makes a cardinal decision and gets enlisted in a sniper company. Having met his wife’s killers, he emotionally breaks down and arranges “sniper terror” for the enemy. He’s saved from a senseless death by his instructor who himself gets mortally wounded. The death of a friend leaves a “scar” and Mykola is ready to sacrifice his life.",
+\t\t\t"poster_path": "/295gZzTXMvuiIG0U19h4M44PXxI.jpg",
+\t\t\t"category": [
+\t\t\t\t10752,
+\t\t\t\t28,
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 635302,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 635302,
+\t\t\t"title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+\t\t\t"released_date": "2020-10-16",
+\t\t\t"rating": 8.3,
+\t\t\t"description": "Tanjiro Kamado, joined with Inosuke Hashibira, a boy raised by boars who wears a boar's head, and Zenitsu Agatsuma, a scared boy who reveals his true power when he sleeps, boards the Infinity Train on a new mission with the Fire Hashira, Kyojuro Rengoku, to defeat a demon who has been tormenting the people and killing the demon slayers who oppose it!",
+\t\t\t"poster_path": "/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t14,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 118340,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 118340,
+\t\t\t"title": "Guardians of the Galaxy",
+\t\t\t"released_date": "2014-07-30",
+\t\t\t"rating": 7.9,
+\t\t\t"description": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
+\t\t\t"poster_path": "/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t878,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 32516,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 32516,
+\t\t\t"title": "The Forbidden Legend: Sex & Chopsticks 2",
+\t\t\t"released_date": "2009-03-04",
+\t\t\t"rating": 6.2,
+\t\t\t"description": "Rich and powerful Simon Qing has been schooled in the ways of sex by his virile father, but is still a virgin. That is, until he meets his first love Violetta who has fun with him all over his father’s estate. Their love does not last, so Simon embarks on a journey. Along the way he meets the comely nun Moon whom Simon deflowers and then marries. He then becomes enamored of Golden Lotus but she is married to dwarf Wu Da-Lang.",
+\t\t\t"poster_path": "/A1yymig7S0FTWv9cTtOwdI1cH5V.jpg",
+\t\t\t"category": [
+\t\t\t\t35,
+\t\t\t\t18,
+\t\t\t\t10749
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 676547,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 676547,
+\t\t\t"title": "Prey for the Devil",
+\t\t\t"released_date": "2022-10-23",
+\t\t\t"rating": 7.1,
+\t\t\t"description": "In response to a global rise in demonic possessions, the Catholic Church reopens exorcism schools to train priests in the Rite of Exorcism. On this spiritual battlefield, an unlikely warrior rises: a young nun, Sister Ann. Thrust onto the spiritual frontline with fellow student Father Dante, Sister Ann finds herself in a battle for the soul of a young girl and soon realizes the Devil has her right where he wants her.",
+\t\t\t"poster_path": "/iCvgemXf2Kpr2LvpDmt5J9NhjKM.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 874745,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 874745,
+\t\t\t"title": "To Me, the One Who Loved You",
+\t\t\t"released_date": "2022-10-07",
+\t\t\t"rating": 6,
+\t\t\t"description": "Koyomi Hidaka and Shiori Sato meet at his father’s research center and begin to fall in love, but so do their parents, who eventually marry. To avoid becoming stepsiblings, they decide to run away to a parallel universe. Traveling between dimensions is common in their world, but not without repercussions. Does a universe exist for the young couple, and what will it cost them to find it?",
+\t\t\t"poster_path": "/gt7kD8MjObtgQYH130pZiLTN0qx.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t10749,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1073413,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1073413,
+\t\t\t"title": "Phenomena",
+\t\t\t"released_date": "2023-04-14",
+\t\t\t"rating": 5.9,
+\t\t\t"description": "Madrid, Spain, 1998. The many resources and skills of Gloria, Paz and Sagrario, three middle-aged women investigating paranormal events, are put to the test when their leader, Father Pilón, has an unpleasant encounter.",
+\t\t\t"poster_path": "/liosTyTUf0ObasR2HLTOrHQlzth.jpg",
+\t\t\t"category": [
+\t\t\t\t35,
+\t\t\t\t27,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 874743,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 874743,
+\t\t\t"title": "To Every You I've Loved Before",
+\t\t\t"released_date": "2022-10-07",
+\t\t\t"rating": 6.5,
+\t\t\t"description": "While struggling to make friends after his parents’ divorce, Koyomi Takasaki meets Kazune Takigawa, but apparently, they already have. Kazune reveals that she’s from World Line 85, an alternate universe in which she and Koyomi are lovers. But in a reality where moving between dimensions is natural, could Koyomi be the one from another world?",
+\t\t\t"poster_path": "/yl4WOrXTVFihtd6wcxpwkKD7xoP.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t10749,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 884184,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 884184,
+\t\t\t"title": "Consecration",
+\t\t\t"released_date": "2023-02-09",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "After the alleged suicide of her priest brother, Grace travels to the remote Scottish convent where he fell to his death. Distrusting the Church's account, she uncovers murder, sacrilege and a disturbing truth about herself.",
+\t\t\t"poster_path": "/yQTRmPzKAdLodknnPVtImm6FWPZ.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 843794,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 843794,
+\t\t\t"title": "JUNG_E",
+\t\t\t"released_date": "2023-01-20",
+\t\t\t"rating": 6.3,
+\t\t\t"description": "On an uninhabitable 22nd-century Earth, the outcome of a civil war hinges on cloning the brain of an elite soldier to create a robot mercenary.",
+\t\t\t"poster_path": "/z2nfRxZCGFgAnVhb9pZO87TyTX5.jpg",
+\t\t\t"category": [
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 842544,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 842544,
+\t\t\t"title": "Transfusion",
+\t\t\t"released_date": "2023-01-05",
+\t\t\t"rating": 6.4,
+\t\t\t"description": "Ryan Logan, a former Special Forces operative, is battling to cope with life after the loss of his wife.  He is thrusted into the criminal underworld to keep his only son from being taken from him.",
+\t\t\t"poster_path": "/bxh5xCCW9Ynfg6EZJWUkc1zqTnr.jpg",
+\t\t\t"category": [
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 265712,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 265712,
+\t\t\t"title": "Stand by Me Doraemon",
+\t\t\t"released_date": "2014-08-08",
+\t\t\t"rating": 7.3,
+\t\t\t"description": "Sewashi and Doraemon find themselves way back in time and meet Nobita. It is up to Doraemon to take care of Nobita or else he will not return to the present.",
+\t\t\t"poster_path": "/wc7XQbfx6EIQqCuvmBMt3aisb2Y.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t10751,
+\t\t\t\t878,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 675353,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 675353,
+\t\t\t"title": "Sonic the Hedgehog 2",
+\t\t\t"released_date": "2022-04-08",
+\t\t\t"rating": 7.6,
+\t\t\t"description": "After settling in Green Hills, Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns, this time with a new partner, Knuckles, in search for an emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.",
+\t\t\t"poster_path": "/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t10751,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1003580,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1003580,
+\t\t\t"title": "Legion of Super-Heroes",
+\t\t\t"released_date": "2023-02-07",
+\t\t\t"rating": 6.3,
+\t\t\t"description": "Kara, devastated by the loss of Krypton, struggles to adjust to her new life on Earth. Her cousin, Superman, mentors her and suggests she leave their space-time to attend the Legion Academy in the 31st century, where she makes new friends and a new enemy: Brainiac 5. Meanwhile, she must contend with a mysterious group called the Dark Circle as it searches for a powerful weapon held in the Academy’s vault.",
+\t\t\t"poster_path": "/8M6bA5t2q5u1nWDTEIXuGDwvboW.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t28,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 774752,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 774752,
+\t\t\t"title": "The Guardians of the Galaxy Holiday Special",
+\t\t\t"released_date": "2022-11-25",
+\t\t\t"rating": 7.3,
+\t\t\t"description": "On a mission to make Christmas unforgettable for Quill, the Guardians head to Earth in search of the perfect present.",
+\t\t\t"poster_path": "/8dqXyslZ2hv49Oiob9UjlGSHSTR.jpg",
+\t\t\t"category": [
+\t\t\t\t35,
+\t\t\t\t878,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 650270,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 650270,
+\t\t\t"title": "Ryoma! The Prince of Tennis",
+\t\t\t"released_date": "2021-11-11",
+\t\t\t"rating": 2,
+\t\t\t"description": "Inspired by his tennis champion father, Ryoma is determined to take his game to the next level and train in the US. But in the middle of an intense tennis battle to save his classmate Sakuno from dangerous villains, they somehow find themselves transported back to the past, just as Ryoma’s father is about to undertake his final championship match at the US Open – when he was mysteriously forced to retire.",
+\t\t\t"poster_path": "/i3uOi1yikhDZP6VbA2lgsztBLCj.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1072074,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1072074,
+\t\t\t"title": "Disquiet",
+\t\t\t"released_date": "2023-02-10",
+\t\t\t"rating": 7,
+\t\t\t"description": "After a near-fatal car accident, Sam wakes to discover he is trapped in an abandoned hospital by mysterious and sinister forces that have no intention of letting him leave…",
+\t\t\t"poster_path": "/fKuyTfzKMOdwQi150Zu3DVXwi7J.jpg",
+\t\t\t"category": [
+\t\t\t\t53,
+\t\t\t\t27,
+\t\t\t\t9648
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 724495,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 724495,
+\t\t\t"title": "The Woman King",
+\t\t\t"released_date": "2022-09-16",
+\t\t\t"rating": 7.8,
+\t\t\t"description": "The story of the Agojie, the all-female unit of warriors who protected the African Kingdom of Dahomey in the 1800s with skills and a fierceness unlike anything the world has ever seen, and General Nanisca as she trains the next generation of recruits and readies them for battle against an enemy determined to destroy their way of life.",
+\t\t\t"poster_path": "/438QXt1E3WJWb3PqNniK0tAE5c1.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t18,
+\t\t\t\t36
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1111140,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1111140,
+\t\t\t"title": "Two Sinners and a Mule",
+\t\t\t"released_date": "2023-04-21",
+\t\t\t"rating": 5.7,
+\t\t\t"description": "Kicked out of a small Western town for sinful behavior, free-spirited Alice and Nora set out for Virginia City to pursue their dream of opening a restaurant. Out on the prairie, they come across an injured bounty hunter named Elden. Hoping to share in the reward, they nurse Elden back to health and help him stalk his prey, Grimes. But as Nora and Alice both develop feelings for Elden, no one notices that Grimes is now on their tail, and the hunters become the hunted…",
+\t\t\t"poster_path": "/icL1zn5z1L5ULIpxkuOLjeUgURY.jpg",
+\t\t\t"category": [
+\t\t\t\t37,
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 458156,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 458156,
+\t\t\t"title": "John Wick: Chapter 3 - Parabellum",
+\t\t\t"released_date": "2019-05-15",
+\t\t\t"rating": 7.4,
+\t\t\t"description": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn.",
+\t\t\t"poster_path": "/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t53,
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1026563,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1026563,
+\t\t\t"title": "13 Exorcisms",
+\t\t\t"released_date": "2022-11-04",
+\t\t\t"rating": 5.6,
+\t\t\t"description": "After participating in a séance, young Laura begins to behave strangely. Alarmed, her parents ask Father Olmedo, one of the few exorcists authorized by the Vatican to intervene in cases of demonic possession, for help.",
+\t\t\t"poster_path": "/8LpnMIqpRiwxpbGR33ALCmVl7gj.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1104191,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1104191,
+\t\t\t"title": "Solo Somos Carne",
+\t\t\t"released_date": "2022-10-13",
+\t\t\t"rating": 7.2,
+\t\t\t"description": "A regular day for Bans and Uzu, little did they know a series of events would bring them face to face with an alternate reality and their chance to confront Dixon, a disturbed psychopath with blood on his hands and demons in his mind.",
+\t\t\t"poster_path": "/9eVqMhZEbq53VFbmRNqh3yzT0xM.jpg",
+\t\t\t"category": [
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 663712,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 663712,
+\t\t\t"title": "Terrifier 2",
+\t\t\t"released_date": "2022-10-06",
+\t\t\t"rating": 6.9,
+\t\t\t"description": "After being resurrected by a sinister entity, Art the Clown returns to Miles County where he must hunt down and destroy a teenage girl and her younger brother on Halloween night.  As the body count rises, the siblings fight to stay alive while uncovering the true nature of Art's evil intent.",
+\t\t\t"poster_path": "/8gLhu8UFPZfH2Hv11JhTZkb9CVl.jpg",
+\t\t\t"category": [
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 667538,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 667538,
+\t\t\t"title": "Transformers: Rise of the Beasts",
+\t\t\t"released_date": "2023-06-07",
+\t\t\t"rating": 0,
+\t\t\t"description": "A ‘90s globetrotting adventure that introduces the Maximals, Predacons, and Terrorcons to the existing battle on earth between Autobots and Decepticons.",
+\t\t\t"poster_path": "/aY2hzOLuHTxKev5bWnC05ZjxtrB.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1077280,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1077280,
+\t\t\t"title": "Die Hart",
+\t\t\t"released_date": "2023-02-22",
+\t\t\t"rating": 6.1,
+\t\t\t"description": "Kevin Hart - playing a version of himself - is on a death-defying quest to become an action star. And with a little help from John Travolta, Nathalie Emmanuel, and Josh Hartnett - he just might pull it off.",
+\t\t\t"poster_path": "/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t35,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 964426,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 964426,
+\t\t\t"title": "Gold Run",
+\t\t\t"released_date": "2022-12-15",
+\t\t\t"rating": 6.8,
+\t\t\t"description": "Fredrik isn’t the bravest of men, but now he is faced with a great responsibility and an enormous task - to get the entire Norwegian gold reserve away from the Nazis during the invasion of Norway.",
+\t\t\t"poster_path": "/6E4LopmCMUXcMLIv7o3jw1xQrgJ.jpg",
+\t\t\t"category": [
+\t\t\t\t10752,
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 447277,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 447277,
+\t\t\t"title": "The Little Mermaid",
+\t\t\t"released_date": "2023-05-18",
+\t\t\t"rating": 0,
+\t\t\t"description": "The youngest of King Triton’s daughters, and the most defiant, Ariel longs to find out more about the world beyond the sea, and while visiting the surface, falls for the dashing Prince Eric. With mermaids forbidden to interact with humans, Ariel makes a deal with the evil sea witch, Ursula, which gives her a chance to experience life on land, but ultimately places her life – and her father’s crown – in jeopardy.",
+\t\t\t"poster_path": "/kMsNcjyYRPoKFp617BKvPum2Iiw.jpg",
+\t\t\t"category": [
+\t\t\t\t12,
+\t\t\t\t10751,
+\t\t\t\t14,
+\t\t\t\t10749
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1087040,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1087040,
+\t\t\t"title": "Money Shot: The Pornhub Story",
+\t\t\t"released_date": "2023-03-15",
+\t\t\t"rating": 5.8,
+\t\t\t"description": "Featuring interviews with performers, activists and past employees, this documentary offers a deep dive into the successes and scandals of Pornhub.",
+\t\t\t"poster_path": "/kpTqWqLYcf1uErnx5VXLah4EWJZ.jpg",
+\t\t\t"category": [
+\t\t\t\t99
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 776835,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 776835,
+\t\t\t"title": "The Magician's Elephant",
+\t\t\t"released_date": "2023-03-10",
+\t\t\t"rating": 7.1,
+\t\t\t"description": "Peter is searching for his long-lost sister when he crosses paths with a fortune teller in the market square. His one one question is: is his sister still alive? The answer, that he must find a mysterious elephant and the magician who will conjure it, sets Peter off on a journey to complete three seemingly impossible tasks that will change the face of his town forever.",
+\t\t\t"poster_path": "/cAoAgzOCxSytYBqqCQulhXNR3LB.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t12,
+\t\t\t\t10751,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 875104,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 875104,
+\t\t\t"title": "Ip Man: The Awakening",
+\t\t\t"released_date": "2023-05-05",
+\t\t\t"rating": 5.6,
+\t\t\t"description": "When a young Master Ip stops a kidnapping, he ignites a turf war with a ruthless human-trafficking ring. In retaliation, the gang kidnaps one of Ip Man's close friends, forcing him to face the group's brutal boxing champion head-on.",
+\t\t\t"poster_path": "/A7vhdyGrpPMKXsuFBZzxmave94F.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t36,
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 988165,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 988165,
+\t\t\t"title": "H.P. Lovecraft's Witch House",
+\t\t\t"released_date": "2022-06-29",
+\t\t\t"rating": 5.8,
+\t\t\t"description": "Determined to prove the possibility of alternate dimensions, a graduate student unknowingly unlocks a gateway to unimaginable horror. Based on the H.P. Lovecraft's short story The Dreams in the Witch House.",
+\t\t\t"poster_path": "/5KmscR49WkmuPJKjmK4OUmsRn5C.jpg",
+\t\t\t"category": [
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 507086,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 507086,
+\t\t\t"title": "Jurassic World Dominion",
+\t\t\t"released_date": "2022-06-01",
+\t\t\t"rating": 6.9,
+\t\t\t"description": "Four years after the destruction of Isla Nublar, Biosyn operatives attempt to track down Maisie Lockwood, while Dr Ellie Sattler investigates a genetically engineered swarm of giant insects.",
+\t\t\t"poster_path": "/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg",
+\t\t\t"category": [
+\t\t\t\t12,
+\t\t\t\t28,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 668482,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 668482,
+\t\t\t"title": "Roald Dahl's Matilda the Musical",
+\t\t\t"released_date": "2022-11-25",
+\t\t\t"rating": 6.8,
+\t\t\t"description": "An extraordinary young girl discovers her superpower and summons the remarkable courage, against all odds, to help others change their stories, whilst also taking charge of her own destiny. Standing up for what's right, she's met with miraculous results.",
+\t\t\t"poster_path": "/ga8R3OiOMMgSvZ4cOj8x7prUNYZ.jpg",
+\t\t\t"category": [
+\t\t\t\t10751,
+\t\t\t\t35,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1013860,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1013860,
+\t\t\t"title": "R.I.P.D. 2: Rise of the Damned",
+\t\t\t"released_date": "2022-11-15",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "When Sheriff Roy Pulsipher finds himself in the afterlife, he joins a special police force and returns to Earth to save humanity from the undead.",
+\t\t\t"poster_path": "/g4yJTzMtOBUTAR2Qnmj8TYIcFVq.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t35,
+\t\t\t\t14,
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 829410,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 829410,
+\t\t\t"title": "Sick",
+\t\t\t"released_date": "2022-09-11",
+\t\t\t"rating": 6.3,
+\t\t\t"description": "In the midst of the pandemic, college student Parker and her best friend Miri decide to self-quarantine at her family's lake house, where they will be alone — or so they think.",
+\t\t\t"poster_path": "/nBgxSimgLMGYCQckRQw7C2f7row.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 988233,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 988233,
+\t\t\t"title": "Hex",
+\t\t\t"released_date": "2022-11-01",
+\t\t\t"rating": 5.9,
+\t\t\t"description": "Following a mysterious disappearance on a jump, a group of skydivers experiences paranormal occurrences that leave them fighting for their lives.",
+\t\t\t"poster_path": "/mFukGiFZaVYoXIR8nrE95LlfbHG.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t27,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 299536,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 299536,
+\t\t\t"title": "Avengers: Infinity War",
+\t\t\t"released_date": "2018-04-25",
+\t\t\t"rating": 8.3,
+\t\t\t"description": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+\t\t\t"poster_path": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+\t\t\t"category": [
+\t\t\t\t12,
+\t\t\t\t28,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 882598,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 882598,
+\t\t\t"title": "Smile",
+\t\t\t"released_date": "2022-09-23",
+\t\t\t"rating": 6.8,
+\t\t\t"description": "After witnessing a bizarre, traumatic incident involving a patient, Dr. Rose Cotter starts experiencing frightening occurrences that she can't explain. As an overwhelming terror begins taking over her life, Rose must confront her troubling past in order to survive and escape her horrifying new reality.",
+\t\t\t"poster_path": "/aPqcQwu4VGEewPhagWNncDbJ9Xp.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t9648,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 646385,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 646385,
+\t\t\t"title": "Scream",
+\t\t\t"released_date": "2022-01-12",
+\t\t\t"rating": 6.7,
+\t\t\t"description": "Twenty-five years after a streak of brutal murders shocked the quiet town of Woodsboro, a new killer has donned the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town’s deadly past.",
+\t\t\t"poster_path": "/nD4M4Bx457ryLuKYpxFwQ2IBJ5w.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t9648,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1101799,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1101799,
+\t\t\t"title": "Queens on the Run",
+\t\t\t"released_date": "2023-04-14",
+\t\t\t"rating": 7,
+\t\t\t"description": "When four women finally take the road trip they planned in high school, they have no idea of the things they'll bump into sometimes literally.",
+\t\t\t"poster_path": "/oUmuwUIofGsgOr05kieD3Q8ELEO.jpg",
+\t\t\t"category": [
+\t\t\t\t35,
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 67308,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 67308,
+\t\t\t"title": "3-D Sex and Zen: Extreme Ecstasy",
+\t\t\t"released_date": "2011-04-14",
+\t\t\t"rating": 4.8,
+\t\t\t"description": "Loosely based on a 17th century erotic Chinese story named The Carnal Prayer Mat, the story follows a young scholar named Yangsheng who gets married to the beautiful daughter of a local merchant. When their sex life proves unsatisfactory, Yangsheng leaves home and journeys to the Pavilion of Ultimate Bliss.",
+\t\t\t"poster_path": "/mmvFokJgpFmNt522Hfpq3Zfs2Ra.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t12,
+\t\t\t\t10749,
+\t\t\t\t28,
+\t\t\t\t36
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 453395,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 453395,
+\t\t\t"title": "Doctor Strange in the Multiverse of Madness",
+\t\t\t"released_date": "2022-05-04",
+\t\t\t"rating": 7.4,
+\t\t\t"description": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
+\t\t\t"poster_path": "/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
+\t\t\t"category": [
+\t\t\t\t14,
+\t\t\t\t28,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 850871,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 850871,
+\t\t\t"title": "Sayen",
+\t\t\t"released_date": "2023-03-03",
+\t\t\t"rating": 6.2,
+\t\t\t"description": "Sayen is hunting down the men who murdered her grandmother. Using her training and knowledge of nature, she is able to turn the tables on them, learning of a conspiracy from a corporation that threatens her people's ancestral lands.",
+\t\t\t"poster_path": "/aCy61aU7BMG7SfhkaAaasS0KzUO.jpg",
+\t\t\t"category": [
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 384018,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 384018,
+\t\t\t"title": "Fast & Furious Presents: Hobbs & Shaw",
+\t\t\t"released_date": "2019-08-01",
+\t\t\t"rating": 6.9,
+\t\t\t"description": "Ever since US Diplomatic Security Service Agent Hobbs and lawless outcast Shaw first faced off, they just have traded smack talk and body blows. But when cyber-genetically enhanced anarchist Brixton's ruthless actions threaten the future of humanity, they join forces to defeat him.",
+\t\t\t"poster_path": "/qRyy2UmjC5ur9bDi3kpNNRCc5nc.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1041513,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1041513,
+\t\t\t"title": "Encanto at the Hollywood Bowl",
+\t\t\t"released_date": "2022-12-28",
+\t\t\t"rating": 7.1,
+\t\t\t"description": "A taped performance of the Encanto Live-to-Film Concert Experience at the Hollywood Bowl. The original cast puts on a miracle of a concert as they sing the favorite songs, accompanied by a full orchestra and 50 person ensemble, and the Hollywood Bowl transforms into Casita!",
+\t\t\t"poster_path": "/sa3Ku5yNVjp8NloWxJoI9dQjvOi.jpg",
+\t\t\t"category": [
+\t\t\t\t10402
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 109428,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 109428,
+\t\t\t"title": "Evil Dead",
+\t\t\t"released_date": "2013-04-05",
+\t\t\t"rating": 6.5,
+\t\t\t"description": "Five young friends find the mysterious and fiercely powerful Book of the Dead, and unable to resist its temptation, release a violent demon on a bloodthirsty quest to possess them all.",
+\t\t\t"poster_path": "/1gDV0Lm9y8ufIKzyf0h0GBgb9Zj.jpg",
+\t\t\t"category": [
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 947704,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 947704,
+\t\t\t"title": "Yuku et la fleur de l’Himalaya",
+\t\t\t"released_date": "2022-10-19",
+\t\t\t"rating": 2,
+\t\t\t"description": "Yuku is a young mouse who lives with her family in the cellar of a castle. Her grandmother passes on the family values by telling her timeless folk tales. Injured in a tussle with a cat, the old mouse is bedridden and she tells her children that she will have to leave them to follow the little blind mole into the Earth’s tunnels. In one of her grandmother’s storybooks, Yuku learns that the flower of the Himalayas can bring her eternal light. She leaves on a journey of discovery to find the flower.",
+\t\t\t"poster_path": "/8bBmqaVxQFtdLJYB0CCcuwnhptc.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t10751,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 325358,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 325358,
+\t\t\t"title": "Superfast!",
+\t\t\t"released_date": "2015-03-05",
+\t\t\t"rating": 5,
+\t\t\t"description": "Undercover cop Lucas White joins Vin Serento's LA gang of illegal street racers. They are fast and they are furious and they plan to double cross LA crime kingpin Juan Carlos de la Sol who hides his cash in a downtown Taco Bell. The gang's outrageous plan is as daring as it is ridiculous and will see them towing the whole restaurant, at crazy speeds.",
+\t\t\t"poster_path": "/iuIWl90qCpoxv6g775JB6Kg0m86.jpg",
+\t\t\t"category": [
+\t\t\t\t35,
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 937278,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 937278,
+\t\t\t"title": "A Man Called Otto",
+\t\t\t"released_date": "2022-12-28",
+\t\t\t"rating": 7.9,
+\t\t\t"description": "When a lively young family moves in next door, grumpy widower Otto Anderson meets his match in a quick-witted, pregnant woman named Marisol, leading to an unlikely friendship that turns his world upside down.",
+\t\t\t"poster_path": "/130H1gap9lFfiTF9iDrqNIkFvC9.jpg",
+\t\t\t"category": [
+\t\t\t\t35,
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1058732,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1058732,
+\t\t\t"title": "The Simpsons Meet the Bocellis in Feliz Navidad",
+\t\t\t"released_date": "2022-12-15",
+\t\t\t"rating": 5.2,
+\t\t\t"description": "This Christmas, Homer surprises Marge with the ultimate gift: an unforgettable performance from Italian opera superstar Andrea Bocelli and his children Matteo and Virginia.",
+\t\t\t"poster_path": "/9rJFKvYvSyQ3HoTl1gcU55FOzYi.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t10751,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 414906,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 414906,
+\t\t\t"title": "The Batman",
+\t\t\t"released_date": "2022-03-01",
+\t\t\t"rating": 7.7,
+\t\t\t"description": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
+\t\t\t"poster_path": "/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+\t\t\t"category": [
+\t\t\t\t80,
+\t\t\t\t9648,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 916224,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 916224,
+\t\t\t"title": "Suzume",
+\t\t\t"released_date": "2022-11-11",
+\t\t\t"rating": 8,
+\t\t\t"description": "Suzume, 17, lost her mother as a little girl. On her way to school, she meets a mysterious young man. But her curiosity unleashes a calamity that endangers the entire population of Japan, and so Suzume embarks on a journey to set things right.",
+\t\t\t"poster_path": "/vIeu8WysZrTSFb2uhPViKjX9EcC.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t18,
+\t\t\t\t12,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 385128,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 385128,
+\t\t\t"title": "F9",
+\t\t\t"released_date": "2021-05-19",
+\t\t\t"rating": 7.2,
+\t\t\t"description": "Dominic Toretto and his crew battle the most skilled assassin and high-performance driver they've ever encountered: his forsaken brother.",
+\t\t\t"poster_path": "/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t80,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 846433,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 846433,
+\t\t\t"title": "The Enforcer",
+\t\t\t"released_date": "2022-09-22",
+\t\t\t"rating": 7.4,
+\t\t\t"description": "A noir thriller set in Miami, the film follows an enforcer who discovers his femme fatale boss has branched out into cyber sex trafficking, putting a young runaway he’s befriended at risk. He sacrifices everything to save the young girl from the deadly organization he’s spent his life building.",
+\t\t\t"poster_path": "/pXC8JJbfnRWtbD8i2yKFqqWEO4X.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t80,
+\t\t\t\t18,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 19995,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 19995,
+\t\t\t"title": "Avatar",
+\t\t\t"released_date": "2009-12-15",
+\t\t\t"rating": 7.6,
+\t\t\t"description": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+\t\t\t"poster_path": "/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t14,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 842942,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 842942,
+\t\t\t"title": "Bandit",
+\t\t\t"released_date": "2022-09-23",
+\t\t\t"rating": 6.2,
+\t\t\t"description": "After escaping a Michigan prison, a charming career criminal assumes a new identity in Canada and goes on to rob a record 59 banks and jewellery stores while being hunted by a rogue task force. Based on the story of The Flying Bandit.",
+\t\t\t"poster_path": "/yph9PAbmjYPvyvbeZvdYIhCZHEu.jpg",
+\t\t\t"category": [
+\t\t\t\t80,
+\t\t\t\t18,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 573171,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 573171,
+\t\t\t"title": "A Frozen Rooster",
+\t\t\t"released_date": "2022-12-14",
+\t\t\t"rating": 7.8,
+\t\t\t"description": "Follow the adventures of Toto and his family, who will have to travel to the South Pole to fulfill their promise to return a polar bear and some Spanish penguins to their home. In order to fulfill the promise, they will have to overcome some obstacles that will teach them how important teamwork is.",
+\t\t\t"poster_path": "/d7i9UXE7IfPx2uYtYKzgjs6zYzR.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t12,
+\t\t\t\t35,
+\t\t\t\t10751
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 324552,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 324552,
+\t\t\t"title": "John Wick: Chapter 2",
+\t\t\t"released_date": "2017-02-08",
+\t\t\t"rating": 7.3,
+\t\t\t"description": "John Wick is forced out of retirement by a former associate looking to seize control of a shadowy international assassins’ guild. Bound by a blood oath to aid him, Wick travels to Rome and does battle against some of the world’s most dangerous killers.",
+\t\t\t"poster_path": "/hXWBc0ioZP3cN4zCu6SN3YHXZVO.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t53,
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 899112,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 899112,
+\t\t\t"title": "Violent Night",
+\t\t\t"released_date": "2022-11-30",
+\t\t\t"rating": 7.5,
+\t\t\t"description": "When a team of mercenaries breaks into a wealthy family compound on Christmas Eve, taking everyone inside hostage, the team isn’t prepared for a surprise combatant: Santa Claus is on the grounds, and he’s about to show why this Nick is no saint.",
+\t\t\t"poster_path": "/1XSYOP0JjjyMz1irihvWywro82r.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t35,
+\t\t\t\t80,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 993621,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 993621,
+\t\t\t"title": "The Stranger in Our Bed",
+\t\t\t"released_date": "2022-08-26",
+\t\t\t"rating": 6.2,
+\t\t\t"description": "A newly married woman leaves her wealthy husband for a lover who mysteriously disappears. Things start to unravel and become life-threatening on a trip to the husband's family estate.",
+\t\t\t"poster_path": "/9bX57QlmpI1DcWLkggGmg5guqJx.jpg",
+\t\t\t"category": [
+\t\t\t\t53,
+\t\t\t\t9648
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 551271,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 551271,
+\t\t\t"title": "Medieval",
+\t\t\t"released_date": "2022-09-08",
+\t\t\t"rating": 7.2,
+\t\t\t"description": "The story of 14th century Czech icon and warlord Jan Zizka who defeated armies of the Teutonic Order and the Holy Roman Empire.",
+\t\t\t"poster_path": "/eeUNWsdoiOijOZAMaWFDA5Pb1n8.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t18,
+\t\t\t\t36
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 931954,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 931954,
+\t\t\t"title": "Venus",
+\t\t\t"released_date": "2022-12-02",
+\t\t\t"rating": 5.6,
+\t\t\t"description": "Lucía, a club dancer on the run, takes refuge in a sinister building on the outskirts of Madrid where her sister Rocío lives with her daughter Alba.",
+\t\t\t"poster_path": "/vyQmDx5CF8x9T6WKCLuoFotGpjf.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t27,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1058949,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1058949,
+\t\t\t"title": "Little Dixie",
+\t\t\t"released_date": "2023-02-03",
+\t\t\t"rating": 6,
+\t\t\t"description": "Erstwhile Special Forces operative Doc Alexander is asked to broker a truce with the Mexican drug cartel in secrecy. When Oklahoma Governor Richard Jeffs celebrates the execution of a high-ranking cartel member on TV, his Chief of Staff and Doc inform him about the peace he just ended. But it’s too late, as Cuco, the cartel’s hatchet man, has set his vengeful sights on Doc’s daughter Dixie.",
+\t\t\t"poster_path": "/cmWTZj9zzT9KFt3XyL0gssL7Ig8.jpg",
+\t\t\t"category": [
+\t\t\t\t53,
+\t\t\t\t28,
+\t\t\t\t18,
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 106646,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 106646,
+\t\t\t"title": "The Wolf of Wall Street",
+\t\t\t"released_date": "2013-12-25",
+\t\t\t"rating": 8,
+\t\t\t"description": "A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort's autobiography.",
+\t\t\t"poster_path": "/34m2tygAYBGqA9MXKhRDtzYd4MR.jpg",
+\t\t\t"category": [
+\t\t\t\t80,
+\t\t\t\t18,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 575322,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 575322,
+\t\t\t"title": "Project Gemini",
+\t\t\t"released_date": "2022-01-06",
+\t\t\t"rating": 5.8,
+\t\t\t"description": "After depleting Earth's resources for centuries, humankind's survival requires an exodus to outer space. An international expedition is quickly formed to find a suitable new planet, but when plans go awry, the crew is suddenly stranded without power on a strange planet, where something unimaginable lies in wait.",
+\t\t\t"poster_path": "/rFljUdOozFEv6HDHIFpFvcYW0ec.jpg",
+\t\t\t"category": [
+\t\t\t\t878,
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 653851,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 653851,
+\t\t\t"title": "Devotion",
+\t\t\t"released_date": "2022-11-23",
+\t\t\t"rating": 7.3,
+\t\t\t"description": "The harrowing true story of two elite US Navy fighter pilots during the Korean War. Their heroic sacrifices would ultimately make them the Navy's most celebrated wingmen.",
+\t\t\t"poster_path": "/26yQPXymbWeCLKwcmyL8dRjAzth.jpg",
+\t\t\t"category": [
+\t\t\t\t10752,
+\t\t\t\t36,
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 555604,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 555604,
+\t\t\t"title": "Guillermo del Toro's Pinocchio",
+\t\t\t"released_date": "2022-11-09",
+\t\t\t"rating": 8.2,
+\t\t\t"description": "During the rise of fascism in Mussolini's Italy, a wooden boy brought magically to life struggles to live up to his father's expectations.",
+\t\t\t"poster_path": "/vx1u0uwxdlhV2MUzj4VlcMB0N6m.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t14,
+\t\t\t\t18,
+\t\t\t\t10402
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1016121,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1016121,
+\t\t\t"title": "Beautiful Disaster",
+\t\t\t"released_date": "2023-04-04",
+\t\t\t"rating": 5.7,
+\t\t\t"description": "Bad-boy Travis is exactly what college freshman Abby needs and wants to avoid. He spends his nights fighting in underground boxing matches, and his days as the ultimate college campus charmer. But Abby wants nothing to do with Travis. Intrigued by Abby’s resistance, Travis offers her a simple bet: if he loses his next fight, he must remain sex-free for a month. If he wins, Abby must live in his apartment for the same amount of time. Either way, Travis has no idea that Abby’s dark past is about to emerge, and he may have finally met his match.",
+\t\t\t"poster_path": "/bwdLflvCcOCRPqb1x13KPuYIzVx.jpg",
+\t\t\t"category": [
+\t\t\t\t10749,
+\t\t\t\t18,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 585511,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 585511,
+\t\t\t"title": "Luck",
+\t\t\t"released_date": "2022-08-05",
+\t\t\t"rating": 7.9,
+\t\t\t"description": "Suddenly finding herself in the never-before-seen Land of Luck, the unluckiest person in the world must unite with the magical creatures there to turn her luck around.",
+\t\t\t"poster_path": "/1HOYvwGFioUFL58UVvDRG6beEDm.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t12,
+\t\t\t\t35,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1012404,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1012404,
+\t\t\t"title": "Sword Art Online: Extra Edition",
+\t\t\t"released_date": "2013-12-31",
+\t\t\t"rating": 6,
+\t\t\t"description": "Kirito and some of his new friends look back at the events of season one. Kirito recalls his defining moments while Suguha learns to swim with the help of Asuna and other girls who fought alongside Kirito.",
+\t\t\t"poster_path": "/nWr2GUTKRR4d8aCApF93OzBfq3e.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t14,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 876797,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 876797,
+\t\t\t"title": "The Last 10 Years",
+\t\t\t"released_date": "2022-03-04",
+\t\t\t"rating": 7,
+\t\t\t"description": "The 20-year-old heroine learns that she only has 10 years to live due to an incurable disease of 1 in tens of thousands. She decided not to fall in love and not to be obsessed with living. But then, she met the hero at a local alumni association.",
+\t\t\t"poster_path": "/yJFUBE5VGjQaTLuyhf4Hb926mn4.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t10749
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 739405,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 739405,
+\t\t\t"title": "Operation Fortune: Ruse de Guerre",
+\t\t\t"released_date": "2023-01-04",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "Special agent Orson Fortune and his team of operatives recruit one of Hollywood's biggest movie stars to help them on an undercover mission when the sale of a deadly new weapons technology threatens to disrupt the world order.",
+\t\t\t"poster_path": "/uo7vWfQUlVwueYTDRicXOJa8Oow.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t35,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 785084,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 785084,
+\t\t\t"title": "The Whale",
+\t\t\t"released_date": "2022-12-09",
+\t\t\t"rating": 8,
+\t\t\t"description": "A reclusive English teacher suffering from severe obesity attempts to reconnect with his estranged teenage daughter for one last chance at redemption.",
+\t\t\t"poster_path": "/jQ0gylJMxWSL490sy0RrPj1Lj7e.jpg",
+\t\t\t"category": [
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 49046,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 49046,
+\t\t\t"title": "All Quiet on the Western Front",
+\t\t\t"released_date": "2022-10-07",
+\t\t\t"rating": 7.8,
+\t\t\t"description": "Paul Baumer and his friends Albert and Muller, egged on by romantic dreams of heroism, voluntarily enlist in the German army. Full of excitement and patriotic fervour, the boys enthusiastically march into a war they believe in. But once on the Western Front, they discover the soul-destroying horror of World War I.",
+\t\t\t"poster_path": "/2IRjbi9cADuDMKmHdLK7LaqQDKA.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t10752,
+\t\t\t\t36
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 599019,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 599019,
+\t\t\t"title": "Big Trip 2: Special Delivery",
+\t\t\t"released_date": "2022-10-07",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "It has been a year since Mic Mic and Oscar returned from their incredible adventure. And now, after a diabolical plan by Vulture to sabotage the delivery of the Grizzly cub to his opponent in the American presidential elections, Mic Mic, Oscar, Panda teenager and Stork set off on another great adventure as they ride a zeppelin to return little Grizzly to its rightful parents and save the American elections and the whole continent from an erupting volcano.",
+\t\t\t"poster_path": "/dabXVfrAFfhDte8XVemom3mTJog.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t10751,
+\t\t\t\t12,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 947938,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 947938,
+\t\t\t"title": "Dolphin Boy",
+\t\t\t"released_date": "2022-04-07",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "When a plane crashes at sea, dolphins rescue a little boy and raise him as family. He lives a carefree life beneath the waves until an evil monster seizes power over the underwater world. The boy is banished to dry land, where a kind-hearted captain takes him in. With the captain’s help, the boy sets out on a journey to solve the mystery of his true identity.",
+\t\t\t"poster_path": "/gISoDEiaUH9BNEunmLC7FgUVaia.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t12,
+\t\t\t\t14,
+\t\t\t\t35
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 965839,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 965839,
+\t\t\t"title": "Lord of the Streets",
+\t\t\t"released_date": "2022-04-22",
+\t\t\t"rating": 5.2,
+\t\t\t"description": "When Jason Dyson refuses to make his prized fighter throw an MMA match, a notorious gangster collects his debt by killing the fighter and kidnapping Jason's daughter. Now he must train a prisoner to endure five consecutive underground fights to save her.",
+\t\t\t"poster_path": "/n9YWVQRc0zw0nwrFcOkOpffZxjc.jpg",
+\t\t\t"category": [
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 772515,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 772515,
+\t\t\t"title": "Huesera: The Bone Woman",
+\t\t\t"released_date": "2023-02-10",
+\t\t\t"rating": 5.8,
+\t\t\t"description": "Valeria's joy at becoming a first-time mother is quickly taken away when she's cursed by a sinister entity. As danger closes in, she's forced deeper into a chilling world of dark magic that threatens to consume her.",
+\t\t\t"poster_path": "/zgpj76z9byUgcWnxLDmtZ3XqfvN.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t27,
+\t\t\t\t9648
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 823999,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 823999,
+\t\t\t"title": "Diabolik - Ginko Attacks",
+\t\t\t"released_date": "2022-11-17",
+\t\t\t"rating": 6,
+\t\t\t"description": "Diabolik nearly gets caught in Inspector Ginko's latest trap, leaving his partner in crime Eva Kant behind in the escape. Furious, Eva offers Ginko her help in capturing the King of Terror, but the former has to face the return of an old flame of his.",
+\t\t\t"poster_path": "/8QVbWBv94BAT9u1q9uJccwOxMzt.jpg",
+\t\t\t"category": [
+\t\t\t\t80,
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1114905,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1114905,
+\t\t\t"title": "Death's Roulette",
+\t\t\t"released_date": "2023-05-05",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "Seven strangers wake up in a mansion in the middle of nowhere to discover they are part of a twisted game. They will have 60 minutes to choose one person to die; otherwise, all of them will be murdered. As the clock ticks down, the most lurid secrets will come to light, and they’ll discover they are all connected by a dark past.",
+\t\t\t"poster_path": "/yMeKoe3ui4Pad8FUOJwCby3SOWe.jpg",
+\t\t\t"category": [
+\t\t\t\t53,
+\t\t\t\t9648,
+\t\t\t\t18,
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 568124,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 568124,
+\t\t\t"title": "Encanto",
+\t\t\t"released_date": "2021-10-13",
+\t\t\t"rating": 7.6,
+\t\t\t"description": "The tale of an extraordinary family, the Madrigals, who live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place called an Encanto. The magic of the Encanto has blessed every child in the family—every child except one, Mirabel. But when she discovers that the magic surrounding the Encanto is in danger, Mirabel decides that she, the only ordinary Madrigal, might just be her exceptional family's last hope.",
+\t\t\t"poster_path": "/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t35,
+\t\t\t\t10751,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 230622,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 230622,
+\t\t\t"title": "Rain Town",
+\t\t\t"released_date": "2011-03-02",
+\t\t\t"rating": 6.7,
+\t\t\t"description": "In this town, since who knows when, rain has never stopped. Residents moved out to suburbs and high ground around. People’s memories are now deeply submerged. But into this forgotten rainy town sometimes, someone wanders.",
+\t\t\t"poster_path": "/zfeOjiQWXIAaxCYwUrPzoy1poXy.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 337339,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 337339,
+\t\t\t"title": "The Fate of the Furious",
+\t\t\t"released_date": "2017-04-12",
+\t\t\t"rating": 6.9,
+\t\t\t"description": "When a mysterious woman seduces Dom into the world of crime and a betrayal of those closest to him, the crew face trials that will test them as never before.",
+\t\t\t"poster_path": "/dImWM7GJqryWJO9LHa3XQ8DD5NH.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t80,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 438148,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 438148,
+\t\t\t"title": "Minions: The Rise of Gru",
+\t\t\t"released_date": "2022-06-29",
+\t\t\t"rating": 7.4,
+\t\t\t"description": "A fanboy of a supervillain supergroup known as the Vicious 6, Gru hatches a plan to become evil enough to join them, with the backup of his followers, the Minions.",
+\t\t\t"poster_path": "/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t35,
+\t\t\t\t10751
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 813726,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 813726,
+\t\t\t"title": "A Tourist's Guide to Love",
+\t\t\t"released_date": "2023-04-21",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "After an unexpected break up, a travel executive accepts an assignment to go undercover and learn about the tourist industry in Vietnam. Along the way, she finds adventure and romance with her Vietnamese expat tour guide and they decide to hijack the tour bus in order to explore life and love off the beaten path.",
+\t\t\t"poster_path": "/uWkpjbBe4gRZilXRXbYfsMUZMhz.jpg",
+\t\t\t"category": [
+\t\t\t\t10749,
+\t\t\t\t35,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 845659,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 845659,
+\t\t\t"title": "Perfect Addiction",
+\t\t\t"released_date": "2023-02-16",
+\t\t\t"rating": 6.6,
+\t\t\t"description": "A female boxing trainer discovers that her champion cage-fighter boyfriend has been cheating on her with her sister and decides to seek revenge by training up his arch-rival to challenge him.",
+\t\t\t"poster_path": "/3wkrRKMFRwCpjp1U27914oRbcqH.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t10749,
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 438695,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 438695,
+\t\t\t"title": "Sing 2",
+\t\t\t"released_date": "2021-12-01",
+\t\t\t"rating": 8,
+\t\t\t"description": "Buster and his new cast now have their sights set on debuting a new show at the Crystal Tower Theater in glamorous Redshore City. But with no connections, he and his singers must sneak into the Crystal Entertainment offices, run by the ruthless wolf mogul Jimmy Crystal, where the gang pitches the ridiculous idea of casting the lion rock legend Clay Calloway in their show. Buster must embark on a quest to find the now-isolated Clay and persuade him to return to the stage.",
+\t\t\t"poster_path": "/aWeKITRFbbwY8txG5uCj4rMCfSP.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t10751
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 829560,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 829560,
+\t\t\t"title": "The Next 365 Days",
+\t\t\t"released_date": "2022-08-19",
+\t\t\t"rating": 6.5,
+\t\t\t"description": "Laura and Massimo's relationship hangs in the balance as they try to overcome trust issues while a tenacious Nacho works to push them apart.",
+\t\t\t"poster_path": "/6FsGeIp7heHm5eh4tIxTzHIRxmt.jpg",
+\t\t\t"category": [
+\t\t\t\t10749,
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 508947,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 508947,
+\t\t\t"title": "Turning Red",
+\t\t\t"released_date": "2022-03-10",
+\t\t\t"rating": 7.5,
+\t\t\t"description": "Thirteen-year-old Mei is experiencing the awkwardness of being a teenager with a twist – when she gets too excited, she transforms into a giant red panda.",
+\t\t\t"poster_path": "/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t10751,
+\t\t\t\t35,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 717728,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 717728,
+\t\t\t"title": "Jeepers Creepers: Reborn",
+\t\t\t"released_date": "2022-09-15",
+\t\t\t"rating": 5.7,
+\t\t\t"description": "Forced to travel with her boyfriend to a horror festival, Laine begins to experience disturbing visions associated with the urban legend of The Creeper. As the festival arrives and the blood-soaked entertainment builds to a frenzy, she becomes the center of it while something unearthly has been summoned.",
+\t\t\t"poster_path": "/aGBuiirBIQ7o64FmJxO53eYDuro.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t53,
+\t\t\t\t9648
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 411,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 411,
+\t\t\t"title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+\t\t\t"released_date": "2005-12-07",
+\t\t\t"rating": 7.1,
+\t\t\t"description": "Siblings Lucy, Edmund, Susan and Peter step through a magical wardrobe and find the land of Narnia. There, they discover a charming, once peaceful kingdom that has been plunged into eternal winter by the evil White Witch, Jadis. Aided by the wise and magnificent lion, Aslan, the children lead Narnia into a spectacular, climactic battle to be free of the Witch's glacial powers forever.",
+\t\t\t"poster_path": "/iREd0rNCjYdf5Ar0vfaW32yrkm.jpg",
+\t\t\t"category": [
+\t\t\t\t12,
+\t\t\t\t10751,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 808,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 808,
+\t\t\t"title": "Shrek",
+\t\t\t"released_date": "2001-05-18",
+\t\t\t"rating": 7.7,
+\t\t\t"description": "It ain't easy bein' green -- especially if you're a likable (albeit smelly) ogre named Shrek. On a mission to retrieve a gorgeous princess from the clutches of a fire-breathing dragon, Shrek teams up with an unlikely compatriot -- a wisecracking donkey.",
+\t\t\t"poster_path": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t35,
+\t\t\t\t14,
+\t\t\t\t12,
+\t\t\t\t10751
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1071806,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1071806,
+\t\t\t"title": "Hunger",
+\t\t\t"released_date": "2023-04-04",
+\t\t\t"rating": 7.5,
+\t\t\t"description": "A talented young street-food cook pushes herself to the limit after accepting an invitation to train under an infamous and ruthless chef.",
+\t\t\t"poster_path": "/rNYHsKHFP3AY2PIDZgz3AuY7QoC.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 727340,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 727340,
+\t\t\t"title": "Hunt",
+\t\t\t"released_date": "2022-08-10",
+\t\t\t"rating": 6.9,
+\t\t\t"description": "After a high-ranking North Korean official requests asylum, KCIA Foreign Unit chief Park Pyong-ho and Domestic Unit chief Kim Jung-do are tasked with uncovering a North Korean spy, known as Donglim, who is deeply embedded within their agency. When the spy begins leaking top secret intel that could jeopardize national security, the two units are each assigned to investigate each other.",
+\t\t\t"poster_path": "/tDe5eLxAbeK7sYckUn5aH3ngWnn.jpg",
+\t\t\t"category": [
+\t\t\t\t53,
+\t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 168259,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 168259,
+\t\t\t"title": "Furious 7",
+\t\t\t"released_date": "2015-04-01",
+\t\t\t"rating": 7.2,
+\t\t\t"description": "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
+\t\t\t"poster_path": "/ktofZ9Htrjiy0P6LEowsDaxd3Ri.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t53,
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 728754,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 728754,
+\t\t\t"title": "Stand by Me Doraemon 2",
+\t\t\t"released_date": "2020-11-20",
+\t\t\t"rating": 7.7,
+\t\t\t"description": "Nobita travels to the future to show his beloved grandma his bride, but adult Nobita has fled his own wedding.",
+\t\t\t"poster_path": "/vBv8iOFPLnXmtELUjcFc7OKHsR4.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t10751,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 118412,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 118412,
+\t\t\t"title": "Berserk: The Golden Age Arc II - The Battle for Doldrey",
+\t\t\t"released_date": "2012-06-23",
+\t\t\t"rating": 7.5,
+\t\t\t"description": "The Band of the Hawk participates in the Midland war campaign. On the bloody battlefield, they conquer decisive victories that lead them to Doldrey, an old fortress that will decide the outcome of the war.",
+\t\t\t"poster_path": "/gzVQQaDazukAcmiFx6l9WLj1kwo.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t18,
+\t\t\t\t14,
+\t\t\t\t16
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 790409,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 790409,
+\t\t\t"title": "The Last Heretic",
+\t\t\t"released_date": "2022-11-09",
+\t\t\t"rating": 5.6,
+\t\t\t"description": "Juan Conte is a world-renowned spokesman of the new atheism. After suffering a heart attack, he receives a transplant and a change in his personal life begins, opening up to the possibility of being in a couple for the first time. Juan will go on a journey of horror and pain, in which his vision of reality will be put to the test.",
+\t\t\t"poster_path": "/1j9B1iao0kqZnfSUqPadfXDdWNg.jpg",
+\t\t\t"category": [
+\t\t\t\t53,
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 785759,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 785759,
+\t\t\t"title": "Two Witches",
+\t\t\t"released_date": "2023-03-02",
+\t\t\t"rating": 6.3,
+\t\t\t"description": "A matriarchal witch passes on her sinister inheritance to her grand-daughter, triggering the most horrific curses.",
+\t\t\t"poster_path": "/uL9fFTdNmUUlKIJfHJclN5X3bxH.jpg",
+\t\t\t"category": [
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 782936,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 782936,
+\t\t\t"title": "Nocebo",
+\t\t\t"released_date": "2022-11-03",
+\t\t\t"rating": 6.2,
+\t\t\t"description": "A fashion designer hires a nanny from the Philippines to assist her in caring for her family while she is suffering from what she believes is a tick-related illness. The nanny uses traditional Filipino folk healing techniques to help her, but in the process of doing so, she uncovers a horrifying truth about why she is there and why her employer is actually sick.",
+\t\t\t"poster_path": "/3FPnDTlX0LsaU4VD5mc82BMbchA.jpg",
+\t\t\t"category": [
+\t\t\t\t9648,
+\t\t\t\t53,
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1103856,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1103856,
+\t\t\t"title": "Sex Games",
+\t\t\t"released_date": "2023-04-28",
+\t\t\t"rating": 6.5,
+\t\t\t"description": "A rich couple often spices up their sexual relationship by doing their so-called Sex Games. But when they meet a new set of \"playmates\"- a conservative couple, their game becomes more challenging.",
+\t\t\t"poster_path": "/9U47u3cDXTPgxAFqns0Sur9DvyV.jpg",
+\t\t\t"category": [
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 912908,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 912908,
+\t\t\t"title": "Strays",
+\t\t\t"released_date": "2023-08-17",
+\t\t\t"rating": 0,
+\t\t\t"description": "When Reggie, a naïve, relentlessly optimistic Border Terrier, is abandoned on the mean city streets by his lowlife owner, Doug, Reggie is certain that his beloved owner would never leave him on purpose. But once Reggie falls in with a fast-talking, foul-mouthed Boston Terrier named Bug, a stray who loves his freedom and believes that owners are for suckers, Reggie finally realizes he was in a toxic relationship and begins to see Doug for the heartless sleazeball that he is. Determined to seek revenge, Reggie, Bug and Bug’s pals together hatch a plan and embark on an epic adventure to help Reggie find his way home … and make Doug pay by biting off the appendage he loves the most. (Hint: It’s not his foot).",
+\t\t\t"poster_path": "/wDyIj84k4zpEMbhNbX4zaUW0Jkj.jpg",
+\t\t\t"category": [
+\t\t\t\t35,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1100962,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1100962,
+\t\t\t"title": "One More Time",
+\t\t\t"released_date": "2023-04-21",
+\t\t\t"rating": 5.9,
+\t\t\t"description": "On her 40th birthday, Amelia makes a fateful wish to be 18 again back in 2002 but soon regrets it when she's stuck reliving the day over and over again.",
+\t\t\t"poster_path": "/wUVuJXnBfNpSwvSDGnqzZ5VUBwP.jpg",
+\t\t\t"category": [
+\t\t\t\t35,
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 671,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 671,
+\t\t\t"title": "Harry Potter and the Philosopher's Stone",
+\t\t\t"released_date": "2001-11-16",
+\t\t\t"rating": 7.9,
+\t\t\t"description": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths—and about the villain who's to blame.",
+\t\t\t"poster_path": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+\t\t\t"category": [
+\t\t\t\t12,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1035806,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1035806,
+\t\t\t"title": "Detective Knight: Independence",
+\t\t\t"released_date": "2023-01-20",
+\t\t\t"rating": 5.5,
+\t\t\t"description": "Detective James Knight 's last-minute assignment to the Independence Day shift turns into a race to stop an unbalanced ambulance EMT from imperiling the city's festivities. The misguided vigilante, playing cop with a stolen gun and uniform, has a bank vault full of reasons to put on his own fireworks show... one that will strike dangerously close to Knight's home.",
+\t\t\t"poster_path": "/jrPKVQGjc3YZXm07OYMriIB47HM.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t80,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 399566,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 399566,
+\t\t\t"title": "Godzilla vs. Kong",
+\t\t\t"released_date": "2021-03-24",
+\t\t\t"rating": 7.7,
+\t\t\t"description": "In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.",
+\t\t\t"poster_path": "/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t14,
+\t\t\t\t878
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 613504,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 613504,
+\t\t\t"title": "After We Collided",
+\t\t\t"released_date": "2020-09-02",
+\t\t\t"rating": 7.2,
+\t\t\t"description": "Tessa finds herself struggling with her complicated relationship with Hardin; she faces a dilemma that could change their lives forever.",
+\t\t\t"poster_path": "/kiX7UYfOpYrMFSAGbI6j1pFkLzQ.jpg",
+\t\t\t"category": [
+\t\t\t\t10749,
+\t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 955991,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 955991,
+\t\t\t"title": "The Offering",
+\t\t\t"released_date": "2022-09-23",
+\t\t\t"rating": 5.7,
+\t\t\t"description": "In the wake of a young Jewish girl’s disappearance, the son of a Hasidic funeral director returns home with his pregnant wife in hopes of reconciling with his father. Little do they know that directly beneath them in the family morgue, an ancient evil with sinister plans for the unborn child lurks inside a mysterious corpse.",
+\t\t\t"poster_path": "/tbaTFgGIaTL1Uhd0SMob6Dhi5cK.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t27
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 1045944,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 1045944,
+\t\t\t"title": "The Boss Baby: Christmas Bonus",
+\t\t\t"released_date": "2022-12-06",
+\t\t\t"rating": 6.8,
+\t\t\t"description": "Christmas Eve takes a twisty turn when the Boss Baby accidentally swaps places with one of Santa's elves and gets stranded at the North Pole.",
+\t\t\t"poster_path": "/iMmMxF6f2OonUrXrHKBLSYAhXly.jpg",
+\t\t\t"category": [
+\t\t\t\t16,
+\t\t\t\t10751,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 718930,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 718930,
+\t\t\t"title": "Bullet Train",
+\t\t\t"released_date": "2022-07-03",
+\t\t\t"rating": 7.5,
+\t\t\t"description": "Unlucky assassin Ladybug is determined to do his job peacefully after one too many gigs gone off the rails. Fate, however, may have other plans, as Ladybug's latest mission puts him on a collision course with lethal adversaries from around the globe—all with connected, yet conflicting, objectives—on the world's fastest train.",
+\t\t\t"poster_path": "/tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t35,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t}
+]
