@@ -4,6 +4,9 @@ from .forms import PostForm, ReviewForm
 import os, json
 import requests
 import pprint
+from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 TMDB_API_KEY = 'dfc02edc73a8a31017aeb0d746f5753d'
@@ -163,6 +166,7 @@ def index(request):
 
 
 def detail(request, movie_id):
+    post = Post.objects.get(movie_id=movie_id)
     detail_url = f'https://api.themoviedb.org/3/movie/{movie_id}'
 
     params = {
@@ -183,11 +187,44 @@ def detail(request, movie_id):
     context = {
         'detail_data':detail_data,
         'movie_id' : movie_id,
+        'post': post,
         # 'comments' : comments,
         # 'reviews_count': reviews_count,
         
     }
     return render(request, 'movies/detail.html', context)
+
+@login_required
+def create(request, movie_id):
+    url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={TMDB_API_KEY}&language=ko-KR'
+    response = requests.get(url)
+    movie_data = response.json()
+
+    poster_path = 'https://image.tmdb.org/t/p/w200' + movie_data.get('poster_path')
+    
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.movie_id = movie_id
+            post.user = request.user
+            post.poster_path = poster_path
+            post.movie_title = movie_data.get('title')
+            post.movie_overview = movie_data.get('overview')
+            post.movie_release_date = movie_data.get('release_date')
+            post.ratings = movie_data.get('score')
+            # ratings = float(request.POST['ratings'])
+            # post.ratings = ratings
+            post.save()
+            return redirect('movies:detail', movie_id)
+    else:
+        form = PostForm()
+    context = {
+        'form': form,
+        'movie': movie_data,
+    }
+    return render(request, 'movies/create.html', context)
+
 
 def similar(request, movie_id):
     similar_url = f'https://api.themoviedb.org/3/movie/{movie_id}/similar'
@@ -260,3 +297,18 @@ def review_delete(request, movie_id, review_id):
     return redirect('movies:detail', movie_id)
 
 # def comment_create(request, movie_id, review_id):
+
+# 보고싶어요 부분인데 아직 미완입니다 (템플릿 작업 안됨)
+def wants(request, movie_id):
+    post = Post.objects.get(movie_id=movie_id)
+    if request.user in post.want_users.all():
+        post.want_users.remove(request.user)
+        is_wanted = False
+    else:
+        post.want_users.add(request.user)
+        is_wanted = True
+    context = {
+        'is_wanted': is_wanted,
+    }
+    return JsonResponse(context) 
+
