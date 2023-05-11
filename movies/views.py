@@ -28,7 +28,8 @@ def index(request):
     }
     now_playing_response = requests.get(now_playing_url, params=params)
     now_playing_data = now_playing_response.json()
-    now_playing = sorted(now_playing_data['results'], key=lambda x:x['vote_average'], reverse=True)[:5]
+    now_playing = sorted(now_playing_data['results'], key=lambda x:x['vote_average'], reverse=True)[:10]
+
 
     # popular 순위 (1페이지~ 10페이지, 페이지당 20개, 총 200개)
     total_data = []   
@@ -139,6 +140,7 @@ def index(request):
             'region':'kr',
             'page': page
         }
+        
         
         top_rated_response = requests.get(top_rated_url, params=params)
         top_rated_data = top_rated_response.json()
