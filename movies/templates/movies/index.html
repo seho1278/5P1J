@@ -9,7 +9,7 @@
 
  {% for movie in now_playing %}
     <article class="movie">
-        <a class="movie-link" href="#">
+        <a class="movie-link" href="{% url 'movies:detail' movie.id %}">
         <div class="movie-poster">
             <img src="https://image.tmdb.org/t/p/w300{{ movie.poster_path }}" alt="">
             <div class="movie-ranking">
