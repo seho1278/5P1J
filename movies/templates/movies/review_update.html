@@ -40,10 +40,10 @@
 {% endblock style %}  
 
 {% block content %}
-<h3>Create</h3>
-<form action="{% url 'movies:review_create' movie.id  %}" method="post">
+<h3>Update</h3>
+<form action="{% url 'movies:review_update' movie_id review.pk %}" method="post">
     {% csrf_token %}
-    <h2 class="mb-4 title fw-bold">리뷰 생성</h2>
+    <h2 class="mb-4 title fw-bold">리뷰 수정</h2>
     <div>
       <div class="rating_box">
         <label for="id_rating">별점:</label>

@@ -4,6 +4,9 @@ from .forms import PostForm, ReviewForm
 import os, json
 import requests
 import pprint
+from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 TMDB_API_KEY = 'dfc02edc73a8a31017aeb0d746f5753d'
@@ -163,7 +166,62 @@ def index(request):
 
 
 def detail(request, movie_id):
+    try:
+        post = Post.objects.get(movie_id=movie_id)
+    except Post.DoesNotExist:
+        post = None    
     detail_url = f'https://api.themoviedb.org/3/movie/{movie_id}'
+    similar_url = f'https://api.themoviedb.org/3/movie/{movie_id}/similar'
+    
+    
+    # platform 하나씩 빼내기 
+    platform_list = []
+    platform_word = ""
+    if "[" in post.platform:
+        for platform in post.platform:
+            if platform in ["[", "'",]:
+                pass
+            elif platform in [",", "]"]:
+                platform_list.append(platform_word.strip())
+                platform_word = ""
+            else:
+                platform_word = platform_word + platform
+    else:
+        platform_list.append(post.platform)
+    
+    # post에 있는 tags 하나씩 빼내기
+    p_tags = []
+    p_word = ""
+    if "[" in post.tags:
+        for tag in post.tags:    
+            if tag in ["[", "'",]:
+                pass
+            elif tag in [",", "]"]:
+                p_tags.append(p_word.strip())
+                p_word = ""
+            else:
+                p_word = p_word + tag
+    else:
+        p_tags.append(post.tags)
+        
+    
+    # reviews에 있는 tags 하나씩 빼내기
+    tags = []
+    word = ""
+    reviews = Review.objects.filter(post=post.pk)   
+    for review in reviews:
+        if "[" in review.tags:
+            for tag in review.tags:    
+                if tag in ["[", "'",]:
+                    pass
+                elif tag in [",", "]"] :
+                    tags.append(word.strip())
+                    word = ""
+                    
+                else:
+                    word = word + tag
+        else:
+            tags.append(review.tags)
 
     params = {
         'api_key': TMDB_API_KEY,
@@ -173,21 +231,62 @@ def detail(request, movie_id):
     }
     detail_response = requests.get(detail_url, params=params)
     detail_data = detail_response.json()
-    # print("----------------")
-    # print(detail_data)
 
-    # review = Review.objects.filter(id=movie_id)
-    # comments = review.reviews.all()
-    # reviews_count = reviews.count()
+    similar_response = requests.get(similar_url, params=params)
+    similar_data = similar_response.json()
+    similars = sorted(similar_data['results'], key=lambda x:x['vote_average'], reverse=True)
     
     context = {
         'detail_data':detail_data,
         'movie_id' : movie_id,
-        # 'comments' : comments,
-        # 'reviews_count': reviews_count,
+        'post': post,
+        'similars' : similars,
+        'reviews': reviews,
+        'tags' : tags,
+        'p_tags' : p_tags,
+        'platform_list': platform_list,
         
     }
     return render(request, 'movies/detail.html', context)
+
+@login_required
+def create(request, movie_id):
+    url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={TMDB_API_KEY}&language=ko-KR'
+    response = requests.get(url)
+    movie_data = response.json()
+
+    poster_path = 'https://image.tmdb.org/t/p/w200' + movie_data.get('poster_path')
+    
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.movie_id = movie_id
+            post.user = request.user
+            post.poster_path = poster_path
+            post.movie_title = movie_data.get('title')
+            post.movie_overview = movie_data.get('overview')
+            post.movie_release_date = movie_data.get('release_date')
+            post.ratings = movie_data.get('score')
+            post.tags = form.cleaned_data.get('tags', [])  
+            post.platform = form.cleaned_data.get('platform', [])  
+
+
+            # ratings = float(request.POST['ratings'])
+            # post.ratings = ratings
+            post.save()
+            return redirect('movies:detail', movie_id)
+        
+    #템플릿에서 다중 선택된 값들을 렌더링하기 위해 폼을 다시 표시할 때, 이전에 선택된 값들이 표시되도록 폼을 초기화할 수 있습니다. 
+    else:
+        form = PostForm(initial={'tags': Post.objects.values_list('tags', flat=True)}) 
+    context = {
+        'form': form,
+        'movie': movie_data,
+    }
+    return render(request, 'movies/create.html', context)
+
 
 def similar(request, movie_id):
     similar_url = f'https://api.themoviedb.org/3/movie/{movie_id}/similar'
@@ -228,35 +327,70 @@ def get_movie_info(movie_id):
     return None
     
 
-def review_create(request, movie_id):
-    movie = get_movie_info(movie_id)
-    print('---------------------')
-    print(movie)
+def review_create(request, post_pk):
+    
+    post = Post.objects.get(pk=post_pk)
+    print(post)
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
-            review.post = movie
+            review.post = post        
             review.user = request.user
+            review.tags = form.cleaned_data.get('tags', [])
             review.save()
-            return redirect('movies:detail', movie_id=movie_id)
+            return redirect('movies:detail', post.movie_id)
     else:
         form = ReviewForm()
 
     context = {
         'form': form,
-        'movie': movie,
+        'movie': post,
     }
     
     return render(request, 'movies/review_create.html', context)
 
 
 def review_delete(request, movie_id, review_id):
-    # post = Post.objects.get(id=movie_id)
     review = Review.objects.get(id=review_id)
-    if request.method == "POST":
+    if request.user == review.user:
         review.delete()
     
     return redirect('movies:detail', movie_id)
 
+def review_update(request, movie_id, review_id):
+    review = Review.objects.get(id=review_id)
+    
+    if request.user == review.user:
+        if request.method == 'POST':
+            form = ReviewForm(request.POST, instance=review)
+            if form.is_valid():
+                form.save()
+                return redirect('movies:detail', movie_id)
+        else:
+            form = ReviewForm(instance=review)
+    else:
+        return redirect('movies:detail', movie_id)
+    
+    context = {
+        'review': review,
+        'form': form,
+    }
+    
+    return render(request, 'movies/review_update.html', context)
 # def comment_create(request, movie_id, review_id):
+
+# 보고싶어요 부분인데 아직 미완입니다 (템플릿 작업 안됨)(제가 하겠습니다!)
+def wants(request, movie_id):
+    post = Post.objects.get(movie_id=movie_id)
+    if request.user in post.want_users.all():
+        post.want_users.remove(request.user)
+        is_wanted = False
+    else:
+        post.want_users.add(request.user)
+        is_wanted = True
+    context = {
+        'is_wanted': is_wanted,
+    }
+    return JsonResponse(context)
+
