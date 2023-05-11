@@ -98,3 +98,99 @@
     color: gray;
     font-size: 12px;
 }
+
+.Detail__ContentBox {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 30px;
+    margin: 10px 0 10px 0;
+}
+
+/* .Index__main {
+    display: block;
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    margin-top: 100px;
+  } */
+
+.Detail__Content__Similar {
+    width: 950px;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: auto;
+}
+
+.Detail__carousel {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.card {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    scroll-snap-align: start;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s linear;
+}
+
+.card-title {
+    color: black;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 15px;
+}
+
+.Detail__Card:hover .card img {
+    transform: scale(1.1);
+}
+
+/* .Index__Like {
+    position: absolute;
+    border: solid 1px black;
+    border-radius: 50%;
+    right: 10px;
+    top: 10px;
+} */
+
+.Detail__Card__Content {
+    width: 163px;
+    height: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 7px;
+    overflow: hidden;
+}
+
+.Detail__Card:hover .card-title {
+    color: black;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: visible;
+    /* text-overflow:ellipsis; */
+    animation: scroll-text 10s linear infinite;
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
