@@ -28,9 +28,6 @@ footer.item {
 }
 
 
-.mobile--header--wrap {
-  display: none;
-}
 /* header */
 .header--container {
   display: grid;
@@ -53,7 +50,7 @@ footer.item {
 .header--logo--image {
   width: 200px;
 }
-.header--search--login--wrap {
+.header--user--login--wrap {
   display: flex;
   align-items: flex-end;
 }
@@ -83,6 +80,62 @@ footer.item {
 .header--nav--list li.item:hover {
   border-bottom: 1px solid #fff;
 }
+@media screen and (max-width: 1350px) {
+  
+}
+@media screen and (max-width: 1350px) {
+  .header--list {
+    flex-direction: column; 
+    align-items: center;
+  }
+  .header--list > div:nth-child(2) {
+    order: 3;
+  }
+  .header--list > div:nth-child(3) {
+    order: 2;
+  }
+  .header--search--wrap {
+    width: 100%;
+  }
+  .header--search--wrap > form {
+    width: 100%;
+  }
+  .header--search--wrap > form > input {
+    width: 100%;
+  }
+  .header--user--login--wrap{
+    width: 100%;
+  }
+  .header--user--login--list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+}
+
+.mobile--header--wrap {
+    display: none;
+  }
+
+@media screen and (max-width: 700px) {
+  .header--list {
+    display: none;
+  }
+  .mobile--header--wrap {
+    display: block;
+    position: fixed;
+    bottom: 0;
+  }
+  .mobile--header--list {
+    display: flex;
+  }
+}
+/* 삭제하고 push */
+main {
+  background-color: #fff;
+}
+
 /* footer */
 .footer--wrap{
   display: grid;
