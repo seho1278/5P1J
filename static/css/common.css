@@ -13,19 +13,47 @@ ul, ol {
   margin: 0;
   padding: 0;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
-.form--control{
+.input--control{
     padding: 0.4rem 1rem;
     border: 3px solid #7048E9;
     border-radius: 5px;
 
   }
   
-  .form--control:focus {
-    border: 3px solid #a182ff;
-    outline:none;
-    box-shadow: 1px 1px 0px 0px rgba(225, 225, 225, 0.3);
+.input--control:focus {
+  border: 3px solid #a182ff;
+  outline:none;
+  box-shadow: 1px 1px 0px 0px rgba(225, 225, 225, 0.3);
+}
+
+input[type="submit"] {
+  color: #ffffff;
+  border: none;
+  background-color: #000;
+}
+
+
+
+main {
+  background-color: #232323;
+  height: 1000px;
+  margin-top: 152px;
   }
+
+@media screen and (max-width: 1350px) {
+  main {
+    margin-top: 240px;
+  }
+}
+@media screen and (max-width: 700px) {
+  main {
+    margin-top: 57px;
+  }
+  footer {
+    margin-bottom: 155px;
+  }
+}
