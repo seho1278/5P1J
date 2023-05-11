@@ -1,0 +1,106 @@
+
+
+body {
+  font-family: 'NanumSquareAcb';
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr) auto auto auto;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas:
+    "header header header header header header header"
+    ". main main main main main ."
+    ". main main main main main ."
+    ". main main main main main ."
+    ". main main main main main ."
+    "footer footer footer footer footer footer footer";
+  color: #fff;
+  background-color: #000;
+}
+
+header.item {
+  grid-area: header;      
+  background-color: rgba(0, 0, 0, .5);
+}
+main.item {
+  grid-area: main;
+}
+footer.item {
+  grid-area: footer;
+}
+
+
+.mobile--header--wrap {
+  display: none;
+}
+/* header */
+.header--container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas: 
+    " . header header header header header ."
+  ;
+  height: auto;
+}
+.header--wrap {
+  grid-area: header;
+}
+.header--list {
+  display: flex;
+  justify-content: space-between;
+}
+.header--logo--wrap {
+  margin-top: 2rem;
+}
+.header--logo--image {
+  width: 200px;
+}
+.header--search--login--wrap {
+  display: flex;
+  align-items: flex-end;
+}
+.header--search--wrap {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 1rem;
+}
+.header--search--wrap > form > input {
+  width: 500px;
+}
+.header--login--wrap{
+  display: flex;
+  justify-content: flex-end;
+}
+.header--login--wrap > div {
+  margin-left: 1rem; 
+}
+.header--nav--list {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+.header--nav--list li.item {
+  border-bottom: 1px solid #000;
+}
+.header--nav--list li.item:hover {
+  border-bottom: 1px solid #fff;
+}
+/* footer */
+.footer--wrap{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas: 
+    " . footer footer footer footer footer ."
+  ;
+  height: auto;
+}
+.footer--team--wrap {
+  grid-area: footer;
+}
+.footer--list--wrap {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+.footer--copyright--wrap {
+  display: flex;
+  justify-content: center;
+}

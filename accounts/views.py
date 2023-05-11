@@ -102,3 +102,6 @@ def follow(request, user_pk):
         else:
             person.followers.add(me)
     return redirect('accounts:profile', person.username)
+
+def about_us(request):
+    return render(request, 'accounts/about_us.html')
