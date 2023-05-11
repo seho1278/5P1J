@@ -1,0 +1,142 @@
+body {
+  background-color: #000000;
+}
+
+.Index__main {
+  display: block;
+  width: 1200px;
+  height: auto;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.Index__Content__rankingContainer {
+  width: 1100px;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.Index__Crew {
+  font-size: 21px;
+  color: white;
+}
+
+.Index__Tag {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;  
+}
+
+.card {
+  flex: 0 0 auto;
+  margin: 0 10px;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;  
+}
+
+.card img {
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear;
+}
+
+.card-title {
+  color:white;
+  font-size: 1.1rem;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  margin-right: 15px;
+}
+
+.Index__Card:hover .card img {
+  transform: scale(1.1);
+}
+
+/* .Index__Like {
+  position: absolute;
+  border: solid 1px black;
+  border-radius: 50%;
+  right: 10px;
+  top: 10px;
+} */
+
+.Index__Card__Content {
+  width: 190px;
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 7px;
+  overflow: hidden;
+}
+
+.Index__Card:hover .card-title{
+  color:white;
+  font-size: 1.1rem;
+  white-space:nowrap;
+  overflow: visible;
+  /* text-overflow:ellipsis; */
+  animation: scroll-text 10s linear infinite;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+@media ( max-width: 960px ) {
+  .Index__main {
+    display: block;
+    width: 660px;
+    height: auto;
+    margin: auto;
+    margin-top: 100px;
+  }
+  .Index__Content__rankingContainer {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+}
+
+@media ( max-width: 540px ) {
+  .Index__main {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  .Index__Content__rankingContainer {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .Index__Category {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* .Index__Movie__Card:hover .card-title {
+  animation-play-state: paused;
+} */

@@ -26,7 +26,7 @@ def index(request):
     }
     now_playing_response = requests.get(now_playing_url, params=params)
     now_playing_data = now_playing_response.json()
-    now_playing = sorted(now_playing_data['results'], key=lambda x:x['vote_average'], reverse=True)[:5]
+    now_playing = sorted(now_playing_data['results'], key=lambda x:x['vote_average'], reverse=True)[:10]
 
     total_data = []
         
@@ -119,7 +119,7 @@ def index(request):
 
         genre_response = requests.get(genre_url, params=params)
         genre_data = genre_response.json()
-        pprint.pprint(genre_data)
+        # pprint.pprint(genre_data)
         genre = sorted(genre_data['results'], key=lambda x:x['vote_average'], reverse=True)
         genre_movie_list.append(genre)
 
@@ -134,6 +134,7 @@ def index(request):
             'region':'kr',
             'page': page
         }
+        
         
         top_rated_response = requests.get(top_rated_url, params=params)
         top_rated_data = top_rated_response.json()

@@ -1,61 +1,118 @@
 {% extends 'base.html' %}
 
-{% block title %}{% endblock title %}
+{% load static %}
 
-{% block style %}{% endblock style %}  
+{% block title %}INDEX{% endblock title %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'index/index.css' %}">
+<style>
+  
+</style>
+{% endblock style %}  
 
 {% block content %}
-<h1>INDEX</h1>
-
- {% for movie in now_playing %}
-    <article class="movie">
-        <a class="movie-link" href="#">
-        <div class="movie-poster">
+<div class="Index__main">
+  <div class="Index__Category">
+    <p class="Index__Crew">연기 & 캐스팅</p>
+    <p class="Index__Tag">"믿고 보는 배우인"</p>
+  </div>
+  <div class="Index__Content__rankingContainer">
+    <div class="carousel">
+      {% for movie in now_playing %}
+        <div class="Index__Card">
+          <div class="card" style="width: 200px; height: 300px; position: relative; overflow: hidden;">
             <img src="https://image.tmdb.org/t/p/w300{{ movie.poster_path }}" alt="">
-            <div class="movie-ranking">
-            <p class="movie-ranking-number"></p>
-            </div>
+            <div class="Index__Like">ㅇ</div>
+          </div>
+          <div class="Index__Card__Content">
+            <div class="card-title">{{ movie.title }}</div>
+          </div>
         </div>
-        <div class="movie-info">
-            <div class="d-flex justify-content-between mb-1 px-1">
-            <p class="title">{{ movie.title }}</p>
-            <span class="rating"><i class="bi bi-star-fill"></i>{{ movie.rating }}</span>
-            </div>
-            <p>{{movie.description}}</p>
-            {{movie.released_date}}
-            <div class="movie-category">
-            <p>{{movie.category}}</p>
-            <p>{{genre_dicts}}</p>
-                
-            </div>
-        </div>
-        </a>
-    </article>
-{% endfor %}
-<h1>top rated</h1>
-{% for movie in top_rated %}
-<p>{{movie.title}}</p>
-{% endfor %}
+      {% endfor %}
+    </div>
+  </div> 
+</div>
 
-{% comment %} <h1>최신순</h1>
-{% for movie in latest %}
-<p>{{movie.title}}</p>
-{% endfor %}
+<script>
+  // 드래그 앤 드롭
+  document.addEventListener('DOMContentLoaded', function() {
+    var carousel = document.querySelector('.carousel');
+    var cards = document.querySelector('.card');
+    var isDragging = false;
+    var startX, cardStartX;
+  
+    carousel.addEventListener('mousedown', function(e) {
+      isDragging = true;
+      startX = e.pageX - carousel.offsetLeft;
+    });
+  
+    carousel.addEventListener('mouseup', function() {
+      isDragging = false;
+    });
+  
+    carousel.addEventListener('mousemove', function(e) {
+      if (!isDragging) return;
+      e.preventDefault();
+      var x = e.pageX - carousel.offsetLeft;
+      var walk = x - startX;
+  
+      carousel.scrollLeft -= walk;
+    });
+  });
 
-<h1>인기순</h1>
-{% for movie in popular %}
-<p>{{movie.title}}</p>
-{% endfor %} {% endcomment %}
+  // carousel 자동 스크롤
+  const carouselElement = document.querySelector('.carousel');
+  let direction = 1; // 스크롤 방향 설정 (1: 오른쪽으로, -1: 왼쪽으로)
+  let scrollInterval;
 
-<h1>장르순</h1>
-{% for movie in genre %}
-<p>{{movie.genre_ids}}</p>
-<p>{{movie.title}}</p>
-{% endfor %}
+  function handleScroll() {
+    const scrollPosition = carouselElement.scrollLeft;
+    const containerWidth = carouselElement.offsetWidth;
+    const contentWidth = carouselElement.scrollWidth;
+    
 
+    // 스크롤이 왼쪽 끝에 도달했을 때
+    if (scrollPosition === 0) {
+      direction = 1; // 오른쪽으로 스크롤
+    }
 
+    // 스크롤이 오른쪽 끝에 도달했을 때
+    //if (scrollPosition + containerWidth === contentWidth) {
+    //  direction = -1; // 왼쪽으로 스크롤
+    //}
+  }
 
+  function startAutoScroll() {
+    scrollInterval = setInterval(() => {
+      carouselElement.scrollBy({
+        left: direction * 0.1, // 스크롤 속도 조절
+        behavior: 'smooth',
+      });
+    }, 3000); // 스크롤 간격 조절
+  }
 
+  function stopAutoScroll() {
+    clearInterval(scrollInterval);
+  }
+
+  // 페이지 로딩 시 자동 스크롤 시작
+  window.addEventListener('load', () => {
+    startAutoScroll();
+  });
+
+  // 마우스가 캐러셀 위로 진입했을 때 자동 스크롤 일시 정지
+  carouselElement.addEventListener('mouseenter', () => {
+    stopAutoScroll();
+  });
+
+  // 마우스가 캐러셀에서 벗어났을 때 자동 스크롤 재개
+  carouselElement.addEventListener('mouseleave', () => {
+    startAutoScroll();
+  });
+</script>
 
 {% endblock content %}
+
 {% block script %}{% endblock script %}
