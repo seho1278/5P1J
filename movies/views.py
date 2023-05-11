@@ -267,8 +267,8 @@ def get_movie_info(movie_id):
 
 def review_create(request, movie_id):
     movie = get_movie_info(movie_id)
-    print('---------------------')
-    print(movie)
+    # print('---------------------')
+    # print(movie)
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
