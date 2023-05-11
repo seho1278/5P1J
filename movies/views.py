@@ -298,17 +298,17 @@ def review_delete(request, movie_id, review_id):
 
 # def comment_create(request, movie_id, review_id):
 
+# 보고싶어요 부분인데 아직 미완입니다 (템플릿 작업 안됨)
 def wants(request, movie_id):
-    movie = get_movie_info(movie_id)
-    Post.objec
-    if request.user in movie.want_users.all():
-        movie.want_users.remove(request.user)
+    post = Post.objects.get(movie_id=movie_id)
+    if request.user in post.want_users.all():
+        post.want_users.remove(request.user)
         is_wanted = False
     else:
-        movie.want_users.add(request.user)
+        post.want_users.add(request.user)
         is_wanted = True
     context = {
         'is_wanted': is_wanted,
     }
-    return JsonResponse(context)
+    return JsonResponse(context) 
 
