@@ -76,7 +76,7 @@
 \t\t\t"movie_id": 868759,
 \t\t\t"title": "고스팅",
 \t\t\t"released_date": "2023-04-18",
-\t\t\t"rating": 7.2,
+\t\t\t"rating": 7.1,
 \t\t\t"description": "선량한 남자 콜은 수수께끼 같은 세이디에게 푹 빠지지만 곧 그녀가 비밀 요원이라는 충격적인 사실을 알게 된다. 두 번째 데이트 약속을 하기도 전에 콜과 세이디는 세상을 구하기 위한 국제적 모험에 휩쓸린다.",
 \t\t\t"poster_path": "/zCsg0CgncQkLiAgk1zkmt15OhM8.jpg",
 \t\t\t"category": [
@@ -105,13 +105,29 @@
 \t\t}
 \t},
 \t{
+\t\t"pk": 713704,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 713704,
+\t\t\t"title": "이블 데드 라이즈",
+\t\t\t"released_date": "2023-04-12",
+\t\t\t"rating": 7.2,
+\t\t\t"description": "길바닥에서 지친 베스가 비좁은 아파트에서 세 아이를 키우는 엘리를 뒤늦게 찾아간다. 아파트에서 신비로운 책이 발견되며 육체에 사로잡힌 악마가 발견되며, 베스가 가장 악몽 같은 버전의 모성애에 직면하게 되면서 생존에 위한 원초적인 싸움에 내몰리게 되는데...",
+\t\t\t"poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
 \t\t"pk": 1102776,
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 1102776,
 \t\t\t"title": "에이전트 A.K.A.",
 \t\t\t"released_date": "2023-04-28",
-\t\t\t"rating": 7,
+\t\t\t"rating": 7.1,
 \t\t\t"description": "한 치도 흔들림이 없는 특수 작전 요원. 하지만 범죄 조직 침투 임무 중, 우연히 상관의 어린 아들과 가까워지면서 굳은 신념이 시험대에 오른다.",
 \t\t\t"poster_path": "/zLQc0AF6yWkW6piLlFvjDU8FznN.jpg",
 \t\t\t"category": [
@@ -151,21 +167,6 @@
 \t\t\t"category": [
 \t\t\t\t18,
 \t\t\t\t28
-\t\t\t]
-\t\t}
-\t},
-\t{
-\t\t"pk": 713704,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 713704,
-\t\t\t"title": "이블 데드 라이즈",
-\t\t\t"released_date": "2023-04-12",
-\t\t\t"rating": 7.1,
-\t\t\t"description": "길바닥에서 지친 베스가 비좁은 아파트에서 세 아이를 키우는 엘리를 뒤늦게 찾아간다. 아파트에서 신비로운 책이 발견되며 육체에 사로잡힌 악마가 발견되며, 베스가 가장 악몽 같은 버전의 모성애에 직면하게 되면서 생존에 위한 원초적인 싸움에 내몰리게 되는데...",
-\t\t\t"poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
-\t\t\t"category": [
-\t\t\t\t27
 \t\t\t]
 \t\t}
 \t},
@@ -334,7 +335,7 @@
 \t\t\t"movie_id": 946310,
 \t\t\t"title": "De Piraten van Hiernaast II: De Ninja's van de Overkant",
 \t\t\t"released_date": "2022-04-20",
-\t\t\t"rating": 7.1,
+\t\t\t"rating": 6.9,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/uDsvma9dAwnDPVuCFi99YpWvBk0.jpg",
 \t\t\t"category": [
@@ -383,7 +384,7 @@
 \t\t\t"movie_id": 1085103,
 \t\t\t"title": "클록",
 \t\t\t"released_date": "2023-03-28",
-\t\t\t"rating": 6,
+\t\t\t"rating": 5.9,
 \t\t\t"description": "떠오르는 스타 디자이너 엘라. 호화로운 집에 다정한 남편까지, 모든 걸 가진 그녀에겐 한 가지 고민이 있다. 바로 아이를 원하는 마음이 전혀 생기지 않는 것. 사회적 압박에 시달리던 그녀는 새로운 각도로 임신 문제를 다루는 임상시험에 지원하고. 놀랍게도 치료는 효과를 보이지만, 엘라는 어떤 대가를 치러야 할까?",
 \t\t\t"poster_path": "/3TLFdU75guGAh6qIqumvtKrzhji.jpg",
 \t\t\t"category": [
@@ -465,7 +466,7 @@
 \t\t\t"movie_id": 997776,
 \t\t\t"title": "Justice League x RWBY: Super Heroes & Huntsmen, Part One",
 \t\t\t"released_date": "2023-04-25",
-\t\t\t"rating": 7.9,
+\t\t\t"rating": 7.8,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/sjBFnG8DpouuWi161KbjbAER235.jpg",
 \t\t\t"category": [
@@ -534,7 +535,7 @@
 \t\t\t"movie_id": 1105014,
 \t\t\t"title": "Ripper's Revenge",
 \t\t\t"released_date": "2023-04-03",
-\t\t\t"rating": 5.3,
+\t\t\t"rating": 5.6,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/cuEIBHTWAvaYkhhS8HfOkhce2MB.jpg",
 \t\t\t"category": [
@@ -549,7 +550,7 @@
 \t\t\t"movie_id": 840326,
 \t\t\t"title": "시수",
 \t\t\t"released_date": "2023-01-27",
-\t\t\t"rating": 7.3,
+\t\t\t"rating": 7.2,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/uCAaaAQEDrTllYR4dtsEsfQa8We.jpg",
 \t\t\t"category": [
@@ -615,7 +616,7 @@
 \t\t\t"movie_id": 1104040,
 \t\t\t"title": "갱스 오브 라고스",
 \t\t\t"released_date": "2023-04-07",
-\t\t\t"rating": 6.1,
+\t\t\t"rating": 6.3,
 \t\t\t"description": "절친 오발롤라, 이피, 기프트는 정치판과 연계한 갱들이 거리를 지배하는 곳, 이살레 에코에서 나고 자랐다. 라이벌 갱들이 거리를 피로 붉게 물들이는 가운데, 오발롤라, 이피, 기프트는 갱단 간의 전쟁에 말려든다. 이 전쟁을 통해 이살레 에코의 기반을 뒤흔드는 비밀이 밝혀지고, 최종적으로 세 사람은 자신들의 운명을 깨닫게 된다.",
 \t\t\t"poster_path": "/nGwFsB6EXUCr21wzPgtP5juZPSv.jpg",
 \t\t\t"category": [
@@ -630,7 +631,7 @@
 \t\t\t"movie_id": 994128,
 \t\t\t"title": "엘더리",
 \t\t\t"released_date": "2023-04-21",
-\t\t\t"rating": 6.4,
+\t\t\t"rating": 7.1,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/31W5qM3rfsdJwQCWjDRXa00T8xJ.jpg",
 \t\t\t"category": [
@@ -749,9 +750,9 @@
 \t\t\t"movie_id": 455476,
 \t\t\t"title": "세인트 세이야: 더 비기닝",
 \t\t\t"released_date": "2023-04-27",
-\t\t\t"rating": 6.6,
-\t\t\t"description": "",
-\t\t\t"poster_path": "/tBiUXvCqz34GDeuY7jK14QQdtat.jpg",
+\t\t\t"rating": 6.5,
+\t\t\t"description": "슬럼가 격투장에서 싸우던 중 이상한 힘이 발현된 ‘세이야’가 자신이 아테나의 환생인 ‘시에나’를 지킬 운명임을 받아들이고 세상을 구하는 이야기",
+\t\t\t"poster_path": "/1nbFEdIFprRNSWcCM0RUjQqZifF.jpg",
 \t\t\t"category": [
 \t\t\t\t14,
 \t\t\t\t28,
@@ -964,7 +965,7 @@
 \t\t\t"movie_id": 676710,
 \t\t\t"title": "어메이징 모리스",
 \t\t\t"released_date": "2022-12-16",
-\t\t\t"rating": 7,
+\t\t\t"rating": 7.1,
 \t\t\t"description": "신기한 능력으로 성공적인 사기 행각을 이어가던 모리스와 친구들! 4차원 소녀 ‘멜리시아’에게 정체가 탄로나 어쩔 수 없이 그녀를 도와 마을에 숨겨진 비밀을 찾아 나선 그들은 세상을 지배하려는 절대악 ‘쥐마왕’의 음모를 알아채지만 뜻하지 않은 위험에 처한다. 가까스로 잡혀있던 ‘복숭아’를 구해낸 모리스와 친구들은 마을에서 탈출을 시도하고, 멜리시아는 허당 피리꾼 ‘키이스’와 함께 쥐마왕에게 맞서기 위해 진짜 마술피리를 찾아나서는데..  쥐마왕의 정체는 과연 무엇? 그리고 모리스와 친구들은 무사히 마을에서 벗어날 수 있을 것인가?!",
 \t\t\t"poster_path": "/m4gi3r7JizAaURreUqjCk306vxz.jpg",
 \t\t\t"category": [
@@ -1110,22 +1111,6 @@
 \t\t}
 \t},
 \t{
-\t\t"pk": 983768,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 983768,
-\t\t\t"title": "Black Warrant",
-\t\t\t"released_date": "2023-01-09",
-\t\t\t"rating": 5.3,
-\t\t\t"description": "",
-\t\t\t"poster_path": "/A7vFFZHbDyxfjuYKzJwruTnwwjT.jpg",
-\t\t\t"category": [
-\t\t\t\t28,
-\t\t\t\t53
-\t\t\t]
-\t\t}
-\t},
-\t{
 \t\t"pk": 1076605,
 \t\t"model": "movies.movie",
 \t\t"fields": {
@@ -1183,7 +1168,7 @@
 \t\t\t"movie_id": 989473,
 \t\t\t"title": "살인 초대장",
 \t\t\t"released_date": "2023-05-05",
-\t\t\t"rating": 6.1,
+\t\t\t"rating": 6.2,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/8OyzvMrVx2tXjyJiE3GZpvaXE2T.jpg",
 \t\t\t"category": [
@@ -1522,7 +1507,7 @@
 \t\t\t"movie_id": 874743,
 \t\t\t"title": "내가 사랑했던 모든 너에게",
 \t\t\t"released_date": "2022-10-07",
-\t\t\t"rating": 6.5,
+\t\t\t"rating": 6.9,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/zQqUvA1rxSceehwoChsKB780plX.jpg",
 \t\t\t"category": [
@@ -1654,7 +1639,7 @@
 \t\t\t"movie_id": 874745,
 \t\t\t"title": "너를 사랑했던 한 사람의 나에게",
 \t\t\t"released_date": "2022-10-07",
-\t\t\t"rating": 6,
+\t\t\t"rating": 5.7,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/fcxJCxRSJQ9XLJUjjDdHJvuLYWm.jpg",
 \t\t\t"category": [
@@ -1671,7 +1656,7 @@
 \t\t\t"movie_id": 964426,
 \t\t\t"title": "Gulltransporten",
 \t\t\t"released_date": "2022-12-15",
-\t\t\t"rating": 6.8,
+\t\t\t"rating": 6.7,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/xzP0WmdTac9Pl9hgBqwii9iuTlZ.jpg",
 \t\t\t"category": [
@@ -1698,6 +1683,23 @@
 \t\t}
 \t},
 \t{
+\t\t"pk": 453395,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 453395,
+\t\t\t"title": "닥터 스트레인지: 대혼돈의 멀티버스",
+\t\t\t"released_date": "2022-05-04",
+\t\t\t"rating": 7.4,
+\t\t\t"description": "아메리카는 어느 날 멀티버스 사이를 오갈 수 있는 힘에 눈을 뜨지만 완전히 제어하지 못한다. 정체불명의 악마가 아메리카를 죽이려 하자 다른 우주의 스트레인지가 이를 막아보지만 결국 살해당한다. 우여곡절 끝에 우리가 알고 있는 우주로 넘어온 아메리카는 어벤져스 멤버인 닥터 스트레인지의 도움과 보호를 받는다. 닥터 스트레인지는 웨스트뷰 사건 이후 잠적한 완다에게 도움을 청하지만 곧바로 그녀가 사건의 진정한 흑막, 스칼렛 위치임이 드러난다. 스칼렛 위치는 자신의 원하는 멀티버스로 가기 위해 아메리카의 힘을 흡수하려 한다. 닥터 스트레인지와 아메리카는 압도적인 힘을 지닌 스칼렛 위치를 피해 또 한번 다른 멀티버스로 도망치지만 그의 끈질긴 추격을 받는다.",
+\t\t\t"poster_path": "/vL5ktZauR0fZMDOHKjakb1idhuU.jpg",
+\t\t\t"category": [
+\t\t\t\t14,
+\t\t\t\t28,
+\t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
 \t\t"pk": 1013860,
 \t\t"model": "movies.movie",
 \t\t"fields": {
@@ -1712,23 +1714,6 @@
 \t\t\t\t35,
 \t\t\t\t14,
 \t\t\t\t80
-\t\t\t]
-\t\t}
-\t},
-\t{
-\t\t"pk": 453395,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 453395,
-\t\t\t"title": "닥터 스트레인지: 대혼돈의 멀티버스",
-\t\t\t"released_date": "2022-05-04",
-\t\t\t"rating": 7.4,
-\t\t\t"description": "아메리카는 어느 날 멀티버스 사이를 오갈 수 있는 힘에 눈을 뜨지만 완전히 제어하지 못한다. 정체불명의 악마가 아메리카를 죽이려 하자 다른 우주의 스트레인지가 이를 막아보지만 결국 살해당한다. 우여곡절 끝에 우리가 알고 있는 우주로 넘어온 아메리카는 어벤져스 멤버인 닥터 스트레인지의 도움과 보호를 받는다. 닥터 스트레인지는 웨스트뷰 사건 이후 잠적한 완다에게 도움을 청하지만 곧바로 그녀가 사건의 진정한 흑막, 스칼렛 위치임이 드러난다. 스칼렛 위치는 자신의 원하는 멀티버스로 가기 위해 아메리카의 힘을 흡수하려 한다. 닥터 스트레인지와 아메리카는 압도적인 힘을 지닌 스칼렛 위치를 피해 또 한번 다른 멀티버스로 도망치지만 그의 끈질긴 추격을 받는다.",
-\t\t\t"poster_path": "/vL5ktZauR0fZMDOHKjakb1idhuU.jpg",
-\t\t\t"category": [
-\t\t\t\t14,
-\t\t\t\t28,
-\t\t\t\t12
 \t\t\t]
 \t\t}
 \t},
@@ -1756,7 +1741,7 @@
 \t\t\t"movie_id": 916224,
 \t\t\t"title": "스즈메의 문단속",
 \t\t\t"released_date": "2022-11-11",
-\t\t\t"rating": 8,
+\t\t\t"rating": 7.9,
 \t\t\t"description": "큐슈의 작은 마을에서 살고 있는 소녀 ‘스즈메’는 어느 날, 여행을 하며 ‘문’을 찾고 있는 한 청년을 만난다. 그의 뒤를 쫓아간 소녀는 산속 폐허에서 덩그러니 남겨진 낡은 문을 발견한다. 무언가에 이끌린 듯 ‘스즈메’는 문으로 손을 뻗는데…",
 \t\t\t"poster_path": "/kVS51ssZF1y0IXF342h54cIJ0EK.jpg",
 \t\t\t"category": [
@@ -2081,6 +2066,22 @@
 \t\t}
 \t},
 \t{
+\t\t"pk": 983768,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 983768,
+\t\t\t"title": "Black Warrant",
+\t\t\t"released_date": "2023-01-09",
+\t\t\t"rating": 5.3,
+\t\t\t"description": "",
+\t\t\t"poster_path": "/A7vFFZHbDyxfjuYKzJwruTnwwjT.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
 \t\t"pk": 846433,
 \t\t"model": "movies.movie",
 \t\t"fields": {
@@ -2358,7 +2359,7 @@
 \t\t\t"movie_id": 1016121,
 \t\t\t"title": "Beautiful Disaster",
 \t\t\t"released_date": "2023-04-04",
-\t\t\t"rating": 5.7,
+\t\t\t"rating": 5.5,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/bwdLflvCcOCRPqb1x13KPuYIzVx.jpg",
 \t\t\t"category": [
@@ -2806,22 +2807,6 @@
 \t\t}
 \t},
 \t{
-\t\t"pk": 671,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 671,
-\t\t\t"title": "해리 포터와 마법사의 돌",
-\t\t\t"released_date": "2001-11-16",
-\t\t\t"rating": 7.9,
-\t\t\t"description": "해리 포터는 위압적인 버논 숙부와 냉담한 이모 페투니아, 욕심 많고 버릇없는 사촌 더즐리 밑에서 갖은 구박을 견디며 계단 밑 벽장에서 생활한다. 이모네 식구들 역시 해리와의 동거가 불편하기는 마찬가지. 이모 페투니아에겐 해리가 이상한 언니 부부에 관한 기억을 떠올리게 만드는 달갑지 않은 존재다. 11살 생일이 며칠 앞으로 다가왔지만 한번도 생일파티를 치르거나 제대로 된 생일선물을 받아 본 적이 없는 해리로서는 특별히 신날 것도 기대 할 것도 없다. 11살 생일을 며칠 앞둔 어느 날 해리에게 초록색 잉크로 쓰여진 한 통의 편지가 배달된다. 그 편지의 내용은 다름 아닌 해리의 11살 생일을 맞이하여 호그와트에서 보낸 입학 초대장이었다. 그리고 해리의 생일을 축하하러 온 거인 해그리드는 해리가 모르고 있었던 해리의 진정한 정체를 알려주는데...",
-\t\t\t"poster_path": "/unEtC8uWn2lcQLnwKG9PZJX0h0c.jpg",
-\t\t\t"category": [
-\t\t\t\t12,
-\t\t\t\t14
-\t\t\t]
-\t\t}
-\t},
-\t{
 \t\t"pk": 829560,
 \t\t"model": "movies.movie",
 \t\t"fields": {
@@ -2962,7 +2947,7 @@
 \t\t\t"movie_id": 851644,
 \t\t\t"title": "20세기 소녀",
 \t\t\t"released_date": "2022-10-06",
-\t\t\t"rating": 8.4,
+\t\t\t"rating": 8.3,
 \t\t\t"description": "보라의 둘도 없는 친구 연두는 심장 수술을 위해 미국에 가면서 자신이 좋아하는 남자 백현진에 대한 모든 정보를 수집해 달라고 보라에게 부탁한다. 보라는 백현진의 가장 친한 친구 풍운호와 먼저 친해지기로 한다. 하지만 보라의 서투른 계획은 예상치 못한 방향으로 전개된다. 새로운 세기가 오기 1년 전인 1999년, 17세가 된 보라는 첫사랑의 열병에 빠진다.",
 \t\t\t"poster_path": "/xM9Jt2sA6QcvLuHKM0RI3BMtFc5.jpg",
 \t\t\t"category": [
@@ -3004,6 +2989,23 @@
 \t\t\t\t27,
 \t\t\t\t12,
 \t\t\t\t18
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 399566,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 399566,
+\t\t\t"title": "고질라 VS. 콩",
+\t\t\t"released_date": "2021-03-24",
+\t\t\t"rating": 7.7,
+\t\t\t"description": "콩과 보호자들은 정착할 수 있는 곳을 찾아 특별하고 강력한 유대감을 형성하고 있는 지아와 함께 여정을 떠나게 된다. 그러던 중 지구 파괴를 위한 회심의 날을 휘두르는 고질라와 마주하게 되고, 보이지 않는 힘에 의해 맞붙게 된 두 전설의 대결은 지구 깊은 곳에 도사린 수수께끼의 시작에 불과할 뿐이었는데…",
+\t\t\t"poster_path": "/sqo672rKMXiLRC5kVcGvBRebkp.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t14,
+\t\t\t\t878
 \t\t\t]
 \t\t}
 \t}

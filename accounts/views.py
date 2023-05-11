@@ -5,7 +5,7 @@ from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm, CustomUserChangeForm, CustomAuthenticationForm, CustomPasswordChangeForm
 from django.contrib.auth import get_user_model
-
+from movies.models import Review
 
 # Create your views here.
 
@@ -48,8 +48,11 @@ def signup(request):
 def profile(request, username):
     User = get_user_model()
     person = User.objects.get(username=username)
+    reviews = Review.objects.filter(user=person)
+
     context = {
         'person':person,
+        'reviews':reviews,
     }
     return render(request, 'accounts/profile.html', context)
 
@@ -68,7 +71,7 @@ def update(request):
             form.save()
             return redirect('accounts:profile', request.user.username)
     else:
-        form = CustomUserChangeForm(isinstance=request.user)
+        form = CustomUserChangeForm(instance=request.user)
     context = {
         'form': form,
     }
@@ -88,7 +91,7 @@ def change_password(request):
     context = {
         'form':form,
     }
-    return render(request, 'acconts/change_password.html', context)
+    return render(request, 'accounts/change_password.html', context)
 
 @login_required
 def follow(request, user_pk):
