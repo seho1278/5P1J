@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Post, Review, Comment
+from .forms import PostForm, ReviewForm
 import os, json
 import requests
 import pprint
@@ -156,3 +158,103 @@ def index(request):
     }
     return render(request, 'movies/index.html', context)
 
+
+
+def detail(request, movie_id):
+    detail_url = f'https://api.themoviedb.org/3/movie/{movie_id}'
+
+    params = {
+        'api_key': TMDB_API_KEY,
+        'language': 'ko-kr',
+        'region':'kr',
+    
+    }
+    detail_response = requests.get(detail_url, params=params)
+    detail_data = detail_response.json()
+    # print("----------------")
+    # print(detail_data)
+
+    # review = Review.objects.filter(id=movie_id)
+    # comments = review.reviews.all()
+    # reviews_count = reviews.count()
+    
+    context = {
+        'detail_data':detail_data,
+        'movie_id' : movie_id,
+        # 'comments' : comments,
+        # 'reviews_count': reviews_count,
+        
+    }
+    return render(request, 'movies/detail.html', context)
+
+def similar(request, movie_id):
+    similar_url = f'https://api.themoviedb.org/3/movie/{movie_id}/similar'
+    params = {
+        'api_key': TMDB_API_KEY,
+        'language': 'ko-kr',
+        'region':'kr',
+    
+    }
+    similar_response = requests.get(similar_url, params=params)
+    similar_data = similar_response.json()
+    # print(similar_data)
+
+    reviews = Review.objects.filter(movie_id=movie_id)
+    review_count = reviews.count()
+    
+    context = {
+        'similar_data':similar_data,
+        'review_count':review_count,
+        
+        
+    }
+    return render(request, 'movies/detail.html', context)
+
+def get_movie_info(movie_id):
+    get_movie_url = f'https://api.themoviedb.org/3/movie/{movie_id}'
+    params = {
+        'api_key': TMDB_API_KEY,
+        'language': 'ko-kr',
+        'region':'kr',
+    }
+    get_movie_response = requests.get(get_movie_url, params=params)
+    # movie_data = get_movie_response.json()
+    # return movie_data
+    if get_movie_response.status_code == 200:
+        movie_data = get_movie_response.json()
+        return movie_data
+    return None
+    
+
+def review_create(request, movie_id):
+    movie = get_movie_info(movie_id)
+    print('---------------------')
+    print(movie)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.post = movie
+            review.user = request.user
+            review.save()
+            return redirect('movies:detail', movie_id=movie_id)
+    else:
+        form = ReviewForm()
+
+    context = {
+        'form': form,
+        'movie': movie,
+    }
+    
+    return render(request, 'movies/review_create.html', context)
+
+
+def review_delete(request, movie_id, review_id):
+    # post = Post.objects.get(id=movie_id)
+    review = Review.objects.get(id=review_id)
+    if request.method == "POST":
+        review.delete()
+    
+    return redirect('movies:detail', movie_id)
+
+# def comment_create(request, movie_id, review_id):

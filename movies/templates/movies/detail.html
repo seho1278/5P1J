@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block style %}{% endblock style %}  
+
+{% block content %}
+<h2>Detail</h2>
+{% comment %} 영화 {% endcomment %}
+{{ detail_data.title }}
+<p>{{ detail_data.overview }}</p>
+
+<div class="movie-poster">
+  <img src="https://image.tmdb.org/t/p/w300{{ detail_data.poster_path }}" alt="">
+  <div class="movie-ranking">
+  <p class="movie-ranking-number"></p>
+  </div>
+</div>
+<p>나라 : {{ detail_data.production_countries.0.name }}</p>
+<p>제작사 : {{detail_data.production_companies.0.name }}</p>
+<p>런타임 :{{ detail_data.runtime}}분</p>
+<p>별점 : {{ detail_data.vote_average|floatformat:1}}점</p> 
+<p>개봉일 : {{ detail_data.release_date}}</p>
+
+<a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_create' movie_id %}">리뷰쓰기</a> 
+{% comment %} {% for comment in comments %}
+  <p>{{ comment. }}</p>
+
+{% endfor %} {% endcomment %}
+{% endblock content %}
+{% block script %}{% endblock script %}
