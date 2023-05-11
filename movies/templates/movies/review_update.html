@@ -41,7 +41,7 @@
 
 {% block content %}
 <h3>Update</h3>
-<form action="{% url 'movies:review_update' movie_id review.pk %}" method="post">
+<form action="{% url 'movies:review_update' post.movie_id review.pk %}" method="post">
     {% csrf_token %}
     <h2 class="mb-4 title fw-bold">리뷰 수정</h2>
     <div>
@@ -62,7 +62,7 @@
       내용 : {{ form.content }}
     </div>
     
-    <input type="submit" value="생성하기" class="btn btn-outline-success mt-4" style="width:400px;">
+    <input type="submit" value="수정하기" class="btn btn-outline-success mt-4" style="width:400px;">
 </form>
 
 {% endblock content %}

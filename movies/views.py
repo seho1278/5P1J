@@ -236,6 +236,14 @@ def detail(request, movie_id):
     similar_data = similar_response.json()
     similars = sorted(similar_data['results'], key=lambda x:x['vote_average'], reverse=True)
     
+    
+    # 출연/제작진 정보 
+    credits_url = f'https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key={TMDB_API_KEY}&language=ko-kr'
+    credits_response = requests.get(credits_url)
+    credits_data = credits_response.json()
+    credits = credits_data['cast'][:6]
+    profile_path = 'https://image.tmdb.org/t/p/w200'
+    
     context = {
         'detail_data':detail_data,
         'movie_id' : movie_id,
@@ -245,6 +253,8 @@ def detail(request, movie_id):
         'tags' : tags,
         'p_tags' : p_tags,
         'platform_list': platform_list,
+        'credits': credits,
+        'profile_path': profile_path,
         
     }
     return render(request, 'movies/detail.html', context)
@@ -326,10 +336,10 @@ def get_movie_info(movie_id):
         return movie_data
     return None
     
-
-def review_create(request, post_pk):
-    
-    post = Post.objects.get(pk=post_pk)
+@login_required
+def review_create(request, movie_id):
+    post = Post.objects.get(movie_id=movie_id)
+    # post = Post.objects.get(pk=post_pk)
     print(post)
     if request.method == 'POST':
         form = ReviewForm(request.POST)
@@ -345,12 +355,12 @@ def review_create(request, post_pk):
 
     context = {
         'form': form,
-        'movie': post,
+        'post': post,
     }
     
     return render(request, 'movies/review_create.html', context)
 
-
+@login_required
 def review_delete(request, movie_id, review_id):
     review = Review.objects.get(id=review_id)
     if request.user == review.user:
@@ -358,31 +368,42 @@ def review_delete(request, movie_id, review_id):
     
     return redirect('movies:detail', movie_id)
 
+@login_required
 def review_update(request, movie_id, review_id):
+    post = Post.objects.get(movie_id=movie_id)
+
+    # post = Post.objects.get(pk=post_pk)
+    # movie_id = post.movie_id
     review = Review.objects.get(id=review_id)
-    
+
+    # try:
+    #     review = Review.objects.get(id=review_id)
+    # except Review.DoesNotExist:
+    #     return redirect('movies:detail', movie_id )
+
     if request.user == review.user:
         if request.method == 'POST':
             form = ReviewForm(request.POST, instance=review)
             if form.is_valid():
                 form.save()
-                return redirect('movies:detail', movie_id)
+                return redirect('movies:detail', post.movie_id)
         else:
             form = ReviewForm(instance=review)
     else:
-        return redirect('movies:detail', movie_id)
+        return redirect('movies:detail', post.movie_id)
     
     context = {
         'review': review,
         'form': form,
+        'post': post,
     }
     
     return render(request, 'movies/review_update.html', context)
 # def comment_create(request, movie_id, review_id):
-
+# ㅎㅎ...오류 뜨셔서..오셨죠..? 될겁니당ㅎㅎ 화이띵! 화이띵!!
 # 보고싶어요 부분인데 아직 미완입니다 (템플릿 작업 안됨)(제가 하겠습니다!)
-def wants(request, movie_id):
-    post = Post.objects.get(movie_id=movie_id)
+def wants(request, post_pk):
+    post = Post.objects.get(pk=post_pk)
     if request.user in post.want_users.all():
         post.want_users.remove(request.user)
         is_wanted = False
@@ -391,6 +412,19 @@ def wants(request, movie_id):
         is_wanted = True
     context = {
         'is_wanted': is_wanted,
+    }
+    return JsonResponse(context)
+
+def watchings(request, post_pk):
+    post = Post.objects.get(pk=post_pk)
+    if request.user in post.watching_users.all():
+        post.watching_users.remove(request.user)
+        watching = False
+    else:
+        post.watching_users.add(request.user)
+        watching = True
+    context = {
+        'watching': watching,
     }
     return JsonResponse(context)
 
