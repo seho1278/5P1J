@@ -21,6 +21,7 @@
   <div class="Index__Content__rankingContainer">
     <div class="carousel">
       {% for movie in now_playing %}
+        <a class="movie-link" href="{% url 'movies:detail' movie.id %}">
         <div class="Index__Card">
           <div class="card" style="width: 200px; height: 300px; position: relative; overflow: hidden;">
             <img src="https://image.tmdb.org/t/p/w300{{ movie.poster_path }}" alt="">
@@ -30,6 +31,14 @@
             <div class="card-title">{{ movie.title }}</div>
           </div>
         </div>
+      {% endfor %}
+      {% comment %} 장르별 {% endcomment %}
+      {% for g in genre_movie_list %}
+        {% if g.genre_ids == 18 %}
+          <h2>로맨스</h2>
+          {{ g.title }}
+        {% endif %}
+      
       {% endfor %}
     </div>
   </div> 

@@ -138,7 +138,7 @@ def index(request):
             'api_key': TMDB_API_KEY,
             'language': 'ko-kr',
             'region':'kr',
-            'page': page
+            'page': page,
         }
         
         
@@ -156,6 +156,7 @@ def index(request):
         'genre_dict' : genre_dict, 
         'genre': genre,
         'top_rated': top_rated,
+        'genre_movie_list' : genre_movie_list
        
     }
     return render(request, 'movies/index.html', context)
@@ -164,7 +165,8 @@ def index(request):
 
 def detail(request, movie_id):
     detail_url = f'https://api.themoviedb.org/3/movie/{movie_id}'
-
+    similar_url = f'https://api.themoviedb.org/3/movie/{movie_id}/similar'
+    
     params = {
         'api_key': TMDB_API_KEY,
         'language': 'ko-kr',
@@ -173,18 +175,17 @@ def detail(request, movie_id):
     }
     detail_response = requests.get(detail_url, params=params)
     detail_data = detail_response.json()
-    # print("----------------")
-    # print(detail_data)
 
-    # review = Review.objects.filter(id=movie_id)
-    # comments = review.reviews.all()
-    # reviews_count = reviews.count()
+    similar_response = requests.get(similar_url, params=params)
+    similar_data = similar_response.json()
+    similars = sorted(similar_data['results'], key=lambda x:x['vote_average'], reverse=True)
+   
     
     context = {
         'detail_data':detail_data,
         'movie_id' : movie_id,
-        # 'comments' : comments,
-        # 'reviews_count': reviews_count,
+        'similars' : similars,
+       
         
     }
     return render(request, 'movies/detail.html', context)
@@ -199,14 +200,11 @@ def similar(request, movie_id):
     }
     similar_response = requests.get(similar_url, params=params)
     similar_data = similar_response.json()
+    similars = sorted(similar_data['results'], key=lambda x:x['vote_average'], reverse=True)
     # print(similar_data)
-
-    reviews = Review.objects.filter(movie_id=movie_id)
-    review_count = reviews.count()
-    
     context = {
         'similar_data':similar_data,
-        'review_count':review_count,
+        'similars' : similars,
         
         
     }
@@ -230,8 +228,7 @@ def get_movie_info(movie_id):
 
 def review_create(request, movie_id):
     movie = get_movie_info(movie_id)
-    print('---------------------')
-    print(movie)
+    
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():

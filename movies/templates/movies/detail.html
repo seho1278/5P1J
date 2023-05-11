@@ -21,7 +21,14 @@
 <p>런타임 :{{ detail_data.runtime}}분</p>
 <p>별점 : {{ detail_data.vote_average|floatformat:1}}점</p> 
 <p>개봉일 : {{ detail_data.release_date}}</p>
+<h2>이런 영화는 어때요?</h2>
+{% for similar in similars %}
+  <a class="movie-link" href="{% url 'movies:detail' similar.id %}" value="{{ similar.title }}">
+  <p>{{ similar.title }}</p>
 
+
+
+{% endfor %}
 <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_create' movie_id %}">리뷰쓰기</a> 
 {% comment %} {% for comment in comments %}
   <p>{{ comment. }}</p>
