@@ -6,6 +6,27 @@
 
 {% block content %}
   <h1>{{ person.username }}님!!</h1>
+  <p>팔로워 - {{ person.followers.all|length }}</p>
+  <p>팔로잉 - {{ person.followings.all|length }}</p>
+  <form action="{% url 'accounts:follow' person.pk %}" method="POST">
+    {% csrf_token %}
+    <button type="submit">
+      {% if request.user in person.followers.all %}
+        언팔로우
+      {% else %}
+        팔로우
+      {% endif %}
+    </button>
+  </form>
+
+
+
+  <h1>작성 리뷰</h1>
+  {% for review in reviews %}
+    
+    <p>{{ review.post.title }}</p>
+    <p>{{ review.content }}</p>
+  {% endfor %}
 {% endblock content %}
 
 {% block script %}{% endblock script %}

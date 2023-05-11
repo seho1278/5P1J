@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block style %}
+<style>
+  .rating_box {
+    display: flex;
+  }
+
+  .rating {
+    position: relative;
+    color: #ddd;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .rating input {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .rating_star {
+    width: 0;
+    color: #ffc107;
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: width 0.3s ease; {% comment %} 부드러운 너비 변경 {% endcomment %}
+  }
+
+</style>
+{% endblock style %}  
+
+{% block content %}
+<h3>Update</h3>
+<form action="{% url 'movies:review_update' movie_id review.pk %}" method="post">
+    {% csrf_token %}
+    <h2 class="mb-4 title fw-bold">리뷰 수정</h2>
+    <div>
+      <div class="rating_box">
+        <label for="id_rating">별점:</label>
+        <div class="rating">
+          ★★★★★
+          <span class="rating_star">★★★★★</span>
+          <input type="range" name="rating" value="{{ form.rating.initial }}" step="1" min="0" max="5">
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3 main">
+      태그 : {{ form.tags }}
+    </div>
+    <div class="mb-3 main">
+      내용 : {{ form.content }}
+    </div>
+    
+    <input type="submit" value="생성하기" class="btn btn-outline-success mt-4" style="width:400px;">
+</form>
+
+{% endblock content %}
+{% block script %}
+  <script>
+    const rating_input = document.querySelector('.rating input');
+    const rating_star = document.querySelector('.rating_star');
+
+    // 별점 드래그 할 때
+    rating_input.addEventListener('input', () => {
+    rating_star.style.width = `${rating_input.value * 20}%`;
+    });
+  </script>
+{% endblock script %}

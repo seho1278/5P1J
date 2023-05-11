@@ -1,0 +1,100 @@
+.Detail__Container {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    /* background-color: white; */
+}
+
+.card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.Detail__TitleBox {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 30px;
+    margin: 10px 0 10px 0;
+}
+
+.Detail__Title__Stat {
+    padding: 10px 20px 20px 20px;
+    width: 450px;
+}
+
+.Detail__Title__StatTitle {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.Detail__Info__PlatformBox {
+    background-color: white;
+    margin-left: auto;
+    width: 300px;
+    height: 300px;
+    border: solid 1px black;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px;
+}
+
+.Detail__ContentBox {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 30px;
+    margin: 10px 0 10px 0;
+}
+
+.Detail__ContentBox__Title {
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.Detail__ContentBox__GraphTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Detail__ContentBox__GraphTitle p {
+    margin: 0px;
+}
+
+.bar-chart {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 200px;
+}
+
+.bar-chart__text {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.bar-chart__bar {
+    flex-grow: 1;
+    background-color: rgb(255, 221, 99);
+    transition: width 0.5s ease-in-out;
+    margin: 0 20px 0 20px;
+}
+
+.bar-chart__barText {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 20px 0 20px;
+    color: gray;
+    font-size: 12px;
+}

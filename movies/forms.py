@@ -15,27 +15,27 @@ class PostForm(forms.ModelForm):
         ('상영시간이 긴', '상영시간이 긴'), ('내용이 산으로 가는', '내용이 산으로 가는'), ('난해한', '난해한'), ('지루한', '지루한'), ('무슨 소리인지 모르겠는', '무슨 소리인지 모르겠는'), ('시대착오적인', '시대착오적인'), ('결말이 부실한', '결말이 부실한'),
     ]
 
-    tags = forms.ChoiceField(
+    tags = forms.MultipleChoiceField(
         label = '태그',
-        widget = forms.Select(
-            attrs={
-                'class': 'form-control',
-            }
+        widget = forms.CheckboxSelectMultiple(
+            # attrs={
+            #     'class': 'form-control',
+            # }
         ),
         choices = TAG_CHOICES,
 
     )
     
     PLATFORM_CHOICES = [
-        ('넷플리스', '넷플릭스'), ('왓챠', '왓챠'), ('웨이브', '웨이브'), ('애플TV+', '애플TV+'), ('디즈니+', '디즈니+'),
+        ('넷플릭스', '넷플릭스'), ('왓챠', '왓챠'), ('웨이브', '웨이브'), ('애플TV+', '애플TV+'), ('디즈니+', '디즈니+'),
     ]
     
-    platform = forms.ChoiceField(
+    platform = forms.MultipleChoiceField(
         label = '플랫폼', 
-        widget = forms.Select(
-            attrs = {
-                'class': 'form-control',
-            }
+        widget = forms.CheckboxSelectMultiple(
+            # attrs = {
+            #     'class': 'form-control',
+            # }
         ),
         choices = PLATFORM_CHOICES,
 
@@ -58,12 +58,10 @@ class ReviewForm(forms.ModelForm):
         ('상영시간이 긴', '상영시간이 긴'), ('내용이 산으로 가는', '내용이 산으로 가는'), ('난해한', '난해한'), ('지루한', '지루한'), ('무슨 소리인지 모르겠는', '무슨 소리인지 모르겠는'), ('시대착오적인', '시대착오적인'), ('결말이 부실한', '결말이 부실한'),
     ]
 
-    tags = forms.ChoiceField(
+    tags = forms.MultipleChoiceField(
         label = '태그',
-        widget = forms.Select(
-            attrs={
-                'class': 'form-control',
-            }
+        widget = forms.CheckboxSelectMultiple(
+            
         ),
         choices = TAG_CHOICES,
 

@@ -21,15 +21,18 @@
   <div class="Index__Content__rankingContainer">
     <div class="carousel">
       {% for movie in now_playing %}
-        <div class="Index__Card">
-          <div class="card" style="width: 200px; height: 300px; position: relative; overflow: hidden;">
-            <img src="https://image.tmdb.org/t/p/w300{{ movie.poster_path }}" alt="">
-            <div class="Index__Like">ㅇ</div>
+        <a class="movie-link" href="{% url 'movies:detail' movie.id %}">
+          <div class="Index__Card">
+            <div class="card" style="width: 200px; height: 300px; position: relative; overflow: hidden;">
+              <img src="https://image.tmdb.org/t/p/w300{{ movie.poster_path }}" alt="">
+              <div class="Index__Like">ㅇ</div>
+            </div>
+            <div class="Index__Card__Content">
+              <div class="card-title">{{ movie.title }}</div>
+              <span><a href="{% url 'movies:create' movie.id %}">생성하기</a></span>
+            </div>
           </div>
-          <div class="Index__Card__Content">
-            <div class="card-title">{{ movie.title }}</div>
-          </div>
-        </div>
+        </a>
       {% endfor %}
     </div>
   </div> 

@@ -1,36 +1,152 @@
 {% extends 'base.html' %}
 
-{% block title %}{% endblock title %}
+{% load static %}
 
-{% block style %}{% endblock style %}  
+{% block title %}Detail{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'detail/detail.css' %}">
+{% endblock style %}  
 
 {% block content %}
-<h2>Detail</h2>
-{% comment %} 영화 {% endcomment %}
-{{ detail_data.title }}
-<p>{{ detail_data.overview }}</p>
+<div class="Detail__Container">
+  <div class="Detail__TitleBox">
+    <div class="card" style="width: 200px; height: auto;">
+      <img src="https://image.tmdb.org/t/p/w300{{ detail_data.poster_path }}" alt="">
+    </div>
+    <div class="Detail__Title__Stat">
+      <div class="Detail__Title__StatTitle">{{ detail_data.title }}  <span style="color: rgb(221, 221, 0);">{{ detail_data.vote_average|floatformat:1}}</span></div>
+      <div style="margin-bottom:10px;">{{ detail_data.release_date }} · 장르 · {{ detail_data.production_countries.0.name }}</div>
+      <div style="margin-bottom:10px;">제작사: {{detail_data.production_companies.0.name }}</div>
+      <div style="margin-bottom:10px;">상영시간: {{ detail_data.runtime}}분</div>
+      <hr>
+      <div>
+        {% if request.user.is_authenticated %}
+          <form id="wants-form" data-movie-id="{{ movie.id }}">
+            {% csrf_token %}
+            {% if request.user in post.want_users.all %}
+              <button class="btn btn-primary">보고싶지 않아요</button>
+      
+            {% else %}
+              <button class="btn btn-primary">보고싶어요</button>
+            {% endif %}
+          </form>
+        {% else %}
+            <button class="btn btn-primary" disabled> 
+              보고싶지 않아요
+            </button>    
+        {% endif %}
+          
+      </div>
+      <div>보고싶어요/보는중/리뷰작성</div>
+    </div>
+    <div class="Detail__Info__PlatformBox">
+      <p>플랫폼: 
+        {% for platform in platform_list %}
+        <span class="badge rounded-pill text-bg-warning"> {{platform}} </span>
+        {% endfor %}
+      </p>
+    </div>
+  </div>
+  <div class="Detail__ContentBox">
+    <div>
+      <p class="Detail__ContentBox__Title">선호하는 태그</p>
+      <p>태그 : 
+        {% comment %} 포스트태그 {% endcomment %}
+        {% for tag in p_tags %}
+        <span class="badge rounded-pill text-bg-light">{{ tag }}</span>
+        {% endfor %}
+        {% comment %} 리뷰태그 {% endcomment %}
+        {% for tag in tags %}
+          <span class="badge rounded-pill text-bg-light">{{ tag }}</span>
+        {% endfor %}
+      </p>
+    </div>
+    <hr>
+    <div>
+      <p class="Detail__ContentBox__Title">정보</p>
+      <p style="margin: 0 15px 0 15px;">{{ detail_data.overview }}</p>
+    </div>
+    <hr>
+    <div>
+      <p class="Detail__ContentBox__Title">출연/제작</p>
+    </div>
+    <hr>
+    <div>
+      <div class="Detail__ContentBox__GraphTitle">
+        <p class="Detail__ContentBox__Title">별점그래프</p>
+        <div class="">
+          <p>평균 ★0</p>
+          <p>(리뷰 수)</p>
+        </div>
+      </div>
+      <div class="bar-chart">
+        <div class="bar-chart__bar" style="height: 0;"></div>
+        <div class="bar-chart__bar" style="height: 0;"></div>
+        <div class="bar-chart__bar" style="height: 0;"></div>
+        <div class="bar-chart__bar" style="height: 0;"></div>
+        <div class="bar-chart__bar" style="height: 0;"></div>
+      </div>
+      <div class="bar-chart__text">
+        <div class="bar-chart__barText">1</div>
+        <div class="bar-chart__barText">2</div>
+        <div class="bar-chart__barText">3</div>
+        <div class="bar-chart__barText">4</div>
+        <div class="bar-chart__barText">5</div>
+      </div>
+    </div>
+  </div>
+  <div class="Detail__ContentBox">
+    <p class="Detail__ContentBox__Title">리뷰</p>
+    {% comment %} 리뷰 출력 {% endcomment %}
+    {% for review in reviews %}
+    <p>{{ review.user }}</p>
+    <p>{{ review.content }}</p>
+    <a class="btn btn-sm btn-outline-danger" href="{% url 'movies:review_delete' movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_update' movie_id review.pk %}">수정</a> 
+    <hr>  
+    {% endfor %}
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_create' post.pk %}">리뷰쓰기</a> 
 
-<div class="movie-poster">
-  <img src="https://image.tmdb.org/t/p/w300{{ detail_data.poster_path }}" alt="">
-  <div class="movie-ranking">
-  <p class="movie-ranking-number"></p>
+  </div>
+  <div class="Detail__ContentBox">
+    <p class="Detail__ContentBox__Title">비슷한 작품</p>
+    {% for similar in similars %}
+      <p><a href="{% url 'movies:detail' similar.id %}">{{ similar.title }}</a></p>
+    {% endfor %}
   </div>
 </div>
-<p>나라 : {{ detail_data.production_countries.0.name }}</p>
-<p>제작사 : {{detail_data.production_companies.0.name }}</p>
-<p>런타임 :{{ detail_data.runtime}}분</p>
-<p>별점 : {{ detail_data.vote_average|floatformat:1}}점</p> 
-<p>개봉일 : {{ detail_data.release_date}}</p>
-<p>플랫폼 : {{ post.platform}}</p>
-<p>태그 : {{ post.tags}}</p>
 
-<hr>
+<script>
+  // 예시: 1점부터 5점까지 선택한 수
+  const ratings = [2, 4, 5, 3, 1];
+  const maxRating = 5;
 
-<hr>
-<a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_create' movie_id %}">리뷰쓰기</a> 
-{% comment %} {% for comment in comments %}
-  <p>{{ comment. }}</p>
+  const bars = document.querySelectorAll('.bar-chart__bar');
+  bars.forEach((bar, index) => {
+    const rating = ratings[index];
+    
+    const heightPercentage = (rating / maxRating) * 100;
+    
+    bar.style.height = `${heightPercentage}%`;
 
-{% endfor %} {% endcomment %}
+    if (rating === maxRating) {
+      bar.style.backgroundColor = 'rgb(255, 161, 54)'; // 가장 높은 값에 대한 색상을 변경
+    }
+    
+  });
+</script>
+
+
 {% endblock content %}
-{% block script %}{% endblock script %}
+
+{% block script %}
+
+  <script>
+    const form = document.querySelector('#wants-form')
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+
+  </script>
+
+
+{% endblock script %}
