@@ -21,7 +21,12 @@
 <p>런타임 :{{ detail_data.runtime}}분</p>
 <p>별점 : {{ detail_data.vote_average|floatformat:1}}점</p> 
 <p>개봉일 : {{ detail_data.release_date}}</p>
+<p>플랫폼 : {{ post.platform}}</p>
+<p>태그 : {{ post.tags}}</p>
 
+<hr>
+
+<hr>
 <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_create' movie_id %}">리뷰쓰기</a> 
 {% comment %} {% for comment in comments %}
   <p>{{ comment. }}</p>

@@ -8,11 +8,13 @@ from imagekit.processors import ResizeToFill
 # Create your models here.
 class Post(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    movie_id = models.CharField(max_length=100, default='')
     title = models.CharField(max_length=20)
+    tags = models.CharField(max_length=100, default='태그')
     description = models.CharField(max_length=300)
     want_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='want_posts')
     watching_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='watching_posts')
-    platform = models.URLField(max_length=100)
+    platform = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
 
 # class PostImage(models.Model):
@@ -34,4 +36,4 @@ class Comment(models.Model):
     content = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_comments')
-    update_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)

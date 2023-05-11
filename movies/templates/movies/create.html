@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block style %}{% endblock style %}  
+
+{% block content %}
+<article>
+  <h3>Create</h3>
+  <ul class="list-group list-group-flush d-flex flex-column">
+  <li class="list-group-item"><h5><strong>{{ movie.title }}</strong></h5></li>
+  <li class="list-group-item flex-grow-1">{{ movie.overview|truncatechars:200 }}</li>
+  <li class="list-group-item">개봉일: {{ movie.release_date }}</li>
+  </ul>
+  <form action="{% url 'movies:create' movie.id  %}" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      
+      <input type="submit" value="생성하기" class="btn btn-outline-success mt-4" style="width:400px;">
+  </form>
+
+</article>
+
+
+{% endblock content %}
+{% block script %}{% endblock script %}
