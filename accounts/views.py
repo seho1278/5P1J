@@ -5,7 +5,8 @@ from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm, CustomUserChangeForm, CustomAuthenticationForm, CustomPasswordChangeForm
 from django.contrib.auth import get_user_model
-from movies.models import Review
+from movies.models import Review, ReviewReport
+from django.db.models import Count
 
 # Create your views here.
 
@@ -49,10 +50,13 @@ def profile(request, username):
     User = get_user_model()
     person = User.objects.get(username=username)
     reviews = Review.objects.filter(user=person)
-
+    reports = ReviewReport.objects.values('review').annotate(num_reports=Count('review')).filter(num_reports__gte=5)
+    review_ids = [report['review'] for report in reports]
+    reviews_report = Review.objects.filter(id__in=review_ids)
     context = {
         'person':person,
         'reviews':reviews,
+        'reviews_report':reviews_report,
     }
     return render(request, 'accounts/profile.html', context)
 

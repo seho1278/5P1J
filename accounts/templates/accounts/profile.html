@@ -27,6 +27,16 @@
     <p>{{ review.post.title }}</p>
     <p>{{ review.content }}</p>
   {% endfor %}
+  {% if request.user.is_superuser %}
+    <h2>신고 댓글</h2>
+    {% for review_report in reviews_report %}
+        <div>
+          <a href="{% url 'movies:detail' %}"></a>
+            <p>{{ review_report.user }}</p>
+            <p>{{ review_report.content }}</p>
+        </div>
+    {% endfor %}
+  {% endif %}
 {% endblock content %}
 
 {% block script %}{% endblock script %}

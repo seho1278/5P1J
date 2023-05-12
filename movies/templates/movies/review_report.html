@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block style %}{% endblock style %}  
+
+{% block content %}
+  <form action="{% url 'movies:review_report' movie_id review_id %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    
+    <input type="submit" value="신고하기" class="btn btn-outline-success mt-4" style="width:400px;">
+  </form>
+
+{% endblock content %}
+{% block script %}{% endblock script %}

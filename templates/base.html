@@ -31,7 +31,7 @@
             </a>
           </div>
           <div class="header--search--wrap">
-            <form action="#" method="GET">
+            <form action="{% url 'movies:search' %}" method="GET">
               <input class="input--control" type="search" name="query" placeholder="검색어를 입력해 주세요!">
             </form>
           </div>

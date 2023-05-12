@@ -60,7 +60,18 @@
     <div class="Detail__Info__PlatformBox">
       <p>플랫폼: 
         {% for platform in platform_list %}
-        <span class="badge rounded-pill text-bg-warning"> {{platform}} </span>
+        {% if platform == "넷플릭스" %}
+        <a href="https://www.netflix.com/kr/"><span class="badge rounded-pill text-bg-warning"> {{platform}} </span></a>
+        {% elif platform == "왓챠" %}
+        <a href="https://watcha.com/"><span class="badge rounded-pill text-bg-warning"> {{platform}} </span></a>
+        {% elif platform == "웨이브" %}
+        <a href="https://www.wavve.com/"><span class="badge rounded-pill text-bg-warning"> {{platform}} </span></a>
+        {% elif platform == "애플TV+" %}
+        <a href="https://www.apple.com/apple-tv-plus/"><span class="badge rounded-pill text-bg-warning"> {{platform}} </span></a>
+        {% elif platform == "디즈니+" %}
+        <a href="https://www.disneyplus.com/"><span class="badge rounded-pill text-bg-warning"> {{platform}} </span></a>
+        {% endif %}
+        
         {% endfor %}
       </p>
     </div>
@@ -77,6 +88,7 @@
         {% for tag in tags %}
           <span class="badge rounded-pill text-bg-light">{{ tag }}</span>
         {% endfor %}
+        
       </p>
     </div>
     <hr>
@@ -126,20 +138,30 @@
       </div>
     </div>
 
-    <div class="Detail__ContentBox">
+    <div class="Detail__ReviewBox">
       <p class="Detail__ContentBox__Title">리뷰</p>
       {% comment %} 리뷰 출력 {% endcomment %}
-      {% for review in reviews %}
-      <p>{{ review.user }}</p>
-      <p>{{ review.content }}</p>
-  
-      {% if request.user == review.user %}
-        <a class="btn btn-sm btn-outline-danger" href="{% url 'movies:review_delete' movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
-        <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_update' post.movie_id review.pk %}">수정</a> 
-        <hr>  
-      {% endif %}
-      
+      {% for review in reviews reversed %}
+      <div class="Detail__Review" style="{% if forloop.counter0 <= 4 %}display: block; {% else %}display: none; {% endif %}">
+        <div class="Review__Spoiler--Active"style="display: block;">
+          <p>스포일러 내용이 포함되어 있습니다.</p>
+          <button class="SpoilerNone--Btn" onclick="toggleSpoiler(this)">더보기</button>
+        </div>
+        <div class="Review__Spoiler--None" style="display: none;">
+          <p>{{ review.user }}</p>
+          <p>{{ review.content }}</p>
+        </div>
+    
+        {% if request.user == review.user %}
+          <a class="btn btn-sm btn-outline-danger" href="{% url 'movies:review_delete' movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+          <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_update' post.movie_id review.pk %}">수정</a>
+        {% endif %}
+      </div>  
       {% endfor %}
+      
+      <hr>
+        <button id="load-more-btn" class="load-more-btn">더보기</button>
+      <hr>
       <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_create' movie_id %}">리뷰쓰기</a> 
     </div>
     <div class="Detail__ContentBox">
@@ -154,7 +176,9 @@
                 </div>
                 <div class="Detail__Card__Content">
                   <div class="card-title">{{ similar.title }}</div>
-                  <span><a href="{% url 'movies:create' similar.id %}">생성하기</a></span>
+                  {% if request.user.is_superuser %}
+                    <span><a href="{% url 'movies:create' similar.id %}">생성하기</a></span>
+                  {% endif %}
                 </div>
               </div>
             </a>
@@ -200,7 +224,6 @@
 
   // carousel 자동 스크롤
   const DetailcarouselElement = document.querySelector('.Detail__carousel');
-  console.log(DetailcarouselElement)
   let direction = 1; // 스크롤 방향 설정 (1: 오른쪽으로, -1: 왼쪽으로)
   let scrollInterval;
 
@@ -234,7 +257,6 @@
     clearInterval(scrollInterval);
   }
 
-  console.log(clearInterval(scrollInterval))
   // 페이지 로딩 시 자동 스크롤 시작
   window.addEventListener('load', () => {
     startAutoScroll();
@@ -295,7 +317,7 @@
       console.log(error.response)
     })
   })
-  // 보는 중이에요 비동기 (안돼요.....)
+  // 보는 중이에요 비동기
   const form1 = document.querySelector('#watching-form')
   const csrftoken1 = document.querySelector('[name=csrfmiddlewaretoken]').value
   form1.addEventListener('submit', function (event) {
@@ -322,9 +344,63 @@
       })
   }) 
 
-  
-  
+  // 더보기
+  var loadMoreBtn = document.getElementById('load-more-btn');
+  var reviews = document.querySelectorAll('.Detail__ReviewBox .Detail__Review');
+  console.log(reviews)
+  var hiddenReviewsCount = {{ reviews|length }} - 5;  
+  console.log(hiddenReviewsCount)
+  var currentDisplayCount = 5;
+  console.log(currentDisplayCount)
 
+  function loadMoreBtnClick() {
+    for (var i = currentDisplayCount; i < currentDisplayCount + 5 && i < reviews.length; i++) {
+      reviews[i].style.display = 'block';
+    }
+
+    currentDisplayCount += 5;
+
+    if (currentDisplayCount >= reviews.length) {
+      loadMoreBtn.innerText = '닫기'; // 버튼 텍스트를 '닫기로 변경'
+      loadMoreBtn.classList.remove('load-more-btn')
+      loadMoreBtn.classList.add('load-close-btn')
+
+      loadMoreBtn.removeEventListener('click', loadMoreBtnClick); // 이벤트 제거
+      loadMoreBtn.addEventListener('click', closeMoreBtnClick); // 닫기 버튼 클릭 이벤트 추가
+    }
+  };
+
+  if (hiddenReviewsCount <= 0) {
+    loadMoreBtn.style.display = 'none';
+  }
+
+  // 닫기 버튼 클릭 시
+  
+  function closeMoreBtnClick() {
+    for (var i = 5; i < reviews.length; i++) {
+      reviews[i].style.display = 'none';
+    }
+  
+    currentDisplayCount = 5;
+    loadMoreBtn.innerText = '더보기';  // 버튼 텍스트를 '더보기'로 변경
+    loadMoreBtn.classList.add('load-more-btn')
+    loadMoreBtn.classList.remove('load-close-btn')
+
+    loadMoreBtn.removeEventListener('click', closeMoreBtnClick); // 이벤트 제거
+    loadMoreBtn.addEventListener('click', loadMoreBtnClick); // 더보기 버튼 클릭 이벤트 추가
+     
+  };
+
+  loadMoreBtn.addEventListener('click', loadMoreBtnClick); // 초기에 더보기 버튼 클릭 이벤트 추가
+
+  function toggleSpoiler(button) {
+    var spoilerActive = button.parentNode;
+    var spoilerNone = spoilerActive.nextElementSibling;
+
+    spoilerActive.style.display = 'none';
+    spoilerNone.style.display = 'block';
+  }
+  
 </script>
 
 {% endblock script %}
