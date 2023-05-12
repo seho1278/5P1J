@@ -10,24 +10,29 @@
 <h2>영화 정보</h2>
 
 <p>{{ post.title }}</p>
-<p>{{ movie.title }}</p>
-<p>{{ post.movie.title }}<p>
+
 <p>-------------------------</p>
+
 <p>{{ review.user }} - {{ review.content }} / 작성일 : {{ review.created_at }}</p>
 
-<h3>좋아요</h3>
-<p>좋아요 개수 - {{ review.like_users.all.count}}</p>
-<form action="{% url 'movies:review_like' post.movie_id review.id %}" method="POST">
+
+<p>-------------------------</p>
+<h2>리뷰 좋아요</h2>
+<form class="like-forms" data-movie-id="{{ post.movie_id }}" data-review-id="{{ review.id }}">
   {% csrf_token %}
   {% if request.user in review.like_users.all %}
-    <button type="submit">좋아요 취소</button>
+    <input type="submit" value="좋아요 취소" id="like-{{ review.id }}">
   {% else %}
-    <button type="submit">좋아요</button>
+    <input type="submit" value="좋아요" id="like-{{ review.id }}">
   {% endif %}
 </form>
 
 <p>-----------------------------</p>
 <a class="btn btn-sm btn btn-primary" href="{% url 'movies:comment_create' post.movie_id review.id %}">댓글 작성하기</a>
+
+<p>-----------------------------</p>
+
+
 
 <h3>댓글</h3>
 {% for comment in review.reviews.all %}
@@ -37,15 +42,6 @@
 {% endfor %}
 
 
-<h2>좋아요</h2>
-<form class="like-forms" data-review-id="{{ review.id }}">
-  {% csrf_token %}
-  {% if request.user in review.like_users.all %}
-    <input type="submit" value="좋아요 취소" id="like-{{ review.id }}">
-  {% else %}
-    <input type="submit" value="좋아요" id="like-{{ review.id }}">
-  {% endif %}
-</form>
 
 {% endblock content %}
 
@@ -60,9 +56,10 @@
     form.addEventListener('submit',function (event) {
       event.preventDefault()
       const reviewId = event.target.dataset.reviewId
+      const movieId = event.target.dataset.movieId
       axios({
-        method: 'POST',
-        url: 'http://localhost:8000/movies/${movieId}/reviews/${reviewId}/like/',
+        method: 'post',
+        url: `/movies/${movieId}/reviews/${reviewId}/like/`,
         headers: {'X-CSRFToken': csrftoken},
       })
         .then((response) => {

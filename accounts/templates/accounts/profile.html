@@ -103,7 +103,6 @@
 {% endblock content %}
 
 {% block script %}
-
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
   const form = document.querySelector('#follow-form')
@@ -115,17 +114,33 @@
 
     axios({
       method: 'post',
-      url: `/accounts/follow/${userId}`,
+
+      url: `/accounts/follow/${userId}/`,
       headers: {'X-CSRFToken': csrftoken},
     })
       .then((response) => {
         const isFollowed = response.data.is_followed
         const followBtn = document.querySelector('#follow-form > input[type=submit]')
         if (isFollowed === true) {
+
+          followBtn.value = '언팔로우'
+        } else {
+          followBtn.value = '팔로우'
+        }
+
+        const followingsCountTag = document.querySelector('#followings-count')
+        const followersCountTag = document.querySelector('#followers-count')
+
+        const followingsCountData = response.data.followings_count
+        const followersCountData = response.data.followers_count
+
+        followingsCountTag.textContent = followingsCountData
+        followersCountTag.textContent = followersCountData
           followBtn = '언팔로우'
         } else {
           followBtn = '팔로우'
         }
+
       })
   })
 </script>

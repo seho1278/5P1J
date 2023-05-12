@@ -148,13 +148,17 @@
           <button class="SpoilerNone--Btn" onclick="toggleSpoiler(this)">더보기</button>
         </div>
         <div class="Review__Spoiler--None" style="display: none;">
-          <p>{{ review.user }}</p>
-          <p>{{ review.content }}</p>
+          <a href="{% url 'movies:review_detail' movie_id review.pk %}">
+            <p>{{ review.user }}</p>
+            <p>{{ review.content }}</p>
+          </a>
         </div>
     
         {% if request.user == review.user %}
           <a class="btn btn-sm btn-outline-danger" href="{% url 'movies:review_delete' movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
           <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_update' post.movie_id review.pk %}">수정</a>
+        {% else %}
+          <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_report' post.movie_id review.pk %}">신고하기</a>
         {% endif %}
       </div>  
       {% endfor %}

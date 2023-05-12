@@ -36,6 +36,14 @@
           </div>
         </a>
       {% endfor %}
+      {% comment %} 장르별 {% endcomment %}
+      {% for g in genre_movie_list %}
+        {% if g.genre_ids == 18 %}
+          <h2>로맨스</h2>
+          {{ g.title }}
+        {% endif %}
+      
+      {% endfor %}
     </div>
   </div> 
 </div>

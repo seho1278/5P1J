@@ -144,7 +144,7 @@ def index(request):
             'api_key': TMDB_API_KEY,
             'language': 'ko-kr',
             'region':'kr',
-            'page': page
+            'page': page,
         }
         
         
@@ -162,6 +162,7 @@ def index(request):
         'genre_dict' : genre_dict, 
         'genre': genre,
         'top_rated': top_rated,
+        'genre_movie_list' : genre_movie_list
        
     }
     return render(request, 'movies/index.html', context)
@@ -175,57 +176,7 @@ def detail(request, movie_id):
         post = None    
     detail_url = f'https://api.themoviedb.org/3/movie/{movie_id}'
     similar_url = f'https://api.themoviedb.org/3/movie/{movie_id}/similar'
-    # keyword_url = f'https://api.themoviedb.org/3/movie/{movie_id}/keywords'
     
-    # platform 하나씩 빼내기 
-    platform_list = []
-    platform_word = ""
-    if "[" in post.platform:
-        for platform in post.platform:
-            if platform in ["[", "'",]:
-                pass
-            elif platform in [",", "]"]:
-                platform_list.append(platform_word.strip())
-                platform_word = ""
-            else:
-                platform_word = platform_word + platform
-    else:
-        platform_list.append(post.platform)
-    
-    # post에 있는 tags 하나씩 빼내기
-    p_tags = []
-    p_word = ""
-    if "[" in post.tags:
-        for tag in post.tags:    
-            if tag in ["[", "'",]:
-                pass
-            elif tag in [",", "]"]:
-                p_tags.append(p_word.strip())
-                p_word = ""
-            else:
-                p_word = p_word + tag
-    else:
-        p_tags.append(post.tags)
-        
-    
-    # reviews에 있는 tags 하나씩 빼내기
-    tags = []
-    word = ""
-    reviews = Review.objects.filter(post=post.pk)   
-    for review in reviews:
-        if "[" in review.tags:
-            for tag in review.tags:    
-                if tag in ["[", "'",]:
-                    pass
-                elif tag in [",", "]"] :
-                    tags.append(word.strip())
-                    word = ""
-                    
-                else:
-                    word = word + tag
-        else:
-            tags.append(review.tags)
-
     params = {
         'api_key': TMDB_API_KEY,
         'language': 'ko-kr',
@@ -238,29 +189,14 @@ def detail(request, movie_id):
     similar_response = requests.get(similar_url, params=params)
     similar_data = similar_response.json()
     similars = sorted(similar_data['results'], key=lambda x:x['vote_average'], reverse=True)
-    
-    # keyword_response = requests.get(keyword_url, params=params)
-    # keyword_data = keyword_response.json()
-    
-    # 출연/제작진 정보 
-    credits_url = f'https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key={TMDB_API_KEY}&language=ko-kr'
-    credits_response = requests.get(credits_url)
-    credits_data = credits_response.json()
-    credits = credits_data['cast'][:6]
-    profile_path = 'https://image.tmdb.org/t/p/w200'
+   
     
     context = {
         'detail_data':detail_data,
        # 'keyword_data': keyword_data,
         'movie_id' : movie_id,
-        'post': post,
         'similars' : similars,
-        'reviews': reviews,
-        'tags' : tags,
-        'p_tags' : p_tags,
-        'platform_list': platform_list,
-        'credits': credits,
-        'profile_path': profile_path,
+       
         
     }
     return render(request, 'movies/detail.html', context)
@@ -409,7 +345,7 @@ def create(request, movie_id):
                     post.movie_id = movie_id
                     post.user = request.user
                     post.poster_path = poster_path
-                    post.movie_title = movie_data.get('title')
+                    post.title = movie_data.get('title')
                     post.movie_overview = movie_data.get('overview')
                     post.movie_release_date = movie_data.get('release_date')
                     post.ratings = movie_data.get('score')
@@ -443,14 +379,11 @@ def similar(request, movie_id):
     }
     similar_response = requests.get(similar_url, params=params)
     similar_data = similar_response.json()
+    similars = sorted(similar_data['results'], key=lambda x:x['vote_average'], reverse=True)
     # print(similar_data)
-
-    reviews = Review.objects.filter(movie_id=movie_id)
-    review_count = reviews.count()
-    
     context = {
         'similar_data':similar_data,
-        'review_count':review_count,
+        'similars' : similars,
         
         
     }
@@ -473,6 +406,8 @@ def get_movie_info(movie_id):
     
 @login_required
 def review_create(request, movie_id):
+    movie = get_movie_info(movie_id)
+    
     post = Post.objects.get(movie_id=movie_id)
     # post = Post.objects.get(pk=post_pk)
     print(post)
@@ -535,6 +470,7 @@ def review_update(request, movie_id, review_id):
     
     return render(request, 'movies/review_update.html', context)
 
+@login_required
 def wants(request, post_pk):
     post = Post.objects.get(pk=post_pk)
     if request.user in post.want_users.all():
@@ -548,6 +484,7 @@ def wants(request, post_pk):
     }
     return JsonResponse(context)
 
+@login_required
 def watchings(request, post_pk):
     post = Post.objects.get(pk=post_pk)
     if request.user in post.watching_users.all():
@@ -566,11 +503,6 @@ def watchings(request, post_pk):
 @login_required
 def review_detail(request, movie_id, review_id):
     post = Post.objects.get(movie_id=movie_id)
-    print(post)
-    print('-----------------')
-    print(post.movie_id)
-    print('-----------------')
-    print(post.title) # 여기가 비어있어요
     review = Review.objects.get(id=review_id)
     # movie_title = post.movie.title
     context = {
@@ -596,7 +528,7 @@ def review_like(request, movie_id, review_id):
   }
   return JsonResponse(context)
 
-
+@login_required
 def comment_create(request, movie_id, review_id):
     review = Review.objects.get(id=review_id)
     # movie = Post.objects.get(movie_id=movie_id)
@@ -616,18 +548,7 @@ def comment_create(request, movie_id, review_id):
     }
     return render(request, 'movies/comment_create.html', context)
 
-
-# @login_required
-# def review_like(request, movie_id, review_id):
-#     review = Review.objects.get(id=review_id)
-#     if request.method == "POST":
-#         if review.like_users.filter(pk=request.user.pk).exists():
-#           review.like_users.remove(request.user)
-#         else:
-#           review.like_users.add(request.user)
-#         return redirect('movies:review_detail', movie_id, review_id)
-
-
+@login_required
 def review_report(request, movie_id, review_id):
     review = Review.objects.get(id=review_id)
     form = ReviewReportForm()
