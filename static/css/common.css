@@ -18,10 +18,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .input--control{
-    padding: 0.4rem 1rem;
-    border: 3px solid #7048E9;
-    border-radius: 5px;
-
+  padding: 0.4rem 1rem;
+  border: 3px solid #7048E9;
+  border-radius: 5px;
+  transition: border-color .15s ease-in-out, box-shadow .20s ease-in-out;
   }
   
 .input--control:focus {
@@ -30,17 +30,11 @@ h1, h2, h3, h4, h5, h6, p {
   box-shadow: 1px 1px 0px 0px rgba(225, 225, 225, 0.3);
 }
 
-input[type="submit"] {
-  color: #ffffff;
-  border: none;
-  background-color: #000;
-}
 
 
 
 main {
   background-color: #232323;
-  height: 1000px;
   margin-top: 152px;
   }
 
@@ -63,6 +57,4 @@ main {
   font-size: 16.5px;
   border: solid;
   border-width: 0 0 1px 0;
-  border-image: linear-gradient(to right, #000, #7048E9, #000);
-  border-image-slice: 1;
 }
