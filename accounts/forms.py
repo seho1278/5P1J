@@ -14,15 +14,6 @@ class CustomUserCreationForm(UserCreationForm):
             }
         ),
     )
-    email = forms.EmailField(
-        label="이메일",
-        widget=forms.TextInput(
-            attrs={
-                'class': 'form--control',
-
-            }
-        ),
-    )
     first_name = forms.CharField(
         label="이름",
         widget=forms.TextInput(
@@ -43,6 +34,24 @@ class CustomUserCreationForm(UserCreationForm):
             }
         ),
     )
+    email = forms.EmailField(
+        label="이메일",
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form--control',
+
+            }
+        ),
+    )
+    image = forms.ImageField(
+        label='프로필 이미지',
+        required=False,
+        widget=forms.ClearableFileInput(
+        attrs={
+            'class': 'form--control',
+            }
+        )
+    )
     password1 = forms.CharField(
         label="비밀번호",
         widget=forms.PasswordInput(
@@ -60,16 +69,6 @@ class CustomUserCreationForm(UserCreationForm):
                 'placeholder': '비밀번호를 다시 입력하세요',
             }
         ),
-    )
-
-    image = forms.ImageField(
-        label='프로필 이미지',
-        required=False,
-        widget=forms.ClearableFileInput(
-        attrs={
-            'class': 'form--control',
-            }
-        )
     )
     password=None
     class Meta(UserChangeForm.Meta):

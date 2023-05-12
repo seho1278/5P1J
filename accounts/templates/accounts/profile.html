@@ -103,8 +103,6 @@
 {% endblock content %}
 
 {% block script %}
-
-
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
   const form = document.querySelector('#follow-form')
@@ -116,6 +114,7 @@
 
     axios({
       method: 'post',
+
       url: `/accounts/follow/${userId}/`,
       headers: {'X-CSRFToken': csrftoken},
     })
@@ -123,6 +122,7 @@
         const isFollowed = response.data.is_followed
         const followBtn = document.querySelector('#follow-form > input[type=submit]')
         if (isFollowed === true) {
+
           followBtn.value = '언팔로우'
         } else {
           followBtn.value = '팔로우'
@@ -136,6 +136,11 @@
 
         followingsCountTag.textContent = followingsCountData
         followersCountTag.textContent = followersCountData
+          followBtn = '언팔로우'
+        } else {
+          followBtn = '팔로우'
+        }
+
       })
   })
 </script>

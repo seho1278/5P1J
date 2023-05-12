@@ -51,8 +51,9 @@ def profile(request, username):
     User = get_user_model()
     person = User.objects.get(username=username)
     reviews = Review.objects.filter(user=person)
-
-    reviews_report = ReviewReport.objects.values('review').annotate(count=Count('id'))
+    reports = ReviewReport.objects.values('review').annotate(num_reports=Count('review')).filter(num_reports__gte=5)
+    review_ids = [report['review'] for report in reports]
+    reviews_report = Review.objects.filter(id__in=review_ids)
     context = {
         'person':person,
         'reviews':reviews,
