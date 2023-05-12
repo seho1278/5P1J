@@ -1,42 +1,133 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}{% endblock title %}
+{% block title %}
+{{ person.username }}님의 프로필
+{% endblock title %}
 
-{% block style %}{% endblock style %}  
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/accounts/profile.css' %}">
+{% endblock style %}  
 
 {% block content %}
+<article>
   <h1>{{ person.username }}님!!</h1>
-  <p>팔로워 - {{ person.followers.all|length }}</p>
-  <p>팔로잉 - {{ person.followings.all|length }}</p>
-  <form action="{% url 'accounts:follow' person.pk %}" method="POST">
-    {% csrf_token %}
-    <button type="submit">
-      {% if request.user in person.followers.all %}
-        언팔로우
+  <section>
+    <div>
+      {% if person.image %}
+      <img src="{{ person.image.url }}" alt="">
       {% else %}
-        팔로우
+      <p>이미지가 없습니다</p>
       {% endif %}
-    </button>
-  </form>
-
-
-
-  <h1>작성 리뷰</h1>
-  {% for review in reviews %}
-    
-    <p>{{ review.post.title }}</p>
-    <p>{{ review.content }}</p>
-  {% endfor %}
+    </div>
+    <ul>
+      <li>{{ person.first_name }}</li>
+      <li>{{ person.birthday }}</li>
+      <li>{{ person.email }}</li>
+    </ul>
+    <a class="good--button" href="{% url 'accounts:update'%}">회원정보 수정</a>
+  </section>
+  <section>
+    <div>
+      팔로워 - <span id="followings-count">{{ person.followers.all|length }}</span>
+      팔로잉 - <span id="followers-count">{{ person.followings.all|length }}</span>
+    </div>
+    <form id="follow-form" data-user-id="{{ person.pk }}">
+      {% csrf_token %}
+      {% if request.user in person.followers.all %}
+        <input type="submit" value="언팔로우">
+      {% else %}
+        <input type="submit" value="팔로우">
+      {% endif %}
+    </form>
+  
+  </section>
+  <section>
+    <!-- 앗 여기 회원가입할때 태그받는다 했는데, 아직 구현 안한거군요! -->
+    <h3>{{ person.username }}님이 선택한 Tag</h3>
+    <ul>
+      <li></li>
+    </ul>
+  </section>
+  <section>
+    <h3>{{ person.username }}님이 선택한 태그 기준으로 영화 추천</h3>
+  </section>
+  <section>
+    <h3>My Reviews</h3>
+    <table class="table" style="color:#fff;">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">영화제목</th>
+          <th scope="col">내용</th>
+          <th scope="col">Tags</th>
+          <th scope="col">작성일</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for review in reviews %}
+        <tr>
+          <th scope="row">{{ review.post.pk }}</th>
+          <td>{{ review.post.movie_id }}</td>
+          <td>{{ review.content }}</td>
+          <td>{% for tag in review.tags %}
+            <span>{{ tag }}</span>
+             {% endfor %}
+          </td>
+          <td>{{ review.created_at|date:"Y년 m월 d일 H:i" }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </section>
   {% if request.user.is_superuser %}
+  <section>
     <h2>신고 댓글</h2>
-    {% for review_report in reviews_report %}
+    {% for review_report in review_reports %}
         <div>
-          <a href="{% url 'movies:detail' %}"></a>
             <p>{{ review_report.user }}</p>
             <p>{{ review_report.content }}</p>
         </div>
-    {% endfor %}
+    {% endfor %} 
+    {% for report in review_reports %}
+      <p>Review {{ report.review }} has {{ report.count }} reports.</p>
+      <ul>
+          {% for r in report.reviews_report.all %}
+              <li>{{ r.title }}: {{ r.content }}</li>
+          {% endfor %}
+      </ul>
+  {% endfor %}
+  </section>
   {% endif %}
+</article>
 {% endblock content %}
 
-{% block script %}{% endblock script %}
+{% block script %}
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  const form = document.querySelector('#follow-form')
+  const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault()
+    const userId = event.target.dataset.userId
+
+    axios({
+      method: 'post',
+      url: `/accounts/follow/${userId}`,
+      headers: {'X-CSRFToken': csrftoken},
+    })
+      .then((response) => {
+        const isFollowed = response.data.is_followed
+        const followBtn = document.querySelector('#follow-form > input[type=submit]')
+        if (isFollowed === true) {
+          followBtn = '언팔로우'
+        } else {
+          followBtn = '팔로우'
+        }
+      })
+  })
+</script>
+
+{% endblock script %}

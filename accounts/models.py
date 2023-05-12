@@ -9,3 +9,4 @@ class User(AbstractUser):
     followings = models.ManyToManyField('self', related_name='followers', symmetrical=False)
     birthday = models.DateField(null=True, blank=True)
     tags = TaggableManager(blank=True)
+    image = models.ImageField(blank=True, upload_to='accounts/images/')
