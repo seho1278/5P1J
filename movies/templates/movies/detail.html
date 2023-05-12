@@ -9,7 +9,7 @@
 {% endblock style %}  
 
 {% block content %}
-<div class="Detail__Container">
+<article class="Detail__Container">
   <div class="Detail__TitleBox">
     <div class="card" style="width: 200px; height: auto;">
       <img src="https://image.tmdb.org/t/p/w300{{ detail_data.poster_path }}" alt="">
@@ -22,21 +22,38 @@
       <hr>
       <div>
         {% if request.user.is_authenticated %}
-          <form id="wants-form" data-movie-id="{{ movie.id }}">
+          {% comment %} 보고싶어요 폼 {% endcomment %}
+          <form id="wants-form" data-post-id="{{ post.pk }}">
             {% csrf_token %}
             {% if request.user in post.want_users.all %}
-              <button class="btn btn-primary">보고싶지 않아요</button>
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-eye-fill"></i>
+              </button>
       
             {% else %}
-              <button class="btn btn-primary">보고싶어요</button>
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-eye"></i>
+              </button>
+            {% endif %}
+          </form>
+          {% comment %} 보는중이에요 폼 {% endcomment %}
+          <form id="watching-form" data-post-id="{{ post.pk }}">
+            {% csrf_token %}
+            {% if request.user in post.watching_users.all %}
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-check-lg"></i>
+              </button>
+            {% else %}
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-plus-lg"></i>
+              </button>
             {% endif %}
           </form>
         {% else %}
             <button class="btn btn-primary" disabled> 
-              보고싶지 않아요
+              <i class="bi bi-plus-lg"></i>
             </button>    
-        {% endif %}
-          
+        {% endif %}          
       </div>
       <div>보고싶어요/보는중/리뷰작성</div>
     </div>
@@ -68,11 +85,23 @@
       <p style="margin: 0 15px 0 15px;">{{ detail_data.overview }}</p>
     </div>
     <hr>
-    <div>
+    <div class="row">
       <p class="Detail__ContentBox__Title">출연/제작</p>
-    </div>
-    <hr>
-    <div>
+        <div class="row" >
+          {% for credit in credits %}
+            <div class="col-3" style="width:150px; height:150px; object-fit:hidden"> 
+              {% if credit.profile_path %}
+                <img  style="object-fit:cover; width:100%; height:100%" src="https://image.tmdb.org/t/p/w200/{{ credit.profile_path }}" alt="{{credit.name}}사진">
+              {% else %}
+                <p>static에 기본 사진 넣으시면 될 것 같습니다~! </p> 
+              {% endif %}
+              <p>{{ credit.name }}</p>
+              <p class='text-secondary'>{{ credit.character }} 역</p>  
+            </div>
+          {% endfor %}
+        </div>
+      <hr>
+      <div>
       <div class="Detail__ContentBox__GraphTitle">
         <p class="Detail__ContentBox__Title">별점그래프</p>
         <div class="">
@@ -94,30 +123,133 @@
         <div class="bar-chart__barText">4</div>
         <div class="bar-chart__barText">5</div>
       </div>
+      </div>
+    </div>
+
+    <div class="Detail__ContentBox">
+      <p class="Detail__ContentBox__Title">리뷰</p>
+      {% comment %} 리뷰 출력 {% endcomment %}
+      {% for review in reviews %}
+      <p>{{ review.user }}</p>
+      <p>{{ review.content }}</p>
+  
+      {% if request.user == review.user %}
+        <a class="btn btn-sm btn-outline-danger" href="{% url 'movies:review_delete' movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+        <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_update' post.movie_id review.pk %}">수정</a> 
+        <hr>  
+      {% endif %}
+      
+      {% endfor %}
+      <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_create' movie_id %}">리뷰쓰기</a> 
+    </div>
+    <div class="Detail__ContentBox">
+      <p class="Detail__ContentBox__Title">비슷한 작품</p>
+      <div class="Detail__Content__Similar">
+        <div class="Detail__carousel">
+          {% for similar in similars %}
+            <a class="movie-link" href="{% url 'movies:detail' similar.id %}">
+              <div class="Detail__Card" style="width: 193px;">
+                <div class="card" style="width: 173px; height: 255px; position: relative; overflow: hidden;">
+                  <img src="https://image.tmdb.org/t/p/w300{{ similar.poster_path }}" alt="">
+                </div>
+                <div class="Detail__Card__Content">
+                  <div class="card-title">{{ similar.title }}</div>
+                  <span><a href="{% url 'movies:create' similar.id %}">생성하기</a></span>
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
-  <div class="Detail__ContentBox">
-    <p class="Detail__ContentBox__Title">리뷰</p>
-    {% comment %} 리뷰 출력 {% endcomment %}
-    {% for review in reviews %}
-    <p>{{ review.user }}</p>
-    <p>{{ review.content }}</p>
-    <a class="btn btn-sm btn-outline-danger" href="{% url 'movies:review_delete' movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
-    <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_update' movie_id review.pk %}">수정</a> 
-    <hr>  
-    {% endfor %}
-    <a class="btn btn-sm btn-outline-primary" href="{% url 'movies:review_create' post.pk %}">리뷰쓰기</a> 
+</article>
 
-  </div>
-  <div class="Detail__ContentBox">
-    <p class="Detail__ContentBox__Title">비슷한 작품</p>
-    {% for similar in similars %}
-      <p><a href="{% url 'movies:detail' similar.id %}">{{ similar.title }}</a></p>
-    {% endfor %}
-  </div>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+
+
+{% endblock content %}
+{% block script %}
 <script>
+  // 드래그 앤 드롭
+  document.addEventListener('DOMContentLoaded', function() {
+    var carousel = document.querySelector('.Detail__carousel');
+    var cards = document.querySelector('.card');
+    var isDragging = false;
+    var startX, cardStartX;
+  
+    carousel.addEventListener('mousedown', function(e) {
+      isDragging = true;
+      startX = e.pageX - carousel.offsetLeft;
+    });
+  
+    carousel.addEventListener('mouseup', function() {
+      isDragging = false;
+    });
+  
+    carousel.addEventListener('mousemove', function(e) {
+      if (!isDragging) return;
+      e.preventDefault();
+      var x = e.pageX - carousel.offsetLeft;
+      var walk = x - startX;
+  
+      carousel.scrollLeft -= walk;
+    });
+  });
+
+  // carousel 자동 스크롤
+  const DetailcarouselElement = document.querySelector('.Detail__carousel');
+  console.log(DetailcarouselElement)
+  let direction = 1; // 스크롤 방향 설정 (1: 오른쪽으로, -1: 왼쪽으로)
+  let scrollInterval;
+
+  function handleScroll() {
+    const DetailscrollPosition = DetailcarouselElement.scrollLeft;
+    const DetailcontainerWidth = DetailcarouselElement.offsetWidth;
+    const DetailcontentWidth = DetailcarouselElement.scrollWidth;
+    
+
+    // 스크롤이 왼쪽 끝에 도달했을 때
+    if (scrollPosition === 0) {
+      direction = 1; // 오른쪽으로 스크롤
+    }
+
+    // 스크롤이 오른쪽 끝에 도달했을 때
+    //if (scrollPosition + containerWidth === contentWidth) {
+    //  direction = -1; // 왼쪽으로 스크롤
+    //}
+  }
+
+  function startAutoScroll() {
+    scrollInterval = setInterval(() => {
+      DetailcarouselElement.scrollBy({
+        left: direction * 1, // 스크롤 속도 조절
+        behavior: 'smooth',
+      });
+    }, 3000); // 스크롤 간격 조절
+  }
+
+  function stopAutoScroll() {
+    clearInterval(scrollInterval);
+  }
+
+  console.log(clearInterval(scrollInterval))
+  // 페이지 로딩 시 자동 스크롤 시작
+  window.addEventListener('load', () => {
+    startAutoScroll();
+  });
+
+  // 마우스가 캐러셀 위로 진입했을 때 자동 스크롤 일시 정지
+  DetailcarouselElement.addEventListener('mouseenter', () => {
+    stopAutoScroll();
+  });
+
+  // 마우스가 캐러셀에서 벗어났을 때 자동 스크롤 재개
+  DetailcarouselElement.addEventListener('mouseleave', () => {
+    startAutoScroll();
+  });
+
   // 예시: 1점부터 5점까지 선택한 수
   const ratings = [2, 4, 5, 3, 1];
   const maxRating = 5;
@@ -135,18 +267,64 @@
     }
     
   });
+  // 보고싶어요 비동기
+  const form = document.querySelector('#wants-form')
+  const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+  form.addEventListener('submit', function (event) {
+    event.preventDefault()
+    const postId = event.target.dataset.postId
+    axios({
+      method: 'post',
+      url: `/movies/${postId}/wants/`,
+      headers: {'X-CSRFToken': csrftoken},
+    })
+      .then((response) => {
+        const isWanted = response.data.is_wanted
+        const wantBtn = document.querySelector('#wants-form > button[type=submit]')
+        const wantBtni = document.querySelector('#wants-form > button[type=submit] > i')
+       
+        if (isWanted === true) {
+          wantBtni.classList.remove('bi-eye')
+          wantBtni.classList.add('bi-eye-fill') 
+        } else {
+          wantBtni.classList.remove('bi-eye-fill')
+          wantBtni.classList.add('bi-eye')  
+        }
+      })
+      .catch((error) => {
+      console.log(error.response)
+    })
+  })
+  // 보는 중이에요 비동기 (안돼요.....)
+  const form1 = document.querySelector('#watching-form')
+  const csrftoken1 = document.querySelector('[name=csrfmiddlewaretoken]').value
+  form1.addEventListener('submit', function (event) {
+    event.preventDefault()
+    const postId = event.target.dataset.postId
+    axios({
+      method: 'post',
+      url: `/movies/${postId}/watchings/`,
+      headers: {'X-CSRFToken': csrftoken1},
+    })
+      .then((response) => {
+        const watching = response.data.watching
+        // 보는중이에요 폼 버튼 변수 설정했습니다 원하시는 대로 클래스 추가해주세요ㅎㅎ 아이콘도 바꾸셔도 됩니다
+        const watchingBtn = document.querySelector('#watching-form > button[type=submit]')
+        const watchingBtni = document.querySelector('#watching-form > button[type=submit] > i')
+        if (watching === true) {
+          watchingBtni.classList.remove('bi-plus-lg')
+          watchingBtni.classList.add('bi-check-lg')     
+        } else {
+          watchingBtni.classList.remove('bi-check-lg')
+          watchingBtni.classList.add('bi-plus-lg') 
+        }
+        
+      })
+  }) 
+
+  
+  
+
 </script>
-
-
-{% endblock content %}
-
-{% block script %}
-
-  <script>
-    const form = document.querySelector('#wants-form')
-    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
-
-  </script>
-
 
 {% endblock script %}
