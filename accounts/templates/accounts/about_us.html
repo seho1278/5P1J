@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}{% endblock title %}
 
@@ -6,8 +7,8 @@
 
 {% block content %}
 <article>
-  <div class="footer--list--wrap">
-    <section class="about_ustitle--wrap">
+  <div class="">
+    <section class="">
       <h2>5조. 5P==1J</h2>
     </section>
     <section>
@@ -30,11 +31,16 @@
     </section>
     <section>
       <h4>뭉지망지</h4>
+      <img src="{% static 'img/pinocchio.png' %}" alt="img">
       <ul>
         <li>BACKEND</li>
         <li>ISFP(J)</li>
         <li>https://github.com/mungjimangji</li>
         <li>https://together.kakao.com/big-five</li>
+        <li>어려움이 없다 -장민지 -</li>
+        <li>소셜로그인 내가 하라는대로 하면 된다 -장민지-</li>
+        <li>채팅은 귀찮다 들어와서 말하라 -장민지-</li>
+        <li>소셜로그인 5분이면 끝난다 -장민지-</li>
       </ul>
     </section>
     <section>
@@ -53,6 +59,15 @@
         <li>INTP</li>
         <li>https://github.com/qloeo</li>
         <li>https://together.kakao.com/big-five/summary/28211106</li>
+      </ul>
+    </section>
+    <section>
+      <h4>도와주신 분들</h4>
+      <ul>
+        <li>정소담</li>
+        <li>문지수</li>
+        <li>박현준</li>
+        <li>안정환</li>
       </ul>
     </section>
   </div>

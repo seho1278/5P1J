@@ -57,3 +57,12 @@ main {
     margin-bottom: 155px;
   }
 }
+
+/* hover */
+.text--hover:hover {
+  font-size: 16.5px;
+  border: solid;
+  border-width: 0 0 1px 0;
+  border-image: linear-gradient(to right, #000, #7048E9, #000);
+  border-image-slice: 1;
+}

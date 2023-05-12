@@ -80,7 +80,6 @@ footer.item {
 .header--nav--list {
   display: flex;
   justify-content: space-around;
-  margin: 1rem 0;
 }
 .header--nav--list li.item {
   position: relative;
@@ -93,8 +92,10 @@ footer.item {
   display: block;
   width: 100%;
   height: 100%;
+  padding: 1rem 0 0.5rem;
 }
 .header--nav--list > li.item > a:hover {
+  font-size: 16.5px;
   border: solid;
   border-width: 0 0 1px 0;
   border-image: linear-gradient(to right, #000, #7048E9, #000);
