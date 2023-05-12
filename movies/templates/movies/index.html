@@ -29,7 +29,9 @@
             </div>
             <div class="Index__Card__Content">
               <div class="card-title">{{ movie.title }}</div>
-              <span><a href="{% url 'movies:create' movie.id %}">생성하기</a></span>
+              {% if request.user.is_superuser %}
+                <span><a href="{% url 'movies:create' movie.id %}">생성하기</a></span>
+              {% endif %}
             </div>
           </div>
         </a>

@@ -1,5 +1,5 @@
 footer {
-  display: none;
+    display: none;
 }
 
 .Detail__Container {
@@ -17,7 +17,7 @@ footer {
 .Detail__TitleBox {
     display: flex;
     flex-direction: row;
-    background-color: rgba(225,225,225,0.5);
+    background-color: rgba(225, 225, 225, 0.5);
     color: black;
     padding: 15px;
     border-radius: 30px;
@@ -48,7 +48,7 @@ footer {
 .Detail__ContentBox {
     display: flex;
     flex-direction: column;
-    background-color: rgba(225,225,225,0.5);
+    background-color: rgba(225, 225, 225, 0.5);
     color: black;
     padding: 15px;
     border-radius: 30px;
@@ -103,10 +103,10 @@ footer {
     font-size: 12px;
 }
 
-.Detail__ContentBox {
+.Detail__ReviewBox {
     display: flex;
     flex-direction: column;
-    background-color: rgba(225,225,225,0.5);
+    background-color: rgba(225, 225, 225, 0.5);
     color: black;
     padding: 15px;
     border-radius: 30px;

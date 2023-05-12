@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block style %}{% endblock style %}  
+
+{% block content %}
+<h1>리뷰 댓글 작성</h1>
+
+<form action="{% url 'movies:comment_create' movie_id=review.post.movie_id review_id=review.id %}" method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn btn-sm btn btn-primary" type="submit">댓글 작성</button>
+</form>
+
+
+{% endblock content %}
+{% block script %}{% endblock script %}

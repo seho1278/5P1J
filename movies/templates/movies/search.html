@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block title %}
+검색 결과 {{query}}
+
+{% endblock title %}
+
+{% block style %}{% endblock style %}  
+
+{% block content %}
+
+{% if search_data.results %}
+  <p>검색결과 <b>{{search_data.results|length}} 건</b>
+  </p>
+
+  {% for movie in posts %}
+    <a href="{% url 'movies:detail' movie.id %}">
+      <div>
+        {% if movie.poster_path %}
+          <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}">
+        {% else %}
+          <p>포스터 없을 경우 static에 대체 이미지 넣기 </p>
+        {% endif %}
+      </div>
+      <div>
+        <h5>{{movie.title}}</h5>
+        {% comment %} <div>
+          {% if movie.genre_ids %}
+            <span>{{genre_dict|get_genre_name:movie.genre_ids.0}}</span>
+            {% if movie.genre_ids|length > 1 %}
+              <span>{{genre_dict|get_genre_name:movie.genre_ids.1}}</span>
+            {% endif %}
+          {% else %}
+            <span>장르 정보 없음</span>
+          {% endif %}
+        </div> {% endcomment %}
+
+      </div>
+
+    </a>
+    
+  {% endfor %}
+
+{% comment %} 배우 검색 {% endcomment %}
+{% elif person_search_data.results %}
+    <p> 검색 결과 <b>{{movies_cast|length}}건</b> </p>
+    <div class="row">
+      {% for p in person_search_data.results %}
+        <div class="col-3">
+          {% if p.profile_path %}
+            <img src="https://image.tmdb.org/t/p/w150{{p.profile_path}}" alt="{{p.name}}">
+            <p>{{p.name}}</p>
+        </div>
+        
+        <hr>
+          <div>
+            <p>{{p.name}}의 출연작</p>
+            {% for cast in movies_cast %}
+              {% if cast.person_name == p.name%}
+                {% for movie_title in cast.movies %}
+                  {% for poster in movie_posters %}
+                    {% if movie_title == poster.title and poster.poster_path %}
+                      <a href="{% url 'movies:detail' poster.id %}">
+                      <img src="https://image.tmdb.org/t/p/w80{{ poster.poster_path }}" alt="{{ movie_title }} 포스터">
+                      </a>
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
+          <hr>
+
+        {% endif %}
+      {% endfor %}
+    </div>
+{% else %}
+  <h5> {{query}} 검색 결과가 없습니다.</h5>
+{% endif %}
+
+{% comment %} 페이지네이션 {% endcomment %}
+<ul class="pagination justify-content-center">
+  {% if posts.has_previous %}
+    <li class="page-item">
+      <a class="page-link" href="?query={{ query }}&page=1">처음으로</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="?query={{ query }}&page={{ posts.previous_page_number }}">이전</a>
+    </li>
+  {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" tabindex="-1" aria-disabled="true" href="#">이전</a>
+    </li>
+  {% endif %}
+
+  {% for page_number in posts.paginator.page_range %}
+    {% if page_number >= posts.number|add:-4 and page_number <= posts.number|add:4 %}
+      {% if page_number == posts.number %}
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="?query={{ query }}&page={{ page_number }}">{{ page_number }}</a>
+        </li>
+      {% else %}
+        <li class="page-item">
+          <a class="page-link" href="?query={{ query }}&page={{ page_number }}">{{ page_number }}</a>
+        </li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if posts.has_next %}
+    <li class="page-item">
+      <a class="page-link" href="?query={{ query }}&page={{ posts.next_page_number }}">다음</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="?query={{ query }}&page={{ posts.paginator.num_pages }}">마지막으로</a>
+    </li>
+  {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
+    </li>
+  {% endif %}
+</ul>
+{% endblock content %}
+{% block script %}{% endblock script %}

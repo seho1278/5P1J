@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ClearableFileInput
-from .models import Post, Review, Comment
+from .models import Post, Review, Comment, ReviewReport
 
 class PostForm(forms.ModelForm):
     TAG_CHOICES = [
@@ -90,3 +90,33 @@ class ReviewForm(forms.ModelForm):
             ),
             
         }
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('content',)
+
+class ReviewReportForm(forms.ModelForm):
+
+    title = forms.ChoiceField(
+        choices=ReviewReport.TITLE_CHOICES,
+        label='분류(필수)',
+        widget=forms.Select(
+            attrs={
+                'required': True,
+                'class': 'form-select',
+            }
+        )
+    )
+    content = forms.CharField(
+        label='세부내용',
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control',
+              
+            }
+        )
+    )
+    class Meta:
+        model = ReviewReport
+        fields = ('title', 'content')

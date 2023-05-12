@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block style %}{% endblock style %}  
+
+{% block content %}
+<h1>리뷰 상세 페이지</h1>
+
+<h2>영화 정보</h2>
+
+<p>{{ post.title }}</p>
+<p>{{ movie.title }}</p>
+<p>{{ post.movie.title }}<p>
+<p>-------------------------</p>
+<p>{{ review.user }} - {{ review.content }} / 작성일 : {{ review.created_at }}</p>
+
+<h3>좋아요</h3>
+<p>좋아요 개수 - {{ review.like_users.all.count}}</p>
+<form action="{% url 'movies:review_like' post.movie_id review.id %}" method="POST">
+  {% csrf_token %}
+  {% if request.user in review.like_users.all %}
+    <button type="submit">좋아요 취소</button>
+  {% else %}
+    <button type="submit">좋아요</button>
+  {% endif %}
+</form>
+
+<p>-----------------------------</p>
+<a class="btn btn-sm btn btn-primary" href="{% url 'movies:comment_create' post.movie_id review.id %}">댓글 작성하기</a>
+
+<h3>댓글</h3>
+{% for comment in review.reviews.all %}
+<p>{{ comment.content }}</p>
+{% empty %}
+  <p>댓글이 없습니다.</p>
+{% endfor %}
+
+
+<h2>좋아요</h2>
+<form class="like-forms" data-review-id="{{ review.id }}">
+  {% csrf_token %}
+  {% if request.user in review.like_users.all %}
+    <input type="submit" value="좋아요 취소" id="like-{{ review.id }}">
+  {% else %}
+    <input type="submit" value="좋아요" id="like-{{ review.id }}">
+  {% endif %}
+</form>
+
+{% endblock content %}
+
+{% block script %}
+<script>
+// 좋아요 비동기 movieId 받아오기
+  // like-form요소 선택
+  const forms = document.querySelectorAll('.like-forms')
+  const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+
+  forms.forEach((form) => {
+    form.addEventListener('submit',function (event) {
+      event.preventDefault()
+      const reviewId = event.target.dataset.reviewId
+      axios({
+        method: 'POST',
+        url: 'http://localhost:8000/movies/${movieId}/reviews/${reviewId}/like/',
+        headers: {'X-CSRFToken': csrftoken},
+      })
+        .then((response) => {
+          // 요청이 성공한 경우 처리할 로직 작성
+          const isLiked = response.data.is_liked
+          const likeBtn = document.querySelector('#like-' + reviewId)
+          if (isLiked === true) {
+            likeBtn.value = '좋아요 취소'
+          } else {
+            likeBtn.value = '좋아요'
+          }
+        })
+        .catch((error) => {
+          console.log(error.response)
+        })
+    })
+  })
+</script>
+{% endblock script %}

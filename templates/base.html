@@ -30,9 +30,8 @@
             <img class="header--logo--image" src="{% static 'img/cinepedia_logo_01_purple.png' %}" alt="cinepedia_logo">
           </div>
           <div class="header--search--wrap">
-            <form  action="#" method="POST">
-              {% csrf_token %}
-              <input class="input--control" type="search" placeholder="키워드를 입력해 주세요!">
+            <form action="{% url 'movies:search' %}" method="GET">
+              <input class="input--control" type="search" name="query" placeholder="검색어를 입력해 주세요!">
             </form>
           </div>
           <div class="header--user--login--wrap">
