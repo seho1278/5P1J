@@ -6,19 +6,19 @@ import datetime
 
 class CustomUserCreationForm(UserCreationForm):
     username = forms.CharField(
-        label="username",
+        label="아이디",
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control',
+                'class': 'form--control',
                 'placeholder': '아이디를 입력하세요',
             }
         ),
     )
     email = forms.EmailField(
-        label="Email",
+        label="이메일",
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control',
+                'class': 'form--control',
 
             }
         ),
@@ -27,7 +27,7 @@ class CustomUserCreationForm(UserCreationForm):
         label="이름",
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control',
+                'class': 'form--control',
                 'placeholder': '이름을 입력하세요',
             }
 
@@ -35,39 +35,39 @@ class CustomUserCreationForm(UserCreationForm):
     )
     birthday = forms.DateField(
         initial=datetime.date(2000, 1, 1),
-        label="birthday",
+        label="생일",
         widget=forms.DateInput(
             attrs={
                 'type':'date',
-                'class': 'form-control',
+                'class': 'form--control',
             }
         ),
     )
     password1 = forms.CharField(
-        label=False,
+        label="비밀번호",
         widget=forms.PasswordInput(
             attrs={
-                'class': 'form-control',
+                'class': 'form--control',
                 'placeholder': '비밀번호를 입력하세요',
             }
         ),
     )
     password2 = forms.CharField(
-        label=False,
+        label="비밀번호 확인",
         widget=forms.PasswordInput(
             attrs={
-                'class': 'form-control',
+                'class': 'form--control',
                 'placeholder': '비밀번호를 다시 입력하세요',
             }
         ),
     )
 
     image = forms.ImageField(
-        label=False,
+        label='프로필 이미지',
         required=False,
         widget=forms.ClearableFileInput(
         attrs={
-            'class': 'form-control',
+            'class': 'form--control',
             }
         )
     )
@@ -126,7 +126,7 @@ class CustomAuthenticationForm(AuthenticationForm):
         label=False,
         widget=forms.TextInput(
             attrs = {
-                'class': 'form-control',
+                'class': 'login--form--control',
                 'placeholder' : '아이디',
               
             }
@@ -136,7 +136,7 @@ class CustomAuthenticationForm(AuthenticationForm):
         label=False,
         widget=forms.PasswordInput(
             attrs = {
-                'class': 'form-control',
+                'class': 'login--form--control',
                 'placeholder' : '비밀번호',
                
             }

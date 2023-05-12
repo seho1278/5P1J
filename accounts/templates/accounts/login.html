@@ -1,18 +1,45 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block title %}로그인{% endblock title %}
 
-{% block title %}{% endblock title %}
-
-{% block style %}{% endblock style %}  
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/common.css' %}">
+<link rel="stylesheet" href="{% static 'css/accounts/login.css' %}">
+{% endblock style %}  
 
 {% block content %}
-<h1>login</h1>
-<div>
-  <form action="{% url 'accounts:login' %}" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="로그인">
-  </form>
-</div>
+<article>
+  <section>
+    <div class="main--logo--wrap">
+      <img class="main--logo--image" src="{% static 'img/cinepedia_login.png' %}" alt="">
+    </div>
+    <div>
+      <form action="{% url 'accounts:login' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="로그인">
+      </form>
+    </div>
+  </section>
+  <hr>
+  <section class="main--login--section">
+    <div>
+      <a href="#">
+        <img class="login--naver--image" src="{% static 'img/accounts/login_naver.png' %}" alt="">
+      </a>
+    </div>
+    <div>
+      <a href="#">
+        <img class="login--kakao--image" src="{% static 'img/accounts/login_kakao.png' %}" alt="">
+      </a>
+    </div>
+    <div>
+      <a href="#">
+        <img class="login--gogle--image" src="{% static 'img/accounts/login_google.png' %}" alt="">
+      </a>
+    </div>
+  </section>
+</article>
 {% endblock content %}
 
 {% block script %}{% endblock script %}

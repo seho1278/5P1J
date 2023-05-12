@@ -1,18 +1,60 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}{% endblock title %}
+{% block title %}회원가입{% endblock title %}
 
-{% block style %}{% endblock style %}  
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/accounts/signup.css' %}">
+{% endblock style %}  
 
 {% block content %}
-<h1>sign up</h1>
-<div>
-  <form action="{% url 'accounts:signup' %}" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Join">
-  </form>
-</div>
+<article class="main__siginup--container">
+  <section class="main__signup--image--wrap">
+    <img class="main__signup--image" src="{% static 'img/cinepedia_signup.png' %}" alt="">
+    <p>내 취향에 맞는 영화를 찾아보세요!</p>
+    <ul class="main__siginup__ott--list">
+      <li>
+        <img src="https://www.gnnews.co.kr/news/photo/201811/343582_102326_2141.jpg" alt="">
+      </li>
+      <li>
+        <img src="https://img.etnews.com/photonews/2108/1442171_20210809174226_463_0001.jpg" alt="">
+      </li>
+      <li>
+        <img src="https://image.newdaily.co.kr/site/data/img/2021/03/03/2021030300004_0.png" alt="">
+      </li>
+      <li>
+        <img src="https://www.jeonmae.co.kr/news/photo/202211/922309_613195_74.jpg" alt="">
+      </li>
+    </ul>
+  </section>
+  <section class="main__signup__form--wrap">
+    <div>
+      <form action="{% url 'accounts:signup' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="회원가입">
+      </form>
+    </div>
+  </section>
+</article>
 {% endblock content %}
 
-{% block script %}{% endblock script %}
+{% block script %}
+<script>
+  const realFileBtn = document.getElementById("real-file");
+const customBtn = document.getElementById("custom-button");
+const customTxt = document.getElementById("custom-text");
+
+customBtn.addEventListener("click", function() {
+  realFileBtn.click();
+});
+
+realFileBtn.addEventListener("change", function() {
+  if (realFileBtn.value) {
+    customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+  } else {
+    customTxt.innerHTML = "선택된 파일 없음";
+  }
+});
+</script>
+{% endblock script %}
