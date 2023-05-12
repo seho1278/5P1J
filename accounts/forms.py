@@ -74,7 +74,7 @@ class CustomUserCreationForm(UserCreationForm):
     password=None
     class Meta(UserChangeForm.Meta):
         model = get_user_model()
-        fields = ('username','email', 'first_name', 'birthday', 'image')
+        fields = ('username', 'first_name', 'birthday', 'email', 'image')
 
 class CustomUserChangeForm(UserChangeForm):
     email = forms.EmailField(

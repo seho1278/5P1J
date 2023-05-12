@@ -409,7 +409,7 @@ def create(request, movie_id):
                     post.movie_id = movie_id
                     post.user = request.user
                     post.poster_path = poster_path
-                    post.movie_title = movie_data.get('title')
+                    post.title = movie_data.get('title')
                     post.movie_overview = movie_data.get('overview')
                     post.movie_release_date = movie_data.get('release_date')
                     post.ratings = movie_data.get('score')
@@ -535,6 +535,7 @@ def review_update(request, movie_id, review_id):
     
     return render(request, 'movies/review_update.html', context)
 
+@login_required
 def wants(request, post_pk):
     post = Post.objects.get(pk=post_pk)
     if request.user in post.want_users.all():
@@ -548,6 +549,7 @@ def wants(request, post_pk):
     }
     return JsonResponse(context)
 
+@login_required
 def watchings(request, post_pk):
     post = Post.objects.get(pk=post_pk)
     if request.user in post.watching_users.all():
@@ -566,11 +568,6 @@ def watchings(request, post_pk):
 @login_required
 def review_detail(request, movie_id, review_id):
     post = Post.objects.get(movie_id=movie_id)
-    print(post)
-    print('-----------------')
-    print(post.movie_id)
-    print('-----------------')
-    print(post.title) # 여기가 비어있어요
     review = Review.objects.get(id=review_id)
     # movie_title = post.movie.title
     context = {
@@ -596,7 +593,7 @@ def review_like(request, movie_id, review_id):
   }
   return JsonResponse(context)
 
-
+@login_required
 def comment_create(request, movie_id, review_id):
     review = Review.objects.get(id=review_id)
     # movie = Post.objects.get(movie_id=movie_id)
@@ -616,18 +613,7 @@ def comment_create(request, movie_id, review_id):
     }
     return render(request, 'movies/comment_create.html', context)
 
-
-# @login_required
-# def review_like(request, movie_id, review_id):
-#     review = Review.objects.get(id=review_id)
-#     if request.method == "POST":
-#         if review.like_users.filter(pk=request.user.pk).exists():
-#           review.like_users.remove(request.user)
-#         else:
-#           review.like_users.add(request.user)
-#         return redirect('movies:review_detail', movie_id, review_id)
-
-
+@login_required
 def review_report(request, movie_id, review_id):
     review = Review.objects.get(id=review_id)
     form = ReviewReportForm()

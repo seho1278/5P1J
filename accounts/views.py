@@ -7,7 +7,8 @@ from .forms import CustomUserCreationForm, CustomUserChangeForm, CustomAuthentic
 from django.contrib.auth import get_user_model
 from movies.models import Review, ReviewReport
 from django.db.models import Count
-
+from django.http import JsonResponse
+from django.db.models import F
 # Create your views here.
 
 def login(request):
@@ -50,13 +51,12 @@ def profile(request, username):
     User = get_user_model()
     person = User.objects.get(username=username)
     reviews = Review.objects.filter(user=person)
-    reports = ReviewReport.objects.values('review').annotate(num_reports=Count('review')).filter(num_reports__gte=5)
-    review_ids = [report['review'] for report in reports]
-    reviews_report = Review.objects.filter(id__in=review_ids)
+
+    reviews_report = ReviewReport.objects.values('review').annotate(count=Count('id'))
     context = {
         'person':person,
         'reviews':reviews,
-        'reviews_report':reviews_report,
+        'review_reports': reviews_report,
     }
     return render(request, 'accounts/profile.html', context)
 
@@ -106,9 +106,20 @@ def follow(request, user_pk):
     if person != me:
         if me in person.followers.all():
             person.followers.remove(me)
+            is_followed = False
         else:
             person.followers.add(me)
+            is_followed = True
+        context = {
+            'is_followed':is_followed,
+            'followings_count':person.followings.count(),
+            'followers_count':person.followers.count(),
+
+        }
+        return JsonResponse(context)
     return redirect('accounts:profile', person.username)
+
+
 
 def about_us(request):
     return render(request, 'accounts/about_us.html')
