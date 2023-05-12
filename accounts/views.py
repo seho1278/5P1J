@@ -53,6 +53,7 @@ def profile(request, username):
     reports = ReviewReport.objects.values('review').annotate(num_reports=Count('review')).filter(num_reports__gte=5)
     review_ids = [report['review'] for report in reports]
     reviews_report = Review.objects.filter(id__in=review_ids)
+    print(person.image.url)
     context = {
         'person':person,
         'reviews':reviews,
