@@ -80,7 +80,6 @@ footer.item {
 .header--nav--list {
   display: flex;
   justify-content: space-around;
-  margin: 1rem 0;
 }
 .header--nav--list li.item {
   position: relative;
@@ -93,8 +92,11 @@ footer.item {
   display: block;
   width: 100%;
   height: 100%;
+  padding: 1rem 0 0.5rem;
+  transition: border-image .30s ease-in-out, font-size .30s ease-in-out;
 }
 .header--nav--list > li.item > a:hover {
+  font-size: 16.5px;
   border: solid;
   border-width: 0 0 1px 0;
   border-image: linear-gradient(to right, #000, #7048E9, #000);
@@ -216,6 +218,7 @@ footer.item {
   justify-content: center;
   width: 160px;
   border-radius: 10px;
+  transition: border-image .30s ease-in-out, font-size .30s ease-in-out;
 }
 .footer--list--wrap section:hover {
   border: solid;
@@ -231,4 +234,90 @@ footer.item {
   display: flex;
   justify-content: center;
   margin: 1rem;
+}
+
+
+
+common.css
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.input--control{
+    padding: 0.4rem 1rem;
+    border: 3px solid #7048E9;
+    border-radius: 5px;
+
+  }
+  
+.input--control:focus {
+  border: 3px solid #a182ff;
+  outline:none;
+  box-shadow: 1px 1px 0px 0px rgba(225, 225, 225, 0.3);
+}
+
+input[type="submit"] {
+  color: #ffffff;
+  border: none;
+  background-color: #000;
+}
+
+
+
+main {
+  background-color: #232323;
+  margin-top: 152px;
+  }
+
+@media screen and (max-width: 1350px) {
+  main {
+    margin-top: 240px;
+  }
+}
+@media screen and (max-width: 700px) {
+  main {
+    margin-top: 57px;
+  }
+  footer {
+    margin-bottom: 155px;
+  }
+}
+
+
+/* 대기 */
+.text--hover {
+  transition: border-image .30s ease-in-out, font-size .30s ease-in-out;
+
+}
+/* hover */
+.text--hover:hover {
+  font-size: 16.5px;
+  border: solid;
+  border-width: 0 0 1px 0;
+  border-image: linear-gradient(to right, #000, #7048E9, #000);
+  border-image-slice: 1;
+}
+
+
+/**/
+input[type="submit"] {
+  color: #ffffff;
+  border: none;
+  background-color: #000;
 }
