@@ -1,55 +1,78 @@
 
 .profile--container{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+  text-align: center;
   margin: 6rem 0;
 }
 .profile--title--wrap {
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title--image--wrap {
+  width: 100%;
+  border-bottom: 1px solid #555;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .profile--title--image {
-  display: block;
+}
+.pw--button {
+  /* display: block;
+  width: 191px; */
+}
+.sm--pw--button {
+  display: none;
 }
 .profile--form--wrap {
   width: 500px;
   margin: auto;
 }
+
 @media screen and (max-width: 1350px) { 
-  .profile--form--wrap {
-    width: 60%;
-    margin: auto;
+  .profile--container {
+    grid-template-columns: 1fr;
+  }
+  .profile--title--wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    /* text-align: left; */
+    border-bottom: 1px solid #555;
+  }
+  .title--image--wrap {
+    border: none;
+    padding-bottom: 1rem;
+    margin: 0;
+  }
+  .pw--button {
+    width: 100%;
+    padding-top: 0.3rem;
+    /* text-align: right; */
   }
 }
 @media screen and (max-width: 700px) { 
-
-}
-.form--control{
-    appearance: none;
-    width: 100%;
-    border: 1.5px solid #FFF;
-    border-radius: 0.375rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    background-color: black;
-    color: white;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
-    transition: box-shadow .30s ease-in-out;
+  .profile--container{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem;
   }
-  .form--control:focus {  
-    border: 1.5px solid #a182ff;
-    outline:none;
-    box-shadow: 0.5px 0.5px 1px 1px rgba(225, 225, 225, 0.5);
+  .profile--title--wrap {
+    display: flex;
   }
-  .good--button {
+  .pw--button {
+    display: none;
+  }
+  .sm--pw--button {
     display: block;
     width: 100%;
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
-    background-color: #7048E9;
-    transition: background-color .30s ease-in-out;
+    border-top: 1px solid #555;
+    padding-top: 2rem;
+    margin-top: 2rem;
   }
-  .good--button:hover {
-    background-color: #a182ff;
+  .profile--form--wrap {
+    width: 100%;
   }
   
+} 
