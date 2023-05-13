@@ -10,37 +10,49 @@
 {% endblock style %}  
 
 {% block content %}
-<article>
-  <h1>{{ person.username }}님!!</h1>
-  <section>
-    <div>
-      {% if person.image %}
-      <img src="{{ person.image.url }}" alt="">
-      {% else %}
-      <p>이미지가 없습니다</p>
-      {% endif %}
+<article class="mypage--container">
+  <h2 class="mypage--title">{{ person.username }}님의 프로필 페이지</h2>
+  <section class="profile--container">
+    <div class="profile--wrap">
+      <div>
+        {% if person.image %}
+        <img class="profile--image" src="{{ person.image.url }}" alt="">
+        {% else %}
+        <img class="profile--image" src="{% static 'img/accounts/cidia_profile_noimage_02.png' %}" alt="">
+        {% endif %}
+      </div>
+      <div class="profile--list--wrap">
+        <ul class="profile--list">
+          <li>
+            <p>이름</p>
+            <p>{{ person.first_name }}</p>
+          </li>
+          <li>
+            <p>생일</p>
+            <p>{{ person.birthday|date:"Y년 m월 d일" }}</p>
+          </li>
+          <li>
+            <p>이메일</p>
+            <p>{{ person.email }}</p>
+          </li>
+          <li>
+            <a class="good--button" href="{% url 'accounts:update'%}">회원정보 수정</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        팔로워 - <span id="followings-count">{{ person.followers.all|length }}</span>
+        팔로잉 - <span id="followers-count">{{ person.followings.all|length }}</span>
+        <form id="follow-form" data-user-id="{{ person.pk }}">
+          {% csrf_token %}
+          {% if request.user in person.followers.all %}
+            <input type="submit" value="언팔로우">
+          {% else %}
+            <input type="submit" value="팔로우">
+          {% endif %}
+        </form>
+      </div>
     </div>
-    <ul>
-      <li>{{ person.first_name }}</li>
-      <li>{{ person.birthday }}</li>
-      <li>{{ person.email }}</li>
-    </ul>
-    <a class="good--button" href="{% url 'accounts:update'%}">회원정보 수정</a>
-  </section>
-  <section>
-    <div>
-      팔로워 - <span id="followings-count">{{ person.followers.all|length }}</span>
-      팔로잉 - <span id="followers-count">{{ person.followings.all|length }}</span>
-    </div>
-    <form id="follow-form" data-user-id="{{ person.pk }}">
-      {% csrf_token %}
-      {% if request.user in person.followers.all %}
-        <input type="submit" value="언팔로우">
-      {% else %}
-        <input type="submit" value="팔로우">
-      {% endif %}
-    </form>
-  
   </section>
   <section>
     <!-- 앗 여기 회원가입할때 태그받는다 했는데, 아직 구현 안한거군요! -->

@@ -1,15 +1,44 @@
-main {
-  background-color: #000;
+.mypage--container {
+  margin: 6rem 0;
 }
-section {
-  /* border: 1px solid #fff; */
+
+.mypage--title {
+  text-align: center;
+}
+.profile--container {
   border-radius: 10px;
   box-shadow: 0.8px 0.8px 2px 1px rgba(225, 225, 225, 0.2);
-  padding: 1rem;
-  margin: 2rem 0;
+  padding: 2rem;
+  margin: 1rem 0 2rem;
+}
+.profile--wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  grid-gap: 1rem;
+
+}
+.profile--image {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.profile--list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.profile--list > li {
+  display: flex;
+  justify-content: space-between;
 }
 
 .good--button {
+  display: block;
+  width: 100%;
   padding: 0.4rem 1rem;
   border-radius: 5px;
   background-color: #7048E9;

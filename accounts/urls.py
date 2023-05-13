@@ -13,5 +13,5 @@ urlpatterns = [
     path('password/', views.change_password, name='change_password'),
     path('profile/<username>/', views.profile, name='profile'),
     path('follow/<int:user_pk>/', views.follow, name='follow'),
-    path('about_us/', views.about_us, name="about_us"),
+    path('aboutus/', views.aboutus, name="aboutus"),
 ]
