@@ -5,7 +5,7 @@
 
 {% block style %}
 <link rel="stylesheet" href="{% static 'css/accounts/update.css' %}">
-<link rel="stylesheet" href="{% static 'css/accounts/common.css' %}">
+<link rel="stylesheet" href="{% static 'css/common.css' %}">
 {% endblock style %}  
 
 {% block content %}
@@ -23,7 +23,7 @@
       <form action="{% url 'accounts:update' %}" method="POST" enctype='multipart/form-data'>
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="회원정보 수정">
+        <input class="good" type="submit" value="회원정보 수정">
       </form>
     </div>
     <div class="sm--pw--button">
