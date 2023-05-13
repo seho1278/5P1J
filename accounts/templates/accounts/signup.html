@@ -4,37 +4,54 @@
 {% block title %}회원가입{% endblock title %}
 
 {% block style %}
+<link rel="stylesheet" href="{% static 'css/common.css' %}">
 <link rel="stylesheet" href="{% static 'css/accounts/signup.css' %}">
 {% endblock style %}  
 
 {% block content %}
 <article class="main__siginup--container">
   <section class="main__signup--image--wrap">
-    <img class="main__signup--image" src="{% static 'img/accounts/cidia_signup.png' %}" alt="">
-    <p>내 취향에 맞는 영화를 찾아보세요!</p>
+    <img class="main__signup--image" src="{% static 'img/accounts/cidia_signup_nocircle_01.png' %}" alt="">
+    <p class="main__signup--text">내 취향에 맞는 영화를 찾아보세요!</p>
     <ul class="main__siginup__ott--list">
-      <li>
-        <img src="https://www.gnnews.co.kr/news/photo/201811/343582_102326_2141.jpg" alt="">
+      <li class="ott--image--wrap">
+        <img class="ott--image" src="https://www.gnnews.co.kr/news/photo/201811/343582_102326_2141.jpg" alt="">
       </li>
-      <li>
-        <img src="https://img.etnews.com/photonews/2108/1442171_20210809174226_463_0001.jpg" alt="">
+      <li class="ott--image--wrap">
+        <img class="ott--image" src="https://img.etnews.com/photonews/2108/1442171_20210809174226_463_0001.jpg" alt="">
       </li>
-      <li>
-        <img src="https://image.newdaily.co.kr/site/data/img/2021/03/03/2021030300004_0.png" alt="">
+      <li class="ott--image--wrap">
+        <img class="ott--image" src="https://image.newdaily.co.kr/site/data/img/2021/03/03/2021030300004_0.png" alt="">
       </li>
-      <li>
-        <img src="https://www.jeonmae.co.kr/news/photo/202211/922309_613195_74.jpg" alt="">
+      <li class="ott--image--wrap">
+        <img class="ott--image" src="https://www.jeonmae.co.kr/news/photo/202211/922309_613195_74.jpg" alt="">
       </li>
     </ul>
   </section>
-  <section class="main__signup__form--wrap">
-    <div>
-      <form action="{% url 'accounts:signup' %}" method="POST">
+  <section class="main__signup__form--container">
+    <div class="main__signip__form--wrap">
+      <form class="main__signip__form" action="{% url 'accounts:signup' %}" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="회원가입">
+        <input class="good" type="submit" value="회원가입">
       </form>
     </div>
+  </section>
+  <section class="sm--ott--list--container">
+    <ul class="sm__ott--list">
+      <li class="ott--image--wrap">
+        <img class="ott--image" src="https://www.gnnews.co.kr/news/photo/201811/343582_102326_2141.jpg" alt="">
+      </li>
+      <li class="ott--image--wrap">
+        <img class="ott--image" src="https://img.etnews.com/photonews/2108/1442171_20210809174226_463_0001.jpg" alt="">
+      </li>
+      <li class="ott--image--wrap">
+        <img class="ott--image" src="https://image.newdaily.co.kr/site/data/img/2021/03/03/2021030300004_0.png" alt="">
+      </li>
+      <li class="ott--image--wrap">
+        <img class="ott--image" src="https://www.jeonmae.co.kr/news/photo/202211/922309_613195_74.jpg" alt="">
+      </li>
+    </ul>
   </section>
 </article>
 {% endblock content %}

@@ -28,7 +28,7 @@
     background-color: #a182ff;
   }
   
-  input[type="submit"] {
+  input[type="submit"].good {
     width: 100%;
     color: #ffffff;
     border: none;
@@ -38,6 +38,6 @@
     transition: background-color .15s ease-in-out;
   }
   
-  input[type="submit"]:hover {
+  input[type="submit"].good:hover {
     background-color: #9b79fe;
   }

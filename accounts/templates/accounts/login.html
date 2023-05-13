@@ -8,34 +8,50 @@
 {% endblock style %}  
 
 {% block content %}
-<article>
+<article class="main--login--container">
   <section>
     <div class="main--logo--wrap">
-      <img class="main--logo--image" src="{% static 'img/accounts/cidia_login.png' %}" alt="">
-    </div>
-    <div>
-      <form action="{% url 'accounts:login' %}" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="로그인">
-      </form>
+      <img class="main--logo--image" src="{% static 'img/accounts/cidia_login_nocircle_01.png' %}" alt="">
+      <div class="main--social--list">
+        <div class="main--social--wrap">
+          <a href="#">
+            <img class="social--image" src="{% static 'img/accounts/login_naver.png' %}" alt="">
+          </a>
+        </div>
+        <div class="main--social--wrap">
+          <a href="#">
+            <img class="social--image" src="{% static 'img/accounts/login_kakao_m.png' %}" alt="">
+          </a>
+        </div>
+        <div class="main--social--wrap">
+          <a href="#">
+            <img class="social--image" src="{% static 'img/accounts/login_google.png' %}" alt="">
+          </a>
+        </div>
+      </div>
     </div>
   </section>
-  <hr>
-  <section class="main--login--section">
-    <div>
+  <section class="main--login--form--wrap">
+    <form action="{% url 'accounts:login' %}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input class="good" type="submit" value="로그인">
+    </form>
+  </section>
+  <section class="sm--main--social--list">
+    <div class="main--social--wrap">
       <a href="#">
-        <img class="login--naver--image" src="{% static 'img/accounts/login_naver.png' %}" alt="">
+        <img class="social--image" src="{% static 'img/accounts/login_naver.png' %}" alt="">
       </a>
     </div>
-    <div>
+    <div class="main--social--wrap">
       <a href="#">
-        <img class="login--kakao--image" src="{% static 'img/accounts/login_kakao.png' %}" alt="">
+        <img class="social--image" src="{% static 'img/accounts/login_kakao_m.png' %}" alt="">
       </a>
     </div>
-    <div>
+    <div class="main--social--wrap">
       <a href="#">
-        <img class="login--gogle--image" src="{% static 'img/accounts/login_google.png' %}" alt="">
+        <img class="social--image" src="{% static 'img/accounts/login_google.png' %}" alt="">
       </a>
     </div>
   </section>
