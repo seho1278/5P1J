@@ -5,21 +5,29 @@
 
 {% block style %}
 <link rel="stylesheet" href="{% static 'css/accounts/update.css' %}">
+<link rel="stylesheet" href="{% static 'css/accounts/common.css' %}">
 {% endblock style %}  
 
 {% block content %}
   <article class="profile--container">
     <div class="profile--title--wrap">
-      <img class="profile--title--image" src="{% static 'img/accounts/cidia_profileupdate_01.png' %}" alt="">
-      <a class="good--button" href="{% url 'accounts:change_password' %}">비밀번호 변경하러 가기</a>
+      <div class="title--image--wrap">
+        <img class="profile--title--image" src="{% static 'img/accounts/cidia_profileupdate_01.png' %}" alt="회원정보 수정">
+      </div>
+      <div class="pw--button">
+        <a class="good--button" href="{% url 'accounts:change_password' %}">비밀번호 변경하러 가기</a>
+      </div>
       {% comment %} <img src="{% static 'img/accounts/cidia_profileupdate_02.png' %}" alt=""> {% endcomment %}
     </div>
     <div class="profile--form--wrap">
       <form action="{% url 'accounts:update' %}" method="POST" enctype='multipart/form-data'>
         {% csrf_token %}
         {{ form.as_p }}
-        <input class="good--button" type="submit" value="회원정보 수정">
+        <input type="submit" value="회원정보 수정">
       </form>
+    </div>
+    <div class="sm--pw--button">
+      <a class="good--button" href="{% url 'accounts:change_password' %}">비밀번호 변경하러 가기</a>
     </div>
   </article>
 {% endblock content %}
