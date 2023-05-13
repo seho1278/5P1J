@@ -80,7 +80,7 @@ class CustomUserChangeForm(UserChangeForm):
         label= False,
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control',
+                'class': 'form--control',
                 'placeholder': '이메일을 입력하세요',
                
             }
@@ -90,7 +90,7 @@ class CustomUserChangeForm(UserChangeForm):
         label= False,
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control',
+                'class': 'form--control',
                 'placeholder': '이름을 입력하세요',
                
             }
@@ -102,7 +102,7 @@ class CustomUserChangeForm(UserChangeForm):
         widget=forms.DateInput(
             attrs={
                 'type':'date',
-                'class': 'form-control',
+                'class': 'form--control',
             }
         ),
     )
@@ -111,14 +111,14 @@ class CustomUserChangeForm(UserChangeForm):
         required=False,
         widget=forms.ClearableFileInput(
         attrs={
-            'class': 'form-control',
+            'class': 'form--control',
             }
         )
     )
     password=None
     class Meta(UserChangeForm.Meta):
         model = get_user_model()
-        fields = ('email', 'first_name', 'birthday', 'image')
+        fields = ('first_name', 'birthday', 'email', 'image')
 
 class CustomAuthenticationForm(AuthenticationForm):
     username = forms.CharField(
@@ -147,7 +147,7 @@ class CustomPasswordChangeForm(PasswordChangeForm):
         label=False,
         widget=forms.PasswordInput(
             attrs = {
-                'class': 'form-control',
+                'class': 'form--control',
                 'placeholder' : '기존 비밀번호',
             }
         )
@@ -156,7 +156,7 @@ class CustomPasswordChangeForm(PasswordChangeForm):
         label=False,
         widget= forms.PasswordInput(
         attrs = {
-                'class': 'form-control',
+                'class': 'form--control',
                 'placeholder' : '새 비밀번호',
 
             }
@@ -167,7 +167,7 @@ class CustomPasswordChangeForm(PasswordChangeForm):
         label=False,
         widget= forms.PasswordInput(
         attrs = {
-                'class': 'form-control',
+                'class': 'form--control',
                 'placeholder' : '새 비밀번호(확인)',
 
             }

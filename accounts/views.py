@@ -122,5 +122,5 @@ def follow(request, user_pk):
 
 
 
-def about_us(request):
-    return render(request, 'accounts/about_us.html')
+def aboutus(request):
+    return render(request, 'accounts/aboutus.html')

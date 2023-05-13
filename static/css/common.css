@@ -33,25 +33,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 
-main {
-  background-color: #232323;
-  margin-top: 152px;
-  }
-
-@media screen and (max-width: 1350px) {
-  main {
-    margin-top: 240px;
-  }
-}
-@media screen and (max-width: 700px) {
-  main {
-    margin-top: 57px;
-  }
-  footer {
-    margin-bottom: 155px;
-  }
-}
-
 /* hover */
 .text--hover:hover {
   font-size: 16.5px;
