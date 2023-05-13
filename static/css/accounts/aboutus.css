@@ -1,0 +1,27 @@
+
+.aboutus__list {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.aboutus--title {
+  text-align: center;
+}
+section {
+  display: flex;
+  border-radius: 10px;
+  background-color: #111;
+  box-shadow: 0px 0px 3px 1px rgba(225, 225, 225, 0.5);
+  padding: 1rem;
+  margin: 1rem;
+}
+.aboutus__image--wrap {
+  text-align: center;
+  margin-right: 1rem;
+}
+.aboutus--image {
+  width: 100px;
+  border-radius: 10px;
+}
+h4 {margin-top: 0.5rem;}
