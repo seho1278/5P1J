@@ -77,6 +77,9 @@ footer.item {
 .header--login--wrap > div {
   margin-left: 1rem; 
 }
+.header--nav--wrap {
+  margin-top: 1rem;
+}
 .header--nav--list {
   display: flex;
   justify-content: space-around;
