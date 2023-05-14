@@ -24,4 +24,35 @@ section {
   width: 100px;
   border-radius: 10px;
 }
+.mung--name {
+  display: flex;
+}
+.mung--image {
+  width: 35px;
+  height: 22px;
+  margin-left: 0.5rem;
+}
 h4 {margin-top: 0.5rem;}
+
+.point--user--list > li {
+ margin: 0.2rem 0;
+}
+.point--box {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #eee;
+  background-color: #7048E9;
+  margin-left: 0.5rem;
+}
+.point--user--1 {
+  padding: 0 1.5rem;
+}
+.point--user--2 {
+  padding: 0 1.5rem;
+}
+.point--user--3 {
+  padding: 0 0.3rem;
+}
+.point--user--4 {
+  padding: 0 0.3rem;
+}
