@@ -9,10 +9,20 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
+from collections import Counter
 
 # Create your views here.
 
+# 리뷰 평균 계산모듈(추가)
+from django.db.models import Avg
+
 TMDB_API_KEY = 'dfc02edc73a8a31017aeb0d746f5753d'
+
+# 리뷰 평균 계산(추가)
+def calculate_average_rating(reviews):
+    average_rating = reviews.aggregate(avg_rating=Avg('rating'))['avg_rating']
+    return average_rating
+
 
 def index(request):
 # 플랫폼별 TOP10
@@ -183,8 +193,87 @@ def detail(request, movie_id):
         'region':'kr',
     
     }
+    
+     # platform 하나씩 빼내기 
+    platform_list = []
+    platform_word = ""
+    if "[" in post.platform:
+        for platform in post.platform:
+            if platform in ["[", "'",]:
+                pass
+            elif platform in [",", "]"]:
+                platform_list.append(platform_word.strip())
+                platform_word = ""
+            else:
+                platform_word = platform_word + platform
+    else:
+        platform_list.append(post.platform)
+    
+    # post에 있는 tags 하나씩 빼내기
+    p_tags = []
+    p_word = ""
+    if "[" in post.tags:
+        for tag in post.tags:    
+            if tag in ["[", "'",]:
+                pass
+            elif tag in [",", "]"]:
+                p_tags.append(p_word.strip())
+                p_word = ""
+            else:
+                p_word = p_word + tag
+    else:
+        p_tags.append(post.tags)
+        
+    
+    # reviews에 있는 tags 하나씩 빼내기
+    tags = []
+    # 추가------
+    r_tags = {}
+    cnt = 1
+    # ----------
+    word = ""
+    reviews = Review.objects.filter(post=post.pk)   
+    for review in reviews:
+        # 추가
+        tags1 = []
+        #----------
+        if "[" in review.tags:
+            for tag in review.tags:    
+                if tag in ["[", "'",]:
+                    pass
+                elif tag in [",", "]"] :
+                    tags.append(word.strip())
+                    # 추가
+                    tags1.append(word.strip())
+                    # -------------------
+                    word = ""
+                    
+                else:
+                    word = word + tag
+            # 추가
+            r_tags[cnt] = tags1
+            cnt += 1
+            # ---------------------
+        else:
+            tags.append(review.tags)
+    
+    # 추가
+    r_tags_list = []
+    for value in r_tags.values():
+        r_tags_list.append(value)
+    # ---------------------------
+    
+    total = p_tags + tags
+    total_tags = dict(Counter(total)) 
+            
     detail_response = requests.get(detail_url, params=params)
     detail_data = detail_response.json()
+    
+    # 추가
+    average = detail_data['vote_average']/2
+
+    average_rating = calculate_average_rating(reviews)
+    # ------------------------------------
 
     similar_response = requests.get(similar_url, params=params)
     similar_data = similar_response.json()
@@ -195,11 +284,23 @@ def detail(request, movie_id):
         'detail_data':detail_data,
        # 'keyword_data': keyword_data,
         'movie_id' : movie_id,
+        'post': post,
         'similars' : similars,
+        'reviews': reviews,
+        'tags' : tags,
+        'p_tags' : p_tags,
+        'platform_list': platform_list,
+        'total_tags': total_tags,
+        # 추가
+        'r_tags_list': r_tags_list,
+        'average': average,
+        'average_rating': average_rating,
+        # ----------------------------
        
         
     }
     return render(request, 'movies/detail.html', context)
+
 
 def search(request):
     query = request.GET.get('query')
@@ -223,6 +324,32 @@ def search(request):
     person_response = requests.get(person_url, params=params)
     person_search_data = person_response.json()
     
+
+    tag_movies = Post.objects.filter(tags__contains=query)
+    tag_reviews = Review.objects.filter(tags__contains=query)   
+    
+    tag_name = ''
+    for movie in tag_movies :
+        word = movie.tags[2:-2]
+        word = word.split("', '")
+        
+        for tag in word :
+            if query in tag:
+                tag_name = tag
+            
+    # tag_reviews에서 post 역참조 후 중복 제거 
+    tag_reviews_1 = list(set([review.post for review in tag_reviews])) 
+    
+    # tag_movies와 tag_reviews_1 에서 중복 제거 후 총 영화 수 산출 
+    total_tags = len(list(set(list(tag_movies) + tag_reviews_1)))
+
+    
+    # print(tag_movies)
+    # print('----')
+    # print(tag_reviews)
+    # print('----')
+    # print(tag_reviews_1)
+    # print(len(search_data))
     
     movie_image = 'https://image.tmdb.org/t/p/w200' 
     for movie in search_data['results']:
@@ -279,14 +406,13 @@ def search(request):
                                 'movies': movies,
                             })
     
-    sorted_data = sorted(search_data['results'], key=lambda x: x['release_date'], reverse=True)
+    posts = sorted(search_data['results'], key=lambda x: x['release_date'], reverse=True)
     
-    page = request.GET.get('page', '1')
-    per_page = 12
-    paginator = Paginator(sorted_data, per_page)
-    posts = paginator.get_page(page)
+    # page = request.GET.get('page', '1')
+    # per_page = 12
+    # paginator = Paginator(sorted_data, per_page)
+    # posts = paginator.get_page(page)
     
-    # 사이트가 안들어가져서 잠시만 주석처리할게요..ㅠ 네 !!
     # if query in request.GET:
         
     
@@ -321,6 +447,11 @@ def search(request):
         'movies_cast': movies_cast,
         'movie_posters': movie_posters,
         'genre_dict': genre_dict,
+        'tag_movies': tag_movies,
+        'tag_reviews': tag_reviews,
+        'tag_reviews_1' : tag_reviews_1,
+        'total_tags' : total_tags,
+        'tag_name' : tag_name,
     }
     
     return render(request, 'movies/search.html', context)
@@ -330,7 +461,7 @@ def create(request, movie_id):
     url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={TMDB_API_KEY}&language=ko-KR'
     response = requests.get(url)
     movie_data = response.json()
-    poster_path = 'https://image.tmdb.org/t/p/w200' + movie_data.get('poster_path')
+    # poster_path = 'https://image.tmdb.org/t/p/w200' + movie_data.get('poster_path')
     # if request.user != 'admin':
     #     return redirect('movies:index')
     if Post.objects.filter(movie_id=movie_id).exists():
@@ -344,7 +475,7 @@ def create(request, movie_id):
                     post = form.save(commit=False)
                     post.movie_id = movie_id
                     post.user = request.user
-                    post.poster_path = poster_path
+                    # post.poster_path = poster_path
                     post.title = movie_data.get('title')
                     post.movie_overview = movie_data.get('overview')
                     post.movie_release_date = movie_data.get('release_date')
@@ -406,7 +537,7 @@ def get_movie_info(movie_id):
     
 @login_required
 def review_create(request, movie_id):
-    movie = get_movie_info(movie_id)
+    # movie = get_movie_info(movie_id)
     
     post = Post.objects.get(movie_id=movie_id)
     # post = Post.objects.get(pk=post_pk)
@@ -560,6 +691,8 @@ def review_report(request, movie_id, review_id):
             review_report.review = review
             review_report.user = request.user
             review_report.save()
+            review.user.reported = True
+            review.user.save()
             return redirect('movies:detail', movie_id)
             
     context = {

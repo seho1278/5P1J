@@ -16,6 +16,7 @@ class Post(models.Model):
     watching_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='watching_posts')
     platform = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
+    poster_path = models.CharField(max_length=100, default='')
 
 # class PostImage(models.Model):
 #     post = models.ForeignKey(Post, on_delete=models.CASCADE)

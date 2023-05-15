@@ -5,7 +5,7 @@ from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm, CustomUserChangeForm, CustomAuthenticationForm, CustomPasswordChangeForm
 from django.contrib.auth import get_user_model
-from movies.models import Review, ReviewReport
+from movies.models import Review, ReviewReport, Post
 from django.db.models import Count
 from django.http import JsonResponse
 from django.db.models import F
@@ -37,8 +37,9 @@ def signup(request):
     if request.method == "POST":
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('movies:index')
+            user = form.save()
+            auth_login(request, user)  # 회원가입 후 바로 로그인되게
+            return redirect('movies:index') 
     else:
         form = CustomUserCreationForm()
     context = {
@@ -53,11 +54,31 @@ def profile(request, username):
     reviews = Review.objects.filter(user=person)
     reports = ReviewReport.objects.values('review').annotate(num_reports=Count('review')).filter(num_reports__gte=5)
     review_ids = [report['review'] for report in reports]
-    reviews_report = Review.objects.filter(id__in=review_ids)
+    review_reports = ReviewReport.objects.order_by('review_id', 'title')
+    
+    # 회원가입할 때 받은 tags 정보 가공 (문자열에서 리스트로 변환)
+    new_tags = person.tags[2:-2].split("', '")
+    
+    # 내 tag와 일치하는 영화 정보 불러오기
+    # my_movies = []
+    tag_dict = {} 
+    for tag in new_tags:
+        post = Post.objects.filter(tags__contains = tag)
+        for i in post:
+        # my_movies.append(list(post))
+            tag_dict[i] = tag
+    print(tag_dict)
+    # my_movies = list(set(my_movies))
+        
+        
+    
     context = {
         'person':person,
         'reviews':reviews,
-        'review_reports': reviews_report,
+        'review_reports': review_reports,
+        'new_tags': new_tags,
+        # 'my_movies': my_movies,
+        'tag_dict': tag_dict,
     }
     return render(request, 'accounts/profile.html', context)
 
