@@ -40,30 +40,97 @@
           </li>
         </ul>
       </div>
+      {% comment %} 팔로워 팔로우 모달창 시작!! {% endcomment %}
       <div>
-        팔로워 - <span id="followings-count">{{ person.followers.all|length }}</span>
-        팔로잉 - <span id="followers-count">{{ person.followings.all|length }}</span>
-        <form id="follow-form" data-user-id="{{ person.pk }}">
+        {% comment %} 팔로워 모달 버튼 {% endcomment %}
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#followersModal">
+          <span id="followers-count">{{ person.followers.all|length }}</span> 팔로워
+        </button>
+        {% comment %} 팔로잉 모달 버튼 {% endcomment %}
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#followingsModal">
+          <span id = "followings-count">{{ person.followings.all|length }}</span> 팔로잉 
+        </button>
+        {% comment %} 팔로워 Modal {% endcomment %}
+        <div class="modal fade" style="z-index: 99999;" id="followersModal" tabindex="-1" aria-labelledby="followersModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title" id="followersModalLabel">팔로워</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                {% for follower in person.followers.all %}
+                  <span>{{ follower }}</a></span>
+                {% endfor %}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% comment %} 팔로우 Modal {% endcomment %}
+        <div class="modal fade" style="z-index: 99999;" id="followingsModal" tabindex="-1" aria-labelledby="followingsModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title" id="followingsModalLabel">팔로잉</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                {% for following in person.followings.all %}
+                  <span>{{ following }}</span>
+                {% endfor %}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% comment %} <form id="follow-form" data-user-id="{{ person.pk }}">
           {% csrf_token %}
           {% if request.user in person.followers.all %}
             <input type="submit" value="언팔로우">
           {% else %}
             <input type="submit" value="팔로우">
           {% endif %}
-        </form>
+        </form> {% endcomment %}
       </div>
     </div>
   </section>
-  <section>
-    <!-- 앗 여기 회원가입할때 태그받는다 했는데, 아직 구현 안한거군요! -->
+  <section class="my-3">
     <h4>{{ person.username }}님의 Tag</h4>
-    <ul>
-      <li></li>
-    </ul>
+    {% for tag in new_tags %}
+    <span class="badge rounded-pill text-bg-light" >{{tag}}</span>
+    {% endfor %}
+    
   </section>
   <section>
     <h4>{{ person.username }}님이 선택한 태그 기준으로 영화 추천</h4>
+    <div class="row">
+        {% for movie, tag in tag_dict.items %}
+            <div class="col-3">
+                <p>"{{tag}}"</p>
+                  <a href="{% url 'movies:detail' movie.movie_id %}">
+                    <div>
+                      {% if movie.poster_path %}
+                        <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}">
+                      {% else %}
+                        <p>포스터 없을 경우 static에 대체 이미지 넣기 </p>
+                      {% endif %}
+                    </div>
+                    <div>
+                      <p class="text-center">{{movie.title}}</p>
+                    </div>
+                  </a>
+            </div>     
+          {% endfor %}
+              
+    </div>
   </section>
+
   <section>
     <h4>My Reviews</h4>
     <table class="table" style="color:#fff;">
@@ -101,14 +168,6 @@
             <p>{{ review_report.content }}</p>
         </div>
     {% endfor %} 
-    {% for report in review_reports %}
-      <p>Review {{ report.review }} has {{ report.count }} reports.</p>
-      <ul>
-          {% for r in report.reviews_report.all %}
-              <li>{{ r.title }}: {{ r.content }}</li>
-          {% endfor %}
-      </ul>
-  {% endfor %}
   </section>
   {% endif %}
 </article>
@@ -126,7 +185,6 @@
 
     axios({
       method: 'post',
-
       url: `/accounts/follow/${userId}/`,
       headers: {'X-CSRFToken': csrftoken},
     })
@@ -134,7 +192,6 @@
         const isFollowed = response.data.is_followed
         const followBtn = document.querySelector('#follow-form > input[type=submit]')
         if (isFollowed === true) {
-
           followBtn.value = '언팔로우'
         } else {
           followBtn.value = '팔로우'
@@ -148,10 +205,7 @@
 
         followingsCountTag.textContent = followingsCountData
         followersCountTag.textContent = followersCountData
-          followBtn = '언팔로우'
-        } else {
-          followBtn = '팔로우'
-        }
+      
 
       })
   })

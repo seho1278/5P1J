@@ -1,116 +1,298 @@
+p {
+    margin: 0px;
+}
+
+hr {
+    /* margin: 10px 0 10px 0; */
+}
+
 footer {
     display: none;
 }
 
-.Detail__Container {
-    /* width: 1000px; */
-    /* height: auto; */
-    /* margin: auto; */
-    /* background-color: white; */
+.Detail__Info__PlatformButton {
+    border: solid 1px #7048E9;
+    background-color: #7048E9;
+    border-radius: 10px;
+    font-size: 14px;
 }
 
-.card img {
-    height: 100%;
+button {
+    appearance: none;
+    cursor: pointer;
+    border: 0px;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+
+.Detail__Container {
+    /* background: linear-gradient(135deg, #7048E9, #000000, #7048E9); */
+}
+
+
+.Detail__list {
+    display: grid;
+    grid-template-rows: redpeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.detail-item-1 {
+    grid-column: span 2;
+}
+
+.detail-item-2 {
+    grid-column: span 1;
+}
+
+.detail-item-3 {
+    grid-column: span 2;
+}
+
+.detail-item-4 {
+    grid-column: span 1;
+}
+
+.detail-item-5 {
+    grid-column: span 3;
+}
+
+.detail-item-6 {
+    grid-column: span 3;
+}
+
+.detail-item-7 {
+    grid-column: span 3;
+}
+
+.detail-item {
+    padding: 1rem;
+}
+
+
+
+
+
+/* 1. 현재 영화 정보 박스 */
+.Detail__TitleInfoBox {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    color: white;
+    border-radius: 10px;
+}
+
+.title--image {
     object-fit: cover;
 }
 
-.Detail__TitleBox {
+.Detail__Info__WatchingBox {
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+
+/* 2. 지금 여기서 보기  */
+.Detail__Info__PlatformBox {}
+
+
+.Detail__Info__Platform {
     display: flex;
     flex-direction: row;
-    background-color: rgba(225, 225, 225, 0.5);
-    color: black;
-    padding: 15px;
-    border-radius: 30px;
-    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    align-items: center;
 }
 
-.Detail__Title__Stat {
-    padding: 10px 20px 20px 20px;
-    width: 450px;
-}
-
-.Detail__Title__StatTitle {
-    font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 15px;
-}
-
-.Detail__Info__PlatformBox {
+.Detail__Info__PlatformImg {
+    width: 32px;
+    height: 32px;
     background-color: white;
-    margin-left: auto;
-    width: 300px;
-    height: 300px;
-    border: solid 1px black;
-    border-radius: 10%;
-    box-shadow: 5px 5px 5px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-.Detail__ContentBox {
+.Detail__Info__PlatformTextBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+
+/* 3. 선호하는 태그 */
+.Detail__TagAndRatingBox {
+    display: flex;
+}
+
+.Detail__TagBox {
     display: flex;
     flex-direction: column;
-    background-color: rgba(225, 225, 225, 0.5);
-    color: black;
-    padding: 15px;
-    border-radius: 30px;
-    margin: 10px 0 10px 0;
 }
 
-.Detail__ContentBox__Title {
-    font-weight: bold;
-    font-size: 21px;
+.Detail__Tag {
+    display: flex;
 }
 
+
+
+/* 4. 별점 그래프 */
+.Detail__RatingBox {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 5. 정보, 출연/제작 */
 .Detail__ContentBox__GraphTitle {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width: 100%;
 }
 
-.Detail__ContentBox__GraphTitle p {
-    margin: 0px;
-}
 
 .bar-chart {
-    width: 50%;
-    margin: auto;
     display: flex;
-    flex-direction: row;
     align-items: flex-end;
     height: 200px;
 }
 
 .bar-chart__text {
-    width: 50%;
-    margin: auto;
     display: flex;
-    flex-direction: row;
     align-items: flex-end;
 }
 
 .bar-chart__bar {
     flex-grow: 1;
-    background-color: rgb(255, 221, 99);
+    background-color: #c8c0e2;
+    margin: 0 0.2rem;
     transition: width 0.5s ease-in-out;
-    margin: 0 20px 0 20px;
 }
 
 .bar-chart__barText {
     flex-grow: 1;
     text-align: center;
-    margin: 0 20px 0 20px;
-    color: gray;
     font-size: 12px;
 }
 
+.Detail__ContentBox {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 6. 리뷰스 */
 .Detail__ReviewBox {
     display: flex;
     flex-direction: column;
-    background-color: rgba(225, 225, 225, 0.5);
-    color: black;
-    padding: 15px;
-    border-radius: 30px;
-    margin: 10px 0 10px 0;
+}
+
+/* 6-1. 유저, 콘텐츠 */
+.Detail__Review {
+    display: grid;
+    grid-template-columns: 7fr 150px;
+    border-bottom: 1px solid #555;
+    /* background-color: rgba(31, 31, 31, 1); */
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+
+}
+
+.detail__review__user--content {
+    display: grid;
+    grid-template-columns: 60px 7fr;
+    grid-gap: 1rem;
+}
+
+/* 6-1-1. 유저 */
+.detail__user--wrap {
+    /* margin: 0 1rem; */
+}
+
+.Detail__Review__UserInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.Detail__Review__User__ImgBox {
+    display: flex;
+    justify-content: center;
+}
+
+.Detail__Review__User__Img {
+    width: 2.5rem;
+    height: 2.7rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.noimage {
+    padding-top: 0.2rem;
+}
+
+.Detail__Review__User__Name {
+    font-size: 15px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.Detail__Review__User__Stat {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Detail__Review__User__StatItem--Review {
+    display: block;
+    background-image: url("review.png");
+    background-size: cover;
+    width: 12px;
+    height: 12px;
+}
+
+.Detail__Review__User__StatItem--Follower {
+    display: block;
+    background-image: url("follower.png");
+    background-size: cover;
+    width: 12px;
+    height: 12px;
+}
+
+/*   6- 1-2. 콘텐츠 */
+.Detail__Review__Content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.Detail__Review__Rating {
+    display: flex;
+    flex-direction: row;
+    color: #555555;
+    align-items: center;
+}
+
+
+
+.SpoilerNone--Btn {
+    color: #7048E9;
+    background-color: none;
+}
+
+.SpoilerNone--Btn:hover {
+    border-bottom: solid 1px #7048E9;
+}
+
+.Detail__Review__Tags {}
+
+/* 6-2 . 신고 삭제 수정 */
+.Detail__Review__Etc {
+    display: flex;
+    flex-direction: column;
+}
+
+.Detail__Review__Etc button:hover {
+    border-bottom: solid 1px #7048E9;
 }
 
 /* .Index__main {
@@ -121,12 +303,19 @@ footer {
     margin-top: 100px;
   } */
 
+
+
+/* 7. 비슷한 작품 */
+.Detail__SimilarBox {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(31, 31, 31, 1);
+}
+
 .Detail__Content__Similar {
-    width: 950px;
     display: flex;
     overflow: hidden;
     white-space: nowrap;
-    margin: auto;
 }
 
 .Detail__carousel {
@@ -138,7 +327,6 @@ footer {
 
 .card {
     flex: 0 0 auto;
-    margin: 0 10px;
     scroll-snap-align: start;
     position: relative;
     overflow: hidden;
@@ -151,12 +339,9 @@ footer {
 }
 
 .card-title {
-    color: black;
-    font-size: 1.1rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-right: 15px;
 }
 
 .Detail__Card:hover .card img {
@@ -173,16 +358,10 @@ footer {
 
 .Detail__Card__Content {
     width: 163px;
-    /* height: 100%; */
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 7px;
     overflow: hidden;
 }
 
 .Detail__Card:hover .card-title {
-    color: black;
-    font-size: 1.1rem;
     white-space: nowrap;
     overflow: visible;
     /* text-overflow:ellipsis; */
