@@ -24,6 +24,95 @@ def calculate_average_rating(reviews):
     return average_rating
 
 
+def main(request):
+    # 각 영화의 리뷰 평점
+    movies = Post.objects.annotate(avg_rating=Avg('review__rating')).order_by('-avg_rating')
+    for movie in movies:
+        movie_id = movie.movie_id
+        url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={TMDB_API_KEY}&language=ko-KR'
+        response = requests.get(url)
+        movie_data = response.json()
+        poster_path = 'https://image.tmdb.org/t/p/w200' + movie_data.get('poster_path')
+        movie.poster_path = poster_path
+
+    # 플랫폼 별 리뷰 평점 순서
+    platforms = ['넷플릭스', '왓챠', '웨이브', '애플TV+', '디즈니+']
+    movies_by_platform = {}
+    for platform in platforms:
+        platform_movies = Post.objects.filter(platform__contains=platform).annotate(avg_rating=Avg('review__rating')).order_by('-avg_rating')
+        # print(platform_movies)
+        for platform_movie in platform_movies:
+            movie_id = platform_movie.movie_id
+            url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={TMDB_API_KEY}&language=ko-KR'
+            response = requests.get(url)
+            movie_data = response.json()
+            poster_path = 'https://image.tmdb.org/t/p/w200' + movie_data.get('poster_path')
+            platform_movie.poster_path = poster_path
+        movies_by_platform[platform] = platform_movies
+    
+    # 장르별로
+    genre_dict = {
+        28: '액션',
+        12: '모험',
+        16: '애니메이션',
+        35: '코미디',
+        80: '범죄',
+        99: '다큐멘터리',
+        18: '드라마',
+        14: '판타지',
+        36: '역사',
+        27: '공포',
+        10402: '음악',
+        9648: '미스터리',
+        10749: '로맨스',
+        878: 'SF',
+        10770: 'TV 영화',
+        53: '스릴러',
+        10752: '전쟁',
+        37: '서부'
+    }
+
+    genre_movie_url = 'https://api.themoviedb.org/3/discover/movie'
+    params = {
+    'api_key': TMDB_API_KEY,
+    'language': 'ko-kr',
+    'region':'kr',
+    }
+
+    genre_movie_data = {}
+
+    for genre_id, genre_name in genre_dict.items():
+        genre_movies = []
+        params['with_genres'] = genre_id
+        genre_movie_response = requests.get(genre_movie_url, params=params)
+        genre_movie_data[genre_name] = genre_movie_response.json()
+        genre_movies.extend(genre_movie_data[genre_name]['results'])
+
+        for genre_movie in genre_movies:
+            if 'poster_path' in genre_movie:
+                poster_path = genre_movie['poster_path']
+                genre_poster_path = 'https://image.tmdb.org/t/p/w200' + poster_path
+                genre_movie['poster_path'] = genre_poster_path
+
+        # Only save up to 5 movies
+        genre_movie_data[genre_name]['results'] = genre_movies[:5]
+
+    
+    # 장르별로 평점순으로 정렬
+    for genre_name, movies_data in genre_movie_data.items():
+        genre_movies = movies_data['results']
+        sorted_movies = sorted(genre_movies, key=lambda movie: movie['vote_average'], reverse=True)
+        genre_movie_data[genre_name]['results'] = sorted_movies
+        
+
+    context = {
+        'movies':movies,
+        'movies_by_platform':movies_by_platform,
+        'genre_movie_data':genre_movie_data,
+    }
+    return render(request, 'movies/main.html', context)
+
+@login_required
 def index(request):
 # 플랫폼별 TOP10
 # 최신 상영작 
@@ -553,10 +642,12 @@ def review_create(request, movie_id):
             return redirect('movies:detail', post.movie_id)
     else:
         form = ReviewForm()
+        selecttags = request.POST.getlist('tag')
 
     context = {
         'form': form,
         'post': post,
+        'selecttags': selecttags,
     }
     
     return render(request, 'movies/review_create.html', context)
@@ -656,6 +747,7 @@ def review_like(request, movie_id, review_id):
       is_liked = True
   context = {
     'is_liked':is_liked,
+    'review_likes_count': review.like_users.count()
   }
   return JsonResponse(context)
 
@@ -702,3 +794,24 @@ def review_report(request, movie_id, review_id):
         'review_id' : review_id,
     }
     return render(request, 'movies/review_report.html', context)
+
+
+@login_required
+def comment_like(request, movie_id, review_id, comment_id):
+    comment = Comment.objects.get(id=comment_id)
+
+    if comment.like_users.filter(pk=request.user.pk).exists():
+        comment.like_users.remove(request.user)
+        is_liked = False
+    else:
+        comment.like_users.add(request.user)
+        is_liked = True
+
+    # like_count = comment.likes.count()
+    data = {
+        'is_liked': is_liked,
+        # 'like_count': like_count,
+    }
+    return JsonResponse(data)
+
+

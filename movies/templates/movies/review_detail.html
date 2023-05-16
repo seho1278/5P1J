@@ -2,7 +2,45 @@
 
 {% block title %}{% endblock title %}
 
-{% block style %}{% endblock style %}  
+{% block style %}
+  <style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+{% endblock style %}  
 
 {% block content %}
 <h1>리뷰 상세 페이지</h1>
@@ -18,7 +56,7 @@
 
 <p>-------------------------</p>
 <h2>리뷰 좋아요</h2>
-<form class="like-forms" data-movie-id="{{ post.movie_id }}" data-review-id="{{ review.id }}">
+<form id="review-like-forms" data-movie-id="{{ post.movie_id }}" data-review-id="{{ review.id }}">
   {% csrf_token %}
   {% if request.user in review.like_users.all %}
     <input type="submit" value="좋아요 취소" id="like-{{ review.id }}">
@@ -28,15 +66,37 @@
 </form>
 
 <p>-----------------------------</p>
-<a class="btn btn-sm btn btn-primary" href="{% url 'movies:comment_create' post.movie_id review.id %}">댓글 작성하기</a>
+<button class="btn btn-sm btn-primary" onclick="openModal()">댓글 작성하기</button>
 
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    {% comment %} <form action="{% url 'movies:comment_create' movie_id=review.post.movie_id review_id=review.id %}" method="POST"> {% endcomment %}
+    <form action="{% url 'movies:comment_create' movie_id=post.movie_id review_id=review.id %}" method="POST">
+      {% csrf_token %}
+      <!-- 입력 필드 -->
+      <div class="form-group">
+        <label for="id_content">내용</label>
+        <textarea id="id_content" name="content" rows="4" class="form-control"></textarea>
+      </div>
+      <!-- 제출 버튼 -->
+      <button class="btn btn-sm btn-primary" type="submit">댓글 작성</button>
+    </form>
+  </div>
+</div>
 <p>-----------------------------</p>
-
-
 
 <h3>댓글</h3>
 {% for comment in review.reviews.all %}
 <p>{{ comment.content }}</p>
+<form id="like-comment-form" data-comment-id="{{ comment.pk }}" data-movie-id="{{ post.movie_id }}" data-review-id="{{ review.id }}">
+  {% csrf_token %}
+  {% if request.user in comment.like_users.all %}
+    <input type="submit" value="댓글 좋아요 취소" id="like-comment-{{ comment.pk }}">
+  {% else %}
+    <input type="submit" value="댓글 좋아요" id="like-comment-{{ comment.pk }}">
+  {% endif %}
+</form>
 {% empty %}
   <p>댓글이 없습니다.</p>
 {% endfor %}
@@ -49,7 +109,8 @@
 <script>
 // 좋아요 비동기 movieId 받아오기
   // like-form요소 선택
-  const forms = document.querySelectorAll('.like-forms')
+  const forms = document.querySelectorAll('#review-like-forms')
+  const commentForms = document.querySelectorAll('#like-comment-form')
   const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
 
   forms.forEach((form) => {
@@ -77,5 +138,43 @@
         })
     })
   })
+
+  commentForms.forEach((form) => {
+    form.addEventListener('submit', function(event) {
+      event.preventDefault()
+      const commentId = event.target.dataset.commentId
+      const movieId = event.target.dataset.movieId
+      const reviewId = event.target.dataset.reviewId
+
+      axios({
+        method: 'post',
+        url: `/movies/${movieId}/reviews/${reviewId}/comment/${commentId}/like/`,
+        headers: { 'X-CSRFToken': csrftoken },
+      })
+        .then((response) => {
+          // 요청이 성공한 경우 처리할 로직 작성
+          const isLiked = response.data.is_liked
+          const likeBtn = document.querySelector('#like-comment-' + commentId)
+          if (isLiked === true) {
+            likeBtn.value = '댓글 좋아요 취소'
+          } else {
+            likeBtn.value = '댓글 좋아요'
+          }
+        })
+        .catch((error) => {
+          console.log(error.response)
+        })
+    })
+  })
+
+
+  // 모달
+  function openModal() {
+    document.getElementById('modal').style.display = 'block';
+  }
+  
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
 </script>
 {% endblock script %}

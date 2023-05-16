@@ -55,12 +55,12 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title" id="followersModalLabel">팔로워</h1>
+                <h1 class="modal-title" style="color:black;" id="followersModalLabel">팔로워</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 {% for follower in person.followers.all %}
-                  <span>{{ follower }}</a></span>
+                  <span style="color:black;">{{ follower }}</a></span>
                 {% endfor %}
               </div>
               <div class="modal-footer">
@@ -74,12 +74,12 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title" id="followingsModalLabel">팔로잉</h1>
+                <h1 class="modal-title" style="color:black;" id="followingsModalLabel">팔로잉</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 {% for following in person.followings.all %}
-                  <span>{{ following }}</span>
+                  <span style="color:black;">{{ following }}</span>
                 {% endfor %}
               </div>
               <div class="modal-footer">
@@ -89,14 +89,14 @@
           </div>
         </div>
 
-        {% comment %} <form id="follow-form" data-user-id="{{ person.pk }}">
+        <form id="follow-form" data-user-id="{{ person.pk }}">
           {% csrf_token %}
           {% if request.user in person.followers.all %}
             <input type="submit" value="언팔로우">
           {% else %}
             <input type="submit" value="팔로우">
           {% endif %}
-        </form> {% endcomment %}
+        </form>
       </div>
     </div>
   </section>
@@ -166,6 +166,8 @@
         <div>
             <p>{{ review_report.user }}</p>
             <p>{{ review_report.content }}</p>
+            <p>{{ review_report.review.user }}</p>
+            <p>{{ review_report.review.content }}</p>
         </div>
     {% endfor %} 
   </section>

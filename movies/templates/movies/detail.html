@@ -230,9 +230,12 @@
                   <p id="rate" style="margin-left:5px;">{{ review.rating }}</p>
                   <p> · </p>
                   {% comment %} 좋아요 비동기 하기 {% endcomment %}
-                  <form id="review-like" data-movie-id="{{ movie.id }}" data-review-id="{{ review.pk }}">
+                  <form id="review-like" data-movie-id="{{ post.pk }}" data-review-id="{{ review.pk }}">
                     {% csrf_token %}
-                    <button type="submit" style="margin-left:5px; color: #7048E9;">좋아요 {{ review.like_users|length }}</button>
+                    <button type="submit" style="margin-left:5px; color: #7048E9;">
+                      <span id="review-like-1">좋아요</span>
+                      <span id="review-like-2">{{ review.like_users|length }}</span>
+                    </button>
                   </form>
                   <p> · </p>
                   <p style="margin-left:5px;">댓글 {{ review.comment_set.all|length }} </p>
@@ -476,23 +479,31 @@
   }) 
 
   // 좋아요 비동기
-  {% comment %} const form2 = document.querySelector('#review-like')
+  const form2 = document.querySelector('#review-like')
   const csrftoken2 = document.querySelector('[name=csrfmiddlewaretoken]').value
-  form1.addEventListener('submit', function (event) {
+  form2.addEventListener('submit', function (event) {
     event.preventDefault()
     const movieId = event.target.dataset.movieId
-    console.log(movieId)
     const reviewId = event.target.dataset.reviewId
-    console.log(reviewId)
     axios({
       method: 'post',
       url: `/movies/${movieId}/reviews/${reviewId}/like/`,
-      headers: {'X-CSRFToken': csrftoken1},
+      headers: {'X-CSRFToken': csrftoken2},
     })
       .then((response) => {
         const reviewLike = response.data.is_liked
+        const reviewlike1 = document.querySelector('#review-like-1')
+        if (reviewLike === true) {
+          reviewlike1.textContent = '좋아요취소'
+
+        } else {
+          reviewlike1.textContent = '좋아요'
+        }
+        const likesCountTag = document.querySelector('#review-like-2')
+        const likesCountData = response.data.review_likes_count
+        likesCountTag.textContent = likesCountData
       })
-  })  {% endcomment %}
+  }) 
 
   // 더보기
   var loadMoreBtn = document.getElementById('load-more-btn');
