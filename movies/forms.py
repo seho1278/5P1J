@@ -83,9 +83,10 @@ class ReviewForm(forms.ModelForm):
             'content': forms.Textarea(
                 attrs={
                     'class':'form-control',
+                    'id':'Review__Writing',
                     'placeholder' : '내용을 입력해 주세요',
                     'rows':'10',
-                    'style': 'border:none;'
+                    'style': 'border:none; background: #DBDBDB;',
                 }
             ),
             
