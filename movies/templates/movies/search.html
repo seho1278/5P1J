@@ -5,7 +5,65 @@
 
 {% endblock title %}
 
-{% block style %}{% endblock style %}  
+{% block style %}
+<style>
+    .accordion-item {
+      margin-bottom: 10px;
+      background-color: black;
+      color: white;
+    }
+
+    .accordion-button {
+      padding: 10px 15px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #ced4da;
+      color: #ffffff;
+    }
+
+    .accordion-button.collapsed {
+      background-color: #fff;
+      color: black;
+    }
+
+    .accordion-button:not(.collapsed) {
+    background-color: #96A5FF;
+    }
+
+
+    .col-3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+
+    .movie-poster img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+
+    .movie-title p {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+
+    .row {
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+  </style>
+{% endblock style %}  
 
 {% block content %}
 
@@ -42,6 +100,9 @@
                   </div>
 
                 </a>
+                {% if request.user.is_superuser %}
+                  <span><a href="{% url 'movies:create' movie.id %}">생성하기</a></span>
+                {% endif %}
               </div>     
             {% endfor %}
           </div>

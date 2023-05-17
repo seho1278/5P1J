@@ -14,144 +14,112 @@
 
 {% block content %}
 {% if request.user.is_superuser %}
-{% else %}
-<h4>{{ request.user.username }}님이 선택한 태그 기준으로 영화 추천</h4>
-        <div class="row">
-          {% for movie, tag in tag_dict.items %}
-            <div class="col-3">
-              <p>"{{tag}}"</p>
-              <a href="{% url 'movies:detail' movie.movie_id %}">
-                <div>
-                  {% if movie.poster_path %}
-                    <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}">
+{% else %}  
+  <div class="Index__main">    
+    {% for t , movies in tag_dict.items %}
+      <h2>{{t}}</h2>
+      <div class="Index__Content__rankingContainer">
+        <div class="carousel" id="carousel-{{ movie.id }}">
+          {% for movie in movies %}
+              <a class="movie-link" href="{% url 'movies:detail' movie.movie_id %}">
+                <div class="Index__Card">
+                  <div class="card" style="width: 200px; height: 300px; position: relative; overflow: hidden;">
+                    {% if movie.poster_path %}
+                    <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="{{movie.title}}">
                   {% else %}
-                    <img style="width:200px;" src="{% static 'img/accounts/no_poster.png' %}" alt="기본 영화 포스터">
+                    <img style="width:300px;" src="{% static 'img/accounts/no_poster.png' %}" alt="기본 영화 포스터">
                   {% endif %}
-                </div>
-                <div>
-                  <p class="text-center">{{movie.title}}</p>
+                    <div class="Index__Like"></div>
+                  </div>
+                  <div class="Index__Card__Content">
+                    <div class="card-title">{{ movie.title }}</div>
+                  </div>
                 </div>
               </a>
-            </div>     
           {% endfor %}
-        </div>
-
+        </div>  
+      </div>     
+    {% endfor %}
+  </div>
 {% endif %}
 
 
-<div class="Index__main">
-  <div class="Index__Category">
-    <p class="Index__Crew">연기 & 캐스팅</p>
-    <p class="Index__Tag">"믿고 보는 배우인"</p>
-  </div>
-  <div class="Index__Content__rankingContainer">
-    <div class="carousel">
-      {% for movie in now_playing %}
-        <a class="movie-link" href="{% url 'movies:detail' movie.id %}">
-          <div class="Index__Card">
-            <div class="card" style="width: 200px; height: 300px; position: relative; overflow: hidden;">
-              <img src="https://image.tmdb.org/t/p/w300{{ movie.poster_path }}" alt="">
-              <div class="Index__Like">ㅇ</div>
-            </div>
-            <div class="Index__Card__Content">
-              <div class="card-title">{{ movie.title }}</div>
-              {% if request.user.is_superuser %}
-                <span><a href="{% url 'movies:create' movie.id %}">생성하기</a></span>
-              {% endif %}
-            </div>
-          </div>
-        </a>
-      {% endfor %}
-      {% comment %} 장르별 {% endcomment %}
-      {% for g in genre_movie_list %}
-        {% if g.genre_ids == 18 %}
-          <h2>로맨스</h2>
-          {{ g.title }}
-        {% endif %}
-      
-      {% endfor %}
-    </div>
-  </div> 
-</div>
 
 <script>
-  // 드래그 앤 드롭
   document.addEventListener('DOMContentLoaded', function() {
-    var carousel = document.querySelector('.carousel');
-    var cards = document.querySelector('.card');
-    var isDragging = false;
-    var startX, cardStartX;
+    var carousels = document.querySelectorAll('.carousel');
   
-    carousel.addEventListener('mousedown', function(e) {
-      isDragging = true;
-      startX = e.pageX - carousel.offsetLeft;
-    });
+    carousels.forEach(function(carousel) {
+      var isDragging = false;
+      var startX, cardStartX;
   
-    carousel.addEventListener('mouseup', function() {
-      isDragging = false;
-    });
+      carousel.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        startX = e.pageX - carousel.offsetLeft;
+      });
   
-    carousel.addEventListener('mousemove', function(e) {
-      if (!isDragging) return;
-      e.preventDefault();
-      var x = e.pageX - carousel.offsetLeft;
-      var walk = x - startX;
+      carousel.addEventListener('mouseup', function() {
+        isDragging = false;
+      });
   
-      carousel.scrollLeft -= walk;
+      carousel.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        var x = e.pageX - carousel.offsetLeft;
+        var walk = x - startX;
+  
+        carousel.scrollLeft -= walk;
+      });
     });
   });
   
-
+  const carouselElements = document.querySelectorAll('.carousel');
+  let direction = 1;
+  let scrollIntervals = [];
   
-
-  // carousel 자동 스크롤
-  const carouselElement = document.querySelector('.carousel');
-  let direction = 1; // 스크롤 방향 설정 (1: 오른쪽으로, -1: 왼쪽으로)
-  let scrollInterval;
-
   function handleScroll() {
-    const scrollPosition = carouselElement.scrollLeft;
-    const containerWidth = carouselElement.offsetWidth;
-    const contentWidth = carouselElement.scrollWidth;
-    
-
-    // 스크롤이 왼쪽 끝에 도달했을 때
-    if (scrollPosition === 0) {
-      direction = 1; // 오른쪽으로 스크롤
-    }
-
-    // 스크롤이 오른쪽 끝에 도달했을 때
-    //if (scrollPosition + containerWidth === contentWidth) {
-    //  direction = -1; // 왼쪽으로 스크롤
-    //}
+    carouselElements.forEach(function(carouselElement) {
+      const scrollPosition = carouselElement.scrollLeft;
+      const containerWidth = carouselElement.offsetWidth;
+      const contentWidth = carouselElement.scrollWidth;
+  
+      if (scrollPosition === 0) {
+        direction = 1;
+      }
+    });
   }
-
+  
   function startAutoScroll() {
-    scrollInterval = setInterval(() => {
-      carouselElement.scrollBy({
-        left: direction * 0.1, // 스크롤 속도 조절
-        behavior: 'smooth',
-      });
-    }, 3000); // 스크롤 간격 조절
+    carouselElements.forEach(function(carouselElement, index) {
+      scrollIntervals[index] = setInterval(() => {
+        carouselElement.scrollBy({
+          left: direction * 0.1,
+          behavior: 'smooth',
+        });
+      }, 5000);
+    });
   }
-
+  
   function stopAutoScroll() {
-    clearInterval(scrollInterval);
+    scrollIntervals.forEach(function(scrollInterval) {
+      clearInterval(scrollInterval);
+    });
   }
-
-  // 페이지 로딩 시 자동 스크롤 시작
+  
   window.addEventListener('load', () => {
     startAutoScroll();
   });
-
-  // 마우스가 캐러셀 위로 진입했을 때 자동 스크롤 일시 정지
-  carouselElement.addEventListener('mouseenter', () => {
-    stopAutoScroll();
+  
+  carouselElements.forEach(function(carouselElement) {
+    carouselElement.addEventListener('mouseenter', () => {
+      stopAutoScroll();
+    });
   });
-
-  // 마우스가 캐러셀에서 벗어났을 때 자동 스크롤 재개
-  carouselElement.addEventListener('mouseleave', () => {
-    startAutoScroll();
+  
+  carouselElements.forEach(function(carouselElement) {
+    carouselElement.addEventListener('mouseleave', () => {
+      startAutoScroll();
+    });
   });
 </script>
 

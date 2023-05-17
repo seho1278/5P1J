@@ -58,7 +58,16 @@ def signup(request):
 def profile(request, username):
     User = get_user_model()
     person = User.objects.get(username=username)
-    reviews = Review.objects.filter(user=person)
+    my_reviews = Review.objects.filter(user=person)
+    reviews= []
+
+    review_list = []
+    for review in my_reviews:
+        review_tags = review.tags[2:-2].split("', '")
+        review.tags = review_tags
+       #  print(review.tags)
+       #  review_list.append(review_tags)
+    # print(review_list)
     reports = ReviewReport.objects.values('review').annotate(num_reports=Count('review')).filter(num_reports__gte=5)
     review_ids = [report['review'] for report in reports]
     review_reports = ReviewReport.objects.order_by('review_id', 'title')
@@ -67,6 +76,7 @@ def profile(request, username):
     if person.is_superuser :
         new_tags = []
         tag_dict = []
+        reviewed_posts = []
     else:
         # 회원가입할 때 받은 tags 정보 가공 (문자열에서 리스트로 변환)
         new_tags = person.tags[2:-2].split("', '")
@@ -75,13 +85,19 @@ def profile(request, username):
         # my_movies = []
         tag_dict = {} 
         for tag in new_tags:
-            post = Post.objects.filter(tags__contains = tag)
-            for i in post:
-            # my_movies.append(list(post))
+            posts = Post.objects.filter(tags__contains = tag)
+            reviews = Review.objects.filter(tags__contains = tag)
+            reviews_posts = [review.post for review in reviews]
+            reviewed_posts = list(set(list(posts) + reviews_posts)) 
+
+            for i in reviewed_posts :
                 tag_dict[i] = tag
-        print(tag_dict)
+        # print(tag_dict)
     # my_movies = list(set(my_movies))
 
+
+        
+            
     # 추가
     if request.method == 'POST':
         form = AdminMessageForm(request.POST)
@@ -99,11 +115,14 @@ def profile(request, username):
     context = {
         'person':person,
         'reviews':reviews,
+        'my_reviews': my_reviews,
         'review_reports': review_reports,
         'new_tags': new_tags,
         # 'my_movies': my_movies,
         'tag_dict': tag_dict,
         'form': form,
+        # 'review_tags': review_tags,
+        # 'review_list': review_list,
     }
     return render(request, 'accounts/profile.html', context)
 
@@ -116,6 +135,8 @@ def delete(request):
 
 @login_required
 def update(request):
+    selecttags = []
+
     if request.method == 'POST':
         form = CustomUserChangeForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
@@ -123,9 +144,13 @@ def update(request):
             return redirect('accounts:profile', request.user.username)
     else:
         form = CustomUserChangeForm(instance=request.user)
+        selecttags = request.POST.getlist('tag')
+        
     context = {
-        'form': form,
+        'form':form,
+        'selecttags': selecttags,
     }
+    
     return render(request, 'accounts/update.html', context)
 
 

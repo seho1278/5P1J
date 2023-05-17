@@ -2,15 +2,27 @@
 
 {% block title %}{% endblock title %}
 
-{% block style %}{% endblock style %}  
+{% block style %}
+  <style>
+    .form-container {
+      height: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+  </style>
+{% endblock style %}  
 
 {% block content %}
-  <form action="{% url 'movies:review_report' movie_id review_id %}" method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    
-    <input type="submit" value="신고하기" class="btn btn-outline-success mt-4" style="width:400px;">
-  </form>
+  <div class="form-container">
+    <form action="{% url 'movies:review_report' movie_id review_id %}" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" value="신고하기" class="btn mt-4" style="width:180px; background-color: red;">
+    </form>
+  </div>
 
 {% endblock content %}
 {% block script %}{% endblock script %}

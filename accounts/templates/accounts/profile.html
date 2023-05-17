@@ -148,11 +148,12 @@
         
       </section>
   {% endif %}
-  
-    
+
+
     <section>
       <div class="Profile__ReviewBox">
         <h4>내가 쓴 리뷰</h4>
+
         <table class="table" style="color:#fff;">
           <thead>
             <tr>
@@ -165,7 +166,7 @@
             </tr>
           </thead>
           <tbody>
-          {% for review in reviews %}
+          {% for review in my_reviews %}
             {% if review.reviewreports.exists %}
             <tr style="color: red;">
             {% else %}
@@ -175,7 +176,7 @@
               <td>{{ review.post.title }}</td>
               <td>{{ review.content }}</td>
               <td>{% for tag in review.tags %}
-                <span>{{ tag }}</span>
+              <span>{{tag}}</span>
                 {% endfor %}
               </td>
               <td>{{ review.created_at|date:"Y. m. d" }}</td>
@@ -235,7 +236,7 @@
               <th scope="col">No.</th>
               <th scope="col">신고자</th>
               <th scope="col">신고대상</th>
-              <th style="width: 50%;" scope="col">신고내용</th>
+              <th style="width: 40%;" scope="col">신고내용</th>
               <th scope="col">사유</th>
               <th scope="col">작성일</th>
               <th scope="col">접수내용</th>
@@ -247,7 +248,9 @@
               <th scope="row">{{ forloop.counter }}</th>
               <td>{{ review_report.user }}</td>
               <td>{{ review_report.review.user }}</td>
-              <td>{{ review_report.content }}</td>
+              <td >
+                <p style="width: 100px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis">{{ review_report.content }}</p>
+              </td>
               <td>{{ review_report.title }}</td>
               <td>{{ review_report.created_at|date:"Y. m. d" }}</td>
               <td>

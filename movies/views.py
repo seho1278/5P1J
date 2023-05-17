@@ -19,6 +19,119 @@ from django.db.models import Avg
 
 TMDB_API_KEY = 'dfc02edc73a8a31017aeb0d746f5753d'
 
+# 추가
+TAG_CHOICES_DICT = {
+    '컨셉 & 아이디어': [
+        '무슨 생각인지 알 수 없는',
+        '해석이 새로운',
+        '누구나 이해할 수 있는',
+        '개성있는',
+        '유쾌함을 잃지 않는',
+        '상상력이 무한한',
+    ],
+    '작품성':[
+        '러블리한', 
+        '영양가 없는', 
+        '모던한', 
+        '취향을 저격하는', 
+        '옛날 감성인', 
+        'B급감성인', 
+        '친구들끼리 보는', 
+        '애인이랑 보는', 
+        '완성도가 높은', 
+        '언제 봐도 좋은', 
+        '내 눈을 의심하는', 
+        '전혀 유쾌하지 않은',
+    ],
+    '캐릭터':[
+        '캐릭터가 사랑스러운', 
+        '개 잘생긴', 
+        '개 예쁜', 
+        '띨띨한', 
+        '끼부리는', 
+        '쥐어박고 싶은', 
+        '호구인', 
+        '개새끼인', 
+        '암걸리는', 
+        '천재인', 
+        '동물이 주인공인',
+    ],
+    '감상평':[
+        '읭스러운', 
+        '감탄사를 연발하는', 
+        '보는 내내 설레는', 
+        '웃음이 떠나지 않는', 
+        '깜놀하는', 
+        '거부감 드는', 
+        '경악하는', 
+        '추억을 자극하는', 
+        '박장대소 하는', 
+        '리뷰를 찾아보는', 
+        '엄청난 충격을 받는', 
+        '지루 할 수 있는',
+    ],
+    '감독 & 연출':[
+        '거장의 작품인', 
+        '구닥다리인', 
+        '레트로한', 
+        '특유의 매력이 있는', 
+        '기술적인 성취를 보인', 
+        '장인정신인', 
+        '거침없는', 
+        '미친 연출력인', 
+        '감독에게 찬사를 보내는', 
+        '연출이 과감한',
+    ],
+    '스토리 & 구성':[
+        '인생이 담겨있는', 
+        '내용 별거 없는',
+        '두서없는',
+        '급발진하는', 
+        '막장 드라마인', 
+        '완급 조절에 실패한', 
+        '내용이 뻔한',
+        '결말이 뻔히 보이는',
+        '내용이 알찬',
+        '속도감 있는',
+        '권선징악인',
+        '반전의 묘미가 있는',
+        '꼬이고 꼬인',   
+        '전개가 깔끔한',
+    ],
+    '편집 & 각본':[
+        '의식의 흐름',    
+        '유행어를 낳은',
+        '가벼운 농담을 던지는',
+        '클리셰를 깨는',    
+        '말장난을 하는',
+        '빌드업한',    
+        '문학적인',
+    ],
+    '시각 & 음향':[
+        '구경하는 재미가 있는',
+        '블링블링한',
+        '색감이 다채로운',    
+        '특유의 색감이 있는',
+        '화려한',
+        '영상미가 세련된',
+        '마법 같은',
+        '음악이 조화를 이루는',
+        '한 폭의 그림 같은',
+        '비주얼 쇼크인',
+    ],
+    '클라이맥스 & 결말':[
+        '클라이맥스',
+        '마무리가 훈훈한',
+        '극적인 피날레',
+        '예상치 못한 결말',
+        '마무리가 훈훈한',
+        '주인공이 행복해지는',
+        "열린결말인",
+        '결말이 마음에 드는',
+        '황급한',
+    ],        
+}
+
 # 리뷰 평균 계산(추가)
 def calculate_average_rating(reviews):
     average_rating = reviews.aggregate(avg_rating=Avg('rating'))['avg_rating']
@@ -112,7 +225,6 @@ def main(request):
         genre_movies = movies_data['results']
         sorted_movies = sorted(genre_movies, key=lambda movie: movie['vote_average'], reverse=True)
         genre_movie_data[genre_name]['results'] = sorted_movies
-        
 
     context = {
         'movies':movies,
@@ -122,28 +234,34 @@ def main(request):
     return render(request, 'movies/main.html', context)
 
 @login_required
-def index(request):
+def index(request):   
     my_tags = []
     tag_dict = {}
+    reviewed_posts = []
     if request.user.is_superuser :
         pass
     else:
-        
         if request.user.is_authenticated:
             my_tags = request.user.tags[2:-2].split("', '")
 
-            print(my_tags)
+
+            # print(my_tags)
     
         # 내 tag와 일치하는 영화 정보 불러오기
-        # my_movies = []
         for tag in my_tags:
-            print(tag)
-            post = Post.objects.filter(tags__contains = tag)
-            for i in post:
-            # my_movies.append(list(post))
-                tag_dict[i] = tag
-        print(tag_dict)
-    
+            # print(tag)
+            posts = Post.objects.filter(tags__contains = tag)
+            reviews = Review.objects.filter(tags__contains = tag)
+            reviews_posts = [review.post for review in reviews]
+            reviewed_posts = list(set(list(posts) + reviews_posts))
+            i_list = []
+            for i in reviewed_posts :
+                i_list.append(i)
+                tag_dict[tag] = i_list
+        # print(reviewed_posts)
+        # print(tag_dict)
+
+        
 # 플랫폼별 TOP10
 # 최신 상영작 
 # 많이 본 순 - 완 
@@ -203,27 +321,6 @@ def index(request):
         json.dump(total_data, w, indent="\\t", ensure_ascii=False)
 
 
-    # # 최신순 
-    # latest_movie_list = list()
-    # for i in range(1, 10):
-    #     latest_url = 'https://api.themoviedb.org/3/movie/latest'
-    #     params = {
-    #         'api_key': TMDB_API_KEY,
-    #         'language': 'ko-kr',
-    #         'region':'kr',
-    #         'page': i, 
-    #     }
-
-    #     latest_response = requests.get(latest_url, params=params)
-    #     latest_data = latest_response.json()
-    #     print("--------------------------------")
-    #     pprint.pprint(latest_data)
-    #     # latest = sorted(latest_data, key=lambda x:x['vote_average'], reverse=True)
-    #     latest_movie_list.append(latest_data)
-    #     # print("--------------------------------")
-    #     # pprint.pprint(latest_movie_list)
-        
-
     #장르번호 딕셔너리
     genre_dict = {
         28: '액션',
@@ -282,8 +379,6 @@ def index(request):
         top_rated = sorted(top_rated_data['results'], key=lambda x:x['vote_average'], reverse=True)
         top_rated_movie_list.append(top_rated)
     
-
-
     context={
         'now_playing': now_playing,
         'total': total_data,
@@ -293,9 +388,14 @@ def index(request):
         'top_rated': top_rated,
         'genre_movie_list' : genre_movie_list,
         'tag_dict': tag_dict,
+        'reviewed_posts': reviewed_posts,
+        # 추가
+        'my_tags': my_tags,
+        'TAG_CHOICES_DICT': TAG_CHOICES_DICT,
        
     }
     return render(request, 'movies/index.html', context)
+
 
 
 @login_required
@@ -397,7 +497,7 @@ def detail(request, movie_id):
     total_tags = dict(Counter(total)) 
     total_tags = dict(sorted(total_tags.items(), key=lambda x: x[1], reverse=True))
     
-    print(total_tags)
+    # print(total_tags)
 
     detail_response = requests.get(detail_url, params=params)
     detail_data = detail_response.json()
@@ -452,7 +552,7 @@ def search(request):
     
     search_response = requests.get(search_url, params=params)
     search_data = search_response.json()
-    pprint.pprint(search_data)
+    # pprint.pprint(search_data)
     
     person_response = requests.get(person_url, params=params)
     person_search_data = person_response.json()
@@ -693,7 +793,7 @@ def review_create(request, movie_id):
         form = ReviewForm()
         selecttags = request.POST.getlist('tag')
         
-    print(selecttags)
+    # print(selecttags)
     context = {
         'form': form,
         'post': post,
@@ -827,7 +927,7 @@ def comment_create(request, movie_id, review_id):
     'form':form,
     'review':review,
     }
-    return render(request, 'movies/comment_create.html', context)
+    return render(request, 'movies/review_detail.html', context)
 
 @login_required
 def review_report(request, movie_id, review_id):
@@ -868,10 +968,9 @@ def comment_like(request, movie_id, review_id, comment_id):
         comment.like_users.add(request.user)
         is_liked = True
 
-    # like_count = comment.likes.count()
     data = {
         'is_liked': is_liked,
-        # 'like_count': like_count,
+        'comment_like_count': comment.like_users.count()
     }
     return JsonResponse(data)
 

@@ -114,7 +114,7 @@ class PostForm(forms.ModelForm):
     )
     
     PLATFORM_CHOICES = [
-        ('넷플릭스', '넷플릭스'), ('왓챠', '왓챠'), ('웨이브', '웨이브'), ('애플TV+', '애플TV+'), ('디즈니+', '디즈니+'),
+        ('넷플릭스', '넷플릭스'), ('왓챠', '왓챠'), ('웨이브', '웨이브'), ('애플TV+', '애플TV+'), ('디즈니+', '디즈니+'), ('상영중', '상영중'),
     ]
     
     platform = forms.MultipleChoiceField(
@@ -215,7 +215,6 @@ class ReviewForm(forms.ModelForm):
         ("마무리가 훈훈한","마무리가 훈훈한"),
         ("극적인 피날레","극적인 피날레"),
         ("예상치 못한 결말","예상치 못한 결말"),
-        ("마무리가 훈훈한", "마무리가 훈훈한"),
         ("주인공이 행복해지는", "주인공이 행복해지는"),
         ("열린 결말인", "열린결말인"),
         ('결말이 마음에 드는','결말이 마음에 드는'),
@@ -282,7 +281,7 @@ class ReviewReportForm(forms.ModelForm):
     )
     content = forms.CharField(
         label='세부내용',
-        widget=forms.TextInput(
+        widget=forms.Textarea(
             attrs={
                 'class': 'form-control',
               
