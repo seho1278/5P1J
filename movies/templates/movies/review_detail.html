@@ -78,12 +78,16 @@
           <form id="review-like-forms" data-movie-id="{{ post.movie_id }}" data-review-id="{{ review.id }}">
           {% csrf_token %}
           {% if request.user in review.like_users.all %}
-            <button type="submit" title="좋아요 취소" id="like-{{ review.id }}" style="font-size:0.8rem; border: none; outline: inherit; background-color: transparent;">
-              <i class="bi bi-heart-fill" style="color: pink;">{{ review.like_users|length }}</i>
+            <button type="submit" title="좋아요 취소" class="ms-1" style="font-size:0.8rem; border: none; outline: inherit; background-color: transparent;">
+              <i class="bi bi-heart-fill" style="color: pink;">
+                <span>{{ review.like_users.all|length }}</span>
+              </i>
             </button>
           {% else %}
-            <button type="submit" title="좋아요" id="like-{{ review.id }}" style="font-size:0.8rem; border: none; outline: inherit; background-color: transparent;">
-              <i class="bi bi-heart" style="color: pink;">{{ review.like_users|length }}</i>
+            <button type="submit" title="좋아요" class="ms-1" style="font-size:0.8rem; border: none; outline: inherit; background-color: transparent;">
+              <i class="bi bi-heart" style="color: pink;">
+                <span>{{ review.like_users.all|length }}</span>
+              </i>
             </button>
           {% endif %}
           </form>
@@ -132,15 +136,26 @@
       </a>
       <div>
         <p>{{ comment.content }}</p>
-        <p>{{ comment.created_at|date:"Y년 m월 d일 h:m" }}</p>
-        <form id="like-comment-form" data-comment-id="{{ comment.pk }}" data-movie-id="{{ post.movie_id }}" data-review-id="{{ review.id }}">
-          {% csrf_token %}
-          {% if request.user in comment.like_users.all %}
-            <input type="submit" value="댓글 좋아요 취소" id="like-comment-{{ comment.pk }}">
-          {% else %}
-            <input type="submit" value="댓글 좋아요" id="like-comment-{{ comment.pk }}">
-          {% endif %}
-        </form>
+        <div class="d-flex flex-row">
+          <p>{{ comment.created_at|date:"Y년 m월 d일 h:m" }}</p>
+          <form id="like-comment-form" data-comment-id="{{ comment.pk }}" data-movie-id="{{ post.movie_id }}" data-review-id="{{ review.id }}">
+            {% csrf_token %}
+            {% if request.user in comment.like_users.all %}
+              {% comment %} <input type="submit" value="댓글 좋아요 취소" id="like-comment-{{ comment.pk }}"> {% endcomment %}
+              <button type="submit" id="like-comment-{{ comment.pk }}" class="ms-1" title="댓글 좋아요 취소" style="font-size:0.8rem; border: none; outline: inherit; background-color: transparent;">
+                <i class="bi bi-heart-fill" style="color: pink;">
+                  <span>{{ comment.like_users.all|length }}</span>
+                </i>
+              </button>
+            {% else %}
+              <button type="submit" id="like-comment-{{ comment.pk }}" class="ms-1" title="댓글 좋아요" style="font-size:0.8rem; border: none; outline: inherit; background-color: transparent;">
+                <i class="bi bi-heart" style="color: pink;">
+                  <span>{{ comment.like_users.all|length }}</span>
+                </i>
+              </button>
+            {% endif %}
+          </form>
+        </div>
       </div>
     </div>
       {% empty %}
@@ -158,11 +173,40 @@
 <script>
 // 좋아요 비동기 movieId 받아오기
   // like-form요소 선택
-  const forms = document.querySelectorAll('#review-like-forms')
+  const forms = document.querySelector('#review-like-forms')
   const commentForms = document.querySelectorAll('#like-comment-form')
   const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
 
-  forms.forEach((form) => {
+  forms.addEventListener('submit', function (event) {
+    event.preventDefault()
+    const movieId = event.target.dataset.movieId
+    const reviewId = event.target.dataset.reviewId
+    axios({
+      method: 'post',
+      url: `/movies/${movieId}/reviews/${reviewId}/like/`,
+      headers: {'X-CSRFToken': csrftoken},
+    })
+    .then((response) => {
+      // 요청이 성공한 경우 처리할 로직 작성
+      const isLiked = response.data.is_liked
+      const likeBtn = document.querySelector('#review-like-forms > button[type=submit]')
+      const likeBtni = document.querySelector('#review-like-forms > button[type=submit] > i')
+      if (isLiked === true) {
+        likeBtni.classList.remove('bi-heart')
+        likeBtni.classList.add('bi-heart-fill') 
+      } else {
+        likeBtni.classList.remove('bi-heart-fill')
+        likeBtni.classList.add('bi-heart') 
+      }
+      const reviewsCountTag = document.querySelector('#review-like-forms > button[type=submit] > i > span')
+      const reviewsCountData = response.data.review_likes_count
+      reviewsCountTag.textContent = reviewsCountData
+    })
+  })
+
+
+
+  {% comment %} forms.forEach((form) => {
     form.addEventListener('submit',function (event) {
       event.preventDefault()
       const reviewId = event.target.dataset.reviewId
@@ -186,7 +230,7 @@
           console.log(error.response)
         })
     })
-  })
+  }) {% endcomment %}
 
   commentForms.forEach((form) => {
     form.addEventListener('submit', function(event) {
@@ -203,12 +247,18 @@
         .then((response) => {
           // 요청이 성공한 경우 처리할 로직 작성
           const isLiked = response.data.is_liked
-          const likeBtn = document.querySelector('#like-comment-' + commentId)
+          const likeBtn = document.querySelector('#like-comment-' + commentId )
+          const likeBtni = likeBtn.querySelector('i')
           if (isLiked === true) {
-            likeBtn.value = '댓글 좋아요 취소'
+            likeBtni.classList.remove('bi-heart')
+            likeBtni.classList.add('bi-heart-fill') 
           } else {
-            likeBtn.value = '댓글 좋아요'
+            likeBtni.classList.remove('bi-heart-fill')
+            likeBtni.classList.add('bi-heart') 
           }
+          const commentsCountTag = likeBtn.querySelector('i > span')
+          const commentsCountData = response.data.comment_like_count
+          commentsCountTag.textContent = commentsCountData
         })
         .catch((error) => {
           console.log(error.response)
