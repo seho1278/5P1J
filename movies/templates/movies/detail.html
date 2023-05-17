@@ -36,12 +36,12 @@
               <hr>
               <!-- 정보, 출연/제작 -->
               <div class="">
-                <h3 class="detail--info--title">스토리</h3>
+                <h4 class="detail--info--title">스토리</h4>
                 <p>{{ detail_data.overview }}</p>
               </div>
               <hr>    
               <div class="">
-                <h3 class="detail--info--title">출연/제작</h3>
+                <h4 class="detail--info--title">출연/제작</h4>
                 <div class="" >
                   {% for credit in credits %}
                     <div class="col-3" style="width:150px; height:150px; object-fit:hidden"> 
@@ -88,16 +88,15 @@
                         <i class="bi bi-check-lg"></i>
                       </button>
                     {% else %}
-                      <button type="submit" class="">
-                        <i class="bi bi-plus-lg"></i>
-                      </button>
+                      <a type="submit" class="">
+                        <i class="bi bi-cart-plus"></i>
+                      </a>
                     {% endif %}
                   </form>
-                  {% else %}
-                      <button class="" disabled> 
-                        <i class="bi bi-plus-lg"></i>
-                      </button>    
-                  {% endif %}         
+                {% else %}
+                    <a class="" disabled>
+                      <i class="bi bi-cart-plus-fill"></i>
+                    </a>    
             </div>
           </div>
         </div>
@@ -159,16 +158,16 @@
        <div class="Detail__TagBox">
         <h2 class="detail--content--title">선호하는 태그</h2>
         <div class="Detail__Tag">
-          <div style="">
-            <p>
-              {% for tag, count in total_tags.items %}
-              <span class="tag--botton"># {{tag}} <b>{{count}}</b> </span>
-              {% endfor %}
+          <div style="detail__tag--list">  
+            {% for tag, count in total_tags.items %}
+            <p class="detail__tag--wrap">
+            <span class="tag--botton--border"><i class="bi bi-vinyl-fill"></i> {{tag}} <b>{{count}}</b> </span>
             </p>
+            {% endfor %}
           </div>
           
-          <div class="TagRank" style="position: relative; width: 50%;">
-          </div>
+          {% comment %} <div class="TagRank" style="position: relative; width: 50%;">
+          </div> {% endcomment %}
         </div>
        </div>
       </section>
@@ -203,9 +202,13 @@
       <!-- 5. 리뷰스 -->
       <section class="detail-item detail-item-5 Detail__ReviewBox">
         <h2 class="detail--content--title">리뷰</h2>
-        <div>
-          <a class="" href="{% url 'movies:review_create' movie_id %}">리뷰쓰기</a>
-          <a id="load-more-btn" class="load-more-btn">더보기</a>
+        <div class="reviews__create--wrap" style="display: flex; justify-content: flex-end;">
+            <a id="load-more-btn" class="load-more-btn" style="font-size: 0.8rem; color:#c8c0e2; margin: 0.5rem 0.5rem 0 0;">더보기
+              <i class="bi bi-caret-down-fill"></i>
+            </a>
+            <a class="cidia--text--button2" href="{% url 'movies:review_create' movie_id %}">리뷰쓰기
+              <i class="bi bi-plus-square-fill"></i>
+            </a>
         </div>
         {% comment %} 리뷰 출력 {% endcomment %}
         <ul>
@@ -239,7 +242,7 @@
                     {% for tags1 in r_tags_list reversed %}
                       {% if forloop.parentloop.counter == forloop.counter %}
                         {% for tag in tags1 %}
-                          <span class="tag--botton"># {{ tag }}</span>
+                          <span class="tag--botton"><i class="bi bi-vinyl-fill"></i> {{ tag }}</span>
                         {% endfor %}
                       {% endif %}
                     {% endfor %}
@@ -266,7 +269,7 @@
                   <ul class="review--etc--list">
                     <li class="review--etc">{{ review.created_at|date:"Y. m. d" }}</li>
                     <li class="review--etc">
-                      <i id="rate" class="bi bi-star" style="color: yellow;">{{ review.rating }}</i>
+                      <i id="rate" class="bi bi-star-fill" style="color: yellow;">{{ review.rating }}</i>
                     </li>
                     <li class="review--etc">
                       {% comment %} 좋아요 비동기 하기 {% endcomment %}
@@ -290,7 +293,7 @@
                       {% endif %}
                     </li>
                     <li class="review--etc">
-                      <i class="bi bi-chat-square-dots" style="color: skyblue;" title="댓글">{{ review.comment_set.all|length }}</i>
+                      <i class="bi bi-chat-square-dots-fill" style="color: skyblue;" title="댓글">{{ review.comment_set.all|length }}</i>
                     </li>
                   </ul>
                 </div>
@@ -298,10 +301,10 @@
               <!-- 2. 신고 삭제 수정-->
               <div class="review__remove--wrap">
                   {% if request.user == review.user %}
+                  <a class="cidia--text--button" href="{% url 'movies:review_update' post.movie_id review.pk %}" style="margin-right: 0.1rem;">수정</a>
                       <a class="cidia--text--button" href="{% url 'movies:review_delete' movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
-                      <a class="cidia--text--button" href="{% url 'movies:review_update' post.movie_id review.pk %}">수정</a>
                   {% else %}
-                    <a class="cidia--text--button" href="{% url 'movies:review_report' post.movie_id review.pk %}">신고하기</a>
+                    <a class="report--text--button" href="{% url 'movies:review_report' post.movie_id review.pk %}"><i class="bi bi-bell-fill"></i> 신고하기</a>
                   {% endif %}
                 </div>
           

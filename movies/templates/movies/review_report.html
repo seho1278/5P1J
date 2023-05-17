@@ -8,21 +8,43 @@
       height: 400px;
       margin: 0 auto;
       padding: 20px;
-      border: 1px solid #ccc;
       border-radius: 5px;
+      background-color: #111;
     }
-    
+    form :nth-child(3) label {
+      color: yellow;
+      margin: 0.5rem;
+    }
+    .report--submit--wrap{
+      text-align: center;}
+    #report--button {
+      border-radius: 5px;
+      background-color: #aa0000;
+      padding: 0.5rem 5rem;
+      transition: background-color .60s ease-in-out;
+    }
+    #report--button:hover {
+      background-color: #ff0000;
+    }
+
   </style>
 {% endblock style %}  
 
 {% block content %}
+
+<article>
   <div class="form-container">
     <form action="{% url 'movies:review_report' movie_id review_id %}" method="post">
       {% csrf_token %}
       {{form.as_p}}
       <input type="submit" value="신고하기" class="btn mt-4" style="width:180px; background-color: red;">
+        <input type="submit" value="신고하기" id="report--button">
+      </div>
     </form>
   </div>
+</article>
+
+
 
 {% endblock content %}
 {% block script %}{% endblock script %}

@@ -1,61 +1,111 @@
 
 .aboutus__list {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   
 }
+.aboutus--item1 {
+  grid-column: span 3;
+}
+.aboutus--item2 {
+  grid-column: span 3;
+}
+.aboutus--item3 {
+  grid-column: span 2;
+}
+.aboutus--item4 {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+.aboutus--item5 {
+  grid-column: span 2;
+}
+.aboutus--item6 {
+  grid-column: span 3;
+}
+.aboutus--item7 {
+  grid-column: span 3;
+}
+
 .aboutus--title {
-  text-align: center;
 }
 section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  color: #c8c0e2;
+  border: 1px solid #7048E9;
   border-radius: 10px;
-  background-color: #111;
-  box-shadow: 0px 0px 3px 1px rgba(225, 225, 225, 0.5);
-  padding: 1rem;
+  /* background-color: #111; */
+  /* box-shadow: 0px 0px 3px 1px rgba(225, 225, 225, 0.5); */
+  padding: 0 1rem;
   margin: 1rem;
+}
+section > div { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section h5 {
+  color: #7048E9;
+}
+section h5 > p {
+  margin-bottom: 0.2rem;
 }
 .aboutus__image--wrap {
   text-align: center;
   margin-right: 1rem;
 }
 .aboutus--image {
-  width: 100px;
-  border-radius: 10px;
+  width: 16px;
+  border: 2px solid #7048E9;
+  /* border-radius: 50%; */
+}
+section ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section li {
+  font-size: 0.9rem;
 }
 .mung--name {
   display: flex;
 }
 .mung--image {
-  width: 35px;
-  height: 22px;
+  width: 30px;
+  height: 15px;
   margin-left: 0.5rem;
 }
 h4 {margin-top: 0.5rem;}
 
 .point--user--list > li {
- margin: 0.2rem 0;
+  display: flex;
+  align-items: center;
+  margin: 0.2rem 0;
 }
 .point--box {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #eee;
-  background-color: #7048E9;
+  display: inline-block;
+  height: 1rem;
+  border: 1px solid #7048E9;
+  background-color: #;
   margin-left: 0.5rem;
 }
 .point--user--1 {
-  padding: 0 2rem;
+  width: 20rem;
+  
 }
 .point--user--2 {
-  padding: 0 1.7rem;
+  width: 18rem;
 }
 .point--user--3 {
-  padding: 0 0.3rem;
+  width: 1rem;
 }
 .point--user--4 {
-  padding: 0 0.3rem;
+  width: 1rem;
 }
 .point--user--5 {
-  padding: 0 0.7rem;
+  width: 2rem;
 }
