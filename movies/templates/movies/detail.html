@@ -5,72 +5,100 @@
 {% block title %}Detail{% endblock title %}
 
 {% block style %}
+<link rel="stylesheet" href="{% static 'css/common.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'detail/detail.css' %}">
 {% endblock style %}  
 
 {% block content %}
 <article>
   <div class="Detail__Container">
+    <div class="detail--title--wrap">
+      <h1 class="Detail__Title__StatTitle">{{ detail_data.title }}</h1>
+    </div>
     <div class="Detail__list">
       <!-- 1. 현재 영화 정보 박스 -->
       <section class="detail-item detail-item-1 Detail__TitleInfoBox">
-        <div style="width: 200px; height: auto;">
-          <img class="title--image" src="https://image.tmdb.org/t/p/w300{{ detail_data.poster_path }}" alt="">
-        </div>
-        <div>
-          <div class="Detail__Title__Stat">
-            <h1 class="Detail__Title__StatTitle">{{ detail_data.title }}</h1>
-            <div style="font-size: 21px; margin-bottom:25px;">
-              평점: <span style="color: rgb(221, 221, 0);">{{ average|floatformat:1 }}</span>
-              리뷰평점: <span style="color: white;">{{ average_rating|floatformat:1 }}</span>
+          <div class="detail--title--info--wrap">
+            <div class="title--image--wrap">
+              <img class="title--image" src="https://image.tmdb.org/t/p/w300{{ detail_data.poster_path }}" alt="">
             </div>
-            <div style="margin-bottom:10px;">{{ detail_data.release_date }} · 장르 · {{ detail_data.production_countries.0.name }}</div>
-            <div style="margin-bottom:10px;">제작사: {{detail_data.production_companies.0.name }}</div>
-            <div style="margin-bottom:10px;">상영시간: {{ detail_data.runtime}}분</div>
-            <hr>
-          </div>
-          <div class="Detail__Info__WatchingBox">
-            {% if request.user.is_authenticated %}
-              {% comment %} 보고싶어요 폼 {% endcomment %}
-              <form id="wants-form" data-post-id="{{ post.pk }}">
-                {% csrf_token %}
-                {% if request.user in post.want_users.all %}
-                  <a type="submit" class="">
-                    <i class="bi bi-eye-fill"></i>
-                  </a>
-          
+            <div class="detail__info--list">
+              <div class="detail__info--score">
+                평점 <span style="color: #ffc107; margin-right:0.5rem;"><i class="bi bi-star-fill">{{ average|floatformat:1 }}</i></span>
+                리뷰평점 <span style="color: #ffc107"><i class="bi bi-star-fill">{{ average_rating|floatformat:1 }}</i></span>
+              </div>
+              <hr>
+              <ul>
+                <li style="margin-bottom:10px;">{{ detail_data.release_date }} · 장르 · {{ detail_data.production_countries.0.name }}</li>
+                <li style="margin-bottom:10px;">제작사: {{detail_data.production_companies.0.name }}</li>
+                <li style="margin-bottom:10px;">상영시간: {{ detail_data.runtime}}분</li>
+              </ul>
+              <hr>
+              <!-- 정보, 출연/제작 -->
+              <div class="">
+                <h3 class="detail--info--title">스토리</h3>
+                <p>{{ detail_data.overview }}</p>
+              </div>
+              <hr>    
+              <div class="">
+                <h3 class="detail--info--title">출연/제작</h3>
+                <div class="" >
+                  {% for credit in credits %}
+                    <div class="col-3" style="width:150px; height:150px; object-fit:hidden"> 
+                      {% if credit.profile_path %}
+                        <img  style="object-fit:cover; width:100%; height:100%" src="https://image.tmdb.org/t/p/w200/{{ credit.profile_path }}" alt="{{credit.name}}사진">
+                      {% else %}
+                        <p>static에 기본 사진 넣으시면 될 것 같습니다~! </p> 
+                      {% endif %}
+                      <p>{{ credit.name }}</p>
+                      <p class='text-secondary'>{{ credit.character }} 역</p>  
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <hr>
+              <div class="Detail__Info__WatchingBox">
+                {% if request.user.is_authenticated %}
+                  {% comment %} 보고싶어요 폼 {% endcomment %}
+                  <form id="wants-form" data-post-id="{{ post.pk }}">
+                    {% csrf_token %}
+                    {% if request.user in post.want_users.all %}
+                      <a type="submit" class="">
+                        <i class="bi bi-eye-fill"></i>
+                      </a>
+              
+                    {% else %}
+                      <a type="submit" class="">
+                        <i class="bi bi-eye"></i>
+                      </a>
+                    {% endif %}
+                  </form>
+                  {% comment %} 보는중이에요 폼 {% endcomment %}
+                  <form id="watching-form" data-post-id="{{ post.pk }}">
+                    {% csrf_token %}
+                    {% if request.user in post.watching_users.all %}
+                      <a type="submit" class="">
+                        <i class="bi bi-check-lg"></i>
+                      </a>
+                    {% else %}
+                      <a type="submit" class="">
+                        <i class="bi bi-plus-lg"></i>
+                      </a>
+                    {% endif %}
+                  </form>
                 {% else %}
-                  <a type="submit" class="">
-                    <i class="bi bi-eye"></i>
-                  </a>
-                {% endif %}
-              </form>
-              {% comment %} 보는중이에요 폼 {% endcomment %}
-              <form id="watching-form" data-post-id="{{ post.pk }}">
-                {% csrf_token %}
-                {% if request.user in post.watching_users.all %}
-                  <a type="submit" class="">
-                    <i class="bi bi-check-lg"></i>
-                  </a>
-                {% else %}
-                  <a type="submit" class="">
-                    <i class="bi bi-plus-lg"></i>
-                  </a>
-                {% endif %}
-              </form>
-            {% else %}
-                <a class="" disabled> 
-                  <i class="bi bi-plus-lg"></i>
-                </a>    
-            {% endif %} 
-            <a class="" href="{% url 'movies:review_create' movie_id %}">리뷰쓰기</a>          
+                    <a class="" disabled> 
+                      <i class="bi bi-plus-lg"></i>
+                    </a>    
+                {% endif %}         
+            </div>
           </div>
         </div>
       </section>
       <!-- 2. 지금 여기서 보기 -->
       <section class="detail-item detail-item-2 Detail__Info__PlatformBox">
-        <div class="Detail__ContentBox__Title">
-          <h2>지금 여기서 보기</h2>
+        <div class="">
+          <h2 class="detail--content--title">지금 여기서 보기</h2>
           <ul>
           {% for platform in platform_list %}
             {% if platform == "넷플릭스" %}
@@ -79,43 +107,39 @@
                   <img class="Detail__Info__PlatformImg" src="{% static 'detail/netflix.png' %}" alt="">
                   <p class="Detail__Info__PlatformText">{{platform}}</p>
                 </div>
-                <button type="button" class="Detail__Info__PlatformButton"><a href="https://www.netflix.com/kr/">보러가기</a></button>
+                <a class="cidia--text--button" href="https://www.netflix.com/kr/">보러가기</a>
               </li>
-              <hr>
               {% elif platform == "웨이브" %}
               <li class="Detail__Info__Platform">
                 <div class="Detail__Info__PlatformTextBox">
                   <img class="Detail__Info__PlatformImg" src="{% static 'detail/wavve.png' %}" alt="">
                   <p class="Detail__Info__PlatformText">{{platform}}</p>
                 </div>
-                <button type="button" class="Detail__Info__PlatformButton"><a href="https://www.wavve.com/">보러가기</a></button>
+                <a class="cidia--text--button" href="https://www.wavve.com/">보러가기</a>
               </li>
-              <hr>
               {% elif platform == "왓챠" %}
               <li class="Detail__Info__Platform">
                 <div class="Detail__Info__PlatformTextBox">
                   <img class="Detail__Info__PlatformImg" src="{% static 'detail/watcha.png' %}" alt="">
                   <p class="Detail__Info__PlatformText">{{platform}}</p>
                 </div>
-                <button type="button" class="Detail__Info__PlatformButton"><a href="https://watcha.com/">보러가기</a></button>
+                <a class="cidia--text--button" href="https://watcha.com/">보러가기</a>
               </li>
-              <hr>
               {% elif platform == "애플TV+" %}
               <li class="Detail__Info__Platform">
                 <div class="Detail__Info__PlatformTextBox">
                   <img class="Detail__Info__PlatformImg" src="{% static 'detail/appletv.png' %}" alt="">
                   <p class="Detail__Info__PlatformText">{{platform}}</p>
                 </div>
-                <button type="button" class="Detail__Info__PlatformButton"><a href="https://www.apple.com/apple-tv-plus/">보러가기</a></button>
+                <a class="cidia--text--button" href="https://www.apple.com/apple-tv-plus/">보러가기</a>
               </li>
-              <hr>
               {% elif platform == "디즈니+" %}
               <li class="Detail__Info__Platform">
                 <div class="Detail__Info__PlatformTextBox">
                   <img class="Detail__Info__PlatformImg" src="{% static 'detail/disney.jpg' %}" alt="">
                   <p class="Detail__Info__PlatformText">{{platform}}</p>
                 </div>
-                <button type="button" class="Detail__Info__PlatformButton"><a href="https://www.disneyplus.com/">보러가기</a></button>
+                <a class="cidia--text--button" href="https://www.disneyplus.com/">보러가기</a>
               </li>
             {% endif %}
           {% endfor %}
@@ -125,13 +149,13 @@
 
       <!-- 3. 선호하는 태그 -->
       <section class="detail-item detail-item-3 Detail__TagAndRatingBox">
-      <div class="Detail__TagBox">
-        <h2 class="Detail__ContentBox__Title">선호하는 태그</h2>
+       <div class="Detail__TagBox">
+        <h2 class="detail--content--title">선호하는 태그</h2>
         <div class="Detail__Tag">
-          <div style="width: 50%; padding:10px;">
-            <p>태그 : 
+          <div style="">
+            <p>
               {% for tag, count in total_tags.items %}
-              <span class="badge rounded-pill text-bg-light"> {{tag}} <b>{{count}}</b> </span>
+              <span class="tag--botton"># {{tag}} <b>{{count}}</b> </span>
               {% endfor %}
             </p>
           </div>
@@ -139,19 +163,19 @@
           <div class="TagRank" style="position: relative; width: 50%;">
           </div>
         </div>
-      </div>
+       </div>
       </section>
 
       <!-- 4. 별점그래프 -->
       <section class="detail-item detail-item-4 Detail__RatingBox">
         <div class="Detail__ContentBox__GraphTitle">
-          <h2 class="Detail__ContentBox__Title">별점그래프</h2>
-          <div class="">
-            <p>평균 ★ {{ average_rating|floatformat:1 }}</p>
-            <p>(리뷰: {{ reviews.count }})</p>
-          </div>
+          <h2 class="detail--content--title">별점그래프</h2>
         </div>
-        <div>
+        <div class="">
+          리뷰 평균 <i class="bi bi-star-fill" style="color: #ffc107;">{{ average_rating|floatformat:1 }}</i>
+          / <i class="bi bi-chat-square-text" style=""> {{ reviews.count }}</i>
+        </div>
+        <div class="graph--list">
           <ul class="bar-chart">
             <li class="bar-chart__bar" style="height: 0;"></li>
             <li class="bar-chart__bar" style="height: 0;"></li>
@@ -168,45 +192,24 @@
           </ul>
         </div>
       </section>
-      <!-- 5. 정보, 출연/제작 -->
-      <section class="detail-item detail-item-5 Detail__ContentBox">
-      <div>
-        <h2 class="Detail__ContentBox__Title">정보</h2>
-        <p style="margin: 0 15px 0 15px;">{{ detail_data.overview }}</p>
-      </div>
-      <hr>
-      <div class="row">
-        <h2 class="Detail__ContentBox__Title">출연/제작</h2>
-        <div class="row" >
-          {% for credit in credits %}
-            <div class="col-3" style="width:150px; height:150px; object-fit:hidden"> 
-              {% if credit.profile_path %}
-                <img  style="object-fit:cover; width:100%; height:100%" src="https://image.tmdb.org/t/p/w200/{{ credit.profile_path }}" alt="{{credit.name}}사진">
-              {% else %}
-                <p>static에 기본 사진 넣으시면 될 것 같습니다~! </p> 
-              {% endif %}
-              <p>{{ credit.name }}</p>
-              <p class='text-secondary'>{{ credit.character }} 역</p>  
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-      </section>
 
-      <!-- 6. 리뷰스 -->
-      <section class="detail-item detail-item-6 Detail__ReviewBox">
-        <h2 class="Detail__ContentBox__Title">리뷰</h2>
-        <a id="load-more-btn" class="load-more-btn">더보기</a>
+      <!-- 5. 리뷰스 -->
+      <section class="detail-item detail-item-5 Detail__ReviewBox">
+        <h2 class="detail--content--title">리뷰</h2>
+        <div>
+          <a class="" href="{% url 'movies:review_create' movie_id %}">리뷰쓰기</a>
+          <a id="load-more-btn" class="load-more-btn">더보기</a>
+        </div>
         {% comment %} 리뷰 출력 {% endcomment %}
         <ul>
           <!-- 리뷰 -->
           {% for review in reviews reversed %}
-          <li class="Detail__Review" style="{% if forloop.counter0 <= 4 %}display: grid; {% else %}display: none; {% endif %}">
+          <li class="Detail__Review" style="{% if forloop.counter0 <= 4 %}display: block; {% else %}display: none; {% endif %}">
             <!-- 1. 유저, 콘텐츠-->
             <div class="detail__review__user--content">
               <!-- 1-1. 유저 -->
-              <a class="detail__user--wrap" href="{% url 'accounts:profile' review.user %}">
-                <div class="Detail__Review__UserInfo">
+              <div class="detail__user--wrap">
+                <a class="detail__user--list" href="{% url 'accounts:profile' review.user %}">
                   {% if review.user.picture %}
                   <div class="Detail__Review__User__ImgBox">
                     <img class="Detail__Review__User__Img" src="{{ review.user.picture.url }}" alt="유저 이미지">
@@ -216,34 +219,28 @@
                     <img class="Detail__Review__User__Img noimage" src="{% static 'img/accounts/cidia_profile_noimage_02.png' %}" alt="유저 이미지 없음">
                   </div>
                   {% endif %}
-                  <span class="Detail__Review__User__Name">{{ review.user }}</span>
-                  <ul class="Detail__Review__User__Stat">
-                    <span class="Detail__Review__User__StatItem--Review"></span><li class="Detail__Review__User__StatItem">{{ review.user.review_set.all|length }}</li>
-                    <span class="Detail__Review__User__StatItem--Follower"></span><li class="Detail__Review__User__StatItem">{{ review.user.followers.all|length }}</li>
-                  </ul>
-                </div>
-              </a>
+                  <p class="Detail__Review__User__Name">{{ review.user }}</p>
+                </a>
+                <ul class="revieww__user--info--list">
+                  <li class="revieww__user--info"><i class="bi bi-chat-square-text" title="리뷰 글 수"> {{ review.user.review_set.all|length }}</i></li>
+                  <li class=""><i class="bi bi-person-heart" title="팔로워 수"> {{ review.user.followers.all|length }}</i></li>
+                </ul>
+              </div>
               <!-- 1-2. 콘텐츠 -->
-              <div class="Detail__Review__Content">
-                <div class="Detail__Review__Rating">
-                  <i class="bi bi-star-fill"></i>
-                  <p id="rate" style="margin-left:5px;">{{ review.rating }}</p>
-                  <p> · </p>
-                  {% comment %} 좋아요 비동기 하기 {% endcomment %}
-                  <form id="review-like" data-movie-id="{{ post.pk }}" data-review-id="{{ review.pk }}">
-                    {% csrf_token %}
-                    <button type="submit" style="margin-left:5px; color: #7048E9;">
-                      <span id="review-like-1">좋아요</span>
-                      <span id="review-like-2">{{ review.like_users|length }}</span>
-                    </button>
-                  </form>
-                  <p> · </p>
-                  <p style="margin-left:5px;">댓글 {{ review.comment_set.all|length }} </p>
+              <div class="detail__review__content--list">
+                <div class="Detail__Review__Tags">
+                    {% for tags1 in r_tags_list reversed %}
+                      {% if forloop.parentloop.counter == forloop.counter %}
+                        {% for tag in tags1 %}
+                          <span class="tag--botton"># {{ tag }}</span>
+                        {% endfor %}
+                      {% endif %}
+                    {% endfor %}
                 </div>
                 <div class="detail--review--content">
                   {% if review.spoiler == 1 %}
                     <div class="Review__Spoiler--Active"style="display: block;">
-                      <p>스포일러 내용이 포함되어 있습니다. <button class="SpoilerNone--Btn" onclick="toggleSpoiler(this)">더보기</button></p>
+                      <p>스포일러 내용이 포함되어 있습니다. <a class="SpoilerNone--Btn" onclick="toggleSpoiler(this)">더보기</a></p>
                     </div>
                     <div class="Review__Spoiler--None" style="display: none;">
                       <a href="{% url 'movies:review_detail' movie_id review.pk %}">
@@ -258,39 +255,59 @@
                     </div>
                   {% endif %}
                 </div>
-                <div class="Detail__Review__Tags">
-                    {% for tags1 in r_tags_list reversed %}
-                      {% if forloop.parentloop.counter == forloop.counter %}
-                        {% for tag in tags1 %}
-                          <span class="badge rounded-pill text-bg-light">{{ tag }}</span>
-                        {% endfor %}
+                <div>
+                  <ul class="review--etc--list">
+                    <li class="review--etc">{{ review.created_at|date:"Y. m. d" }}</li>
+                    <li class="review--etc">
+                      <i id="rate" class="bi bi-star" style="color: yellow;">{{ review.rating }}</i>
+                    </li>
+                    <li class="review--etc">
+                      {% comment %} 좋아요 비동기 하기 {% endcomment %}
+                      {% if request.user.is_authenticated %}
+                        <form id="review-like-{{ review.pk }}" data-movie-id="{{ post.pk }}" data-review-id="{{ review.pk }}">
+                          {% csrf_token %}
+                          {% if request.user in review.like_users.all %}
+                            <button type="submit" style="margin-left:5px; color: pink;">
+                              <i class="bi bi-heart">
+                                <span id="reviews-like-count">{{ review.like_users|length }}</span>
+                              </i>
+                            </button>
+                          {% else %}
+                            <button type="submit" style="margin-left:5px; color: pink;">
+                              <i class="bi bi-heart-fill">
+                                <span id="reviews-like-count">{{ review.like_users|length }}</span>
+                              </i>
+                            </button>
+                          {% endif %}
+                        </form>
                       {% endif %}
-                    {% endfor %}
+                    </li>
+                    <li class="review--etc">
+                      <i class="bi bi-chat-square-dots" style="color: skyblue;" title="댓글">{{ review.comment_set.all|length }}</i>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </div>
-            <!-- 2. 신고 삭제 수정-->
-            <div class="Detail__Review__Etc">
-              {{ review.created_at|date:"Y. m. d" }}
-              <div class="d-flex flex-row RemoveandUpdate">
-                {% if request.user == review.user %}
-                  <a href="{% url 'movies:review_delete' movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')"><button style="color:#7048E9;">삭제</button></a>
-                  <p style="color:#7048E9; margin: 0 5px 0 5px;">·</p>
-                  <a href="{% url 'movies:review_update' post.movie_id review.pk %}"><button style="color:#7048E9;">수정</button></a>
-                {% else %}
-                  <a href="{% url 'movies:review_report' post.movie_id review.pk %}"><button style="color:#7048E9;">신고하기</button></a>
-                {% endif %}
-              </div>
+              <!-- 2. 신고 삭제 수정-->
+              <div class="review__remove--wrap">
+                  {% if request.user == review.user %}
+                      <a class="cidia--text--button" href="{% url 'movies:review_delete' movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+                      <a class="cidia--text--button" href="{% url 'movies:review_update' post.movie_id review.pk %}">수정</a>
+                  {% else %}
+                    <a class="cidia--text--button" href="{% url 'movies:review_report' post.movie_id review.pk %}">신고하기</a>
+                  {% endif %}
+                </div>
+          
             </div>
           </li>  
           {% endfor %}
         </ul>
       </section>
 
-      <!-- 7. 비슷한 작품 -->
-      <section class="detail-item detail-item-7 Detail__SimilarBox">
-      <h2 class="Detail__ContentBox__Title">비슷한 작품</h2>
-      <div class="Detail__Content__Similar">
+      <!-- 6. 비슷한 작품 -->
+      <section class="detail-item detail-item-6 Detail__SimilarBox">
+       <h2 class="detail--content--title">비슷한 작품</h2>
+       <div class="Detail__Content__Similar">
         <div class="Detail__carousel">
           {% for similar in similars %}
             <a class="movie-link" href="{% url 'movies:detail' similar.id %}">
@@ -299,10 +316,14 @@
                   <img src="https://image.tmdb.org/t/p/w300{{ similar.poster_path }}" alt="">
                 </div>
                 <div class="Detail__Card__Content">
-                  <div class="card-title" style="color: white;">{{ similar.title }}</div>
-                  {% if request.user.is_superuser %}
-                  <span><a href="{% url 'movies:create' similar.id %}">생성하기</a></span>
-                  {% endif %}
+                  <div class="card-title" style="">
+                    <h5>{{ similar.title }}</h5>
+                    {% if request.user.is_superuser %}
+                      <a class="card--create--button" href="{% url 'movies:create' similar.id %}">
+                        <i style="color:#C8C0E4; background-color: #000;" class="bi bi-plus-square-fill"></i>
+                      </a>
+                    {% endif %}
+                </div>
                 </div>
               </div>
             </a>
@@ -436,8 +457,8 @@
     })
       .then((response) => {
         const isWanted = response.data.is_wanted
-        const wantBtn = document.querySelector('#wants-form > button[type=submit]')
-        const wantBtni = document.querySelector('#wants-form > button[type=submit] > i')
+        const wantBtn = document.querySelector('#wants-form > a[type=submit]')
+        const wantBtni = document.querySelector('#wants-form > a[type=submit] > i')
        
         if (isWanted === true) {
           wantBtni.classList.remove('bi-eye')
@@ -465,8 +486,8 @@
       .then((response) => {
         const watching = response.data.watching
         // 보는중이에요 폼 버튼 변수 설정했습니다 원하시는 대로 클래스 추가해주세요ㅎㅎ 아이콘도 바꾸셔도 됩니다
-        const watchingBtn = document.querySelector('#watching-form > button[type=submit]')
-        const watchingBtni = document.querySelector('#watching-form > button[type=submit] > i')
+        const watchingBtn = document.querySelector('#watching-form > a[type=submit]')
+        const watchingBtni = document.querySelector('#watching-form > a[type=submit] > i')
         if (watching === true) {
           watchingBtni.classList.remove('bi-plus-lg')
           watchingBtni.classList.add('bi-check-lg')     
@@ -479,30 +500,39 @@
   }) 
 
   // 좋아요 비동기
-  const form2 = document.querySelector('#review-like')
+  const form2 = document.querySelectorAll('[id^="review-like-"]')
   const csrftoken2 = document.querySelector('[name=csrfmiddlewaretoken]').value
-  form2.addEventListener('submit', function (event) {
-    event.preventDefault()
-    const movieId = event.target.dataset.movieId
-    const reviewId = event.target.dataset.reviewId
-    axios({
-      method: 'post',
-      url: `/movies/${movieId}/reviews/${reviewId}/like/`,
-      headers: {'X-CSRFToken': csrftoken2},
-    })
+  form2.forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault()
+      const movieId = event.target.dataset.movieId
+      console.log(movieId)
+      const reviewId = event.target.dataset.reviewId
+      console.log(reviewId)
+      axios({
+        method: 'post',
+        url: `/movies/${movieId}/reviews/${reviewId}/like/`,
+        headers: {'X-CSRFToken': csrftoken2},
+      })
       .then((response) => {
         const reviewLike = response.data.is_liked
-        const reviewlike1 = document.querySelector('#review-like-1')
+        const reviewBtn = document.querySelector('#review-like > button[type=submit]')
+        const reviewBtni = document.querySelector('#review-like > button[type=submit] > i')
         if (reviewLike === true) {
-          reviewlike1.textContent = '좋아요취소'
-
+          reviewBtni.classList.remove('bi-heart')
+          reviewBtni.classList.add('bi-heart-fill') 
         } else {
-          reviewlike1.textContent = '좋아요'
+          reviewBtni.classList.remove('bi-heart-fill')
+          reviewBtni.classList.add('bi-heart')  
         }
-        const likesCountTag = document.querySelector('#review-like-2')
-        const likesCountData = response.data.review_likes_count
-        likesCountTag.textContent = likesCountData
+        const reviewsCountTag = document.querySelector('#reviews-like-count')
+        const reviewsCountData = response.data.review_likes_count
+        reviewsCountTag.textContent = reviewsCountData
       })
+      .catch((error) => {
+        console.error(error);
+      })
+    })
   }) 
 
   // 더보기

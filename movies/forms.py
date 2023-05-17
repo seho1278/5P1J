@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ClearableFileInput
-from .models import Post, Review, Comment, ReviewReport
+from .models import Post, Review, Comment, ReviewReport, AdminMessage
 
 class PostForm(forms.ModelForm):
     TAG_CHOICES = [
@@ -19,7 +19,7 @@ class PostForm(forms.ModelForm):
         label = '태그',
         widget = forms.CheckboxSelectMultiple(
             # attrs={
-            #     'class': 'form-control',
+            #     'class': 'form--control',
             # }
         ),
         choices = TAG_CHOICES,
@@ -34,7 +34,7 @@ class PostForm(forms.ModelForm):
         label = '플랫폼', 
         widget = forms.CheckboxSelectMultiple(
             # attrs = {
-            #     'class': 'form-control',
+            #     'class': 'form--control',
             # }
         ),
         choices = PLATFORM_CHOICES,
@@ -61,6 +61,9 @@ class ReviewForm(forms.ModelForm):
     tags = forms.MultipleChoiceField(
         label = '태그',
         widget = forms.CheckboxSelectMultiple(
+            # attrs={
+            #     'class': 'form--control',
+            # }
             
         ),
         choices = TAG_CHOICES,
@@ -78,7 +81,7 @@ class ReviewForm(forms.ModelForm):
             
             'content': forms.Textarea(
                 attrs={
-                    'class':'form-control',
+                    'class': 'form--control',
                     'id':'Review__Writing',
                     'placeholder' : '내용을 입력해 주세요',
                     'rows':'10',
@@ -101,7 +104,6 @@ class ReviewReportForm(forms.ModelForm):
         widget=forms.Select(
             attrs={
                 'required': True,
-                'class': 'form-select',
             }
         )
     )
@@ -117,3 +119,11 @@ class ReviewReportForm(forms.ModelForm):
     class Meta:
         model = ReviewReport
         fields = ('title', 'content')
+
+# 추가
+class AdminMessageForm(forms.ModelForm):
+    review_id = forms.IntegerField()
+
+    class Meta:
+        model = AdminMessage
+        fields = ('review_id', 'content',)

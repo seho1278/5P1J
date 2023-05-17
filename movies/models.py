@@ -32,6 +32,8 @@ class Review(models.Model):
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_reviews')
     spoiler = models.BooleanField('스포일러', default=False)
     created_at = models.DateTimeField(auto_now_add=True)
+    # 추가
+    report = models.BooleanField('신고', default=False)
 
 
 class Comment(models.Model):
@@ -42,6 +44,8 @@ class Comment(models.Model):
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_comments')
     spoiler = models.BooleanField('스포일러', default=False)
     updated_at = models.DateTimeField(auto_now=True)
+    # 추가
+    report = models.BooleanField('신고', default=False)
 
 
 class ReviewReport(models.Model):
@@ -58,6 +62,8 @@ class ReviewReport(models.Model):
     title = models.CharField(max_length=100, choices= TITLE_CHOICES)
     review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='reviews_report')
     content = models.TextField()
+    # 추가
+    created_at = models.DateTimeField(auto_now_add=True)
 
 class CommentReport(models.Model):
     SPAM = '스팸'
@@ -73,3 +79,12 @@ class CommentReport(models.Model):
     title = models.CharField(max_length=100, choices= TITLE_CHOICES)
     comment = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name="comments_report")
     content = models.TextField()
+    # 추가
+    created_at = models.DateTimeField(auto_now_add=True)
+
+# 추가
+class AdminMessage(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='reviewreports', null=True)
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name="commentreports", null=True)
+    content = models.CharField(max_length=300)

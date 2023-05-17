@@ -5,7 +5,8 @@ from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm, CustomUserChangeForm, CustomAuthenticationForm, CustomPasswordChangeForm
 from django.contrib.auth import get_user_model
-from movies.models import Review, ReviewReport, Post
+from movies.models import Review, ReviewReport, Post, AdminMessage
+from movies.forms import ReviewReportForm, AdminMessageForm
 from django.db.models import Count
 from django.http import JsonResponse
 from django.db.models import F
@@ -34,16 +35,22 @@ def logout(request):
 
 
 def signup(request):
+    selecttags = []
+   
     if request.method == "POST":
-        form = CustomUserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)        
         if form.is_valid():
+            selecttags = request.POST.getlist('tag')
             user = form.save()
             auth_login(request, user)  # 회원가입 후 바로 로그인되게
             return redirect('movies:index') 
     else:
         form = CustomUserCreationForm()
+        selecttags = request.POST.getlist('tag')
+        
     context = {
         'form':form,
+        'selecttags': selecttags,
     }
     return render(request, 'accounts/signup.html', context)
 
@@ -69,6 +76,18 @@ def profile(request, username):
             tag_dict[i] = tag
     print(tag_dict)
     # my_movies = list(set(my_movies))
+
+    # 추가
+    if request.method == 'POST':
+        form = AdminMessageForm(request.POST)
+        if form.is_valid():
+            adminmessage = form.save(commit=False)
+            adminmessage.user = request.user
+            adminmessage.review_id = request.POST.get('review_id')
+            adminmessage.save()
+            return redirect('accounts:profile', username=username)
+    else:
+        form = AdminMessageForm()
         
         
     
@@ -79,6 +98,7 @@ def profile(request, username):
         'new_tags': new_tags,
         # 'my_movies': my_movies,
         'tag_dict': tag_dict,
+        'form': form,
     }
     return render(request, 'accounts/profile.html', context)
 
@@ -136,12 +156,24 @@ def follow(request, user_pk):
             'is_followed':is_followed,
             'followings_count':person.followings.count(),
             'followers_count':person.followers.count(),
+            'followers': [{'username': f.username,'pk': f.pk} for f in person.followers.all()]
 
         }
         return JsonResponse(context)
     return redirect('accounts:profile', person.username)
 
 
+@login_required
+def followers(request, user_pk):
+    User = get_user_model()
+    person = User.objects.get(pk=user_pk)
+
+    followers = [{'username': f.username, 'pk': f.pk} for f in person.followers.all()]
+
+    context = {
+        'followers': followers,
+    }
+    return JsonResponse(context)
 
 def aboutus(request):
     return render(request, 'accounts/aboutus.html')

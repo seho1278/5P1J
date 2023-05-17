@@ -17,6 +17,15 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+button {
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  background-color: transparent;
+  padding: 0;
+}
 
 /* hover */
 .text--hover:hover {
@@ -44,6 +53,8 @@ h1, h2, h3, h4, h5, h6, p {
   outline:none;
   box-shadow: 0.5px 0.5px 1px 1px rgba(225, 225, 225, 0.5);
 }
+
+
 .good--button {
   padding: 0.6rem 1rem;
   border-radius: 5px;
@@ -52,6 +63,27 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .good--button:hover {
   background-color: #a182ff;
+}
+
+.sm--good--button {
+  font-size: 12px;
+  padding: 0.4rem 0.5rem;
+  border-radius: 5px;
+  background-color: #7048E9;
+  transition: background-color .30s ease-in-out;
+}
+.sm--good--button:hover {
+background-color: #a182ff;
+}
+
+.tag--botton { 
+  font-size: 13px;
+  color: #222;
+  border-radius: 3px;
+  background-color: #c8c0e2;
+  padding: 0.1rem;
+  margin: 0.1rem;
+  transition: background-color .30s ease-in-out;
 }
 input[type="submit"].good {
   width: 100%;

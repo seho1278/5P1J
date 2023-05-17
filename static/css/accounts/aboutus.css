@@ -45,14 +45,17 @@ h4 {margin-top: 0.5rem;}
   margin-left: 0.5rem;
 }
 .point--user--1 {
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 .point--user--2 {
-  padding: 0 1.5rem;
+  padding: 0 1.7rem;
 }
 .point--user--3 {
   padding: 0 0.3rem;
 }
 .point--user--4 {
   padding: 0 0.3rem;
+}
+.point--user--5 {
+  padding: 0 0.7rem;
 }
