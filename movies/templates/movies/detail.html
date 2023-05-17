@@ -48,7 +48,7 @@
                       {% if credit.profile_path %}
                         <img  style="object-fit:cover; width:100%; height:100%" src="https://image.tmdb.org/t/p/w200/{{ credit.profile_path }}" alt="{{credit.name}}사진">
                       {% else %}
-                        <p>static에 기본 사진 넣으시면 될 것 같습니다~! </p> 
+                        <img src="{% static 'img/accounts/no_poster.png' %}" alt="">
                       {% endif %}
                       <p>{{ credit.name }}</p>
                       <p class='text-secondary'>{{ credit.character }} 역</p>  
@@ -58,28 +58,35 @@
               </div>
               <hr>
               <div class="Detail__Info__WatchingBox">
-                {% if request.user.is_authenticated %}
+                
                   {% comment %} 보고싶어요 폼 {% endcomment %}
+                  {% if request.user.is_authenticated %}
                   <form id="wants-form" data-post-id="{{ post.pk }}">
                     {% csrf_token %}
                     {% if request.user in post.want_users.all %}
-                      <a type="submit" class="">
+                      <button type="submit" class="">
                         <i class="bi bi-eye-fill"></i>
-                      </a>
+                      </button>
               
                     {% else %}
-                      <a type="submit" class="">
+                      <button type="submit" class="">
                         <i class="bi bi-eye"></i>
-                      </a>
+                      </button>
                     {% endif %}
+                  {% else %}
+                    <button class="" disabled> 
+                      <i class="bi bi-eye"></i>
+                    </button>    
+                  {% endif %}     
                   </form>
                   {% comment %} 보는중이에요 폼 {% endcomment %}
+                  {% if request.user.is_authenticated %}
                   <form id="watching-form" data-post-id="{{ post.pk }}">
                     {% csrf_token %}
                     {% if request.user in post.watching_users.all %}
-                      <a type="submit" class="">
+                      <button type="submit" class="">
                         <i class="bi bi-check-lg"></i>
-                      </a>
+                      </button>
                     {% else %}
                       <a type="submit" class="">
                         <i class="bi bi-cart-plus"></i>
@@ -90,7 +97,6 @@
                     <a class="" disabled>
                       <i class="bi bi-cart-plus-fill"></i>
                     </a>    
-                {% endif %}         
             </div>
           </div>
         </div>
@@ -272,14 +278,14 @@
                           {% csrf_token %}
                           {% if request.user in review.like_users.all %}
                             <button type="submit" style="margin-left:5px; color: pink;">
-                              <i class="bi bi-heart">
-                                <span id="reviews-like-count">{{ review.like_users|length }}</span>
+                              <i class="bi bi-heart-fill" id="review-heart">
+                                <span id="reviews-like-count">{{ review.like_users.all|length }}</span>
                               </i>
                             </button>
                           {% else %}
                             <button type="submit" style="margin-left:5px; color: pink;">
-                              <i class="bi bi-heart-fill">
-                                <span id="reviews-like-count">{{ review.like_users|length }}</span>
+                              <i class="bi bi-heart" id="review-heart">
+                                <span id="reviews-like-count">{{ review.like_users.all|length }}</span>
                               </i>
                             </button>
                           {% endif %}
@@ -461,8 +467,8 @@
     })
       .then((response) => {
         const isWanted = response.data.is_wanted
-        const wantBtn = document.querySelector('#wants-form > a[type=submit]')
-        const wantBtni = document.querySelector('#wants-form > a[type=submit] > i')
+        const wantBtn = document.querySelector('#wants-form > button[type=submit]')
+        const wantBtni = document.querySelector('#wants-form > button[type=submit] > i')
        
         if (isWanted === true) {
           wantBtni.classList.remove('bi-eye')
@@ -490,8 +496,8 @@
       .then((response) => {
         const watching = response.data.watching
         // 보는중이에요 폼 버튼 변수 설정했습니다 원하시는 대로 클래스 추가해주세요ㅎㅎ 아이콘도 바꾸셔도 됩니다
-        const watchingBtn = document.querySelector('#watching-form > a[type=submit]')
-        const watchingBtni = document.querySelector('#watching-form > a[type=submit] > i')
+        const watchingBtn = document.querySelector('#watching-form > button[type=submit]')
+        const watchingBtni = document.querySelector('#watching-form > button[type=submit] > i')
         if (watching === true) {
           watchingBtni.classList.remove('bi-plus-lg')
           watchingBtni.classList.add('bi-check-lg')     
@@ -510,9 +516,7 @@
     form.addEventListener('submit', function (event) {
       event.preventDefault()
       const movieId = event.target.dataset.movieId
-      console.log(movieId)
       const reviewId = event.target.dataset.reviewId
-      console.log(reviewId)
       axios({
         method: 'post',
         url: `/movies/${movieId}/reviews/${reviewId}/like/`,
@@ -520,21 +524,18 @@
       })
       .then((response) => {
         const reviewLike = response.data.is_liked
-        const reviewBtn = document.querySelector('#review-like > button[type=submit]')
-        const reviewBtni = document.querySelector('#review-like > button[type=submit] > i')
+        const heartIcon = form.querySelector('#review-heart')
+
         if (reviewLike === true) {
-          reviewBtni.classList.remove('bi-heart')
-          reviewBtni.classList.add('bi-heart-fill') 
+          heartIcon.classList.remove('bi-heart')
+          heartIcon.classList.add('bi-heart-fill') 
         } else {
-          reviewBtni.classList.remove('bi-heart-fill')
-          reviewBtni.classList.add('bi-heart')  
+          heartIcon.classList.remove('bi-heart-fill')
+          heartIcon.classList.add('bi-heart')  
         }
-        const reviewsCountTag = document.querySelector('#reviews-like-count')
+        const reviewsCountTag = form.querySelector('#reviews-like-count')
         const reviewsCountData = response.data.review_likes_count
         reviewsCountTag.textContent = reviewsCountData
-      })
-      .catch((error) => {
-        console.error(error);
       })
     })
   }) 
@@ -594,7 +595,7 @@
     spoilerNone.style.display = 'block';
   }
   
-  // 태그 생성
+  {% comment %} // 태그 생성
   function getRandomTransform() {
     const translateXRange = 100; // X 축 이동 범위
     const translateYRange = 100; // Y 축 이동 범위
@@ -655,7 +656,7 @@
       tagElement.style.whiteSpace = "nowrap";
       tagElement.style.width = `${tagElement.offsetWidth}px`;
     }
-  }
+  } {% endcomment %}
   
   // 두 위치가 겹치는지 확인하는 함수
   function isOverlapping(pos1, pos2) {
@@ -668,7 +669,7 @@
   }
   
   // getRandomTransform 함수 호출
-  getRandomTransform();
+  {% comment %} getRandomTransform(); {% endcomment %}
 
 </script>
 

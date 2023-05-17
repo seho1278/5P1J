@@ -32,21 +32,92 @@
           <button type="button"><div id="cateGory8" class="Review__Category" data-filter="시각 & 음향">시각 & 음향</div></button>
           <button type="button"><div id="cateGory9" class="Review__Category" data-filter="클라이맥스 & 결말">클라이맥스 & 결말</div></button>
         </div>
-        <div class="Review__TagList 컨셉&아이디어">
-          {% for tag in form.tags %}
-            <label class="tag-label">
-              {{ tag }}
-            </label>
-          {% endfor %}
-        </div>
-        <hr>
-        <div class="d-flex flex-row" style="padding: 15px;">
-          <p>선택된 태그 : </p>
-          <div class="d-flex flex-row Tag__Select" style="margin-left: 10px;">
-            {{ selecttag }}
+        {% for tag in form.tags|slice:":6" %}
+              <div class="Review__TagList 컨셉&아이디어">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div>
+                 
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"6:18" %}
+            
+              <div class="Review__TagList 작품성">
+                <label data-Tag="" class="tag-label">
+                  {{ tag }}
+                </label>
+              </div>
+                 
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"18:29" %}
+              <div class="Review__TagList 캐릭터">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div> 
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"29:41" %}
+              <div class="Review__TagList 감상평">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div> 
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"41:51" %}
+              <div class="Review__TagList 감독&연출">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>            
+              </div>
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"51:65" %}
+              <div class="Review__TagList 스토리&구성">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div> 
+            {% endfor %}
+            
+  
+            {% for tag in form.tags|slice:"65:72" %}
+              <div class="Review__TagList 편집&각본">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div>
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"72:82" %}
+              <div class="Review__TagList 시각&음향">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div>
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"82:90" %}
+              <div class="Review__TagList 클라이맥스&결말">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div>
+            {% endfor %}
+            <hr>
+            
+            <div class="d-flex flex-row" style="padding: 15px;">
+              <p>선택된 태그 : </p>
+              <div class="d-flex flex-row Tag__Select" style="margin-left: 10px;">
+                
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+    </div>
+    
       <div class="Review__ContentBox">
       <div>
         <div class="Review__Writing">{{ form.content }}</div>
@@ -81,7 +152,14 @@
 
 {% endblock content %}
 {% block script %}
-  <script>
+ 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Code that runs on page load
+    // Trigger button click event
+    $('#cateGory1').trigger('click');
+  });
     // 색 변경(기본 값)
     document.getElementById("cateGory1").style.color = '#7048E9'
 
@@ -191,10 +269,16 @@
     }
 
     document.addEventListener("DOMContentLoaded", function() {
-      // Review__TagList 요소를 찾아서 할당
-      const tagList = document.querySelector('.Review__TagList');
+      // // Review__TagList 요소를 찾아서 할당
+      // const tagList = document.querySelector('.Review__TagList');
+      // // Review__TagList 요소 내의 input[type="checkbox"] 요소들을 모두 찾아서 할당
+      // const tagInputs = tagList.querySelectorAll('input[type="checkbox"]');
+      // // Tag__Select 요소를 찾아서 할당
+      // const tagSelect = document.querySelector('.Tag__Select');
+
       // Review__TagList 요소 내의 input[type="checkbox"] 요소들을 모두 찾아서 할당
-      const tagInputs = tagList.querySelectorAll('input[type="checkbox"]');
+      const tagInputs = document.querySelectorAll('.Review__TagList input[type="checkbox"]');
+    
       // Tag__Select 요소를 찾아서 할당
       const tagSelect = document.querySelector('.Tag__Select');
   

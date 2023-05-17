@@ -11,7 +11,6 @@
       border-radius: 5px;
       background-color: #111;
     }
-   
     form :nth-child(3) label {
       color: yellow;
       margin: 0.5rem;
@@ -32,17 +31,20 @@
 {% endblock style %}  
 
 {% block content %}
+
 <article>
   <div class="form-container">
     <form action="{% url 'movies:review_report' movie_id review_id %}" method="post">
       {% csrf_token %}
       {{form.as_p}}
-      <div class="report--submit--wrap">
+      <input type="submit" value="신고하기" class="btn mt-4" style="width:180px; background-color: red;">
         <input type="submit" value="신고하기" id="report--button">
       </div>
     </form>
   </div>
 </article>
+
+
 
 {% endblock content %}
 {% block script %}{% endblock script %}

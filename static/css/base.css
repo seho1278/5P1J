@@ -309,23 +309,18 @@ main {
   border-image-slice: 1;
 }
 
-/* :hover {
-  border: solid;
-  border-width: 0 0 1px 0;
-  border-image: linear-gradient(to right, #000, #7048E9, #000);
-  border-image-slice: 1;
-} */
-
 /**/
 input[type="submit"] {
   color: #ffffff;
   border: none;
   background-color: #000;
 }
-.input--control {
+
+ .input--control {
   width: 500px;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
-  font-size: 16px;
+
 }
+
