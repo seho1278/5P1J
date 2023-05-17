@@ -43,7 +43,9 @@
         <div class="d-flex flex-row" style="padding: 15px;">
           <p>선택된 태그 : </p>
           <div class="d-flex flex-row Tag__Select" style="margin-left: 10px;">
-            {{ selecttag }}
+            {% for selecttag in selecttags %}
+              {{ selecttag }}
+            {% endfor %}
           </div>
         </div>
       </div>

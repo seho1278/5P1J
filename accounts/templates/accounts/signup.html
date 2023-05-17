@@ -34,6 +34,16 @@
       <form class="main__signup__form" action="{% url 'accounts:signup' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         
+        
+
+        {{ form.username }}
+        {{ form.password1 }}
+        {{ form.password2 }}
+        {{ form.first_name }}
+        {{ form.birthday }}
+        {{ form.email }}
+        {{ form.image }}
+
         <div class="mb-3 main Review__TagBox">
           <div class="Review__Tag Category">
             <button type="button"><div id="cateGory1" class="Review__Category" data-filter="컨셉 & 아이디어">컨셉 & 아이디어</div></button>
@@ -46,26 +56,20 @@
             <button type="button"><div id="cateGory8" class="Review__Category" data-filter="시각 & 음향">시각 & 음향</div></button>
             <button type="button"><div id="cateGory9" class="Review__Category" data-filter="클라이맥스 & 결말">클라이맥스 & 결말</div></button>
           </div>
-
-
           {% for tag in form.tags|slice:":6" %}
-          
             <div class="Review__TagList 컨셉&아이디어">
               <label class="tag-label">
                 {{ tag }}
               </label>
             </div>
-               
           {% endfor %}
 
-          {% for tag in form.tags|slice:"6:18" %}
-          
+          {% for tag in form.tags|slice:"6:18" %} 
             <div class="Review__TagList 작품성">
               <label data-Tag="" class="tag-label">
                 {{ tag }}
               </label>
-            </div>
-               
+            </div>     
           {% endfor %}
 
           {% for tag in form.tags|slice:"18:29" %}
@@ -98,8 +102,7 @@
                 {{ tag }}
               </label>
             </div> 
-          {% endfor %}
-          
+          {% endfor %} 
 
           {% for tag in form.tags|slice:"65:72" %}
             <div class="Review__TagList 편집&각본">
@@ -132,16 +135,6 @@
             </div>
           </div>
         </div>
-
-        {{ form.username }}
-        {{ form.first_name }}
-        {{ form.birthday }}
-        {{ form.email }}
-        {{ form.image }}
-        {{ form.password1 }}
-        {{ form.password2 }}
-
-
 
         <input class="good" type="submit" value="회원가입">
       </form>

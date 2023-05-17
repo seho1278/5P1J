@@ -123,6 +123,27 @@ def main(request):
 
 @login_required
 def index(request):
+    my_tags = []
+    tag_dict = {}
+    if request.user.is_superuser :
+        pass
+    else:
+        
+        if request.user.is_authenticated:
+            my_tags = request.user.tags[2:-2].split("', '")
+
+            print(my_tags)
+    
+        # 내 tag와 일치하는 영화 정보 불러오기
+        # my_movies = []
+        for tag in my_tags:
+            print(tag)
+            post = Post.objects.filter(tags__contains = tag)
+            for i in post:
+            # my_movies.append(list(post))
+                tag_dict[i] = tag
+        print(tag_dict)
+    
 # 플랫폼별 TOP10
 # 최신 상영작 
 # 많이 본 순 - 완 
@@ -270,7 +291,8 @@ def index(request):
         'genre_dict' : genre_dict, 
         'genre': genre,
         'top_rated': top_rated,
-        'genre_movie_list' : genre_movie_list
+        'genre_movie_list' : genre_movie_list,
+        'tag_dict': tag_dict,
        
     }
     return render(request, 'movies/index.html', context)
@@ -373,7 +395,10 @@ def detail(request, movie_id):
     
     total = p_tags + tags
     total_tags = dict(Counter(total)) 
-            
+    total_tags = dict(sorted(total_tags.items(), key=lambda x: x[1], reverse=True))
+    
+    print(total_tags)
+
     detail_response = requests.get(detail_url, params=params)
     detail_data = detail_response.json()
     
@@ -572,6 +597,8 @@ def create(request, movie_id):
     # poster_path = 'https://image.tmdb.org/t/p/w200' + movie_data.get('poster_path')
     # if request.user != 'admin':
     #     return redirect('movies:index')
+    
+    # selecttags = []
     if Post.objects.filter(movie_id=movie_id).exists():
         return redirect('movies:index')
     
@@ -579,11 +606,12 @@ def create(request, movie_id):
         if request.user.is_superuser:
             if request.method == 'POST':
                 form = PostForm(request.POST)
+                selecttags = []
                 if form.is_valid():
                     post = form.save(commit=False)
                     post.movie_id = movie_id
                     post.user = request.user
-                    # post.poster_path = poster_path
+                    post.poster_path = movie_data.get('poster_path')
                     post.title = movie_data.get('title')
                     post.movie_overview = movie_data.get('overview')
                     post.movie_release_date = movie_data.get('release_date')
@@ -600,9 +628,12 @@ def create(request, movie_id):
             #템플릿에서 다중 선택된 값들을 렌더링하기 위해 폼을 다시 표시할 때, 이전에 선택된 값들이 표시되도록 폼을 초기화할 수 있습니다. 
             else:
                 form = PostForm(initial={'tags': Post.objects.values_list('tags', flat=True)}) 
+                selecttags = request.POST.getlist('tag')
+
             context = {
                 'form': form,
                 'movie': movie_data,
+                'selecttags' : selecttags,
             }
             return render(request, 'movies/create.html', context)
         else:
@@ -661,7 +692,8 @@ def review_create(request, movie_id):
     else:
         form = ReviewForm()
         selecttags = request.POST.getlist('tag')
-
+        
+    print(selecttags)
     context = {
         'form': form,
         'post': post,

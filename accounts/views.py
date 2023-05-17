@@ -63,18 +63,23 @@ def profile(request, username):
     review_ids = [report['review'] for report in reports]
     review_reports = ReviewReport.objects.order_by('review_id', 'title')
     
-    # 회원가입할 때 받은 tags 정보 가공 (문자열에서 리스트로 변환)
-    new_tags = person.tags[2:-2].split("', '")
+    # superuser일 경우 선택한 태그가 없기 때문에 태그 정보 불러오지 않음
+    if person.is_superuser :
+        new_tags = []
+        tag_dict = []
+    else:
+        # 회원가입할 때 받은 tags 정보 가공 (문자열에서 리스트로 변환)
+        new_tags = person.tags[2:-2].split("', '")
     
-    # 내 tag와 일치하는 영화 정보 불러오기
-    # my_movies = []
-    tag_dict = {} 
-    for tag in new_tags:
-        post = Post.objects.filter(tags__contains = tag)
-        for i in post:
-        # my_movies.append(list(post))
-            tag_dict[i] = tag
-    print(tag_dict)
+        # 내 tag와 일치하는 영화 정보 불러오기
+        # my_movies = []
+        tag_dict = {} 
+        for tag in new_tags:
+            post = Post.objects.filter(tags__contains = tag)
+            for i in post:
+            # my_movies.append(list(post))
+                tag_dict[i] = tag
+        print(tag_dict)
     # my_movies = list(set(my_movies))
 
     # 추가

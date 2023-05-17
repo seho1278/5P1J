@@ -41,6 +41,7 @@ class CustomUserCreationForm(UserCreationForm):
         widget=forms.TextInput(
             attrs={
                 'class': 'form--control',
+                'placeholder': '이메일을 입력하세요',
 
             }
         ),

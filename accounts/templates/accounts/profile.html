@@ -137,16 +137,19 @@
     </div>
   </section>
 
-  <div class="Profile__ContentBox">
-    <section class="mb-3">
-      <h4>{{ person.username }}님의 Tag</h4>
-      {% for tag in new_tags %}
-      <span class="badge rounded-pill text-bg-light" >{{tag}}</span>
-      {% endfor %}
-      
-    </section>
+  {% if request.user.is_superuser %}
+  {% else %}
+    <div class="Profile__ContentBox">
+      <section class="mb-3">
+        <h4>{{ person.username }}님의 Tag</h4>
+        {% for tag in new_tags %}
+        <span class="badge rounded-pill text-bg-light" >{{tag}}</span>
+        {% endfor %}
+        
+      </section>
+  {% endif %}
+  
     
-
     <section>
       <div class="Profile__ReviewBox">
         <h4>내가 쓴 리뷰</h4>
@@ -325,6 +328,9 @@
     </section>
     {% endif %}
 
+    {% if request.user.is_superuser %}
+    
+    {% else %}
     <section>
       <div class="Profile__RecommendBox">
         <h4>{{ person.username }}님이 선택한 태그 기준으로 영화 추천</h4>
@@ -337,7 +343,7 @@
                   {% if movie.poster_path %}
                     <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}">
                   {% else %}
-                    <img style="width:200px;" src="{{'img/accounts/no_poster.png' }}" alt="기본 영화 포스터">
+                    <img style="width:200px;" src="{% static 'img/accounts/no_poster.png' %}" alt="기본 영화 포스터">
                   {% endif %}
                 </div>
                 <div>
@@ -349,6 +355,8 @@
         </div>
       </div>
     </section>
+    {% endif %}
+    
   </div>
 </article>
 {% endblock content %}

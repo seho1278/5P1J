@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}{% endblock title %}
 
-{% block style %}{% endblock style %}  
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'reviewcreate/reviewcreate.css' %}">
+{% endblock style %}  
 
 {% block content %}
 <article>
@@ -12,15 +14,251 @@
   <li class="list-group-item flex-grow-1">{{ movie.overview|truncatechars:200 }}</li>
   <li class="list-group-item">개봉일: {{ movie.release_date }}</li>
   </ul>
-  <form action="{% url 'movies:create' movie.id  %}" method="post">
-      {% csrf_token %}
-      {{form.as_p}}
+  {% comment %} <section class="main__signup__form--container">
+    <div class="main__signup__form--wrap"> {% endcomment %}
+    <div style="width:1200px; margin: 25px auto 25px;">
+      <form class="main__signup__form" action="{% url 'movies:create' movie.id  %}" method="post">
+          {% csrf_token %}
+          <div class="mb-3 main Review__TagBox">
+            <div class="Review__TagCategory">
+              <button type="button"><div id="cateGory1" class="Review__Category" data-filter="컨셉 & 아이디어">컨셉 & 아이디어</div></button>
+              <button type="button"><div id="cateGory2" class="Review__Category" data-filter="작품성">작품성</div></button>
+              <button type="button"><div id="cateGory3" class="Review__Category" data-filter="캐릭터">캐릭터</div></button>
+              <button type="button"><div id="cateGory4" class="Review__Category" data-filter="감상평">감상평</div></button>
+              <button type="button"><div id="cateGory5" class="Review__Category" data-filter="감독 & 연출">감독 & 연출</div></button>
+              <button type="button"><div id="cateGory6" class="Review__Category" data-filter="스토리 & 구성">스토리 & 구성</div></button>
+              <button type="button"><div id="cateGory7" class="Review__Category" data-filter="편집 & 각본">편집 & 각본</div></button>
+              <button type="button"><div id="cateGory8" class="Review__Category" data-filter="시각 & 음향">시각 & 음향</div></button>
+              <button type="button"><div id="cateGory9" class="Review__Category" data-filter="클라이맥스 & 결말">클라이맥스 & 결말</div></button>
+            </div>
+              {% for tag in form.tags|slice:":6" %}
+              <div class="Review__TagList 컨셉&아이디어">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div>
+                 
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"6:18" %}
+            
+              <div class="Review__TagList 작품성">
+                <label data-Tag="" class="tag-label">
+                  {{ tag }}
+                </label>
+              </div>
+                 
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"18:29" %}
+              <div class="Review__TagList 캐릭터">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div> 
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"29:41" %}
+              <div class="Review__TagList 감상평">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div> 
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"41:51" %}
+              <div class="Review__TagList 감독&연출">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>            
+              </div>
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"51:65" %}
+              <div class="Review__TagList 스토리&구성">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div> 
+            {% endfor %}
+            
+  
+            {% for tag in form.tags|slice:"65:72" %}
+              <div class="Review__TagList 편집&각본">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div>
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"72:82" %}
+              <div class="Review__TagList 시각&음향">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div>
+            {% endfor %}
+  
+            {% for tag in form.tags|slice:"82:91" %}
+              <div class="Review__TagList 클라이맥스&결말">
+                <label class="tag-label">
+                  {{ tag }}
+                </label>
+              </div>
+            {% endfor %}
+            <hr>
+            
+            <div class="d-flex flex-row" style="padding: 15px;">
+              <p>선택된 태그 : </p>
+              <div class="d-flex flex-row Tag__Select" style="margin-left: 10px;">
+                
+              </div>
+            </div>
+          </div>
+          {{ form.platform }}
+          <input type="submit" value="생성하기" class="btn btn-outline-success mt-4" style="width:400px;">
       
-      <input type="submit" value="생성하기" class="btn btn-outline-success mt-4" style="width:400px;">
-  </form>
+      </form>
+    </div>
+  {% comment %} </section> {% endcomment %}
+    
 
 </article>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Code that runs on page load
+    // Trigger button click event
+    $('#cateGory1').trigger('click');
+  });
 
+  // 색 변경(기본 값)
+  document.getElementById("cateGory1").style.color = '#7048E9'
+
+  // 컨셉 & 아이디어 버튼 클릭 시
+  document.getElementById("cateGory1").addEventListener("click", function() {
+    setButtonColor("cateGory1");
+    showTags("컨셉&아이디어");
+  });
+
+  // 작품성 버튼 클릭 시
+  document.getElementById("cateGory2").addEventListener("click", function() {
+    setButtonColor("cateGory2");
+    showTags("작품성");
+  });
+
+  // 캐릭터 버튼 클릭 시
+  document.getElementById("cateGory3").addEventListener("click", function() {
+    setButtonColor("cateGory3");
+    showTags("캐릭터");
+  });
+
+  // 감상평 버튼 클릭 시
+  document.getElementById("cateGory4").addEventListener("click", function() {
+    setButtonColor("cateGory4");
+    showTags("감상평");
+  });
+
+  // 감독 & 연출 버튼 클릭 시
+  document.getElementById("cateGory5").addEventListener("click", function() {
+    setButtonColor("cateGory5");
+    showTags("감독&연출");
+  });
+
+  // 스토리 & 구성 버튼 클릭 시
+  document.getElementById("cateGory6").addEventListener("click", function() {
+    setButtonColor("cateGory6");
+    showTags("스토리&구성");
+  });
+
+  // 편집 & 각본 버튼 클릭 시
+  document.getElementById("cateGory7").addEventListener("click", function() {
+    setButtonColor("cateGory7");
+    showTags("편집&각본");
+  });
+
+  // 시각 & 음향 버튼 클릭 시
+  document.getElementById("cateGory8").addEventListener("click", function() {
+    setButtonColor("cateGory8");
+    showTags("시각&음향");
+  });
+
+  // 클라이맥스 & 결말 버튼 클릭 시
+  document.getElementById("cateGory9").addEventListener("click", function() {
+    setButtonColor("cateGory9");
+    showTags("클라이맥스&결말");
+  });
+
+  // 버튼 색상 설정 함수
+  function setButtonColor(activeButtonId) {
+    var buttonIds = [
+        "cateGory1", 
+        "cateGory2", 
+        "cateGory3", 
+        "cateGory4", 
+        "cateGory5", 
+        "cateGory6", 
+        "cateGory7", 
+        "cateGory8", 
+        "cateGory9"
+      ];
+    var activeColor = '#ffffff';
+    var inactiveColor = '#9b9b9b';
+    var activeBorderColor = '2px solid #ffffff';
+    var inactiveBorderColor = 'none';
+
+    buttonIds.forEach(function(buttonId) {
+      var button = document.getElementById(buttonId);
+      var buttonParent = button.parentNode;
+      button.style.color = (buttonId === activeButtonId) ? activeColor : inactiveColor;
+      buttonParent.style.borderBottom = (buttonId === activeButtonId) ? activeBorderColor : inactiveBorderColor;
+    });
+  }
+
+   // 필터별 리뷰 출력 함수
+   function showTags(Tags) {
+    var tagItems = document.getElementsByClassName("Review__TagList");
+
+    // 모든 리뷰 아이템 숨기기
+    for (var i = 0; i < tagItems.length; i++) {
+      tagItems[i].style.display = 'none';
+    }
+
+    // 해당 분류의 리뷰 아이템 보여주기
+    var targetItems = document.getElementsByClassName(Tags);
+    for (var j = 0; j < targetItems.length; j++) {
+      targetItems[j].style.display = 'flex';
+      var parentDiv = targetItems[j].parentNode;
+      parentDiv.style.display = 'block';
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {   
+    // Review__TagList 요소 내의 input[type="checkbox"] 요소들을 모두 찾아서 할당
+    const tagInputs = document.querySelectorAll('.Review__TagList input[type="checkbox"]');
+    console.log(tagInputs)
+    // Tag__Select 요소를 찾아서 할당
+    const tagSelect = document.querySelector('.Tag__Select');
+    console.log(tagSelect)
+
+    // 각 체크박스에 대한 변경 이벤트 리스너 등록
+    tagInputs.forEach(function(tagInput) {
+      tagInput.addEventListener('change', function() {
+        // 선택된 체크박스들을 필터링하여 선택된 태그들을 추출하여 배열로 저장
+        const selectedTags = Array.from(tagInputs)
+          .filter(function(input) {
+            return input.checked;
+          })
+          .map(function(input) {
+            return input.value;
+          });
+        console.log(selectedTags)
+        // 선택된 태그들을 쉼표로 구분한 문자열로 설정하여 Tag__Select 요소 내에 업데이트
+        tagSelect.innerHTML = selectedTags.join(', ');
+      });
+    });
+  });
+</script>
 {% endblock content %}
 {% block script %}{% endblock script %}

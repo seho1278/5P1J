@@ -13,6 +13,32 @@
 {% endblock style %}  
 
 {% block content %}
+{% if request.user.is_superuser %}
+{% else %}
+<h4>{{ request.user.username }}님이 선택한 태그 기준으로 영화 추천</h4>
+        <div class="row">
+          {% for movie, tag in tag_dict.items %}
+            <div class="col-3">
+              <p>"{{tag}}"</p>
+              <a href="{% url 'movies:detail' movie.movie_id %}">
+                <div>
+                  {% if movie.poster_path %}
+                    <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}">
+                  {% else %}
+                    <img style="width:200px;" src="{% static 'img/accounts/no_poster.png' %}" alt="기본 영화 포스터">
+                  {% endif %}
+                </div>
+                <div>
+                  <p class="text-center">{{movie.title}}</p>
+                </div>
+              </a>
+            </div>     
+          {% endfor %}
+        </div>
+
+{% endif %}
+
+
 <div class="Index__main">
   <div class="Index__Category">
     <p class="Index__Crew">연기 & 캐스팅</p>
