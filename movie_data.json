@@ -6,7 +6,7 @@
 \t\t\t"movie_id": 713704,
 \t\t\t"title": "이블 데드 라이즈",
 \t\t\t"released_date": "2023-04-12",
-\t\t\t"rating": 7.2,
+\t\t\t"rating": 7.1,
 \t\t\t"description": "길바닥에서 지친 베스가 비좁은 아파트에서 세 아이를 키우는 엘리를 뒤늦게 찾아간다. 아파트에서 신비로운 책이 발견되며 육체에 사로잡힌 악마가 발견되며, 베스가 가장 악몽 같은 버전의 모성애에 직면하게 되면서 생존에 위한 원초적인 싸움에 내몰리게 되는데...",
 \t\t\t"poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
 \t\t\t"category": [
@@ -156,6 +156,22 @@
 \t\t}
 \t},
 \t{
+\t\t"pk": 385687,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 385687,
+\t\t\t"title": "분노의 질주: 라이드 오어 다이",
+\t\t\t"released_date": "2023-05-17",
+\t\t\t"rating": 6.2,
+\t\t\t"description": "돔과 그의 패밀리 앞에 나타난 운명의 적 단테. 과거의 그림자는 돔의 모든 것을 파괴하기 위해 달려온다. 단테에 의해 산산히 흩어진 패밀리들은 모두 목숨을 걸고 맞서야 하는 함정에 빠지고 마는데...",
+\t\t\t"poster_path": "/3JT1oE0JIA6CQJaZDG00y3S0kP3.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t80
+\t\t\t]
+\t\t}
+\t},
+\t{
 \t\t"pk": 677179,
 \t\t"model": "movies.movie",
 \t\t"fields": {
@@ -168,23 +184,6 @@
 \t\t\t"category": [
 \t\t\t\t18,
 \t\t\t\t28
-\t\t\t]
-\t\t}
-\t},
-\t{
-\t\t"pk": 934433,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 934433,
-\t\t\t"title": "스크림 6",
-\t\t\t"released_date": "2023-03-08",
-\t\t\t"rating": 7.3,
-\t\t\t"description": "",
-\t\t\t"poster_path": "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
-\t\t\t"category": [
-\t\t\t\t27,
-\t\t\t\t9648,
-\t\t\t\t53
 \t\t\t]
 \t\t}
 \t},
@@ -206,33 +205,34 @@
 \t\t}
 \t},
 \t{
+\t\t"pk": 934433,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 934433,
+\t\t\t"title": "스크림 6",
+\t\t\t"released_date": "2023-03-08",
+\t\t\t"rating": 7.3,
+\t\t\t"description": "고스트페이스의 습격에서 살아남은 생존자들이 우즈보로를 떠나 뉴욕에서 새로운 삶을 시작하지만, 다시금 과거의 살인마에게 쫓기게 되는 이야기",
+\t\t\t"poster_path": "/1zhb49U0Rjg2qVU9L7VLmujf1Hs.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t9648,
+\t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
 \t\t"pk": 785759,
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 785759,
 \t\t\t"title": "투 위치스",
 \t\t\t"released_date": "2023-03-02",
-\t\t\t"rating": 6.1,
+\t\t\t"rating": 6.2,
 \t\t\t"description": "임신한 새라는 식당에서 사악한 눈빛으로 노려보는 늙은 마녀와 마주친다. 그 후 새라는 아기가 잡아 먹히는 끔찍한 환상과 악몽에 시달린다. 늙은 마녀는 남편의 친구 더스틴의 집으로 가는 새라를 뒤따른다. 새라는 남편 사이먼과 함께 더스틴과 멜리사 부부의 외딴집에 도착한다. 주술에 빠져 있는 멜리사는 새라를 위해 위자 보드로 영을 소환한다. 얼마 후 나쁜 기운을 없애는 양초의 촛불이 저절로 꺼지고 화장실 앞에서 넋을 잃고 서 있던 새라는 아무것도 기억하지 못한다. 어둠 속에서 늙은 마녀가 아기를 먹는 모습을 본 사이먼은 심장마비로 사망한다. 새라가 어딘가로 사라지고 더스틴과 멜리사가 혼란에 빠진 가운데 경찰은 사이먼의 죽음과 새라의 실종을 가정폭력 때문이라고 발표한다. 악마가 새라의 태아를 먹은 늙은 마녀에게 안식을 허락하는데...",
 \t\t\t"poster_path": "/uL9fFTdNmUUlKIJfHJclN5X3bxH.jpg",
 \t\t\t"category": [
 \t\t\t\t27
-\t\t\t]
-\t\t}
-\t},
-\t{
-\t\t"pk": 385687,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 385687,
-\t\t\t"title": "분노의 질주: 라이드 오어 다이",
-\t\t\t"released_date": "2023-05-17",
-\t\t\t"rating": 6.3,
-\t\t\t"description": "돔과 그의 패밀리 앞에 나타난 운명의 적 단테. 과거의 그림자는 돔의 모든 것을 파괴하기 위해 달려온다. 단테에 의해 산산히 흩어진 패밀리들은 모두 목숨을 걸고 맞서야 하는 함정에 빠지고 마는데...",
-\t\t\t"poster_path": "/3JT1oE0JIA6CQJaZDG00y3S0kP3.jpg",
-\t\t\t"category": [
-\t\t\t\t28,
-\t\t\t\t80
 \t\t\t]
 \t\t}
 \t},
@@ -245,7 +245,7 @@
 \t\t\t"released_date": "2022-08-10",
 \t\t\t"rating": 6.9,
 \t\t\t"description": "북한 고위 관리가 망명을 요청한 이후, 안기부 해외팀 차장 박평호와 국내팀 차장 김정도는 동림으로 알려진 안기부 내 스파이, 남파간첩 총책임자를 밝혀내는 임무를 맡는다. 이윽고 동림이 국가 안보를 위태롭게 할 1급 비밀 정보를 누설하기 시작하고 안기부의 해외팀과 국내팀은 서로를 조사하기에 이른다. 당장 스파이를 밝혀내지 못하면 자신이 혐의를 받을 수 있는 일촉즉발의 상황에서 평호와 정도는 서서히 진실을 찾아내고, 마침내 대한민국 1호 암살 작전이라는 거대한 사건과 직면하게 되는데...",
-\t\t\t"poster_path": "/zI0rMYcSUx16pHnsegWExPf1kDF.jpg",
+\t\t\t"poster_path": "/owt8hAoRxyK2tkLj9G0nh0r3Vpr.jpg",
 \t\t\t"category": [
 \t\t\t\t53,
 \t\t\t\t28
@@ -278,7 +278,7 @@
 \t\t\t"movie_id": 1111140,
 \t\t\t"title": "두 죄인과 노새",
 \t\t\t"released_date": "2023-04-21",
-\t\t\t"rating": 5.5,
+\t\t\t"rating": 5.8,
 \t\t\t"description": "이 작품은 자유로운 영혼을 지닌 두 여자가 총상 입은 현상금 사냥꾼을 만나고, 그의 현상금을 나눠 갖기 위해 추적에 동참하는 흥미진진한 서부극이다.",
 \t\t\t"poster_path": "/icL1zn5z1L5ULIpxkuOLjeUgURY.jpg",
 \t\t\t"category": [
@@ -302,6 +302,23 @@
 \t\t\t\t14,
 \t\t\t\t28,
 \t\t\t\t12
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 882569,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 882569,
+\t\t\t"title": "더 커버넌트",
+\t\t\t"released_date": "2023-04-19",
+\t\t\t"rating": 7.7,
+\t\t\t"description": "아프가니스탄에서 적들에게 습격을 받아 죽을뻔했던 미 육군 병사가 현지 통역사의 도움과 노력으로 살아나 미국으로 돌아가게 되는데, 그 통역사와 가족은 약속대로 미국으로 오지 못한 사실을 알게 되자, 자신이 직접 그 가족들을 구하기 위해 아프가니스탄으로 향한다.",
+\t\t\t"poster_path": "/aX0H63vho7rZ9Rm3I567Zf00Z1t.jpg",
+\t\t\t"category": [
+\t\t\t\t10752,
+\t\t\t\t28,
+\t\t\t\t53
 \t\t\t]
 \t\t}
 \t},
@@ -432,7 +449,7 @@
 \t\t\t"movie_id": 868985,
 \t\t\t"title": "멕시코 만세?",
 \t\t\t"released_date": "2023-03-23",
-\t\t\t"rating": 7.5,
+\t\t\t"rating": 7.4,
 \t\t\t"description": "광부였던 할아버지가 죽은 뒤 아내와 아이들을 데리고 고향으로 향한 판초. 그곳에서 유산 상속 문제로 친척들과 한바탕 난리를 치르게 되는데.",
 \t\t\t"poster_path": "/ieyUpr5ES9QEz1cn4clCnBf9XJl.jpg",
 \t\t\t"category": [
@@ -442,19 +459,19 @@
 \t\t}
 \t},
 \t{
-\t\t"pk": 882569,
+\t\t"pk": 649609,
 \t\t"model": "movies.movie",
 \t\t"fields": {
-\t\t\t"movie_id": 882569,
-\t\t\t"title": "더 커버넌트",
-\t\t\t"released_date": "2023-04-19",
-\t\t\t"rating": 7.7,
-\t\t\t"description": "아프가니스탄에서 적들에게 습격을 받아 죽을뻔했던 미 육군 병사가 현지 통역사의 도움과 노력으로 살아나 미국으로 돌아가게 되는데, 그 통역사와 가족은 약속대로 미국으로 오지 못한 사실을 알게 되자, 자신이 직접 그 가족들을 구하기 위해 아프가니스탄으로 향한다.",
-\t\t\t"poster_path": "/aX0H63vho7rZ9Rm3I567Zf00Z1t.jpg",
+\t\t\t"movie_id": 649609,
+\t\t\t"title": "렌필드",
+\t\t\t"released_date": "2023-04-07",
+\t\t\t"rating": 7.2,
+\t\t\t"description": "정년 보장 + 평생 직장의 대가는 밤낮없는 24시간 FULL 근무? 사내 복지는 만성 피로, 불면증, 소화불량, 짙은 다크서클입니다! 불멸의 삶과 폭발적인 힘의 대가는 악당용 배민이 되는 것?! ‘드라큘라’에게 취업 사기를 당하고 24시간 밤낮없이 그에게 순결한 제물을 바치는 직속비서 ‘렌필드’는 남들과 다른 특별한 꼰대 상사에 점차 피폐해져 간다. 그러던 어느 날, 여느 때처럼 ‘드라큘라’에게 바칠 제물을 찾던 중 자신의 인생을 뒤바꿔줄 친구 ‘레베카’를 만나게 되고 지금껏 가슴 한 켠에 숨 죽여 있었던 퇴사의 희망을 발견하게 되는데.. 과연 퇴사 없는 종신계약에서 ‘렌필드’는 벗어날 수 있을까?  슈퍼 을(乙) ‘렌필드’, 자네 꿈이 뭔가? “이 지독한 관계에서 벗어나고 싶어요! 퇴사하겠습니다!”",
+\t\t\t"poster_path": "/wJXgQ3FgVIyVUwdoaKoeobET3po.jpg",
 \t\t\t"category": [
-\t\t\t\t10752,
-\t\t\t\t28,
-\t\t\t\t53
+\t\t\t\t27,
+\t\t\t\t35,
+\t\t\t\t14
 \t\t\t]
 \t\t}
 \t},
@@ -472,6 +489,22 @@
 \t\t\t\t878,
 \t\t\t\t12,
 \t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 964980,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 964980,
+\t\t\t"title": "에어",
+\t\t\t"released_date": "2023-04-05",
+\t\t\t"rating": 7.5,
+\t\t\t"description": "세기의 아이콘을 만든 그들의 실화! 당신이 알고 있는 그 이상의 이야기  1984년, 업계 꼴찌를 벗어나지 못하고 있는 나이키는 브랜드의 간판이 되어 줄 새로운 모델을 찾는다. 나이키의 스카우터 소니 바카로(맷 데이먼)는 NBA의 떠오르는 루키 마이클 조던이 나이키의 미래라고 생각한다. 그런데, 이미 시장을 장악한 컨버스와 아디다스가 그와의 계약을 노리는 상황 나이키 팀은 조던의 마음을 얻기 위한 전략을 세우는데….",
+\t\t\t"poster_path": "/u72FzpfOZLBkeUdL3o3jyYK9OxU.jpg",
+\t\t\t"category": [
+\t\t\t\t18,
+\t\t\t\t36
 \t\t\t]
 \t\t}
 \t},
@@ -531,7 +564,7 @@
 \t\t\t"movie_id": 946310,
 \t\t\t"title": "De Piraten van Hiernaast II: De Ninja's van de Overkant",
 \t\t\t"released_date": "2022-04-20",
-\t\t\t"rating": 6.8,
+\t\t\t"rating": 6.9,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/uDsvma9dAwnDPVuCFi99YpWvBk0.jpg",
 \t\t\t"category": [
@@ -643,6 +676,22 @@
 \t\t}
 \t},
 \t{
+\t\t"pk": 840326,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 840326,
+\t\t\t"title": "시수",
+\t\t\t"released_date": "2023-01-27",
+\t\t\t"rating": 7,
+\t\t\t"description": "",
+\t\t\t"poster_path": "/uCAaaAQEDrTllYR4dtsEsfQa8We.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t10752
+\t\t\t]
+\t\t}
+\t},
+\t{
 \t\t"pk": 579884,
 \t\t"model": "movies.movie",
 \t\t"fields": {
@@ -654,23 +703,6 @@
 \t\t\t"poster_path": "/aGz7lEXj4yZnBydthjBgTotsn1q.jpg",
 \t\t\t"category": [
 \t\t\t\t16
-\t\t\t]
-\t\t}
-\t},
-\t{
-\t\t"pk": 649609,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 649609,
-\t\t\t"title": "렌필드",
-\t\t\t"released_date": "2023-04-07",
-\t\t\t"rating": 7.2,
-\t\t\t"description": "정년 보장 + 평생 직장의 대가는 밤낮없는 24시간 FULL 근무? 사내 복지는 만성 피로, 불면증, 소화불량, 짙은 다크서클입니다! 불멸의 삶과 폭발적인 힘의 대가는 악당용 배민이 되는 것?! ‘드라큘라’에게 취업 사기를 당하고 24시간 밤낮없이 그에게 순결한 제물을 바치는 직속비서 ‘렌필드’는 남들과 다른 특별한 꼰대 상사에 점차 피폐해져 간다. 그러던 어느 날, 여느 때처럼 ‘드라큘라’에게 바칠 제물을 찾던 중 자신의 인생을 뒤바꿔줄 친구 ‘레베카’를 만나게 되고 지금껏 가슴 한 켠에 숨 죽여 있었던 퇴사의 희망을 발견하게 되는데.. 과연 퇴사 없는 종신계약에서 ‘렌필드’는 벗어날 수 있을까?  슈퍼 을(乙) ‘렌필드’, 자네 꿈이 뭔가? “이 지독한 관계에서 벗어나고 싶어요! 퇴사하겠습니다!”",
-\t\t\t"poster_path": "/wJXgQ3FgVIyVUwdoaKoeobET3po.jpg",
-\t\t\t"category": [
-\t\t\t\t27,
-\t\t\t\t35,
-\t\t\t\t14
 \t\t\t]
 \t\t}
 \t},
@@ -705,22 +737,6 @@
 \t\t\t\t16,
 \t\t\t\t28,
 \t\t\t\t14
-\t\t\t]
-\t\t}
-\t},
-\t{
-\t\t"pk": 964980,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 964980,
-\t\t\t"title": "에어",
-\t\t\t"released_date": "2023-04-05",
-\t\t\t"rating": 7.5,
-\t\t\t"description": "세기의 아이콘을 만든 그들의 실화! 당신이 알고 있는 그 이상의 이야기  1984년, 업계 꼴찌를 벗어나지 못하고 있는 나이키는 브랜드의 간판이 되어 줄 새로운 모델을 찾는다. 나이키의 스카우터 소니 바카로(맷 데이먼)는 NBA의 떠오르는 루키 마이클 조던이 나이키의 미래라고 생각한다. 그런데, 이미 시장을 장악한 컨버스와 아디다스가 그와의 계약을 노리는 상황 나이키 팀은 조던의 마음을 얻기 위한 전략을 세우는데….",
-\t\t\t"poster_path": "/u72FzpfOZLBkeUdL3o3jyYK9OxU.jpg",
-\t\t\t"category": [
-\t\t\t\t18,
-\t\t\t\t36
 \t\t\t]
 \t\t}
 \t},
@@ -823,11 +839,27 @@
 \t\t\t"movie_id": 842945,
 \t\t\t"title": "슈퍼셀",
 \t\t\t"released_date": "2023-03-17",
-\t\t\t"rating": 6.3,
+\t\t\t"rating": 6.2,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/gbGHezV6yrhua0KfAgwrknSOiIY.jpg",
 \t\t\t"category": [
 \t\t\t\t28
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 552688,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 552688,
+\t\t\t"title": "내 이름은 마더",
+\t\t\t"released_date": "2023-05-04",
+\t\t\t"rating": 6.8,
+\t\t\t"description": "은둔 생활을 하던 군 출신 암살자. 복수에 혈안이 된 무자비한 범죄자들의 손아귀에서 한 번도 만난 적 없는 딸을 지키기 위해 세상 밖으로 나온다.",
+\t\t\t"poster_path": "/vnRthEZz16Q9VWcP5homkHxyHoy.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t53
 \t\t\t]
 \t\t}
 \t},
@@ -869,24 +901,6 @@
 \t\t}
 \t},
 \t{
-\t\t"pk": 447277,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 447277,
-\t\t\t"title": "인어공주",
-\t\t\t"released_date": "2023-05-18",
-\t\t\t"rating": 5.9,
-\t\t\t"description": "늘 바다 너머의 세상을 꿈꾸던 모험심 가득한 인어공주 에리얼이 조난당한 에릭 왕자를 구해주며 자신의 마음의 소리를 따라 금지된 인간 세상으로 나아가는 모험을 그린 작품",
-\t\t\t"poster_path": "/8k8tmcx5e6ShpackLnDswBo1tnB.jpg",
-\t\t\t"category": [
-\t\t\t\t12,
-\t\t\t\t10751,
-\t\t\t\t14,
-\t\t\t\t10749
-\t\t\t]
-\t\t}
-\t},
-\t{
 \t\t"pk": 536554,
 \t\t"model": "movies.movie",
 \t\t"fields": {
@@ -904,20 +918,20 @@
 \t\t}
 \t},
 \t{
-\t\t"pk": 1114905,
+\t\t"pk": 447277,
 \t\t"model": "movies.movie",
 \t\t"fields": {
-\t\t\t"movie_id": 1114905,
-\t\t\t"title": "죽음의 룰렛",
-\t\t\t"released_date": "2023-05-05",
-\t\t\t"rating": 6.4,
-\t\t\t"description": "가족 3명과 서로 일면식 없는 4명의 인물이 갑자기 납치되어 외딴 섬의 큰 별장에 갇힌 채 깨어나게 된 이후, 알 수 없는 범인의 지시에 의해 서로를 죽여야만 하는 살인 게임을 펼치게 되는 내용",
-\t\t\t"poster_path": "/tP0xZWNqNNM0PEhkURsKriTQT9j.jpg",
+\t\t\t"movie_id": 447277,
+\t\t\t"title": "인어공주",
+\t\t\t"released_date": "2023-05-18",
+\t\t\t"rating": 5.2,
+\t\t\t"description": "아틀란티카 바다의 왕 트라이튼의 사랑스러운 막내딸인 인어 에리얼은 늘 인간들이 사는 바다 너머 세상으로의 모험을 꿈꾼다. 어느 날, 우연히 바다 위로 올라갔다가 폭풍우 속 가라앉는 배에 탄 인간 에릭 왕자의 목숨을 구해준다. 갈망하던 꿈과 운명적인 사랑을 이루기 위해 용기를 낸 에리얼은 사악한 바다 마녀 울슐라와의 위험한 거래를 통해 다리를 얻게 된다. 드디어 바다를 벗어나 그토록 원하던 인간 세상으로 가게 되지만, 그 선택으로 에리얼과 아틀란티카 왕국 모두 위험에 처하게 되는데… 바닷속, 그리고 그 너머 아름다운 꿈과 사랑의 멜로디가 펼쳐진다!",
+\t\t\t"poster_path": "/8k8tmcx5e6ShpackLnDswBo1tnB.jpg",
 \t\t\t"category": [
-\t\t\t\t53,
-\t\t\t\t9648,
-\t\t\t\t18,
-\t\t\t\t27
+\t\t\t\t12,
+\t\t\t\t10751,
+\t\t\t\t14,
+\t\t\t\t10749
 \t\t\t]
 \t\t}
 \t},
@@ -933,23 +947,6 @@
 \t\t\t"poster_path": "/wESfP4ZeBbwjjFw2tql4Bqx101Q.jpg",
 \t\t\t"category": [
 \t\t\t\t18
-\t\t\t]
-\t\t}
-\t},
-\t{
-\t\t"pk": 994128,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 994128,
-\t\t\t"title": "엘더리",
-\t\t\t"released_date": "2023-04-21",
-\t\t\t"rating": 7.4,
-\t\t\t"description": "",
-\t\t\t"poster_path": "/31W5qM3rfsdJwQCWjDRXa00T8xJ.jpg",
-\t\t\t"category": [
-\t\t\t\t27,
-\t\t\t\t53,
-\t\t\t\t14
 \t\t\t]
 \t\t}
 \t},
@@ -1090,29 +1087,13 @@
 \t\t}
 \t},
 \t{
-\t\t"pk": 840326,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 840326,
-\t\t\t"title": "시수",
-\t\t\t"released_date": "2023-01-27",
-\t\t\t"rating": 7.3,
-\t\t\t"description": "",
-\t\t\t"poster_path": "/dHx5yuBb05U9vNaNhIBD7jWyxPk.jpg",
-\t\t\t"category": [
-\t\t\t\t28,
-\t\t\t\t10752
-\t\t\t]
-\t\t}
-\t},
-\t{
 \t\t"pk": 758009,
 \t\t"model": "movies.movie",
 \t\t"fields": {
 \t\t\t"movie_id": 758009,
 \t\t\t"title": "샷건 웨딩",
 \t\t\t"released_date": "2022-12-28",
-\t\t\t"rating": 6.4,
+\t\t\t"rating": 6.3,
 \t\t\t"description": "‘다아시’(제니퍼 로페즈)와 ‘톰’(조쉬 더하멜)의 결혼식 당일, 우여곡절 끝에 결혼식에 참석할 모두가 섬에 모인다. 모든 게 순조로워 보이던 그때!  갑자기 들이닥친 해적으로 인해 결혼식장의 모두가 인질이 되고… ‘다아시’와 ‘톰’은 무사히 혼인서약을 마치기 위해 목숨을 건 버진 로드를 걷게 되는데…  죽이든가, 죽든가! 2023년 3월, 가장 화X한 웨딩이 온다!",
 \t\t\t"poster_path": "/aGhII6CTTvpZwnElzAUB7ZbgjTN.jpg",
 \t\t\t"category": [
@@ -1295,6 +1276,23 @@
 \t\t}
 \t},
 \t{
+\t\t"pk": 994128,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 994128,
+\t\t\t"title": "엘더리",
+\t\t\t"released_date": "2023-04-21",
+\t\t\t"rating": 7.4,
+\t\t\t"description": "",
+\t\t\t"poster_path": "/31W5qM3rfsdJwQCWjDRXa00T8xJ.jpg",
+\t\t\t"category": [
+\t\t\t\t27,
+\t\t\t\t53,
+\t\t\t\t14
+\t\t\t]
+\t\t}
+\t},
+\t{
 \t\t"pk": 820232,
 \t\t"model": "movies.movie",
 \t\t"fields": {
@@ -1312,18 +1310,20 @@
 \t\t}
 \t},
 \t{
-\t\t"pk": 552688,
+\t\t"pk": 1114905,
 \t\t"model": "movies.movie",
 \t\t"fields": {
-\t\t\t"movie_id": 552688,
-\t\t\t"title": "내 이름은 마더",
-\t\t\t"released_date": "2023-05-04",
-\t\t\t"rating": 6.9,
-\t\t\t"description": "은둔 생활을 하던 군 출신 암살자. 복수에 혈안이 된 무자비한 범죄자들의 손아귀에서 한 번도 만난 적 없는 딸을 지키기 위해 세상 밖으로 나온다.",
-\t\t\t"poster_path": "/vnRthEZz16Q9VWcP5homkHxyHoy.jpg",
+\t\t\t"movie_id": 1114905,
+\t\t\t"title": "죽음의 룰렛",
+\t\t\t"released_date": "2023-05-05",
+\t\t\t"rating": 6.5,
+\t\t\t"description": "가족 3명과 서로 일면식 없는 4명의 인물이 갑자기 납치되어 외딴 섬의 큰 별장에 갇힌 채 깨어나게 된 이후, 알 수 없는 범인의 지시에 의해 서로를 죽여야만 하는 살인 게임을 펼치게 되는 내용",
+\t\t\t"poster_path": "/tP0xZWNqNNM0PEhkURsKriTQT9j.jpg",
 \t\t\t"category": [
-\t\t\t\t28,
-\t\t\t\t53
+\t\t\t\t53,
+\t\t\t\t9648,
+\t\t\t\t18,
+\t\t\t\t27
 \t\t\t]
 \t\t}
 \t},
@@ -1682,23 +1682,6 @@
 \t\t}
 \t},
 \t{
-\t\t"pk": 667538,
-\t\t"model": "movies.movie",
-\t\t"fields": {
-\t\t\t"movie_id": 667538,
-\t\t\t"title": "트랜스포머: 비스트의 서막",
-\t\t\t"released_date": "2023-06-07",
-\t\t\t"rating": 0,
-\t\t\t"description": "화려한 액션과 스펙터클로 전 세계를 사로잡은 영화 <트랜스포머> 시리즈의 신작 <트랜스포머: 비스트의 서막>은 1990년대의 지구를 배경으로 벌어지는 오토봇과 디셉티콘의 전투 그리고 새롭게 등장하는 캐릭터들인 맥시멀을 선보일 예정이다.",
-\t\t\t"poster_path": "/chUZNPNd7EiETSB4xBGykXhuXRr.jpg",
-\t\t\t"category": [
-\t\t\t\t28,
-\t\t\t\t12,
-\t\t\t\t878
-\t\t\t]
-\t\t}
-\t},
-\t{
 \t\t"pk": 299536,
 \t\t"model": "movies.movie",
 \t\t"fields": {
@@ -1778,6 +1761,23 @@
 \t\t\t"category": [
 \t\t\t\t27,
 \t\t\t\t53
+\t\t\t]
+\t\t}
+\t},
+\t{
+\t\t"pk": 667538,
+\t\t"model": "movies.movie",
+\t\t"fields": {
+\t\t\t"movie_id": 667538,
+\t\t\t"title": "트랜스포머: 비스트의 서막",
+\t\t\t"released_date": "2023-06-07",
+\t\t\t"rating": 0,
+\t\t\t"description": "화려한 액션과 스펙터클로 전 세계를 사로잡은 영화 <트랜스포머> 시리즈의 신작 <트랜스포머: 비스트의 서막>은 1990년대의 지구를 배경으로 벌어지는 오토봇과 디셉티콘의 전투 그리고 새롭게 등장하는 캐릭터들인 맥시멀을 선보일 예정이다.",
+\t\t\t"poster_path": "/chUZNPNd7EiETSB4xBGykXhuXRr.jpg",
+\t\t\t"category": [
+\t\t\t\t28,
+\t\t\t\t12,
+\t\t\t\t878
 \t\t\t]
 \t\t}
 \t},
@@ -2139,7 +2139,7 @@
 \t\t\t"movie_id": 1079078,
 \t\t\t"title": "로열틴: 마르그레테 공주",
 \t\t\t"released_date": "2023-05-11",
-\t\t\t"rating": 7.2,
+\t\t\t"rating": 7.3,
 \t\t\t"description": "학년말 파티 스캔들이 터진 마르그레테 공주. 완벽한 이미지를 지키기 위해 안간힘을 쓰면서 동시에 가족과의 갈등으로 고민한다. 모든 게 정상이던 시절로 돌아가길 간절히 바라며.",
 \t\t\t"poster_path": "/rQK7I3UmAWgoNhKso7Ptjz60tCS.jpg",
 \t\t\t"category": [
@@ -2556,7 +2556,7 @@
 \t\t\t"movie_id": 1073413,
 \t\t\t"title": "페노메나스",
 \t\t\t"released_date": "2023-04-14",
-\t\t\t"rating": 6,
+\t\t\t"rating": 5.9,
 \t\t\t"description": "스페인 마드리드, 1998년. 초자연적인 사건을 조사하는 세 명의 중년 여성 글로리아, 파즈, 사그라리오의 많은 자원과 기술은 그들의 리더인 필론 신부와 불쾌한 만남을 겪으면서 시험대에 오르게 됩니다.",
 \t\t\t"poster_path": "/lv0r75CdCOUhYq57eJbxvPV091s.jpg",
 \t\t\t"category": [
@@ -2641,7 +2641,7 @@
 \t\t\t"movie_id": 620705,
 \t\t\t"title": "크레이터",
 \t\t\t"released_date": "2023-05-12",
-\t\t\t"rating": 7.2,
+\t\t\t"rating": 6.9,
 \t\t\t"description": "달 광산 정착지의 다섯 아이들이 탐사선을 훔쳐 타고 미지의 분화구를 탐험하는 여정에 나선다.",
 \t\t\t"poster_path": "/fYPegDwZoD1jfVC5sszbEiQmE0c.jpg",
 \t\t\t"category": [
@@ -2775,7 +2775,7 @@
 \t\t\t"movie_id": 823999,
 \t\t\t"title": "Diabolik - Ginko all'attacco!",
 \t\t\t"released_date": "2022-11-17",
-\t\t\t"rating": 6,
+\t\t\t"rating": 5.9,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/8QVbWBv94BAT9u1q9uJccwOxMzt.jpg",
 \t\t\t"category": [
@@ -2876,7 +2876,7 @@
 \t\t\t"movie_id": 1120558,
 \t\t\t"title": "Bendita Suegra",
 \t\t\t"released_date": "2023-05-10",
-\t\t\t"rating": 8,
+\t\t\t"rating": 8.1,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/5xupm2thQic5GzYi6nim6URMZOY.jpg",
 \t\t\t"category": [
@@ -2926,7 +2926,7 @@
 \t\t\t"movie_id": 1101799,
 \t\t\t"title": "퀸스 온 더 런",
 \t\t\t"released_date": "2023-04-14",
-\t\t\t"rating": 6.9,
+\t\t\t"rating": 6.8,
 \t\t\t"description": "",
 \t\t\t"poster_path": "/3raY76KtEzSHya5rcC2j37qGI9L.jpg",
 \t\t\t"category": [

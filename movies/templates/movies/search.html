@@ -5,7 +5,69 @@
 
 {% endblock title %}
 
-{% block style %}{% endblock style %}  
+{% block style %}
+<style>
+    .accordion-item {
+      margin-bottom: 10px;
+      border: none;
+      background-color: #111;
+      color: white;
+    }
+
+    .accordion-button {
+      padding: 10px 15px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #ced4da;
+      color: #ffffff;
+    }
+
+    .accordion-button.collapsed {
+    color: #eee;
+    border: none;
+    background-color: #222;
+    }
+
+    .accordion-button:not(.collapsed) {
+    color: #555;
+    
+    background-color: #eee;
+    }
+
+
+    .col-3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+
+    .movie-poster img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+
+    .movie-title p {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+
+    .row {
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+  </style>
+{% endblock style %}  
 
 {% block content %}
 
@@ -42,6 +104,9 @@
                   </div>
 
                 </a>
+                {% if request.user.is_superuser %}
+                  <span><a href="{% url 'movies:create' movie.id %}">생성하기</a></span>
+                {% endif %}
               </div>     
             {% endfor %}
           </div>
@@ -52,7 +117,7 @@
     </div>
   </div>
 
-  <div class="accordion-item">
+  <div class="accordion-item" style="border: none;">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
         <span>태그로 검색 <b>{{total_tags}} 건</b> </span>
@@ -134,7 +199,7 @@
                         {% for poster in movie_posters %}
                           {% if movie_title == poster.title and poster.poster_path %}
                             <a href="{% url 'movies:detail' poster.id %}">
-                            <img src="https://image.tmdb.org/t/p/w80{{ poster.poster_path }}" alt="{{ movie_title }} 포스터">
+                            <img src="https://image.tmdb.org/t/p/w80{{ poster.poster_path }}" alt="{{ movie_title }} 포스터" style="margin-right:1rem;">
                             </a>
                           {% endif %}
                         {% endfor %}

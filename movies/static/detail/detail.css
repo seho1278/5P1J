@@ -17,8 +17,27 @@
 .cidia--text--button:hover {
     color: #a182ff;
     border-color:#a182ff;
+}
+.cidia--text--button2 {
+    color: #7048E9;
+    padding: 0.2rem;
+    transition: color .30s ease-in-out, border-color .30s ease-in-out;
+}
+.cidia--text--button2:hover {
+    color: #a182ff;
+}
+.report--text--button {
+    font-size: 14px;
+    color: #770000;
+    border: 1.5px solid #770000;
+    border-radius: 5px;
+    padding: 0.2rem;
+    transition: color .30s ease-in-out, border-color .30s ease-in-out;
   }
-
+.report--text--button:hover {
+    color: #ee0000;
+    border-color:#ee0000;
+  }
 .Detail__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -220,8 +239,12 @@
 .Detail__Tag {
     display: flex;
 }
-
-
+.detail__tag--list {
+  display: inline-flex;
+}
+.detail__tag--wrap {
+  display: inline-block;
+}
 
 /* 4. 별점 그래프 */
 .Detail__RatingBox {
@@ -272,7 +295,13 @@
     display: flex;
     flex-direction: column;
 }
-
+.reviews__create--wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.load-more-btn {
+  margin: 1rem 0.5rem 0 0;
+}
 /* 6-1. 유저, 콘텐츠 */
 .Detail__Review {
     justify-content: space-between;
