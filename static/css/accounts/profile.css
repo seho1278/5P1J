@@ -1,3 +1,12 @@
+button {
+  appearance: none;
+  cursor: pointer;
+  border: 0px;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
 .mypage--container {
   margin: 6rem 0;
 }
@@ -46,3 +55,36 @@
 .good--button:hover {
   background-color: #a182ff;
 }
+
+
+
+
+
+
+.Profile__ContentBox {
+  box-shadow: 0.8px 0.8px 2px 1px rgba(225, 225, 225, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.Profile__RecommendBox {
+  background-color: rgba(31, 31, 31, 1);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0 10px 0;
+}
+
+.Profile__ReviewBox {
+  background-color: rgba(31, 31, 31, 1);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0 10px 0;
+}
+
+.Profile__ReportBox {
+  background-color: rgba(31, 31, 31, 1);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0 0px 0;
+}
+

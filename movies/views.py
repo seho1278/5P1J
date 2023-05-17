@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Post, Review, Comment, ReviewReport
+from .models import Post, Review, Comment, ReviewReport, AdminMessage
 from .forms import PostForm, ReviewForm, CommentForm, ReviewReportForm
 import os, json
 import requests
@@ -10,7 +10,8 @@ from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from collections import Counter
-
+import concurrent.futures
+from django.views.decorators.cache import cache_page
 # Create your views here.
 
 # 리뷰 평균 계산모듈(추가)
@@ -24,30 +25,38 @@ def calculate_average_rating(reviews):
     return average_rating
 
 
+def fetch_movie_data(movie):
+    movie_id = movie.movie_id
+    url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={TMDB_API_KEY}&language=ko-KR'
+    response = requests.get(url)
+    movie_data = response.json()
+    poster_path = 'https://image.tmdb.org/t/p/w200' + movie_data.get('poster_path')
+    movie.poster_path = poster_path
+
+
+@cache_page(60 * 15) # 15분동안 캐싱유지
 def main(request):
     # 각 영화의 리뷰 평점
     movies = Post.objects.annotate(avg_rating=Avg('review__rating')).order_by('-avg_rating')
-    for movie in movies:
-        movie_id = movie.movie_id
-        url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={TMDB_API_KEY}&language=ko-KR'
-        response = requests.get(url)
-        movie_data = response.json()
-        poster_path = 'https://image.tmdb.org/t/p/w200' + movie_data.get('poster_path')
-        movie.poster_path = poster_path
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        futures = []
+        for movie in movies:
+            future = executor.submit(fetch_movie_data, movie)
+            futures.append(future)
+        # 모든 API 호출이 완료될 때까지 기다립니다.
+        concurrent.futures.wait(futures)
 
     # 플랫폼 별 리뷰 평점 순서
     platforms = ['넷플릭스', '왓챠', '웨이브', '애플TV+', '디즈니+']
     movies_by_platform = {}
     for platform in platforms:
         platform_movies = Post.objects.filter(platform__contains=platform).annotate(avg_rating=Avg('review__rating')).order_by('-avg_rating')
-        # print(platform_movies)
-        for platform_movie in platform_movies:
-            movie_id = platform_movie.movie_id
-            url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={TMDB_API_KEY}&language=ko-KR'
-            response = requests.get(url)
-            movie_data = response.json()
-            poster_path = 'https://image.tmdb.org/t/p/w200' + movie_data.get('poster_path')
-            platform_movie.poster_path = poster_path
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            futures = []
+            for platform_movie in platform_movies:
+                future = executor.submit(fetch_movie_data, platform_movie)
+                futures.append(future)
+            concurrent.futures.wait(futures)
         movies_by_platform[platform] = platform_movies
     
     # 장르별로
@@ -267,7 +276,7 @@ def index(request):
     return render(request, 'movies/index.html', context)
 
 
-
+@login_required
 def detail(request, movie_id):
     try:
         post = Post.objects.get(movie_id=movie_id)
@@ -285,8 +294,10 @@ def detail(request, movie_id):
     
      # platform 하나씩 빼내기 
     platform_list = []
-    platform_word = ""
-    if "[" in post.platform:
+    # 수정
+    if post is not None and "[" in post.platform:
+        platform_word = ""
+        #---------------------------
         for platform in post.platform:
             if platform in ["[", "'",]:
                 pass
@@ -296,12 +307,16 @@ def detail(request, movie_id):
             else:
                 platform_word = platform_word + platform
     else:
-        platform_list.append(post.platform)
+        # 수정
+        platform_list = []
+        # platform_list.append(post.platform)
     
     # post에 있는 tags 하나씩 빼내기
     p_tags = []
-    p_word = ""
-    if "[" in post.tags:
+    # 수정
+    if post is not None and "[" in post.tags:
+        p_word = ""
+        # ------------------------
         for tag in post.tags:    
             if tag in ["[", "'",]:
                 pass
@@ -311,7 +326,9 @@ def detail(request, movie_id):
             else:
                 p_word = p_word + tag
     else:
-        p_tags.append(post.tags)
+        # 수정
+        p_tags = []
+        # p_tags.append(post.tags)
         
     
     # reviews에 있는 tags 하나씩 빼내기
@@ -326,7 +343,8 @@ def detail(request, movie_id):
         # 추가
         tags1 = []
         #----------
-        if "[" in review.tags:
+        # 수정
+        if review.tags is not None and  "[" in review.tags:
             for tag in review.tags:    
                 if tag in ["[", "'",]:
                     pass
@@ -343,7 +361,8 @@ def detail(request, movie_id):
             r_tags[cnt] = tags1
             cnt += 1
             # ---------------------
-        else:
+        # 수정
+        elif review.tags is not None:
             tags.append(review.tags)
     
     # 추가
@@ -630,7 +649,6 @@ def review_create(request, movie_id):
     
     post = Post.objects.get(movie_id=movie_id)
     # post = Post.objects.get(pk=post_pk)
-    print(post)
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -654,9 +672,17 @@ def review_create(request, movie_id):
 
 @login_required
 def review_delete(request, movie_id, review_id):
+    # 수정
     review = Review.objects.get(id=review_id)
-    if request.user == review.user:
+    referer = request.META.get('HTTP_REFERER')
+
+    # 추가
+    if request.user == review.user or request.user.is_superuser:
         review.delete()
+        if referer and 'profile' in referer:
+            return redirect('accounts:profile', username=request.user.username)
+        else:
+            return redirect('movies:detail', movie_id)
     
     return redirect('movies:detail', movie_id)
 
@@ -785,6 +811,9 @@ def review_report(request, movie_id, review_id):
             review_report.save()
             review.user.reported = True
             review.user.save()
+            # 추가
+            review.report = True
+            review.save()
             return redirect('movies:detail', movie_id)
             
     context = {

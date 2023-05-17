@@ -25,6 +25,7 @@ header.item {
 }
 main.item {
   grid-area: main;
+  min-height: 90vh;
 }
 footer.item {
   grid-area: footer;
@@ -216,10 +217,11 @@ footer.item {
 
 
 
+
 main {
-  /* background-color: #232323; */
-  margin-top: 152px;
+  margin-top: 200px;
   }
+
 
 @media screen and (max-width: 1350px) {
   main {
@@ -228,7 +230,7 @@ main {
 }
 @media screen and (max-width: 700px) {
   main {
-    margin-top: 57px;
+    margin-top: 80px;
   }
   footer {
     margin-bottom: 155px;
