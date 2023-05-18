@@ -33,6 +33,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'port-0-cinepedia-1hz5s2blhtapebl.sel4.cloudtype.app',
+    'localhost',
+    '127.0.0.1',
     ]
 
 
