@@ -11,25 +11,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   /* padding-bottom: 5rem; */
 }
 .main__signup--image{
   width: 200px;
 }
+.login--title {
+  color: #7048E9;
+}
 
 .main__signup--text{
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid #555;
+  /* border-bottom: 1px solid #555; */
   padding-bottom: 1rem;
   margin: 2rem 0;
 }
+.main__siginup__ott--list {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
 .ott--image--wrap {
-    margin: 1rem 0;
+    margin: 0.5rem;
   }
 .ott--image {
-  width: 150px;
+  height: 28px;
 }
 .main__signup__form {
   width:100%;
@@ -44,7 +52,7 @@
 @media screen and (max-width: 1350px) { 
   .main__siginup--container {
     grid-template-columns: 1fr 2fr;
-    grid-gap: 3rem;
+    grid-gap: 1rem;
   }
 }
 @media screen and (max-width: 700px) { 
@@ -67,7 +75,7 @@
     margin: 1rem;
   }
   .ott--image {
-    height: 70px;
+    height: 28px;
     width: auto;
   }
 }

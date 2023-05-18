@@ -18,52 +18,21 @@
     <div class="Detail__list">
       <!-- 1. 현재 영화 정보 박스 -->
       <section class="detail-item detail-item-1 Detail__TitleInfoBox">
-          <div class="detail--title--info--wrap">
-            <div class="title--image--wrap">
-              <img class="title--image" src="https://image.tmdb.org/t/p/w300{{ detail_data.poster_path }}" alt="">
-            </div>
-            <div class="detail__info--list">
+        <div class="detail--title--info--wrap">
+          <div class="title--image--wrap">
+            <img class="title--image" src="https://image.tmdb.org/t/p/w300{{ detail_data.poster_path }}" alt="">
+          </div>
+          <div class="detail__info--list">
+            <div class="deatil__score--watching--wrap">
               <div class="detail__info--score">
                 평점 <span style="color: #ffc107; margin-right:0.5rem;"><i class="bi bi-star-fill">{{ average|floatformat:1 }}</i></span>
                 리뷰평점 <span style="color: #ffc107"><i class="bi bi-star-fill">{{ average_rating|floatformat:1 }}</i></span>
               </div>
-              <hr>
-              <ul>
-                <li style="margin-bottom:10px;">{{ detail_data.release_date }} · 
-                {% for i in detail_data.genres %}
-                #{{i.name}}
-                {% endfor %}· {{ detail_data.production_countries.0.name }}</li>
-                <li style="margin-bottom:10px;">제작사: {{detail_data.production_companies.0.name }}</li>
-                <li style="margin-bottom:10px;">상영시간: {{ detail_data.runtime}}분</li>
-              </ul>
-              <hr>
-              <!-- 정보, 출연/제작 -->
-              <div class="">
-                <h4 class="detail--info--title">스토리</h4>
-                <p>{{ detail_data.overview }}</p>
-              </div>
-              <hr>    
-              <div class="">
-                <h4 class="detail--info--title">출연/제작</h4>
-                <div class="row" >
-                  {% for credit in credits %}
-                    <div class="col-3" style="width:150px; height:150px; object-fit:hidden"> 
-                      {% if credit.profile_path %}
-                        <img  style="object-fit:cover; width:100%; height:100%" src="https://image.tmdb.org/t/p/w200/{{ credit.profile_path }}" alt="{{credit.name}}사진">
-                      {% else %}
-                        <img src="{% static 'img/accounts/no_poster.png' %}" alt="">
-                      {% endif %}
-                      <p>{{ credit.name }}</p>
-                      <p class='text-secondary'>{{ credit.character }} 역</p>  
-                    </div>
-                  {% endfor %}
-                </div>
-              </div>
-              <hr>
+
               <div class="Detail__Info__WatchingBox">
                   {% comment %} 보는중이에요 폼 {% endcomment %}
                   {% if request.user.is_authenticated %}
-                  <form id="watching-form" data-post-id="{{ post.pk }}">
+                  <form id="watching-form" data-post-id="{{ post.pk }}" style="margin-right: 0.5rem;">
                     {% csrf_token %}
                     {% if request.user in post.watching_users.all %}
                       <button type="submit" title="{{ post.watching_users.all|length}}명이 보고 있습니다.">
@@ -75,39 +44,65 @@
                       </button>
                     {% endif %}
                   </form>
-                {% else %}
+                  {% else %}
                     <button title="{{ post.watching_users.all|length}}명이 보고 있습니다." disabled>
                       <i class="bi bi-eye"></i>
                     </button> 
-                {% endif %}   
-                {% comment %} 보고싶어요 폼 {% endcomment %}
-                {% if request.user.is_authenticated %}
-                <form id="wants-form" data-post-id="{{ post.pk }}">
+                  {% endif %}   
+                  {% comment %} 보고싶어요 폼 {% endcomment %}
+                  {% if request.user.is_authenticated %}
+                  <form id="wants-form" data-post-id="{{ post.pk }}">
                   {% csrf_token %}
-                  {% if request.user in post.want_users.all %}
+                    {% if request.user in post.want_users.all %}
                     <button type="submit" class="">
                       <i class="bi bi-cart-check-fill"></i>
                     </button>
             
-                  {% else %}
+                    {% else %}
                     <button type="submit" class="">
                       <i class="bi bi-cart-plus"></i>
                     </button>
-                  {% endif %}
-                {% else %}
-                  <button class="" disabled> 
-                    <i class="bi bi-cart-plus"></i>
-                  </button>    
-                {% endif %}     
+                    {% endif %}
+                  {% else %}
+                    <button class="" disabled> 
+                      <i class="bi bi-cart-plus"></i>
+                    </button>    
+                  {% endif %}     
                 </form>
+              </div>
+            </div>
+            <hr>
+            <ul>
+              <li style="margin-bottom:10px;">{{ detail_data.release_date }} · 
+              {% for i in detail_data.genres %}
+                {{i.name}}
+              {% endfor %}· {{ detail_data.production_countries.0.name }}</li>
+              <li style="margin-bottom:10px;">제작사: {{detail_data.production_companies.0.name }}</li>
+              <li style="margin-bottom:10px;">상영시간: {{ detail_data.runtime}}분</li>
+            </ul>
+            <hr>
+            <div class="">
+              <h4 class="detail--info--title">스토리</h4>
+              <p>{{ detail_data.overview }}</p>
             </div>
           </div>
         </div>
       </section>
+
       <!-- 2. 지금 여기서 보기 -->
-      <section class="detail-item detail-item-2 Detail__Info__PlatformBox">
-        <div class="">
-          <h2 class="detail--content--title">지금 여기서 보기</h2>
+      <section class="detail-item detail-item-2 Detail__Info__PlatformBox" style="position: relative;  min-height: 200px;">
+        <div class="width: 100%;">
+          {% for platform in platform_list %}
+            {% if platform == "상영중" %}
+              <div class="Detail__NoPlatform" style="width: 100%; position:absolute; top:50%; transform: translate(-50%, -50%);">
+                <h2 style="width: 100%; text-align: center;">상영 중인 영화입니다.</h2>
+              </div>
+            {% else %}
+              {% if forloop.first %}
+                <h2 class="detail--content--title">지금 여기서 보기</h2>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
           <ul>
           {% for platform in platform_list %}
             {% if platform == "넷플릭스" %}
@@ -156,8 +151,27 @@
         </div>
       </section>
 
+      <section class="detail-item detail-item-3 Detail__TagAndRatingBox" style="display:;">
+        <div class="">
+          <h2 class="detail--content--title">출연/제작</h2>
+          <div class="detail--movie--info--list" >
+            {% for credit in credits %}
+              <div class=""> 
+                {% if credit.profile_path %}
+                  <img style="width: 100px;" src="https://image.tmdb.org/t/p/w200/{{ credit.profile_path }}" alt="{{credit.name}}사진">
+                {% else %}
+                  <img style="width: 100px;" src="{% static 'img/accounts/no_poster.png' %}" alt="">
+                {% endif %}
+                <p style="width: 100px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">{{ credit.name }}</p>
+                <p class='text-secondary' style="font-size: 0.9rem; width: 100px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">{{ credit.character }} 역</p>  
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
       <!-- 3. 선호하는 태그 -->
-      <section class="detail-item detail-item-3 Detail__TagAndRatingBox">
+      <section class="detail-item detail-item-4 Detail__TagAndRatingBox">
        <div class="Detail__TagBox">
         <h2 class="detail--content--title">선호하는 태그</h2>
         <div class="Detail__Tag">
@@ -176,7 +190,7 @@
       </section>
 
       <!-- 4. 별점그래프 -->
-      <section class="detail-item detail-item-4 Detail__RatingBox">
+      <section class="detail-item detail-item-5 Detail__RatingBox">
         <div class="Detail__ContentBox__GraphTitle">
           <h2 class="detail--content--title">별점그래프</h2>
         </div>
@@ -203,7 +217,7 @@
       </section>
 
       <!-- 5. 리뷰스 -->
-      <section class="detail-item detail-item-5 Detail__ReviewBox">
+      <section class="detail-item detail-item-6 Detail__ReviewBox">
         <h2 class="detail--content--title">리뷰</h2>
         <div class="reviews__create--wrap" style="display: flex; justify-content: flex-end;">
             <a id="load-more-btn" class="load-more-btn" style="font-size: 0.8rem; color:#c8c0e2; margin: 0.5rem 0.5rem 0 0;">더보기
@@ -304,12 +318,14 @@
               <!-- 2. 신고 삭제 수정-->
               <div class="review__remove--wrap">
                   {% if request.user == review.user %}
-                  <a class="cidia--text--button" href="{% url 'movies:review_update' post.movie_id review.pk %}" style="margin-right: 0.1rem;">수정</a>
-                      <a class="cidia--text--button" href="{% url 'movies:review_delete' movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+                  <div>
+                    <a class="cidia--text--button" href="{% url 'movies:review_update' post.movie_id review.pk %}" style="margin-right: 0.1rem;">수정</a>
+                    <a class="cidia--text--button" href="{% url 'movies:review_delete' movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+                  </div>
                   {% else %}
-                    <a class="report--text--button" href="{% url 'movies:review_report' post.movie_id review.pk %}"><i class="bi bi-bell-fill"></i> 신고하기</a>
+                    <a class="report--text--button" href="{% url 'movies:review_report' post.movie_id review.pk %}"><i class="bi bi-bell-fill"></i> </a>
                   {% endif %}
-                </div>
+              </div>
           
             </div>
           </li>  
@@ -318,7 +334,7 @@
       </section>
 
       <!-- 6. 비슷한 작품 -->
-      <section class="detail-item detail-item-6 Detail__SimilarBox">
+      <section class="detail-item detail-item-7 Detail__SimilarBox">
        <h2 class="detail--content--title">비슷한 작품</h2>
        <div class="Detail__Content__Similar">
         <div class="Detail__carousel">

@@ -52,26 +52,26 @@
                 로그인을 해주세요!
                 {% endif %}
               </div>
-              <div class="header--login--wrap">
-                <div class="">
+              <div class="header--login--list">
+                <div class="header--log--wrap">
                   {% if user.is_authenticated %}
                     <form action="{% url 'accounts:logout' %}" method="POST">
                       {% csrf_token %}
-                      <input type="submit" value="LOG OUT">
+                      <input closs="" type="submit" value="LOG OUT">
                     </form>
                     {% else %}
-                    <a class="" href="{% url 'accounts:login' %}">
+                    <a href="{% url 'accounts:login' %}"  class="log--text--button">
                       <span>LOG IN</span>
                     </a>
                   {% endif %}
                 </div>
-                <div>
+                <div class="header--sign--wrap">
                   {% if user.is_authenticated %}
-                    <a href="{% url 'accounts:profile' user %}"  class="sm--nav__icon--wrap">
+                    <a href="{% url 'accounts:profile' user %}"  class="log--text--button">
                       <span>MY PAGE</span>
                     </a>
                     {% else %}
-                    <a href="{% url 'accounts:signup' %}"  class="sm--nav__icon--wrap">
+                    <a href="{% url 'accounts:signup' %}"  class="log--text--button">
                       <span>SIGN UP</span>
                     </a>
                   {% endif %}

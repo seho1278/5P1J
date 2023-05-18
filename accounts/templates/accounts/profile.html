@@ -7,22 +7,141 @@
 
 {% block style %}
 <link rel="stylesheet" href="{% static 'css/accounts/profile.css' %}">
-{% endblock style %}  
+{% endblock style %}
 
 {% block content %}
 <article class="mypage--container">
-  <h2 class="mypage--title">{{ person.username }}님의 프로필 페이지</h2>
-  <section class="profile--container">
-    <div class="profile--wrap">
-      <div>
+  <h1 class="mypage--title">{{ person.username }}님의 프로필 페이지</h1>
+  <div class="profile--update--wrap">
+    <a class="cidia--text--button2 profile--update" href="{% url 'accounts:update'%}">회원정보 수정<i class="bi bi-person-fill-gear"></i></a>
+  </div>
+  <div class="mypage--section--container">
+    <section class="profile--container">
+      {% comment %} <h4>내 정보</h4>  {% endcomment %}
+      <div class="profile--wrap">
+      <div class="profile--item1 profile--image--follow--list">
         {% if person.image %}
-        <img class="profile--image" src="{{ person.image.url }}" alt="">
+        <p><img class="profile--image" src="{{ person.image.url }}" alt=""></p>
         {% else %}
-        <img class="profile--image" src="{% static 'img/accounts/cidia_profile_noimage_02.png' %}" alt="">
+        <p class="profile--noimage"><i class="bi bi-person-circle"></i></p>
         {% endif %}
+        <div class="profile--fllow--wrap">
+          {% comment %} 팔로워 팔로우 모달창 시작!! {% endcomment %}
+          <div>
+            {% comment %} 팔로워 모달 버튼 {% endcomment %}
+            <p>
+              <button type="button" class="" data-bs-toggle="modal" data-bs-target="#followersModal">
+                <span id="followers-count" title="나를 좋아하는 사람">FOLLOWER<i style="color: #c8c0e2;"> {{ person.followers.all|length }}</i></span>
+              </button>
+            </p>
+            {% comment %} 팔로잉 모달 버튼 {% endcomment %}
+            <p>
+              <button type="button" class="" data-bs-toggle="modal" data-bs-target="#followingsModal">
+                <span id = "followings-count" title="내가 좋아하는 사람">FOLLOWING<i style="color: #c8c0e2;"> {{ person.followings.all|length }}</i></span>
+              </button>
+            </p>
+            {% comment %} 팔로워 Modal {% endcomment %}
+            <div class="modal fade" style="z-index: 99999;" id="followersModal" tabindex="-1" aria-labelledby="followersModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title" id="followersModalLabel" title="나를 좋아하는 사람">FOLLOWER</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" id="followersModalBody">
+                    {% if request.user == person %}
+                      {% for follower in person.followers.all %}
+                        <div class="modal--follow--wrap">
+                          <a href="{% url 'accounts:profile' follower.username %}">
+                            {% if follower.image %}
+                              <div>
+                                <img class="modal--profile--image" src="{{ follower.image.url }}" alt="">
+                              </div>
+                            {% else %}
+                              <div>
+                                <img class="modal--profile--image" src="{% static 'img/accounts/cidia_profile_noimage_02.png' %}" alt="">                          </div>
+                            {% endif %}
+                            <div class="modal--textarea">
+                              <span>{{ follower }}</span>
+                            </div>
+                          </a>
+                        </div>
+                      {% endfor %}
+                    {% else %}
+                      <div id="followers-list"></div>
+                    {% endif %}
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% comment %} 팔로우 Modal {% endcomment %}
+            <div class="modal fade" style="z-index: 99999;" id="followingsModal" tabindex="-1" aria-labelledby="followingsModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title" id="followingsModalLabel" title="내가 좋아하는">FOLLOWING</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    {% for following in person.followings.all %}
+                      <div class="modal--follow--wrap">
+                        <a href="{% url 'accounts:profile' following.username %}">
+                          {% if following.image %}
+                            <div>
+                              <img class="modal--profile--image" src="{{ following.image.url }}" alt="">
+                            </div>
+                          {% else %}
+                            <div>
+                              <img class="modal--profile--image" src="{% static 'img/accounts/cidia_profile_noimage_02.png' %}" alt="">
+                            </div>
+                          {% endif %}
+                          <div class="modal--textarea">
+                            <span>{{ following }}</span>
+                          </div>
+                        </a>
+                      </div>
+                    {% endfor %}
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% comment %} 팔로우 버튼 {% endcomment %}
+            {% if request.user != person %}
+              <div>
+                <form id="follow-form" data-user-id="{{ person.pk }}">
+                  {% csrf_token %}
+                  {% if request.user in person.followers.all %}
+                    <input type="submit" value="Unfollow">
+                  {% else %}
+                    {% if request.user.is_authenticated %}
+                      <i class="bi bi-person-add">
+                        <input type="submit" value="FOLLOW">
+                      </i>
+                    {% else %}
+                      <i class="bi bi-person-dash">
+                        <input type="submit" value="FOLLOW" disabled>
+                      </i>
+                    {% endif %}
+                  {% endif %}
+                </form>
+              </div>
+            {% endif %}
+          </div>
+        </div>
       </div>
-      <div class="profile--list--wrap">
+      <div class="profile--item2 profile--list--wrap">
+        <h5 class="profile--list--title">내 정보</h5>
         <ul class="profile--list">
+          <li>
+            <p>ID</p>
+            <p>{{ person.username }}</p>
+          </li>
           <li>
             <p>이름</p>
             <p>{{ person.first_name }}</p>
@@ -35,129 +154,65 @@
             <p>이메일</p>
             <p>{{ person.email }}</p>
           </li>
-          <li>
-            <a class="good--button" href="{% url 'accounts:update'%}">회원정보 수정</a>
-          </li>
         </ul>
       </div>
-      {% comment %} 팔로워 팔로우 모달창 시작!! {% endcomment %}
-      <div>
-        {% comment %} 팔로워 모달 버튼 {% endcomment %}
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#followersModal">
-          <span id="followers-count">{{ person.followers.all|length }}</span> 팔로워
-        </button>
-        {% comment %} 팔로잉 모달 버튼 {% endcomment %}
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#followingsModal">
-          <span id = "followings-count">{{ person.followings.all|length }}</span> 팔로잉 
-        </button>
-        {% comment %} 팔로워 Modal {% endcomment %}
-        <div class="modal fade" style="z-index: 99999;" id="followersModal" tabindex="-1" aria-labelledby="followersModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title" style="color:black;" id="followersModalLabel">팔로워</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body" id="followersModalBody">
-                {% if request.user == person %}
-                  {% for follower in person.followers.all %}
-                    <div >
-                      <a href="{% url 'accounts:profile' follower.username %}">
-                        {% if follower.image %}
-                          <div>
-                            <img style="color:black;" src="{{ follower.image.url }}" alt="">
-                          </div>
-                        {% else %}
-                          <div>
-                            <img style="color:black;" class="profile--image" src="{% static 'img/accounts/cidia_profile_noimage_02.png' %}" alt="">                          </div>
-                        {% endif %}
-                        <span style="color:black;">{{ follower }}</span>
-                      </a>
-                    </div>
-                  {% endfor %}
-                {% else %}
-                  <div id="followers-list"></div>
-                {% endif %}
-              </div>
-              
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% comment %} 팔로우 Modal {% endcomment %}
-        <div class="modal fade" style="z-index: 99999;" id="followingsModal" tabindex="-1" aria-labelledby="followingsModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title" style="color:black;" id="followingsModalLabel">팔로잉</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                {% for following in person.followings.all %}
-                  <div >
-                    <a  style="color:black;" href="{% url 'accounts:profile' following.username %}">
-                      {% if following.image %}
-                        <div>
-                          <img src="{{ following.image.url }}" alt="">
-                        </div>
-                      {% else %}
-                        <div>
-                          <img class="profile--image" src="{% static 'img/accounts/cidia_profile_noimage_02.png' %}" alt="">                        </div>
-                      {% endif %}
-                      <span style="color:black;">{{ following }}</span>
-                    </a>
-                  </div>
-                {% endfor %}
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% comment %} 팔로우 버튼 {% endcomment %}
-        {% if request.user != person %}
-          <div>
-            <form id="follow-form" data-user-id="{{ person.pk }}">
-              {% csrf_token %}
-              {% if request.user in person.followers.all %}
-                <input type="submit" value="Unfollow">
-              {% else %}
-                {% if request.user.is_authenticated %}
-                  <input type="submit" value="follow">
-                {% else %}
-                  <input type="submit" value="follow" disabled>
-                {% endif %}
-              {% endif %}
-            </form>
+      <div class="profile--item3 profiile--my--list--wrap">
+        {% if request.user.is_superuser %}
+        {% else %}
+          <div class="">
+            <h5 class="profile--list--title">{{ person.username }}님의 태그</h5>
+            {% for tag in new_tags %}
+            <p class="my--list--button--wrap"><span class="tag--botton--border--mypage" ><i class="bi bi-vinyl-fill"></i>{{tag}}</span></p>
+            {% endfor %}
           </div>
         {% endif %}
+        <div>
+          <h5 class="profile--list--title">보고싶은 영화</h5>
+          {% for want_post in person.want_posts.all %}
+            <a href="{% url 'movies:detail' want_post.movie_id %}">
+              <p><i class="bi bi-film" style="color:#a182ff;"></i> {{ want_post.title}}</p>
+            </a>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  </section>
+      </div>
+    </section>
+    {% if request.user.is_superuser %}
+    {% else %}
+    <section class="recommend_container">
+      <div class="Profile__RecommendBox">
+        <h4>태그별 영화 추천</h4>
+        <div class="my--movie--list">
+          {% for movie, tag in tag_dict.items %}
+            <div class="">
+              <p class="my--movie--button--wrap"><span class="tag--botton--border--mypage--big" ><i class="bi bi-vinyl-fill"></i>{{tag}}</span></p>
+              <a href="{% url 'movies:detail' movie.movie_id %}">
+                <div>
+                  <p style="width: 200px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">{{movie.title}}</p>
+                </div>
+                <div>
+                  {% if movie.poster_path %}
+                    <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}">
+                  {% else %}
+                    <img style="width:200px;" src="{% static 'img/accounts/no_poster.png' %}" alt="기본 영화 포스터">
+                  {% endif %}
+                </div>
+              </a>
+            </div>     
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
 
-  {% if request.user.is_superuser %}
-  {% else %}
-    <div class="Profile__ContentBox">
-      <section class="mb-3">
-        <h4>{{ person.username }}님의 Tag</h4>
-        {% for tag in new_tags %}
-        <span class="badge rounded-pill text-bg-light" >{{tag}}</span>
-        {% endfor %}
-        
-      </section>
-  {% endif %}
 
-
-    <section>
+    <section class="my--reviews--container">
       <div class="Profile__ReviewBox">
-        <h4>내가 쓴 리뷰</h4>
+        <h4 class="">내가 쓴 리뷰</h4>
 
         <table class="table" style="color:#fff;">
           <thead>
-            <tr>
+            <tr style="color:#c8c0e2; border-bottom:3px solid #c8c0e2;">
               <th scope="col">No.</th>
               <th scope="col">영화제목</th>
               <th scope="col">내용</th>
@@ -171,7 +226,7 @@
             {% if review.reviewreports.exists %}
             <tr style="color: red;">
             {% else %}
-            <tr>
+            <tr style="font-size:0.9rem; border-bottom:1px solid #c8c0e2;">
             {% endif %}
               <th scope="row">{{ forloop.counter }}</th>
               <td>{{ review.post.title }}</td>
@@ -182,6 +237,8 @@
               </td>
               <td>{{ review.created_at|date:"Y. m. d" }}</td>
               <td style="color: #000000;">
+
+
                 {% if review.reviewreports.exists %}
                 <!-- 관리자메세지 -->
                 <button type="button" class="" data-bs-toggle="modal" data-bs-target="#adminmessage{{ forloop.counter }}" style="color: red;">
@@ -229,13 +286,14 @@
       </div>
     </section>
 
+    
     {% if request.user.is_superuser %}
-    <section>
+    <section class="reports_container">
       <div class="Profile__ReportBox">
-        <h2>신고 댓글</h2>
+        <h4>신고 댓글</h4>
         <table class="table" style="color:#fff;">
           <thead>
-            <tr>
+            <tr style="color:#cc0000; border-bottom: 3px solid #aa0000;">
               <th scope="col">No.</th>
               <th scope="col">신고자</th>
               <th scope="col">신고대상</th>
@@ -247,7 +305,7 @@
           </thead>
           <tbody>
             {% for review_report in review_reports %}
-            <tr>
+            <tr style="border-bottom: 1px solid #aa0000;">
               <th scope="row">{{ forloop.counter }}</th>
               <td>{{ review_report.user }}</td>
               <td>{{ review_report.review.user }}</td>
@@ -258,8 +316,8 @@
               <td>{{ review_report.created_at|date:"Y. m. d" }}</td>
               <td>
                 <!-- 신고리뷰 보기 -->
-                <button type="button" class="" data-bs-toggle="modal" data-bs-target="#reportReview{{ forloop.counter }}" style="color: #7048E9;">
-                  확인하기
+                <button type="button" data-bs-toggle="modal" data-bs-target="#reportReview{{ forloop.counter }}" style="height: 25px;">
+                  <span class="mypage--report--button">확인하기</span>
                 </button>
 
                 <!-- Modal -->
@@ -267,21 +325,30 @@
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="reportReviewLabel{{ forloop.counter }}" style="color: #000000;">{{ review_report.review.post.title }}</h1>
+                        <h1 class="modal-title fs-5" id="reportReviewLabel{{ forloop.counter }}">{{ review_report.review.post.title }}</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
-                      <div class="modal-body" style="color: #000000;">
-                        <div>
-                          <p>작성자 : {{ review_report.review.user }}</p>
-                          <p>작성일자 : {{review_report.review.created_at|date:"Y년 m월 d일 H:i"}}</p>
-                          <p>리뷰내용 : {{ review_report.review.content }}</p>
-                        </div>
+                      <div class="modal-body">
+                        <ul class="report--modal--list">
+                          <li class="report--modal--textarea--wrap">
+                            <h6 class="report--modal--text--title">작성자</h6>
+                            <p class="report--modal--textarea">{{ review_report.review.user }}</p>
+                          </li>
+                          <li class="report--modal--textarea--wrap">
+                            <h6 class="report--modal--text--title">작성일자</h6>
+                            <p class="report--modal--textarea">{{review_report.review.created_at|date:"Y년 m월 d일 H:i"}}</p>
+                          </li>
+                          <li class="report--modal--textarea--content--wrap">
+                            <h6 class="report--modal--text--title">리뷰내용</h6>
+                            <p class="report--modal--textarea">{{ review_report.review.content }}</p>
+                          </li>
+                        </ul>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                         <div class="dropdown">
-                          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            처리하기
+                          <button class="dropdown-toggle mypage--report--button--good" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>처리하기</span>
                           </button>
                           <ul class="dropdown-menu">
                             <li class="dropdown-item">
@@ -333,35 +400,6 @@
       </div>
     </section>
     {% endif %}
-
-    {% if request.user.is_superuser %}
-    
-    {% else %}
-    <section>
-      <div class="Profile__RecommendBox">
-        <h4>{{ person.username }}님이 선택한 태그 기준으로 영화 추천</h4>
-        <div class="row">
-          {% for movie, tag in tag_dict.items %}
-            <div class="col-3">
-              <p>"{{tag}}"</p>
-              <a href="{% url 'movies:detail' movie.movie_id %}">
-                <div>
-                  {% if movie.poster_path %}
-                    <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}">
-                  {% else %}
-                    <img style="width:200px;" src="{% static 'img/accounts/no_poster.png' %}" alt="기본 영화 포스터">
-                  {% endif %}
-                </div>
-                <div>
-                  <p class="text-center">{{movie.title}}</p>
-                </div>
-              </a>
-            </div>     
-          {% endfor %}
-        </div>
-      </div>
-    </section>
-    {% endif %}
     
   </div>
 </article>
@@ -395,7 +433,7 @@
             followerImageDiv.appendChild(followerImage)
           } else {
             const followerImage = document.createElement('img')
-            followerImage.classList.add("profile--image")
+            followerImage.classList.add("modal--profile--image")
             followerImage.src = "/static/img/accounts/cidia_profile_noimage_02.png"
             followerImage.alt = "profile_image_none"
             followerImageDiv.appendChild(followerImage)
