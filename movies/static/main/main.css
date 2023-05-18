@@ -2,7 +2,49 @@ body {
   background-color: #000000;
 }
 
-.Index__main {
+
+/* 모달 스타일링 */
+.modal {
+  display: none; /* 기본적으로 숨김 처리 */
+  position: fixed; /* 고정 위치 */
+  z-index: 1; /* 다른 요소 위에 표시하기 위해 z-index 설정 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 모달 내용이 넘칠 경우 스크롤 허용 */
+  background-color: rgba(0, 0, 0, 0.4); /* 배경에 반투명한 색상 설정 */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  color: black;
+  margin: 15% auto; /* 화면 가운데로 위치 */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1; /* 모달 내용이 배경보다 위에 나타나도록 설정 */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* carousel */
+
+.Main__main {
   display: block;
   width: 1200px;
   height: auto;
@@ -10,7 +52,7 @@ body {
   margin-top: 100px;
 }
 
-.Index__Content__rankingContainer {
+.Main__Content__rankingContainer {
   width: 1200px;
   display: flex;
   overflow: hidden;
@@ -20,12 +62,12 @@ body {
   padding-right: 15px;
 }
 
-.Index__Crew {
+.Main__Crew {
   font-size: 21px;
   color: white;
 }
 
-.Index__Tag {
+.Main__Tag {
   font-size: 1.8rem;
   font-weight: bold;
   color: white;
@@ -62,11 +104,11 @@ body {
   margin-right: 15px;
 }
 
-.Index__Card:hover .card img {
+.Main__Card:hover .card img {
   transform: scale(1.1);
 }
 
-/* .Index__Like {
+/* .Main__Like {
   position: absolute;
   border: solid 1px black;
   border-radius: 50%;
@@ -74,7 +116,7 @@ body {
   top: 10px;
 } */
 
-.Index__Card__Content {
+.Main__Card__Content {
   width: 190px;
   height: 100%;
   margin-left: 15px;
@@ -83,7 +125,7 @@ body {
   overflow: hidden;
 }
 
-.Index__Card:hover .card-title{
+.Main__Card:hover .card-title{
   color:white;
   font-size: 1.1rem;
   white-space:nowrap;
@@ -103,14 +145,14 @@ body {
 
 
 @media ( max-width: 1350px ) {
-  .Index__main {
+  .Main__main {
     display: block;
     width: 900px;
     height: auto;
     margin: auto;
     margin-top: 100px;
   }
-  .Index__Content__rankingContainer {
+  .Main__Content__rankingContainer {
     width: 100%;
     display: flex;
     overflow: hidden;
@@ -120,7 +162,7 @@ body {
 }
 
 @media ( max-width: 700px ) {
-  .Index__main {
+  .Main__main {
     display: block;
     width: 100%;
     height: auto;
@@ -128,19 +170,19 @@ body {
     margin-top: 100px;
   }
 
-  .Index__Content__rankingContainer {
+  .Main__Content__rankingContainer {
     width: 100%;
     display: flex;
     overflow: hidden;
     white-space: nowrap;
   }
 
-  .Index__Category {
+  .Main__Category {
     width: 100%;
     text-align: center;
   }
 }
 
-/* .Index__Movie__Card:hover .card-title {
+/* .Main__Movie__Card:hover .card-title {
   animation-play-state: paused;
 } */

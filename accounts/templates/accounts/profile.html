@@ -79,6 +79,7 @@
                   <div id="followers-list"></div>
                 {% endif %}
               </div>
+              
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
@@ -186,6 +187,8 @@
                 <button type="button" class="" data-bs-toggle="modal" data-bs-target="#adminmessage{{ forloop.counter }}" style="color: red;">
                   !
                 </button>
+                {% else %}
+                <a href="{% url 'movies:detail' movie_id=review.post.movie_id %}">이동</a>
                 {% endif %}
 
                 <!-- Modal -->

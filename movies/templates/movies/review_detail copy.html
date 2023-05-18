@@ -112,7 +112,7 @@
               <li class="review--etc">
                 {% comment %} 좋아요 비동기 하기 {% endcomment %}
                 {% if request.user.is_authenticated %}
-                  <form id="review-like-forms" data-movie-id="{{ post.pk }}" data-review-id="{{ review.pk }}">
+                  <form id="review-like-{{ review.pk }}" data-movie-id="{{ post.pk }}" data-review-id="{{ review.pk }}">
                     {% csrf_token %}
                     {% if request.user in review.like_users.all %}
                       <button type="submit" style="margin-left:5px; color: pink;">
@@ -131,7 +131,7 @@
                 {% endif %}
               </li>
               <li class="review--etc">
-                <i class="bi bi-chat-square-dots-fill" style="color: skyblue;" title="댓글">{{ review.reviews.all|length }}</i>
+                <i class="bi bi-chat-square-dots-fill" style="color: skyblue;" title="댓글">{{ review.comment_set.all|length }}</i>
               </li>
             </ul>
           </div>
@@ -156,6 +156,9 @@
       <h3>댓글</h3>
       <div class="d-flex">
         <button class="sm--good--button mx-1" onclick="openModal()">댓글 작성</button>
+      
+          
+      
       </div>
     </div>
     <div id="modal" class="modal">
@@ -175,7 +178,10 @@
           </div>
         </form>
       </div>
-    </div>    
+    </div>
+    
+    
+    
     {% for comment in review.reviews.all %}
       {% if request.user == comment.user %}
       <div id="modal1{{comment.id}}" class="modal">
@@ -196,8 +202,8 @@
           </form>
         </div>
       </div>
-      <span data-comment-id="{{ comment.pk }}"  onclick="openModal1('{{ comment.id }}')">수정</span> 
-      <a href="{% url 'movies:comment_delete' post.movie_id review.id comment.id %}">삭제</a>
+      <button data-comment-id="{{ comment.pk }}" class="sm--good--button update" onclick="openModal1('{{ comment.id }}')">댓글 수정</button> 
+      <a href="{% url 'movies:comment_delete' post.movie_id review.id comment.id %}">삭제하기</a>
 
     {% endif %}
     <div clss="comment--list" style="display:grid; grid-gap: 1rem; grid-template-columns: 110px 10fr; background-color: #111; margin-bottom: 1rem; padding: 10px;">
@@ -272,6 +278,17 @@
   function closeModal1(commentId) {
     document.getElementById('modal1' + commentId).style.display = 'none';
   }
+  {% comment %} // 수정모달
+  function openModal1() {
+
+    document.getElementById('modal1{{comment.id}}').style.display = 'block';
+    
+  }
+  
+  function closeModal1() {
+    document.getElementById('modal1{{comment.id}}').style.display = 'none';
+  } {% endcomment %}
+
 
 // 좋아요 비동기 movieId 받아오기
   // like-form요소 선택
@@ -305,6 +322,34 @@
       reviewsCountTag.textContent = reviewsCountData
     })
   })
+
+
+
+  {% comment %} forms.forEach((form) => {
+    form.addEventListener('submit',function (event) {
+      event.preventDefault()
+      const reviewId = event.target.dataset.reviewId
+      const movieId = event.target.dataset.movieId
+      axios({
+        method: 'post',
+        url: `/movies/${movieId}/reviews/${reviewId}/like/`,
+        headers: {'X-CSRFToken': csrftoken},
+      })
+        .then((response) => {
+          // 요청이 성공한 경우 처리할 로직 작성
+          const isLiked = response.data.is_liked
+          const likeBtn = document.querySelector('#like-' + reviewId)
+          if (isLiked === true) {
+            likeBtn.value = '좋아요 취소'
+          } else {
+            likeBtn.value = '좋아요'
+          }
+        })
+        .catch((error) => {
+          console.log(error.response)
+        })
+    })
+  }) {% endcomment %}
 
   commentForms.forEach((form) => {
     form.addEventListener('submit', function(event) {

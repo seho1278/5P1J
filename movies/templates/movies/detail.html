@@ -29,7 +29,10 @@
               </div>
               <hr>
               <ul>
-                <li style="margin-bottom:10px;">{{ detail_data.release_date }} · 장르 · {{ detail_data.production_countries.0.name }}</li>
+                <li style="margin-bottom:10px;">{{ detail_data.release_date }} · 
+                {% for i in detail_data.genres %}
+                #{{i.name}}
+                {% endfor %}· {{ detail_data.production_countries.0.name }}</li>
                 <li style="margin-bottom:10px;">제작사: {{detail_data.production_companies.0.name }}</li>
                 <li style="margin-bottom:10px;">상영시간: {{ detail_data.runtime}}분</li>
               </ul>
@@ -42,7 +45,7 @@
               <hr>    
               <div class="">
                 <h4 class="detail--info--title">출연/제작</h4>
-                <div class="" >
+                <div class="row" >
                   {% for credit in credits %}
                     <div class="col-3" style="width:150px; height:150px; object-fit:hidden"> 
                       {% if credit.profile_path %}
@@ -58,46 +61,45 @@
               </div>
               <hr>
               <div class="Detail__Info__WatchingBox">
-                
-                  {% comment %} 보고싶어요 폼 {% endcomment %}
-                  {% if request.user.is_authenticated %}
-                  <form id="wants-form" data-post-id="{{ post.pk }}">
-                    {% csrf_token %}
-                    {% if request.user in post.want_users.all %}
-                      <button type="submit" class="">
-                        <i class="bi bi-eye-fill"></i>
-                      </button>
-              
-                    {% else %}
-                      <button type="submit" class="">
-                        <i class="bi bi-eye"></i>
-                      </button>
-                    {% endif %}
-                  {% else %}
-                    <button class="" disabled> 
-                      <i class="bi bi-eye"></i>
-                    </button>    
-                  {% endif %}     
-                  </form>
                   {% comment %} 보는중이에요 폼 {% endcomment %}
                   {% if request.user.is_authenticated %}
                   <form id="watching-form" data-post-id="{{ post.pk }}">
                     {% csrf_token %}
                     {% if request.user in post.watching_users.all %}
-                      <button type="submit" class="">
-                        <i class="bi bi-check-lg"></i>
+                      <button type="submit" title="{{ post.watching_users.all|length}}명이 보고 있습니다.">
+                        <i class="bi bi-eye-fill"></i>
                       </button>
                     {% else %}
-                      <a type="submit" class="">
-                        <i class="bi bi-cart-plus"></i>
-                      </a>
+                      <button type="submit" title="{{ post.watching_users.all|length}}명이 보고 있습니다.">
+                        <i class="bi bi-eye"></i>
+                      </button>
                     {% endif %}
                   </form>
                 {% else %}
-                    <a class="" disabled>
-                      <i class="bi bi-cart-plus-fill"></i>
-                    </a> 
+                    <button title="{{ post.watching_users.all|length}}명이 보고 있습니다." disabled>
+                      <i class="bi bi-eye"></i>
+                    </button> 
                 {% endif %}   
+                {% comment %} 보고싶어요 폼 {% endcomment %}
+                {% if request.user.is_authenticated %}
+                <form id="wants-form" data-post-id="{{ post.pk }}">
+                  {% csrf_token %}
+                  {% if request.user in post.want_users.all %}
+                    <button type="submit" class="">
+                      <i class="bi bi-cart-check-fill"></i>
+                    </button>
+            
+                  {% else %}
+                    <button type="submit" class="">
+                      <i class="bi bi-cart-plus"></i>
+                    </button>
+                  {% endif %}
+                {% else %}
+                  <button class="" disabled> 
+                    <i class="bi bi-cart-plus"></i>
+                  </button>    
+                {% endif %}     
+                </form>
             </div>
           </div>
         </div>
@@ -223,7 +225,7 @@
                 <a class="detail__user--list" href="{% url 'accounts:profile' review.user %}">
                   {% if review.user.picture %}
                   <div class="Detail__Review__User__ImgBox">
-                    <img class="Detail__Review__User__Img" src="{{ review.user.picture.url }}" alt="유저 이미지">
+                    <img class="Detail__Review__User__Img" src="{{ review.user.image.url }}" alt="유저 이미지">
                   </div>
                   {% else %}
                   <div class="Detail__Review__User__ImgBox">
@@ -294,7 +296,7 @@
                       {% endif %}
                     </li>
                     <li class="review--etc">
-                      <i class="bi bi-chat-square-dots-fill" style="color: skyblue;" title="댓글">{{ review.comment_set.all|length }}</i>
+                      <i class="bi bi-chat-square-dots-fill" style="color: skyblue;" title="댓글">{{ review.reviews.all|length }}</i>
                     </li>
                   </ul>
                 </div>
@@ -467,16 +469,17 @@
       headers: {'X-CSRFToken': csrftoken},
     })
       .then((response) => {
+        
         const isWanted = response.data.is_wanted
         const wantBtn = document.querySelector('#wants-form > button[type=submit]')
         const wantBtni = document.querySelector('#wants-form > button[type=submit] > i')
        
         if (isWanted === true) {
-          wantBtni.classList.remove('bi-eye')
-          wantBtni.classList.add('bi-eye-fill') 
+          wantBtni.classList.remove('bi-cart-plus')
+          wantBtni.classList.add('bi-cart-check-fill') 
         } else {
-          wantBtni.classList.remove('bi-eye-fill')
-          wantBtni.classList.add('bi-eye')  
+          wantBtni.classList.remove('bi-cart-check-fill')
+          wantBtni.classList.add('bi-cart-plus')  
         }
       })
       .catch((error) => {
@@ -495,18 +498,20 @@
       headers: {'X-CSRFToken': csrftoken1},
     })
       .then((response) => {
+        console.log(response)
         const watching = response.data.watching
         // 보는중이에요 폼 버튼 변수 설정했습니다 원하시는 대로 클래스 추가해주세요ㅎㅎ 아이콘도 바꾸셔도 됩니다
         const watchingBtn = document.querySelector('#watching-form > button[type=submit]')
         const watchingBtni = document.querySelector('#watching-form > button[type=submit] > i')
         if (watching === true) {
-          watchingBtni.classList.remove('bi-plus-lg')
-          watchingBtni.classList.add('bi-check-lg')     
+          watchingBtni.classList.remove('bi-eye')
+          watchingBtni.classList.add('bi-eye-fill') 
         } else {
-          watchingBtni.classList.remove('bi-check-lg')
-          watchingBtni.classList.add('bi-plus-lg') 
+          watchingBtni.classList.remove('bi-eye-fill')
+          watchingBtni.classList.add('bi-eye')  
         }
-        
+        const watchingCount = response.data.watching_count
+        watchingBtn.title = watchingCount + '명이 보고 있습니다.'
       })
   }) 
 
