@@ -7,114 +7,113 @@
 
 {% block style %}
 <style>
+  .search__grid {
+  display:grid; 
+  grid-template-columns: repeat(5,1fr);
+  grid-gap: 1rem;
+  text-align: center;
+  }
+  @media screen and (max-width: 1550px) {
+  .search__grid {
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem;
+  }
+}
+  @media screen and (max-width: 1240px) {
+  .search__grid {
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+  } 
+}
+  @media screen and (max-width: 950px) {
+  .search__grid {
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+  } 
+  
+  }
+  @media screen and (max-width: 640px) {
+  .search__grid {
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 1rem;
+  } 
+  
+  }
     .accordion-item {
       margin-bottom: 10px;
       border: none;
       background-color: #111;
     }
 
-    .accordion-button {
-      padding: 10px 15px;
-      font-size: 16px;
-      font-weight: bold;
-      background-color: #ced4da;
-      color: #ffffff;
-    }
-
+ 
     .accordion-button.collapsed {
-    color: #eee;
+    color: #555;
     border: none;
-    background-color: #222;
+    background-color: #fff;
     }
 
     .accordion-button:not(.collapsed) {
-    color: #555;
-    background-color: #eee;
+    color: #7048E9;
+    background-color: #fff;
      
     }
 
     .accordion-button:not(.collapsed) {
-    background-color: #96A5FF;
+    
     }
+     article.search--container img {
+    transition: border .50s ease-in-out, box-shadow .15s ease-in-out;
+
+  }
+    article.search--container img:hover {
+      border: 1px solid #7048E9;
+  }
 
 
-    .col-3 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-
-    .movie-poster img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-
-
-    .movie-title p {
-      margin-top: 10px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-
-    .row {
-      margin-left: -5px;
-      margin-right: -5px;
-    }
-
-    .text-center {
-      text-align: center;
-    }
 
   </style>
 {% endblock style %}  
 
 {% block content %}
-
+<article class="search--container">
 {% if search_data.results or person_search_data.results or tag_movies or tag_reviews_1 %}
-  <span class="mt-5"> <b>"{{query}}" </b>검색 결과 </span>
+  <span class="mt-5"> <b>"{{query}}" </b>검색 결과  </span>
 {% else %}
-  <p> {{query}} 검색 결과가 없습니다. </p>
+  <h3> {{query}} 검색 결과가 없습니다. </h3>
 {% endif %}
 <hr>
 
 <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-        영화 이름으로 검색 <b>{{search_data.results|length}} 건</b>
+      <button style="" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        <span>영화 이름으로 검색 <b>{{search_data.results|length}} 건</b></span> 
       </button>
     </h2>
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
       <div class="accordion-body">
         {% if search_data.results %}
-          <div class="row">
+          <div class="search__grid">
             {% for movie in posts %}
-              <div class="col-3">
+              <div class="">
                 <a href="{% url 'movies:detail' movie.id %}">
-                  <div>
+                  <div style="width: 200px;">
                     {% if movie.poster_path %}
-                      <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}">
+                      <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}" style="width: 200px; height: 300px;">
                     {% else %}
-                      <p>포스터 없을 경우 static에 대체 이미지 넣기 </p>
+                      <p style="color: #555;">포스터 없을 경우 static에 대체 이미지 넣기 </p>
                     {% endif %}
+                    <p  style="color:#fff; width: 200px; text-align:center; white-space: nowrap; overflow: hidden; text-overflow:ellipsis; margin:0;">{{movie.title}}</p>
                   </div>
-                  <div>
-                    <p class="text-center">{{movie.title}}</p>
-                  </div>
-
                 </a>
                 {% if request.user.is_superuser %}
-                  <span><a href="{% url 'movies:create' movie.id %}">생성하기</a></span>
+                  <span><a href="{% url 'movies:create' movie.id %}" style="color: #fff;">생성하기</a></span>
                 {% endif %}
               </div>     
             {% endfor %}
           </div>
         {% else %}
-          <p>영화 이름으로 검색 결과가 없습니다.</p>
+          <h3 style="color:#fff;">영화 이름으로 검색 결과가 없습니다.</h3>
         {% endif %}
       </div>
     </div>
@@ -129,47 +128,43 @@
     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
       <div class="accordion-body">
         {% if tag_movies or tag_reviews_1 %}
-          <div class="row">
+          <div class="search__grid">
             {% if tag_movies %}
-                {% for movie in tag_movies %}
-                <div class="col-3">
-                  <p>"{{tag_name}}"</p>
+              {% for movie in tag_movies %}
+                <div class="">
                   <a href="{% url 'movies:detail' movie.movie_id %}">
-                <div>
-                  {% if movie.poster_path %}
-                    <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}">
-                  {% else %}
-                    <p>대체 이미지 {{movie.title}} </p>
-                  {% endif %}
-                </div>
-                  <div>
-                    <p class="text-center">{{movie.title}}</p>
-                  </div>
+                    <p style="width:200px; color:#fff;">"{{tag_name}}"</p>
+                    <div style="width: 200px;">
+                      {% if movie.poster_path %}
+                        <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}" style="width: 200px; height: 300px;">
+                      {% else %}
+                        <p>대체 이미지 {{movie.title}} </p>
+                      {% endif %}
+                        <p  style="color:#fff; width: 200px; text-align:center; white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">{{movie.title}}</p>
+                    </div>
                   </a>
                 </div>
-                {% endfor %}
+              {% endfor %}
             {% elif tag_reviews_1 %}
-                {% for movie in tag_reviews_1 %}
-                  <div class="col-3">
-                    <span> <b>"{{tag_name}}"</b></span>
-                    <a href="{% url 'movies:detail' movie.movie_id %}">
-                      <div>
-                        {% if movie.poster_path %}
-                          <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}">
-                        {% else %}
-                          <p>대체 이미지 {{movie.title}} </p>
-                        {% endif %}
-                      </div>
-                      <div>
-                        <p class="text-center">{{movie.title}}</p>
-                      </div>
-                    </a>
+            {% for movie in tag_reviews_1 %}
+              <div class="">
+                <span> <b>"{{tag_name}}"</b></span>
+                <a styl="" href="{% url 'movies:detail' movie.movie_id %}">
+                  <div style="width: 200px;">
+                    {% if movie.poster_path %}
+                      <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}" style="width: 200px; height: 300px;">
+                    {% else %}
+                      <p>대체 이미지 {{movie.title}} </p>
+                    {% endif %}
+                      <p style="color:#fff; width: 200px; text-align:center; white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">{{movie.title}}</p>
                   </div>
-                {% endfor %}
+                </a>
+              </div>
+            {% endfor %}
 
 
             {% else %}
-            <p>태그로 검색 결과가 없습니다.</p>
+            <h3 style="color:#fff;">태그로 검색 결과가 없습니다.</h3>
             {% endif %}
           </div>
         {% endif %}
@@ -185,38 +180,42 @@
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show">
       <div class="accordion-body">
         {% if person_search_data.results %}
-          <div class="row">
+          <div class="">
             {% for p in person_search_data.results %}
-              <div class="col-3">
+              <div style="width: 200px;">
                 {% if p.profile_path %}
-                  <img src="https://image.tmdb.org/t/p/w150{{p.profile_path}}" alt="{{p.name}}">
-                  <p>{{p.name}}</p>
+                  <img src="https://image.tmdb.org/t/p/w150{{p.profile_path}}" alt="{{p.name}}" style="width: 200px; height: 300px;">
+                  <p style="color:#fff; width: 200px; text-align:center; white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">{{p.name}}</p>
               </div>
               
-              <hr>
-                <div>
-                  <p>{{p.name}}의 출연/제작 작품</p>
+                <div >
+                  <p style="color:#fff;">{{p.name}}의 출연/제작 작품</p>
+                  <div class="search__grid">
                   {% for cast in movies_cast %}
                     {% if cast.person_name == p.name%}
                       {% for movie_title in cast.movies %}
                         {% for poster in movie_posters %}
                           {% if movie_title == poster.title and poster.poster_path %}
                             <a href="{% url 'movies:detail' poster.id %}">
-                            <img src="https://image.tmdb.org/t/p/w80{{ poster.poster_path }}" alt="{{ movie_title }} 포스터" style="margin-right:1rem;">
+                              <div style="width: 200px;">
+                                <img src="https://image.tmdb.org/t/p/w80{{ poster.poster_path }}" alt="{{ movie_title }} 포스터" style="width: 200px; height: 300px;">
+                                <p style="color:#fff; width: 200px; text-align:center; white-space: nowrap; overflow: hidden; text-overflow:ellipsis;">{{poster.title}}</p>
+                              </div>
                             </a>
                           {% endif %}
                         {% endfor %}
                       {% endfor %}
                     {% endif %}
                   {% endfor %}
+                  </div>
                 </div>
-                <hr>
+                <hr style="color:#fff;">
 
               {% endif %}
             {% endfor %}
           </div>
       {% else %}
-        <p>배우로 검색 결과가 없습니다.</p>
+        <h3 style="color:#fff;">배우로 검색 결과가 없습니다.</h3>
       {% endif %}
       </div>
     </div>
@@ -279,6 +278,6 @@
   {% endif %}
 </ul> {% endcomment %}
 
-
+</article>
 {% endblock content %}
 {% block script %}{% endblock script %}

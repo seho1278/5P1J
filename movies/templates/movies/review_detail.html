@@ -100,7 +100,7 @@
           </div>
           <div class="detail--review--content">
             <div class="Review__Spoiler--None" style="display: block;">
-              <p>{{ review.content }}</p>
+              <p>{{ review.content|linebreaksbr }}</p>
             </div>
           </div>
           <div>
@@ -196,7 +196,7 @@
           </form>
         </div>
       </div>
-      <span data-comment-id="{{ comment.pk }}"  onclick="openModal1('{{ comment.id }}')">수정</span> 
+      <span style="cursor: pointer;" data-comment-id="{{ comment.pk }}"  onclick="openModal1('{{ comment.id }}')">수정</span> 
       <a href="{% url 'movies:comment_delete' post.movie_id review.id comment.id %}">삭제</a>
 
     {% endif %}
@@ -237,7 +237,7 @@
       </a>
       <div>
         <p>{{ comment.created_at|date:"Y. m. d" }}</p>
-        <p>{{ comment.content }}</p>
+        <p>{{ comment.content|linebreaksbr }}</p>
       </div>
       
     </div>

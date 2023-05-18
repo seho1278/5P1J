@@ -103,9 +103,6 @@ class PostForm(forms.ModelForm):
     tags = forms.MultipleChoiceField(
         label = '태그',
         widget = forms.CheckboxSelectMultiple(
-            # attrs={
-            #     'class': 'form--control',
-            # }
         ),
         choices = TAG_CHOICES,
 
@@ -293,6 +290,17 @@ class ReviewReportForm(forms.ModelForm):
 # 추가
 class AdminMessageForm(forms.ModelForm):
     review_id = forms.IntegerField()
+
+    content = forms.CharField(
+        label='내용',
+        widget=forms.Textarea(
+            attrs={
+                'class': 'form--control',
+                'placeholder' : '내용을 입력해 주세요', 
+            }
+        )
+    )
+
 
     class Meta:
         model = AdminMessage

@@ -1,0 +1,393 @@
+[
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$XCTF4lhwAhehc7l6zN3Nwo$Mq3hejTsSBgqKHkSwuKDN5X0YRt6XwsZ2geFISf/vgM=",
+        "last_login": "2023-05-18T16:02:03.675Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "wkdalswl3949@naver.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-05-17T15:09:27.095Z",
+        "birthday": null,
+        "tags": "태그",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$hnNxPOnq0T5qPixVJQKpjG$e+rqXEw/T5cTr7BBvU43qz9DLGnjlek7QENkn6HbCSY=",
+        "last_login": "2023-05-18T00:53:01.658Z",
+        "is_superuser": false,
+        "username": "wontae",
+        "first_name": "wontae",
+        "last_name": "",
+        "email": "a@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-17T15:31:44.277Z",
+        "birthday": "2000-01-01",
+        "tags": "['개성있는', '상상력이 무한한']",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$nwz4R0GuSe9EGBNvjkYceY$q/hFo7vyFQCVPDLM3FoVBELhXsYfefeEh1SMYoIWUmA=",
+        "last_login": "2023-05-18T15:17:33.846Z",
+        "is_superuser": false,
+        "username": "seho1278",
+        "first_name": "정세호",
+        "last_name": "",
+        "email": "seho1278@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-17T15:38:27.769Z",
+        "birthday": "1996-05-11",
+        "tags": "['무슨 생각인지 알 수 없는', '해석이 새로운', '개성있는', '개 잘생긴']",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$KANEhOYttkpeAHFA9paQIu$OHyH1yIoxuUvrxqw17xsHoTvkh/a1m37OXG0+qKaI5A=",
+        "last_login": "2023-05-17T16:17:29.070Z",
+        "is_superuser": false,
+        "username": "qwe",
+        "first_name": "qwe",
+        "last_name": "",
+        "email": "d@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-17T16:17:28.878Z",
+        "birthday": "2000-01-01",
+        "tags": "['무슨 생각인지 알 수 없는', '해석이 새로운', '누구나 이해할 수 있는', '개성있는', '유쾌함을 잃지 않는', '상상력이 무한한']",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$BMazHZjhgA8vth3wMMQrGD$axWAtR4PJBbvnV7U1nMhVtq07Hjuqz9juvwHS6C2yYw=",
+        "last_login": "2023-05-18T11:58:23.427Z",
+        "is_superuser": false,
+        "username": "minji2",
+        "first_name": "장민지",
+        "last_name": "",
+        "email": "wkdalswl3949@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-17T16:24:40.131Z",
+        "birthday": "1999-06-09",
+        "tags": "['유쾌함을 잃지 않는', '감탄사를 연발하는', '웃음이 떠나지 않는', '박장대소 하는', '내용 별거 없는', '유행어를 낳은', '화려한', '마무리가 훈훈한']",
+        "image": "",
+        "reported": true,
+        "groups": [],
+        "user_permissions": [],
+        "followings": [
+            10
+        ]
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$TaA2cuvueMjjDyc9i9T9lX$uXS9yK5Z0llFSxCqD+O+Y/DdcK7Z3Coi1l3v/Lfvc8o=",
+        "last_login": "2023-05-18T15:24:05.962Z",
+        "is_superuser": false,
+        "username": "dj",
+        "first_name": "dj",
+        "last_name": "",
+        "email": "d@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T00:57:10.272Z",
+        "birthday": "2000-01-01",
+        "tags": "['감탄사를 연발하는', '웃음이 떠나지 않는', '거부감 드는', '박장대소 하는', '거장의 작품인', '내용 별거 없는', '유행어를 낳은', '마법 같은']",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$vyRWXq3EiRrFFkNQ3jrJUx$SNfk668WivUhmBJoWbVjgF+Cjd9oTR6wgMHeGcexNnI=",
+        "last_login": "2023-05-18T14:25:57.673Z",
+        "is_superuser": false,
+        "username": "hi",
+        "first_name": "hi",
+        "last_name": "",
+        "email": "d@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T01:16:47.147Z",
+        "birthday": "2000-01-01",
+        "tags": "['해석이 새로운', '개성있는']",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": [
+            6
+        ]
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$dao018kqXXbnWjCFtLvxoU$JZBDyQtExrW65231d2K9zs4It5DJV/Q0dbwiOgLUauo=",
+        "last_login": "2023-05-18T16:05:05.871Z",
+        "is_superuser": false,
+        "username": "newsoozie",
+        "first_name": "soozie",
+        "last_name": "",
+        "email": "a@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T01:23:32.468Z",
+        "birthday": "2000-01-01",
+        "tags": "['상상력이 무한한', '캐릭터가 사랑스러운', '감탄사를 연발하는', '인생이 담겨있는', '유행어를 낳은', '화려한', '마법 같은']",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$gCTBlpQMDSUCaeRYZWRoKm$apVPLj46+V8uqO3MDjwKkg2ef13guQ8eyopMdjleERk=",
+        "last_login": "2023-05-18T04:43:40.075Z",
+        "is_superuser": false,
+        "username": "who1234",
+        "first_name": "who",
+        "last_name": "",
+        "email": "a@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T04:43:39.874Z",
+        "birthday": "2000-01-01",
+        "tags": "['해석이 새로운', '개성있는']",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$IDMTLgKWqTHwRO01g7AO70$eYqVnGFHff+L7nv3VwWci4A4FxRsAUUXMQceV0DT4Mc=",
+        "last_login": "2023-05-18T15:18:20.039Z",
+        "is_superuser": false,
+        "username": "seho.Jo",
+        "first_name": "조세호",
+        "last_name": "",
+        "email": "sehojo@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T07:37:18.725Z",
+        "birthday": "1980-01-01",
+        "tags": "['무슨 생각인지 알 수 없는', '해석이 새로운', '상상력이 무한한']",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": [
+            5
+        ]
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 11,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$GerxSWEhDK4YPiaD4spqOT$HH/mJvMOs+yYJzhoINb/4dQf8nr4HEUSdRAjt5GGwfA=",
+        "last_login": "2023-05-18T13:28:19.871Z",
+        "is_superuser": false,
+        "username": "minji",
+        "first_name": "장민지",
+        "last_name": "",
+        "email": "wkdalswl3949@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T11:57:55.815Z",
+        "birthday": "1999-10-05",
+        "tags": "['개 잘생긴', '개 예쁜', '감탄사를 연발하는', '보는 내내 설레는', '영상미가 세련된']",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": [
+            6
+        ]
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$OP8hCtjhJgRjcqA253vfud$zFTu8HcfgvO9i47w9v8oECdyFa6gdy4XwrjSWRquA4k=",
+        "last_login": "2023-05-18T15:42:01.255Z",
+        "is_superuser": false,
+        "username": "miyomi",
+        "first_name": "미영",
+        "last_name": "",
+        "email": "hi@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T12:20:35.945Z",
+        "birthday": "2000-01-01",
+        "tags": "['무슨 생각인지 알 수 없는', '해석이 새로운', '누구나 이해할 수 있는', '개성있는', '유쾌함을 잃지 않는', '상상력이 무한한']",
+        "image": "",
+        "reported": true,
+        "groups": [],
+        "user_permissions": [],
+        "followings": [
+            10
+        ]
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$lY0NAAqicFtp8cv7uDVEie$CwCIN3PmGEYivH8fsLRi/p9oDPViICa/4SO/kiOGZoI=",
+        "last_login": "2023-05-18T15:57:01.755Z",
+        "is_superuser": false,
+        "username": "cinepedia",
+        "first_name": "오조",
+        "last_name": "",
+        "email": "cinepedia@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T13:17:33.366Z",
+        "birthday": "2005-05-05",
+        "tags": "['감탄사를 연발하는', '웃음이 떠나지 않는', '거부감 드는', '박장대소 하는', '거장의 작품인', '내용 별거 없는', '유행어를 낳은', '마법 같은']",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": [
+            6,
+            7,
+            11,
+            14,
+            16
+        ]
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 14,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$e4txDmeFTgbJtgUauH8CzG$KH6nQvaLwJccgzqwrn9QleWN3V6oVByxbvsPMK6ucu4=",
+        "last_login": "2023-05-18T14:14:34.073Z",
+        "is_superuser": false,
+        "username": "minji3",
+        "first_name": "장민지",
+        "last_name": "",
+        "email": "wkdalswl3949@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T14:14:33.879Z",
+        "birthday": "2000-01-01",
+        "tags": "['유쾌함을 잃지 않는', '마무리가 훈훈한']",
+        "image": "",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": [
+            6,
+            11
+        ]
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 15,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$NAm47IU3gflqxoentvhO1F$gE44wu2p9S7pI8Q/03nBX0/dCQgPRMuido8a6gBaHv0=",
+        "last_login": "2023-05-18T14:19:22.027Z",
+        "is_superuser": false,
+        "username": "soozie222",
+        "first_name": "kam",
+        "last_name": "",
+        "email": "a@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T14:19:21.810Z",
+        "birthday": "2000-01-01",
+        "tags": "['해석이 새로운', '개성있는']",
+        "image": "accounts/images/어깡곰씨.png",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 16,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$h4A8Da3kYNhv88xUzc1kBO$MZ7NusddPNIH9OMjHw0rdkpVKi7DlTpalRRnH9+BeBA=",
+        "last_login": "2023-05-18T14:29:41.760Z",
+        "is_superuser": false,
+        "username": "pty9714",
+        "first_name": "박태양",
+        "last_name": "",
+        "email": "pty9714@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T14:29:41.622Z",
+        "birthday": "2000-01-01",
+        "tags": "['무슨 생각인지 알 수 없는']",
+        "image": "accounts/images/lee17.jpg",
+        "reported": false,
+        "groups": [],
+        "user_permissions": [],
+        "followings": [
+            6,
+            7,
+            11
+        ]
+    }
+}
+]

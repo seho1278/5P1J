@@ -277,7 +277,7 @@
                   {% else %}
                     <div class="Review__Spoiler--None" style="display: block;">
                       <a href="{% url 'movies:review_detail' movie_id review.pk %}">
-                        <p>{{ review.content }}</p>
+                        <p>{{ review.content|linebreaksbr }}</p>
                       </a>
                     </div>
                   {% endif %}
@@ -617,68 +617,6 @@
     spoilerNone.style.display = 'block';
   }
   
-  {% comment %} // 태그 생성
-  function getRandomTransform() {
-    const translateXRange = 100; // X 축 이동 범위
-    const translateYRange = 100; // Y 축 이동 범위
-    const tagElements = [];
-    for (let i = 1; i <= 5; i++) {
-      const tagElement = document.getElementById(`tag${i}`);
-      tagElements.push(tagElement);
-    }
-    const numTags = tagElements.length;
-  
-    // 이전에 생성된 위치를 추적하는 배열
-    const previousPositions = [];
-  
-    for (let i = 0; i < numTags; i++) {
-      let positionFound = false;
-      let translateX, translateY, rotate;
-  
-      // 최대 시도 횟수 동안 겹치지 않는 위치를 찾습니다.
-      const maxAttempts = 100;
-      let attempts = 0;
-  
-      while (!positionFound && attempts < maxAttempts) {
-        translateX = Math.floor(Math.random() * translateXRange) + 100;
-        translateY = Math.floor(Math.random() * translateYRange) + 30;
-  
-        // 현재 위치와 이전에 생성된 위치를 비교하여 겹치지 않는지 확인합니다.
-        const currentPosition = { x: translateX, y: translateY };
-        const overlapping = previousPositions.some((prevPosition) =>
-          isOverlapping(currentPosition, prevPosition)
-        );
-  
-        if (!overlapping) {
-          positionFound = true;
-          previousPositions.push(currentPosition);
-        }
-  
-        attempts++;
-      }
-  
-      // 겹치지 않는 위치를 찾지 못한 경우, 기본 위치를 설정합니다.
-      if (!positionFound) {
-        translateX = 100 + i * 30; // 기본 위치 설정
-        translateY = 30;
-      }
-  
-      const transform = `translate(${translateX}px, ${translateY}px) rotate(0deg)`;
-      const tagElement = tagElements[i];
-      tagElement.style.position = "absolute";
-      tagElement.style.fontSize = "17px";
-      tagElement.style.fontWeight = "bold";
-      tagElement.style.lineHeight = "23px";
-      tagElement.style.color = "white";
-      tagElement.style.transform = transform;
-      tagElement.style.fontFamily = "Noto Sans KR";
-      tagElement.style.fontStyle = "normal";
-      tagElement.style.textAlign = "center";
-      tagElement.style.transformOrigin = "center bottom";
-      tagElement.style.whiteSpace = "nowrap";
-      tagElement.style.width = `${tagElement.offsetWidth}px`;
-    }
-  } {% endcomment %}
   
   // 두 위치가 겹치는지 확인하는 함수
   function isOverlapping(pos1, pos2) {

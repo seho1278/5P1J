@@ -13,7 +13,7 @@
 <article class="mypage--container">
   <h1 class="mypage--title">{{ person.username }}님의 프로필 페이지</h1>
   <div class="profile--update--wrap">
-    <a class="cidia--text--button2 profile--update" href="{% url 'accounts:update'%}">회원정보 수정<i class="bi bi-person-fill-gear"></i></a>
+    <a class="cidia--text--button2 profile--update" href="{% url 'accounts:update'%}">내 정보 수정</a>
   </div>
   <div class="mypage--section--container">
     <section class="profile--container">
@@ -48,23 +48,22 @@
                     <h1 class="modal-title" id="followersModalLabel" title="나를 좋아하는 사람">FOLLOWER</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  <div class="modal-body" id="followersModalBody">
+                  <div class="modal-body d-flex" id="followersModalBody">
                     {% if request.user == person %}
                       {% for follower in person.followers.all %}
                         <div class="modal--follow--wrap">
-                          <a href="{% url 'accounts:profile' follower.username %}">
-                            {% if follower.image %}
-                              <div>
-                                <img class="modal--profile--image" src="{{ follower.image.url }}" alt="">
+                          <div>
+                            <a href="{% url 'accounts:profile' follower.username %}">
+                              {% if follower.image %}                          
+                                  <img class="modal--profile--image" src="{{ follower.image.url }}" alt="">
+                              {% else %}
+                                  <img class="modal--profile--image" src="{% static 'img/accounts/cidia_profile_noimage_02.png' %}" alt="">                          
+                              {% endif %}
+                              <div class="modal--textarea">
+                                <span>{{ follower }}</span>
                               </div>
-                            {% else %}
-                              <div>
-                                <img class="modal--profile--image" src="{% static 'img/accounts/cidia_profile_noimage_02.png' %}" alt="">                          </div>
-                            {% endif %}
-                            <div class="modal--textarea">
-                              <span>{{ follower }}</span>
-                            </div>
-                          </a>
+                            </a>
+                          </div>
                         </div>
                       {% endfor %}
                     {% else %}
@@ -86,24 +85,24 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    {% for following in person.followings.all %}
-                      <div class="modal--follow--wrap">
-                        <a href="{% url 'accounts:profile' following.username %}">
-                          {% if following.image %}
-                            <div>
-                              <img class="modal--profile--image" src="{{ following.image.url }}" alt="">
+                    <div class="row">
+                      {% for following in person.followings.all %}
+                        <div class="col-3">
+                          <div class="modal--follow--wrap">
+                            <div class="col d-flex justify-content-center align-items-center">
+                              <a href="{% url 'accounts:profile' following.username %}">
+                                {% if following.image %}                          
+                                  <img class="modal--profile--image" src="{{ following.image.url }}" alt="">
+                                {% else %}
+                                  <img class="modal--profile--image" src="{% static 'img/accounts/cidia_profile_noimage_02.png' %}" alt="">                          
+                                {% endif %}
+                                <p class="text-center">{{ following }}</p>
+                              </a>
                             </div>
-                          {% else %}
-                            <div>
-                              <img class="modal--profile--image" src="{% static 'img/accounts/cidia_profile_noimage_02.png' %}" alt="">
-                            </div>
-                          {% endif %}
-                          <div class="modal--textarea">
-                            <span>{{ following }}</span>
                           </div>
-                        </a>
-                      </div>
-                    {% endfor %}
+                        </div>
+                      {% endfor %}
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -117,62 +116,68 @@
                 <form id="follow-form" data-user-id="{{ person.pk }}">
                   {% csrf_token %}
                   {% if request.user in person.followers.all %}
-                    <input type="submit" value="Unfollow">
+                    <input id="followinput" type="submit" value="UNFOLLOW">
                   {% else %}
                     {% if request.user.is_authenticated %}
-                      <i class="bi bi-person-add">
-                        <input type="submit" value="FOLLOW">
-                      </i>
+                      <input id="followinput" type="submit" value="FOLLOW">
                     {% else %}
-                      <i class="bi bi-person-dash">
-                        <input type="submit" value="FOLLOW" disabled>
-                      </i>
+                      <input type="submit" value="FOLLOW" disabled>
                     {% endif %}
                   {% endif %}
                 </form>
               </div>
             {% endif %}
+            </div>
           </div>
         </div>
-      </div>
-      <div class="profile--item2 profile--list--wrap">
-        <h5 class="profile--list--title">내 정보</h5>
-        <ul class="profile--list">
-          <li>
-            <p>ID</p>
-            <p>{{ person.username }}</p>
-          </li>
-          <li>
-            <p>이름</p>
-            <p>{{ person.first_name }}</p>
-          </li>
-          <li>
-            <p>생일</p>
-            <p>{{ person.birthday|date:"Y년 m월 d일" }}</p>
-          </li>
-          <li>
-            <p>이메일</p>
-            <p>{{ person.email }}</p>
-          </li>
-        </ul>
-      </div>
-      <div class="profile--item3 profiile--my--list--wrap">
+        <div class="profile--item2 profile--list--wrap">
+          <div class="profile--list--flex">
+            <div>
+              <h5 class="profile--list--title">내 정보</h5>
+              <ul class="profile--list">
+                <li>
+                  <p>ID</p>
+                  <p>{{ person.username }}</p>
+                </li>
+                <li>
+                  <p>이름</p>
+                  <p>{{ person.first_name }}</p>
+                </li>
+                <li>
+                  <p>생일</p>
+                  <p>{{ person.birthday|date:"Y년 m월 d일" }}</p>
+                </li>
+                <li>
+                  <p>이메일</p>
+                  <p>{{ person.email }}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="profile--item3 profiile--my--list--wrap">
         {% if request.user.is_superuser %}
         {% else %}
-          <div class="">
+        <div class="profile--list--flex">
+          <div>
             <h5 class="profile--list--title">{{ person.username }}님의 태그</h5>
             {% for tag in new_tags %}
             <p class="my--list--button--wrap"><span class="tag--botton--border--mypage" ><i class="bi bi-vinyl-fill"></i>{{tag}}</span></p>
             {% endfor %}
           </div>
+        </div>
         {% endif %}
-        <div>
-          <h5 class="profile--list--title">보고싶은 영화</h5>
-          {% for want_post in person.want_posts.all %}
+        </div>
+        <div class="profile--item4 profiile--my--list--wrap">
+          <div class="profile--list--flex">
+            <div>
+            <h5 class="profile--list--title">보고싶은 영화</h5>
+            {% for want_post in person.want_posts.all %}
             <a href="{% url 'movies:detail' want_post.movie_id %}">
               <p><i class="bi bi-film" style="color:#a182ff;"></i> {{ want_post.title}}</p>
             </a>
-          {% endfor %}
+            {% endfor %}
+          </div>
         </div>
       </div>
       </div>
@@ -192,7 +197,7 @@
                 </div>
                 <div>
                   {% if movie.poster_path %}
-                    <img src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}">
+                    <img  id="mypage--tag--movie" src="https://image.tmdb.org/t/p/w200{{movie.poster_path}}" alt="{{movie.title}}" style="width: 200px; height:300px;">
                   {% else %}
                     <img style="width:200px;" src="{% static 'img/accounts/no_poster.png' %}" alt="기본 영화 포스터">
                   {% endif %}
@@ -224,7 +229,7 @@
           <tbody>
           {% for review in my_reviews %}
             {% if review.reviewreports.exists %}
-            <tr style="color: red;">
+            <tr style="color: #aa0000;">
             {% else %}
             <tr style="font-size:0.9rem; border-bottom:1px solid #c8c0e2;">
             {% endif %}
@@ -240,12 +245,12 @@
 
 
                 {% if review.reviewreports.exists %}
-                <!-- 관리자메세지 -->
-                <button type="button" class="" data-bs-toggle="modal" data-bs-target="#adminmessage{{ forloop.counter }}" style="color: red;">
-                  !
-                </button>
+                  <!-- 관리자메세지 -->
+                  <button type="button" class="report--text--button" data-bs-toggle="modal" data-bs-target="#adminmessage{{ forloop.counter }}">
+                    <i class="bi bi-bell-fill"></i>
+                  </button>
                 {% else %}
-                <a href="{% url 'movies:detail' movie_id=review.post.movie_id %}">이동</a>
+                  <a href="{% url 'movies:detail' movie_id=review.post.movie_id %}" style="color: #ffffff;">이동하기</a>
                 {% endif %}
 
                 <!-- Modal -->
@@ -256,24 +261,34 @@
                         <h1 class="modal-title fs-5" id="adminmessageLabel{{ forloop.counter }}">다른 유저로 부터 {{ review.reviews_report.all|length }}건의 신고가 접수되었습니다.</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
-                      <div class="modal-body">                      
-                        <p><strong>사유</strong> : 
-                          {% for review_report in review.reviews_report.all %}
-                            {% if not review_report.tilte.exists %}
-                              ({{ review_report.title }})
-                            {% endif %}
-                          {% endfor %}
-                        </p>
-                        <br>
-                        <p><strong>리뷰 내용</strong>: {{ review.content }}</p>
-                        <br>
-                        {% for adminmessage in review.reviewreports.all %}
-                          <p>{{ adminmessage.content }}</p>
-                        {% endfor %}
+                      <div class="modal-body">
+                        <ul class="report--modal--list">
+                          <li class="report--modal--textarea--wrap">
+                            <h6 class="report--modal--text--title">사유</h6>
+                            <p class="report--modal--textarea">
+                            {% for review_report in review.reviews_report.all %}
+                              {% if not review_report.tilte.exists %}
+                                ({{ review_report.title }})
+                              {% endif %}
+                            {% endfor %}
+                          </li>
+                          <li class="report--modal--textarea--wrap">
+                            <h6 class="report--modal--text--title">리뷰 내용</h6>
+                            <p class="report--modal--textarea">{{ review.content }}</p>
+                          </li>
+                          <li class="report--modal--textarea--content--wrap">
+                            <h6 class="report--modal--text--title">관리자 메시지</h6>
+                            <p class="report--modal--textarea">
+                            {% for adminmessage in review.reviewreports.all %}
+                              {{ adminmessage.content }}
+                            {% endfor %}
+                            </p>
+                          </li>
+                        </ul>
                       </div>
                       <div class="modal-footer">
                         <a href="{% url 'movies:review_update' review.post.movie_id review.pk %}"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">수정</button></a>
-                        <a href="{% url 'movies:review_delete' review.post.movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')"><button type="button" class="btn btn-primary">삭제</button></a>
+                        <a href="{% url 'movies:review_delete' review.post.movie_id review.pk %}" onclick="return confirm('삭제하시겠습니까?')"><button type="button" class="mypage--report--button--good">삭제</button></a>
                       </div>
                     </div>
                   </div>
@@ -372,28 +387,27 @@
               </td>
             </tr>
             <!-- 경고메시지 modal -->
-            <div class="modal fade" id="admin_message{{ forloop.counter }}" tabindex="-1" aria-labelledby="admin_messageLabel{{ forloop.counter }}" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="admin_messageLabel{{ forloop.counter }}">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form action="{% url 'accounts:profile' username=person.username %}" method="post">
-                      {% csrf_token %}
-                      {{ form.content }}
-                      <input type="hidden" name="review_id" value="{{ review_report.review.id }}">
-                      <button type="submit" class="btn btn-danger">신고하기</button>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+            <form action="{% url 'accounts:profile' username=person.username %}" method="post">
+              {% csrf_token %}
+                <div class="modal fade" id="admin_message{{ forloop.counter }}" tabindex="-1" aria-labelledby="admin_messageLabel{{ forloop.counter }}" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="admin_messageLabel{{ forloop.counter }}">관리자 메시지</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        {{ form.content }}
+                        <input type="hidden" name="review_id" value="{{ review_report.review.id }}">    
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                        <button type="submit" class="mypage--report--button--good">보내기</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </form>
             {% endfor %}
           </tbody>
         </table>
@@ -415,11 +429,11 @@
       .then((response) => {
         const followers = response.data.followers
         const followersList = document.querySelector('#followers-list')
-        followersList.className = ""
+        followersList.classList.add("d-flex")
         followersList.innerHTML = ''
         followers.forEach(follower => {
           const followerTag = document.createElement('div')
-          followerTag.classList.add()
+          followerTag.classList.add("col-3")
           const followerLink = document.createElement('a')
           followerLink.classList.add()
           followerLink.href = `/accounts/profile/${follower.username}`
@@ -467,21 +481,25 @@
     })
       .then((response) => {
         const isFollowed = response.data.is_followed
-        const followBtn = document.querySelector('#follow-form > input[type=submit]')
-        if (isFollowed === true) {
-          followBtn.value = 'Unfollow'
-        } else {
-          followBtn.value = 'follow'
-        }
+        const followIcon = document.querySelector('#followicon')
+        const unFollowInput = document.querySelector('#follow-form > input[type=submit]')
+        const followInput = document.querySelector('#followinput')
 
-        const followingsCountTag = document.querySelector('#followings-count')
-        const followersCountTag = document.querySelector('#followers-count')
+        console.log(followInput)
+        if (isFollowed === true) {
+          followInput.value = 'UNFOLLOW'
+        } else {
+          followInput.value = 'FOLLOW'
+
+        }
+        const followingsCountTag = document.querySelector('#followings-count > i')
+        const followersCountTag = document.querySelector('#followers-count > i')
 
         const followingsCountData = response.data.followings_count
         const followersCountData = response.data.followers_count
 
-        followingsCountTag.textContent = followingsCountData
-        followersCountTag.textContent = followersCountData
+        followingsCountTag.textContent = ' ' + followingsCountData
+        followersCountTag.textContent =  ' ' + followersCountData
         
         // 팔로워 목록 출력
         

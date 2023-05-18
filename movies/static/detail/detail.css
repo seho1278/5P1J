@@ -473,11 +473,11 @@
     width: 171px;
     height: 50px;
     text-align: center;
-    position: absolute;
+    /* position: absolute; */
     display: inline-flex;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     z-index: 999;
     overflow: hidden;
 }
