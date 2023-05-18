@@ -414,6 +414,12 @@ def detail(request, movie_id):
     
     }
     
+    credits_url = f'https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key={TMDB_API_KEY}&language=ko-kr'
+    credits_response = requests.get(credits_url)
+    credits_data = credits_response.json()
+    credits = credits_data['cast'][:6]
+    profile_path = 'https://image.tmdb.org/t/p/w200'
+
      # platform 하나씩 빼내기 
     platform_list = []
     # 수정
@@ -529,6 +535,8 @@ def detail(request, movie_id):
         'average': average,
         'average_rating': average_rating,
         # ----------------------------
+        'credits': credits,
+        'profile_path': profile_path,
        
         
     }

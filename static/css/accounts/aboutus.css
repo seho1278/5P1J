@@ -32,6 +32,11 @@
 
 .aboutus--title {
 }
+
+section h2:hover {
+  color: #000;
+}
+
 section {
   display: grid;
   grid-template-columns: 50px 1fr;
@@ -54,6 +59,9 @@ section h5 {
 section h5 > p {
   margin-bottom: 0.2rem;
 }
+section h5 > p:hover {
+  color: #000;
+}
 .aboutus__image--wrap {
   text-align: center;
   margin-right: 1rem;
@@ -70,6 +78,9 @@ section ul {
 }
 section li {
   font-size: 0.9rem;
+}
+section li:hover {
+  color: #000;
 }
 .mung--name {
   display: flex;
@@ -94,18 +105,18 @@ h4 {margin-top: 0.5rem;}
   margin-left: 0.5rem;
 }
 .point--user--1 {
-  width: 20rem;
+  width: 88%;
   
 }
 .point--user--2 {
-  width: 18rem;
+  width: 82%;
 }
 .point--user--3 {
-  width: 1rem;
+  width: 5%;
 }
 .point--user--4 {
-  width: 1rem;
+  width: 5%;
 }
 .point--user--5 {
-  width: 2rem;
+  width: 10%;
 }

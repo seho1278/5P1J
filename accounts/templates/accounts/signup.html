@@ -11,7 +11,9 @@
 {% block content %}
 <article class="main__siginup--container">
   <section class="main__signup--image--wrap">
-    <img class="main__signup--image" src="{% static 'img/accounts/cidia_signup_nocircle_01.png' %}" alt="">
+    {% comment %} <img class="main__signup--image" src="{% static 'img/accounts/cidia_signup_nocircle_01.png' %}" alt=""> {% endcomment %}
+    <h1 class="login--title">SIGN UP</h1>
+    <p>CINEPEDIA</p>
     <p class="main__signup--text">내 취향에 맞는 영화를 찾아보세요!</p>
     <ul class="main__siginup__ott--list">
       <li class="ott--image--wrap">
@@ -136,7 +138,7 @@
           </div>
         </div>
 
-        <input class="good" type="submit" value="회원가입">
+        <input class="good--border" type="submit" value="회원가입">
       </form>
     </div>
   </section>

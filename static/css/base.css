@@ -72,11 +72,13 @@ footer.item {
 .header--search--wrap > form > input {
   width: 500px;
 }
-.header--login--wrap{
+.header--login--list {
   display: flex;
   justify-content: flex-end;
+  width: 163px;
+  height: 24px;
 }
-.header--login--wrap > div {
+.header--login--list > div {
   margin-left: 1rem; 
 }
 .header--nav--wrap {
@@ -98,9 +100,10 @@ footer.item {
   width: 100%;
   height: 100%;
   padding: 1rem 0 0.5rem;
-  transition: border-image .30s ease-in-out, font-size .30s ease-in-out;
+  transition: border-image .60s ease-in-out, font-size .60s ease-in-out, color .60s ease-in-out;
 }
 .header--nav--list > li.item > a:hover {
+  color: #a182ff;
   font-size: 16.5px;
   border: solid;
   border-width: 0 0 1px 0;
@@ -309,18 +312,30 @@ main {
   border-image-slice: 1;
 }
 
-/**/
+/* */
 input[type="submit"] {
   color: #ffffff;
   border: none;
   background-color: #000;
+  transition: font-size .60s ease-in-out, color .60s ease-in-out;
 }
-
- .input--control {
+input[type="submit"]:hover {
+  color: #a182ff;
+  font-size: 14px;
+}
+.input--control {
   width: 500px;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
-
 }
-
+.header--sign--wrap {
+  width: 65.7px;
+}
+.log--text--button {
+  transition: font-size .60s ease-in-out, color .60s ease-in-out;
+}
+.log--text--button:hover {
+  color: #a182ff;
+  font-size: 14px;
+}
