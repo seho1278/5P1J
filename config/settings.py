@@ -25,7 +25,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SECRET_KEY = os.getenv('em%b0w9(+uf&5j1z$rmtd)as!ph2uc+q%!zli5!#9zv0jummm5')
+SECRET_KEY = os.getenv('SECRET_KEY')
 # 'django-insecure-&3zcbf4e##oc*wb5_&5#@q(=acmf%kv#2p)k6*y$#+=y0w0zl8'
 
 
