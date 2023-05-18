@@ -17,7 +17,7 @@
 {% else %}  
   <div class="Index__main">    
     {% for t , movies in tag_dict.items %}
-      <h2>{{t}}</h2>
+      <h2 class="Index__Tag ms-2 mb-2">"{{t}}"</h2>
       <div class="Index__Content__rankingContainer">
         <div class="carousel" id="carousel-{{ movie.id }}">
           {% for movie in movies %}
@@ -33,7 +33,11 @@
                   </div>
                   <div class="Index__Card__Content">
                     <div class="card-title">{{ movie.title }}</div>
-                    <i id="rate" class="bi bi-star-fill" style="color: yellow;"> {{ movie.avg_rating }}</i>
+                    <i id="rate" class="bi bi-star-fill" style="color: yellow;"> 
+                    {% if movie.avg_rating %}
+                    {{ movie.avg_rating| floatformat:1 }}
+                    {% else %}
+                    {% endif %}</i>
                   </div>
                 </div>
               </a>

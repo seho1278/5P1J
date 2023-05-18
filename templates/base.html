@@ -45,7 +45,7 @@
               <div>
                 {% if user.is_authenticated %}
                 {% if user.reported %}
-                  <p>신고 당하셨습니다.</p>
+                  <a href="{% url 'accounts:profile' user %}"  class="log--text--button" title="다른 유저로부터 신고가 접수되었습니다.."><i class="bi bi-bell-fill" style="color: red; margin-right: 15px;"></i></a>
                 {% endif %}
                 <a href="{% url 'accounts:profile' user %}">{{ user }}</a>님 안녕하세요!
                 {% else %}

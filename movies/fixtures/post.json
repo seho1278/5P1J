@@ -1,0 +1,892 @@
+[
+{
+    "model": "movies.post",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "movie_id": "447365",
+        "title": "가디언즈 오브 갤럭시: Volume 3",
+        "tags": "['무슨 생각인지 알 수 없는', '해석이 새로운']",
+        "description": "",
+        "platform": "['넷플릭스', '왓챠']",
+        "created_at": "2023-05-17T15:31:53.723Z",
+        "poster_path": "/b7epV2cQZVIR4u5VZraDwD0AgiE.jpg",
+        "want_users": [
+            12
+        ],
+        "watching_users": [
+            12
+        ]
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "movie_id": "76600",
+        "title": "아바타: 물의 길",
+        "tags": "['상상력이 무한한', '친구들끼리 보는', '애인이랑 보는', '완성도가 높은', '언제 봐도 좋은', '감탄사를 연발하는', '특유의 매력이 있는', '미친 연출력인', '감독에게 찬사를 보내는', '연출이 과감한', '특유의 색감이 있는', '화려한', '영상미가 세련된', '한 폭의 그림 같은', '클라이맥스', '극적인 피날레']",
+        "description": "",
+        "platform": "['웨이브']",
+        "created_at": "2023-05-17T15:45:46.718Z",
+        "poster_path": "/z56bVX93oRG6uDeMACR7cXCnAbh.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 3,
+    "fields": {
+        "user": 1,
+        "movie_id": "19995",
+        "title": "아바타",
+        "tags": "['개성있는', '상상력이 무한한', '친구들끼리 보는', '완성도가 높은', '언제 봐도 좋은', '내 눈을 의심하는', '감탄사를 연발하는', '거장의 작품인', '특유의 매력이 있는', '미친 연출력인', '감독에게 찬사를 보내는', '연출이 과감한', '색감이 다채로운', '특유의 색감이 있는', '마법 같은', '한 폭의 그림 같은', '클라이맥스', '극적인 피날레', '주인공이 행복해지는']",
+        "description": "",
+        "platform": "['웨이브', '디즈니+']",
+        "created_at": "2023-05-17T15:47:40.984Z",
+        "poster_path": "/zygmx5abXeDpr3fWYX4jlXFZ1wh.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 4,
+    "fields": {
+        "user": 1,
+        "movie_id": "572164",
+        "title": "엑시트",
+        "tags": "['누구나 이해할 수 있는', '유쾌함을 잃지 않는', '친구들끼리 보는', '언제 봐도 좋은', '개 잘생긴', '개 예쁜', '웃음이 떠나지 않는', '박장대소 하는', '유행어를 낳은', '가벼운 농담을 던지는', '말장난을 하는', '마무리가 훈훈한', '주인공이 행복해지는', '결말이 마음에 드는']",
+        "description": "",
+        "platform": "['넷플릭스', '왓챠', '웨이브']",
+        "created_at": "2023-05-17T16:00:07.617Z",
+        "poster_path": "/a3QQOKBvE1zkTm1pmiaUvKJHmak.jpg",
+        "want_users": [
+            5,
+            12
+        ],
+        "watching_users": [
+            5
+        ]
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 5,
+    "fields": {
+        "user": 1,
+        "movie_id": "299537",
+        "title": "캡틴 마블",
+        "tags": "['속도감 있는', '권선징악인', '화려한']",
+        "description": "",
+        "platform": "['디즈니+']",
+        "created_at": "2023-05-17T16:01:38.914Z",
+        "poster_path": "/2JO8X8aT97BwxMMGr9ChrCl4xGQ.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 6,
+    "fields": {
+        "user": 1,
+        "movie_id": "567646",
+        "title": "극한직업",
+        "tags": "['유쾌함을 잃지 않는', '취향을 저격하는', '친구들끼리 보는', '언제 봐도 좋은', '웃음이 떠나지 않는', '박장대소 하는', '유행어를 낳은', '가벼운 농담을 던지는', '말장난을 하는', '마무리가 훈훈한', '주인공이 행복해지는', '결말이 마음에 드는']",
+        "description": "",
+        "platform": "['넷플릭스', '왓챠', '웨이브']",
+        "created_at": "2023-05-17T16:02:04.149Z",
+        "poster_path": "/jbHNkNydiZstlqhhBSvG19lm4NL.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 7,
+    "fields": {
+        "user": 1,
+        "movie_id": "324857",
+        "title": "스파이더맨: 뉴 유니버스",
+        "tags": "['친구들끼리 보는', '화려한', '영상미가 세련된']",
+        "description": "",
+        "platform": "['넷플릭스', '디즈니+']",
+        "created_at": "2023-05-17T16:03:02.451Z",
+        "poster_path": "/vnWgIIEWAvWKOI65tm6h6VRbyY8.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 8,
+    "fields": {
+        "user": 1,
+        "movie_id": "22",
+        "title": "캐리비안의 해적: 블랙펄의 저주",
+        "tags": "['감탄사를 연발하는', '화려한', '음악이 조화를 이루는']",
+        "description": "",
+        "platform": "['넷플릭스', '왓챠', '웨이브', '애플TV+']",
+        "created_at": "2023-05-17T16:04:09.126Z",
+        "poster_path": "/3ovejwQO4fKOWx4VgGBJeT8CKCn.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 9,
+    "fields": {
+        "user": 1,
+        "movie_id": "18384",
+        "title": "과속스캔들",
+        "tags": "['유쾌함을 잃지 않는', '러블리한', '친구들끼리 보는', '언제 봐도 좋은', '캐릭터가 사랑스러운', '개 예쁜', '웃음이 떠나지 않는', '박장대소 하는', '내용 별거 없는', '유행어를 낳은', '가벼운 농담을 던지는', '말장난을 하는', '마무리가 훈훈한', '주인공이 행복해지는', '결말이 마음에 드는']",
+        "description": "",
+        "platform": "['왓챠', '웨이브']",
+        "created_at": "2023-05-17T16:04:48.923Z",
+        "poster_path": "/oP0EH6AISSygEzbWPoNRRml1tUq.jpg",
+        "want_users": [
+            12
+        ],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 10,
+    "fields": {
+        "user": 1,
+        "movie_id": "672",
+        "title": "해리 포터와 비밀의 방",
+        "tags": "['상상력이 무한한', '언제 봐도 좋은', '캐릭터가 사랑스러운', '화려한']",
+        "description": "",
+        "platform": "['왓챠']",
+        "created_at": "2023-05-17T16:04:50.365Z",
+        "poster_path": "/sfs4U6XpiKFngbbSzrpZbkM1ySI.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 11,
+    "fields": {
+        "user": 1,
+        "movie_id": "129",
+        "title": "센과 치히로의 행방불명",
+        "tags": "['상상력이 무한한', '캐릭터가 사랑스러운', '추억을 자극하는', '거장의 작품인']",
+        "description": "",
+        "platform": "['넷플릭스', '왓챠', '웨이브']",
+        "created_at": "2023-05-17T16:05:45.006Z",
+        "poster_path": "/u1L4qxIu5sC2P082uMHYt7Ifvnj.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 12,
+    "fields": {
+        "user": 1,
+        "movie_id": "560527",
+        "title": "내안의 그놈",
+        "tags": "['유쾌함을 잃지 않는', '언제 봐도 좋은', '개 잘생긴', '웃음이 떠나지 않는', '박장대소 하는', '권선징악인', '가벼운 농담을 던지는', '말장난을 하는', '마무리가 훈훈한', '주인공이 행복해지는', '결말이 마음에 드는']",
+        "description": "",
+        "platform": "['넷플릭스', '왓챠']",
+        "created_at": "2023-05-17T16:06:36.481Z",
+        "poster_path": "/ofhf0Tn7hnBtboiUEuVj5IZyD3g.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 13,
+    "fields": {
+        "user": 1,
+        "movie_id": "585",
+        "title": "몬스터 주식회사",
+        "tags": "['누구나 이해할 수 있는', '친구들끼리 보는', '언제 봐도 좋은', '캐릭터가 사랑스러운', '내용 별거 없는', '권선징악인', '전개가 깔끔한']",
+        "description": "",
+        "platform": "['넷플릭스', '왓챠', '디즈니+']",
+        "created_at": "2023-05-17T16:07:00.389Z",
+        "poster_path": "/fnDLrtEoIrxTCWUvuurMzOzQGpQ.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 14,
+    "fields": {
+        "user": 1,
+        "movie_id": "229",
+        "title": "프랑켄슈타인의 신부",
+        "tags": "['거부감 드는', '경악하는', '엄청난 충격을 받는']",
+        "description": "",
+        "platform": "['넷플릭스', '왓챠', '웨이브']",
+        "created_at": "2023-05-17T16:07:41.907Z",
+        "poster_path": "/5241zUwe7rC17MNc2QpCBKKdp1N.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 15,
+    "fields": {
+        "user": 1,
+        "movie_id": "331251",
+        "title": "스물",
+        "tags": "['무슨 생각인지 알 수 없는', '유쾌함을 잃지 않는', '친구들끼리 보는', '언제 봐도 좋은', '개 잘생긴', '웃음이 떠나지 않는', '박장대소 하는', '인생이 담겨있는', '유행어를 낳은', '가벼운 농담을 던지는', '말장난을 하는', '마무리가 훈훈한', '주인공이 행복해지는', '결말이 마음에 드는']",
+        "description": "",
+        "platform": "['넷플릭스', '웨이브']",
+        "created_at": "2023-05-17T16:09:03.521Z",
+        "poster_path": "/hzKynyDi7NwG5Yxn3JC9eNWM9Io.jpg",
+        "want_users": [],
+        "watching_users": [
+            12
+        ]
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 16,
+    "fields": {
+        "user": 1,
+        "movie_id": "283995",
+        "title": "가디언즈 오브 갤럭시 Vol. 2",
+        "tags": "['B급감성인', '친구들끼리 보는', '띨띨한', '감탄사를 연발하는', '극적인 피날레']",
+        "description": "",
+        "platform": "['넷플릭스', '왓챠', '애플TV+', '디즈니+']",
+        "created_at": "2023-05-17T16:09:16.975Z",
+        "poster_path": "/uDuwGhQgffd5GQ695oUfy5oZGqP.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 17,
+    "fields": {
+        "user": 1,
+        "movie_id": "102899",
+        "title": "앤트맨",
+        "tags": "['유쾌함을 잃지 않는', '상상력이 무한한', '감탄사를 연발하는']",
+        "description": "",
+        "platform": "['넷플릭스', '웨이브', '애플TV+', '디즈니+']",
+        "created_at": "2023-05-17T16:10:22.325Z",
+        "poster_path": "/3EFdR4QG1bJ7sxH7E1EhZF1LNZ0.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 18,
+    "fields": {
+        "user": 1,
+        "movie_id": "4935",
+        "title": "하울의 움직이는 성",
+        "tags": "['해석이 새로운', '상상력이 무한한', '완성도가 높은', '캐릭터가 사랑스러운', '추억을 자극하는', '거장의 작품인', '특유의 매력이 있는', '장인정신인']",
+        "description": "",
+        "platform": "['왓챠', '웨이브', '디즈니+']",
+        "created_at": "2023-05-17T16:14:31.287Z",
+        "poster_path": "/xiz6TiSduvR1U3VLfWVlBEdT9fO.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 19,
+    "fields": {
+        "user": 1,
+        "movie_id": "68721",
+        "title": "아이언맨 3",
+        "tags": "['상상력이 무한한', '언제 봐도 좋은', '천재인', '감탄사를 연발하는', '거장의 작품인', '내용이 알찬', '가벼운 농담을 던지는', '예상치 못한 결말']",
+        "description": "",
+        "platform": "['넷플릭스', '왓챠']",
+        "created_at": "2023-05-17T16:42:21.400Z",
+        "poster_path": "/pGMfidaVkjMVHXNIl7yippnipFT.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 20,
+    "fields": {
+        "user": 1,
+        "movie_id": "64682",
+        "title": "위대한 개츠비",
+        "tags": "['상상력이 무한한', '완성도가 높은', '개 잘생긴', '감탄사를 연발하는', '미친 연출력인', '전개가 깔끔한', '유행어를 낳은', '화려한', '예상치 못한 결말']",
+        "description": "",
+        "platform": "['웨이브', '디즈니+']",
+        "created_at": "2023-05-17T16:48:40.294Z",
+        "poster_path": "/1TQjpuZOp8l5mspPgK85ZmD3gjp.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 21,
+    "fields": {
+        "user": 1,
+        "movie_id": "122906",
+        "title": "어바웃 타임",
+        "tags": "['유쾌함을 잃지 않는', '러블리한', '캐릭터가 사랑스러운', '보는 내내 설레는', '미친 연출력인', '인생이 담겨있는', '빌드업한', '마법 같은', '마무리가 훈훈한']",
+        "description": "",
+        "platform": "['넷플릭스', '웨이브']",
+        "created_at": "2023-05-17T16:58:27.692Z",
+        "poster_path": "/f9CQblm419ysGBS697WUfGN0FoI.jpg",
+        "want_users": [
+            7,
+            12
+        ],
+        "watching_users": [
+            5
+        ]
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 22,
+    "fields": {
+        "user": 1,
+        "movie_id": "27205",
+        "title": "인셉션",
+        "tags": "['개성있는', '완성도가 높은', '미친 연출력인', '반전의 묘미가 있는', '열린 결말인']",
+        "description": "",
+        "platform": "['왓챠']",
+        "created_at": "2023-05-18T01:29:17.536Z",
+        "poster_path": "/zTgjeblxSLSvomt6F6UYtpiD4n7.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 23,
+    "fields": {
+        "user": 1,
+        "movie_id": "582070",
+        "title": "컨저링: 아미티빌의 저주",
+        "tags": "['쥐어박고 싶은', '암걸리는', '깜놀하는', '거부감 드는', '경악하는', '연출이 과감한', '급발진하는']",
+        "description": "",
+        "platform": "['넷플릭스']",
+        "created_at": "2023-05-18T01:46:21.997Z",
+        "poster_path": "/im0Tx82Bg8V0XbNekEt6g8TXx84.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 24,
+    "fields": {
+        "user": 1,
+        "movie_id": "959439",
+        "title": "도쿄 괴담",
+        "tags": "['깜놀하는', '거부감 드는', '경악하는', '두서없는', '비주얼 쇼크인']",
+        "description": "",
+        "platform": "['왓챠']",
+        "created_at": "2023-05-18T01:48:02.826Z",
+        "poster_path": "/7vbCNPR0JQde2BTSFCA1Fbrv9aD.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 26,
+    "fields": {
+        "user": 1,
+        "movie_id": "21208",
+        "title": "오펀: 천사의 비밀",
+        "tags": "['완성도가 높은', '암걸리는', '깜놀하는', '거부감 드는', '경악하는', '반전의 묘미가 있는']",
+        "description": "",
+        "platform": "['웨이브']",
+        "created_at": "2023-05-18T01:49:55.548Z",
+        "poster_path": "/qnxFyxf0PMyt3hudElCOREiJsM2.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 27,
+    "fields": {
+        "user": 1,
+        "movie_id": "313369",
+        "title": "라라랜드",
+        "tags": "['러블리한', '캐릭터가 사랑스러운', '개 예쁜', '인생이 담겨있는', '구경하는 재미가 있는', '특유의 색감이 있는', '영상미가 세련된', '음악이 조화를 이루는', '예상치 못한 결말']",
+        "description": "",
+        "platform": "['넷플릭스']",
+        "created_at": "2023-05-18T01:50:47.984Z",
+        "poster_path": "/6v4g6yW01uTmbxqwg75iEkMkrNP.jpg",
+        "want_users": [
+            5
+        ],
+        "watching_users": [
+            5
+        ]
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 28,
+    "fields": {
+        "user": 1,
+        "movie_id": "222264",
+        "title": "파라노말 2018",
+        "tags": "['쥐어박고 싶은', '호구인', '깜놀하는', '거부감 드는', '기술적인 성취를 보인', '빌드업한']",
+        "description": "",
+        "platform": "['애플TV+']",
+        "created_at": "2023-05-18T01:50:52.342Z",
+        "poster_path": "/a6LKSK7U0kn9lOdjS2uAwJpDrOZ.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 29,
+    "fields": {
+        "user": 1,
+        "movie_id": "120467",
+        "title": "그랜드 부다페스트 호텔",
+        "tags": "['거장의 작품인', '연출이 과감한', '구경하는 재미가 있는', '색감이 다채로운', '특유의 색감이 있는', '마법 같은']",
+        "description": "",
+        "platform": "['왓챠']",
+        "created_at": "2023-05-18T01:51:56.072Z",
+        "poster_path": "/kDByLWU30umAUyetDnmdptUMVap.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 30,
+    "fields": {
+        "user": 1,
+        "movie_id": "1975",
+        "title": "그루지 2",
+        "tags": "['호구인', '개새끼인', '깜놀하는', '거부감 드는', '경악하는', '미친 연출력인', '빌드업한']",
+        "description": "",
+        "platform": "['디즈니+']",
+        "created_at": "2023-05-18T01:53:05.170Z",
+        "poster_path": "/iBqnPMSPBYaCm9WYo094yphckML.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 31,
+    "fields": {
+        "user": 1,
+        "movie_id": "520763",
+        "title": "콰이어트 플레이스 2",
+        "tags": "['해석이 새로운', '완성도가 높은', '쥐어박고 싶은', '암걸리는', '리뷰를 찾아보는', '미친 연출력인', '영상미가 세련된', '열린 결말인']",
+        "description": "",
+        "platform": "['애플TV+']",
+        "created_at": "2023-05-18T01:56:39.309Z",
+        "poster_path": "/6DoKA0l2TaHvw9BbP6YbMuAnxV3.jpg",
+        "want_users": [
+            12
+        ],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 32,
+    "fields": {
+        "user": 1,
+        "movie_id": "394117",
+        "title": "플로리다 프로젝트",
+        "tags": "['해석이 새로운', '취향을 저격하는', '캐릭터가 사랑스러운', '보는 내내 설레는', '웃음이 떠나지 않는', '특유의 매력이 있는', '인생이 담겨있는', '클리셰를 깨는', '색감이 다채로운', '주인공이 행복해지는']",
+        "description": "",
+        "platform": "['애플TV+']",
+        "created_at": "2023-05-18T01:57:46.448Z",
+        "poster_path": "/qaQyAef3x9yp5G59YCRl5CfMEkw.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 33,
+    "fields": {
+        "user": 1,
+        "movie_id": "372058",
+        "title": "너의 이름은.",
+        "tags": "['유쾌함을 잃지 않는', '상상력이 무한한', '취향을 저격하는', '캐릭터가 사랑스러운', '웃음이 떠나지 않는', '감독에게 찬사를 보내는', '인생이 담겨있는', '내용이 알찬', '빌드업한', '색감이 다채로운', '특유의 색감이 있는', '결말이 마음에 드는']",
+        "description": "",
+        "platform": "['디즈니+']",
+        "created_at": "2023-05-18T01:59:46.221Z",
+        "poster_path": "/wx1Dxr4UyvN18SyC5GsVWWWtYja.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 34,
+    "fields": {
+        "user": 1,
+        "movie_id": "587",
+        "title": "빅 피쉬",
+        "tags": "['해석이 새로운', '러블리한', '캐릭터가 사랑스러운', '개 잘생긴', '개 예쁜', '감탄사를 연발하는', '보는 내내 설레는', '감독에게 찬사를 보내는', '내용이 알찬']",
+        "description": "",
+        "platform": "['웨이브']",
+        "created_at": "2023-05-18T02:19:06.882Z",
+        "poster_path": "/hSwCyCgKj8sH80SuauwqJrkC4n9.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 35,
+    "fields": {
+        "user": 1,
+        "movie_id": "110160",
+        "title": "로렌스 애니웨이",
+        "tags": "['누구나 이해할 수 있는', '개성있는', '러블리한', '캐릭터가 사랑스러운', '개 예쁜', '감탄사를 연발하는', '인생이 담겨있는', '영상미가 세련된']",
+        "description": "",
+        "platform": "['웨이브']",
+        "created_at": "2023-05-18T02:26:53.313Z",
+        "poster_path": "/kmwdijk6FjsxqG3cOQ0XAuw3Nhi.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 36,
+    "fields": {
+        "user": 1,
+        "movie_id": "157820",
+        "title": "무드 인디고",
+        "tags": "['누구나 이해할 수 있는', '애인이랑 보는', '캐릭터가 사랑스러운', '특유의 매력이 있는']",
+        "description": "",
+        "platform": "['웨이브']",
+        "created_at": "2023-05-18T02:30:52.155Z",
+        "poster_path": "/1yjvY7SJzTWawyfF2QGKZlQGqOB.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 37,
+    "fields": {
+        "user": 1,
+        "movie_id": "315162",
+        "title": "장화신은 고양이: 끝내주는 모험",
+        "tags": "['누구나 이해할 수 있는', '유쾌함을 잃지 않는']",
+        "description": "",
+        "platform": "['애플TV+']",
+        "created_at": "2023-05-18T06:56:44.744Z",
+        "poster_path": "/rKgvctIuPXyuqOzCQ16VGdnHxKx.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 39,
+    "fields": {
+        "user": 1,
+        "movie_id": "756403",
+        "title": "리버댄스: 애니메이션 어드벤처",
+        "tags": "['동물이 주인공인', '내용 별거 없는']",
+        "description": "",
+        "platform": "['애플TV+', '디즈니+']",
+        "created_at": "2023-05-18T13:33:39.608Z",
+        "poster_path": "/hnNPSrbBhJUDiewoIuwttzuN30k.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 40,
+    "fields": {
+        "user": 1,
+        "movie_id": "315064",
+        "title": "애니멀 크래커",
+        "tags": "['동물이 주인공인', '내용 별거 없는']",
+        "description": "",
+        "platform": "['디즈니+']",
+        "created_at": "2023-05-18T13:34:30.655Z",
+        "poster_path": "/yHdieUQcvxvW32YyqqbJ8eeMSSw.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 41,
+    "fields": {
+        "user": 1,
+        "movie_id": "813258",
+        "title": "몬스터 펫: 몬스터 호텔 단편 애니메이션",
+        "tags": "['동물이 주인공인', '내용 별거 없는']",
+        "description": "",
+        "platform": "['애플TV+', '디즈니+']",
+        "created_at": "2023-05-18T13:35:02.983Z",
+        "poster_path": "/tuzkEyCPwf5O56fDjGNerIA8hxT.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 42,
+    "fields": {
+        "user": 1,
+        "movie_id": "5967",
+        "title": "쉘부르의 우산",
+        "tags": "['러블리한', '마법 같은']",
+        "description": "",
+        "platform": "['웨이브', '애플TV+']",
+        "created_at": "2023-05-18T13:38:39.464Z",
+        "poster_path": "/Atj7iBxDqpRHZkuV3CreinuhGdy.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 43,
+    "fields": {
+        "user": 1,
+        "movie_id": "71",
+        "title": "빌리 엘리어트",
+        "tags": "['완성도가 높은', '마법 같은']",
+        "description": "",
+        "platform": "['웨이브', '애플TV+']",
+        "created_at": "2023-05-18T13:42:17.695Z",
+        "poster_path": "/im9hQmEX9me7vdTE1hHqT81Wjgo.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 44,
+    "fields": {
+        "user": 1,
+        "movie_id": "134673",
+        "title": "르누아르",
+        "tags": "['캐릭터가 사랑스러운', '마법 같은']",
+        "description": "",
+        "platform": "['왓챠', '애플TV+']",
+        "created_at": "2023-05-18T13:49:07.458Z",
+        "poster_path": "/iT8BkP7bUgUvkx4lmCWbGpZom6G.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 45,
+    "fields": {
+        "user": 1,
+        "movie_id": "453127",
+        "title": "청년경찰",
+        "tags": "['개 잘생긴', '끼부리는', '박장대소 하는']",
+        "description": "",
+        "platform": "['왓챠', '웨이브']",
+        "created_at": "2023-05-18T14:01:31.577Z",
+        "poster_path": "/q80MQrVj8NivteUXd3PHbVsaeAY.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 46,
+    "fields": {
+        "user": 1,
+        "movie_id": "434119",
+        "title": "공조",
+        "tags": "['개 잘생긴', '박장대소 하는']",
+        "description": "",
+        "platform": "['넷플릭스', '애플TV+']",
+        "created_at": "2023-05-18T14:02:03.991Z",
+        "poster_path": "/61ZXVq9I2nzC9kcgTga7DYPegeG.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 47,
+    "fields": {
+        "user": 1,
+        "movie_id": "351286",
+        "title": "쥬라기 월드: 폴른 킹덤",
+        "tags": "['거장의 작품인', '감독에게 찬사를 보내는']",
+        "description": "",
+        "platform": "['디즈니+']",
+        "created_at": "2023-05-18T14:05:13.696Z",
+        "poster_path": "/xR2VgpNxElFOJBul0q7ULiT0ayF.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 48,
+    "fields": {
+        "user": 1,
+        "movie_id": "91314",
+        "title": "트랜스포머: 사라진 시대",
+        "tags": "['거장의 작품인', '미친 연출력인']",
+        "description": "",
+        "platform": "['넷플릭스', '애플TV+']",
+        "created_at": "2023-05-18T14:05:48.744Z",
+        "poster_path": "/zPbiUwVSToxgQHMAbuzint09fHf.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 49,
+    "fields": {
+        "user": 1,
+        "movie_id": "137113",
+        "title": "엣지 오브 투모로우",
+        "tags": "['취향을 저격하는', '감탄사를 연발하는', '거침없는', '미친 연출력인']",
+        "description": "",
+        "platform": "['넷플릭스', '웨이브']",
+        "created_at": "2023-05-18T14:23:08.769Z",
+        "poster_path": "/pvcYnXHvtUB8cFf5edSo9Vnq8GZ.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 50,
+    "fields": {
+        "user": 1,
+        "movie_id": "207703",
+        "title": "킹스맨: 시크릿 에이전트",
+        "tags": "['유행어를 낳은', '영상미가 세련된']",
+        "description": "",
+        "platform": "['왓챠', '애플TV+']",
+        "created_at": "2023-05-18T14:24:29.136Z",
+        "poster_path": "/9trg6xOTadyHOkl5rN5nlLjx4L8.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 51,
+    "fields": {
+        "user": 1,
+        "movie_id": "329865",
+        "title": "컨택트",
+        "tags": "['추억을 자극하는', '리뷰를 찾아보는', '인생이 담겨있는', '내용이 알찬', '문학적인']",
+        "description": "",
+        "platform": "['왓챠']",
+        "created_at": "2023-05-18T14:24:45.671Z",
+        "poster_path": "/1jhYawjt748tAkuk2DzJJafvI2V.jpg",
+        "want_users": [
+            8
+        ],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 52,
+    "fields": {
+        "user": 1,
+        "movie_id": "346646",
+        "title": "베테랑",
+        "tags": "['완성도가 높은', '유행어를 낳은']",
+        "description": "",
+        "platform": "['넷플릭스', '디즈니+']",
+        "created_at": "2023-05-18T14:25:46.855Z",
+        "poster_path": "/idCfJB8mTZfy49Yb6lX3FfEzvV7.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 53,
+    "fields": {
+        "user": 1,
+        "movie_id": "38015",
+        "title": "타짜",
+        "tags": "['속도감 있는', '권선징악인', '유행어를 낳은']",
+        "description": "",
+        "platform": "['넷플릭스', '웨이브']",
+        "created_at": "2023-05-18T14:38:28.416Z",
+        "poster_path": "/qjCW5nggBaOFy2WhVraE4iSBzP3.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 54,
+    "fields": {
+        "user": 1,
+        "movie_id": "165213",
+        "title": "신세계",
+        "tags": "['내용이 뻔한', '속도감 있는', '권선징악인', '유행어를 낳은']",
+        "description": "",
+        "platform": "['넷플릭스']",
+        "created_at": "2023-05-18T14:39:22.543Z",
+        "poster_path": "/yiDQaLGF6hXVdiKodfdurUcgxWV.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 55,
+    "fields": {
+        "user": 1,
+        "movie_id": "11178",
+        "title": "엽기적인 그녀",
+        "tags": "['러블리한', '캐릭터가 사랑스러운', '개 예쁜', '유행어를 낳은', '가벼운 농담을 던지는']",
+        "description": "",
+        "platform": "['왓챠']",
+        "created_at": "2023-05-18T14:40:23.681Z",
+        "poster_path": "/h7xTfZbrJ86nzypPvPjwVmxZoHS.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+},
+{
+    "model": "movies.post",
+    "pk": 56,
+    "fields": {
+        "user": 1,
+        "movie_id": "9666",
+        "title": "주온 2",
+        "tags": "['깜놀하는', '거부감 드는', '경악하는']",
+        "description": "",
+        "platform": "['애플TV+']",
+        "created_at": "2023-05-18T15:22:19.915Z",
+        "poster_path": "/odDdWAu3PVRuinM47eR3WQM2OLc.jpg",
+        "want_users": [],
+        "watching_users": []
+    }
+}
+]

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&3zcbf4e##oc*wb5_&5#@q(=acmf%kv#2p)k6*y$#+=y0w0zl8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'port-0-cinepedia-1hz5s2blhtapebl.sel4.cloudtype.app', '127.0.0.1']
 
 
 # Application definition

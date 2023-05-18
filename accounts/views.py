@@ -38,7 +38,7 @@ def signup(request):
     selecttags = []
    
     if request.method == "POST":
-        form = CustomUserCreationForm(request.POST)        
+        form = CustomUserCreationForm(request.POST, request.FILES)        
         if form.is_valid():
             selecttags = request.POST.getlist('tag')
             user = form.save()
@@ -92,9 +92,7 @@ def profile(request, username):
 
             for i in reviewed_posts :
                 tag_dict[i] = tag
-        # print(tag_dict)
-    # my_movies = list(set(my_movies))
-
+ 
 
         
             

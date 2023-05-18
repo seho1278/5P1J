@@ -18,11 +18,6 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     poster_path = models.CharField(max_length=100, default='')
 
-# class PostImage(models.Model):
-#     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-#     image = ProcessedImageField(blank=True, upload_to='', processors=[ResizeToFill(500, 350)], format='JPEG', options={'quality':100})
-
-
 class Review(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)

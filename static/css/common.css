@@ -64,10 +64,6 @@ button {
 .good--button:hover {
   background-color: #a182ff;
 }
-.profile--update--wrap {
-  height: 25px;
-  
-}
 .good--button--border {
   display: block;
   width: 100%;
@@ -155,7 +151,7 @@ background-color: #a182ff;
 }
 .report--text--button {
     font-size: 14px;
-    color: #770000;
+    color: #aa0000;
     /* border: 1.5px solid #770000; */
     border-radius: 5px;
     padding: 0.2rem;
@@ -166,7 +162,7 @@ background-color: #a182ff;
     /* border-color:#ee0000; */
   }
 .mypage--report--button{
-  color: #ee0000;
+  color: #aa0000;
   transition: color .30s ease-in-out, font-size .30s ease-in-out;
 }
 .mypage--report--button:hover {
