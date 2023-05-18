@@ -25,7 +25,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SECRET_KEY = os.getenv('se%3+i2^^hx)k3-64iqpn@w%!pk$$q(r#w_15h@b(hl_mm6ldb')
+SECRET_KEY = os.getenv('em%b0w9(+uf&5j1z$rmtd)as!ph2uc+q%!zli5!#9zv0jummm5')
 # 'django-insecure-&3zcbf4e##oc*wb5_&5#@q(=acmf%kv#2p)k6*y$#+=y0w0zl8'
 
 
@@ -33,10 +33,6 @@ SECRET_KEY = os.getenv('se%3+i2^^hx)k3-64iqpn@w%!pk$$q(r#w_15h@b(hl_mm6ldb')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'port-0-cinepedia-1hz5s2blhtapebl.sel4.cloudtype.app',
-    'localhost',
-    '127.0.0.1',
-
     ]
 
 
