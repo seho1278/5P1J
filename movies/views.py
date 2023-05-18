@@ -147,7 +147,7 @@ def fetch_movie_data(movie):
     movie.poster_path = poster_path
 
 
-@cache_page(60 * 15) # 15분동안 캐싱유지
+# @cache_page(60 * 15) # 15분동안 캐싱유지
 def main(request):
     # 각 영화의 리뷰 평점
     movies = Post.objects.annotate(avg_rating=Avg('review__rating')).order_by('-avg_rating')
@@ -156,6 +156,7 @@ def main(request):
         for movie in movies:
             future = executor.submit(fetch_movie_data, movie)
             futures.append(future)
+            # movie.avg_rating = round(movie.avg_rating, 1)
         # 모든 API 호출이 완료될 때까지 기다립니다.
         concurrent.futures.wait(futures)
 
@@ -164,11 +165,14 @@ def main(request):
     movies_by_platform = {}
     for platform in platforms:
         platform_movies = Post.objects.filter(platform__contains=platform).annotate(avg_rating=Avg('review__rating')).order_by('-avg_rating')
+        
         with concurrent.futures.ThreadPoolExecutor() as executor:
             futures = []
             for platform_movie in platform_movies:
                 future = executor.submit(fetch_movie_data, platform_movie)
                 futures.append(future)
+                # 추가
+                # platform_movie['avg_rating'] = round(platform_movie['avg_rating'], 1)
             concurrent.futures.wait(futures)
         movies_by_platform[platform] = platform_movies
     
@@ -215,6 +219,9 @@ def main(request):
                 poster_path = genre_movie['poster_path']
                 genre_poster_path = 'https://image.tmdb.org/t/p/w200' + poster_path
                 genre_movie['poster_path'] = genre_poster_path
+
+                genre_movie['vote_average'] = round(genre_movie['vote_average']/2, 1)
+
 
         # Only save up to 5 movies
         genre_movie_data[genre_name]['results'] = genre_movies[:5]
@@ -413,6 +420,13 @@ def detail(request, movie_id):
         'region':'kr',
     
     }
+
+    # 출연/제작진 정보 
+    credits_url = f'https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key={TMDB_API_KEY}&language=ko-kr'
+    credits_response = requests.get(credits_url)
+    credits_data = credits_response.json()
+    credits = credits_data['cast'][:6]
+    profile_path = 'https://image.tmdb.org/t/p/w200'
     
     credits_url = f'https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key={TMDB_API_KEY}&language=ko-kr'
     credits_response = requests.get(credits_url)
@@ -507,6 +521,7 @@ def detail(request, movie_id):
 
     detail_response = requests.get(detail_url, params=params)
     detail_data = detail_response.json()
+    # print(detail_data['genres'])
     
     # 추가
     average = detail_data['vote_average']/2
@@ -536,8 +551,7 @@ def detail(request, movie_id):
         'average_rating': average_rating,
         # ----------------------------
         'credits': credits,
-        'profile_path': profile_path,
-       
+        'profile_path': profile_path,       
         
     }
     return render(request, 'movies/detail.html', context)
@@ -747,6 +761,16 @@ def create(request, movie_id):
         else:
             return redirect('movies:index')
 
+def delete(request, movie_id):
+    post = Post.objects.get(movie_id = movie_id)
+
+    if request.user.is_superuser:
+        post.delete()
+        return redirect('movies:index')
+    else:
+        return redirect('movies:detail', movie_id)
+    
+
 def similar(request, movie_id):
     similar_url = f'https://api.themoviedb.org/3/movie/{movie_id}/similar'
     params = {
@@ -834,6 +858,9 @@ def review_update(request, movie_id, review_id):
     # movie_id = post.movie_id
     review = Review.objects.get(id=review_id)
 
+    # 추가
+    referer = request.META.get('HTTP_REFERER')
+
     # try:
     #     review = Review.objects.get(id=review_id)
     # except Review.DoesNotExist:
@@ -843,10 +870,23 @@ def review_update(request, movie_id, review_id):
         if request.method == 'POST':
             form = ReviewForm(request.POST, instance=review)
             if form.is_valid():
-                form.save()
+                review = form.save(commit=False)
+                if review.report == True:
+                    review.report = False
+                    review.user.reported = False
+                    review.reviewreports.delete()
+                    review.save()
+                    if referer and 'profile' in referer:
+                        return redirect('accounts:profile', username=request.user.username)
+                else:
+                    review.save()
+                
+                
                 return redirect('movies:detail', post.movie_id)
         else:
             form = ReviewForm(instance=review)
+            selecttags = request.POST.getlist('tag')
+
     else:
         return redirect('movies:detail', post.movie_id)
     
@@ -854,6 +894,8 @@ def review_update(request, movie_id, review_id):
         'review': review,
         'form': form,
         'post': post,
+        'selecttags': selecttags,
+
     }
     
     return render(request, 'movies/review_update.html', context)
@@ -883,6 +925,7 @@ def watchings(request, post_pk):
         watching = True
     context = {
         'watching': watching,
+        'watching_count': post.watching_users.count(),
     }
     return JsonResponse(context)
 
@@ -892,11 +935,50 @@ def watchings(request, post_pk):
 def review_detail(request, movie_id, review_id):
     post = Post.objects.get(movie_id=movie_id)
     review = Review.objects.get(id=review_id)
+    comment = review.reviews.all()
     # movie_title = post.movie.title
+    reviewall = Review.objects.all()
+    print(reviewall)
+
+    # 추가
+    tags = []
+    r_tags = {}
+    
+    word = ""
+    reviews = Review.objects.filter(post=post.pk)   
+    for review in reviews:
+        tags1 = []
+        if review.tags is not None and  "[" in review.tags:
+            for tag in review.tags:    
+                if tag in ["[", "'",]:
+                    pass
+                elif tag in [",", "]"] :
+                    tags.append(word.strip())
+                    tags1.append(word.strip())
+                    word = ""
+                    
+                else:
+                    word = word + tag            
+            r_tags[review.id] = tags1
+            
+        elif review.tags is not None:
+            tags.append(review.tags)
+
+    r_tags_list = []
+    for value in r_tags.values():
+        r_tags_list.append(value)
+    # ---------------------------
+    
+    print(r_tags)
+    
     context = {
       'post':post,
       'review':review,
     #   'movie_title':movie_title,
+    # 추가
+      'r_tags': r_tags,
+      'review_id': review_id,
+      'comment': comment,
     }
     return render(request, 'movies/review_detail.html', context)
 
@@ -936,6 +1018,39 @@ def comment_create(request, movie_id, review_id):
     'review':review,
     }
     return render(request, 'movies/review_detail.html', context)
+
+def comment_update(request, movie_id, review_id, comment_id):
+    post = Post.objects.get(movie_id=movie_id)
+    review = Review.objects.get(id=review_id)
+    comment = Comment.objects.get(id=comment_id)
+    if request.user == comment.user:
+        if request.method == 'POST':
+            form = CommentForm(request.POST, instance=comment)
+            if form.is_valid():
+                form.save()
+                return redirect('movies:review_detail', movie_id, review_id)
+        else:
+            form = CommentForm(instance=comment)
+    else:
+        return redirect('movies:review_detail', movie_id, review_id)
+    context = {
+        'form' : form,
+        'review' : review,
+        'post' : post,
+        'comment' : comment,
+    }
+    return render(request, 'movies/comment_update.html', context)
+
+
+
+def comment_delete(request, movie_id, review_id, comment_id):
+    comment = Comment.objects.get(id=comment_id)
+    if request.user == comment.user or request.user.is_superuser:
+        comment.delete()
+    else:
+        return redirect('movies:review_detail', movie_id, review_id)
+    return redirect('movies:review_detail', movie_id, review_id)
+
 
 @login_required
 def review_report(request, movie_id, review_id):

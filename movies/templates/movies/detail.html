@@ -28,6 +28,7 @@
                 평점 <span style="color: #ffc107; margin-right:0.5rem;"><i class="bi bi-star-fill">{{ average|floatformat:1 }}</i></span>
                 리뷰평점 <span style="color: #ffc107"><i class="bi bi-star-fill">{{ average_rating|floatformat:1 }}</i></span>
               </div>
+
               <div class="Detail__Info__WatchingBox">
                   {% comment %} 보는중이에요 폼 {% endcomment %}
                   {% if request.user.is_authenticated %}
@@ -238,7 +239,7 @@
                 <a class="detail__user--list" href="{% url 'accounts:profile' review.user %}">
                   {% if review.user.picture %}
                   <div class="Detail__Review__User__ImgBox">
-                    <img class="Detail__Review__User__Img" src="{{ review.user.picture.url }}" alt="유저 이미지">
+                    <img class="Detail__Review__User__Img" src="{{ review.user.image.url }}" alt="유저 이미지">
                   </div>
                   {% else %}
                   <div class="Detail__Review__User__ImgBox">

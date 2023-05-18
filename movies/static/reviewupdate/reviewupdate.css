@@ -1,0 +1,134 @@
+hr {
+  margin: 5px 0 5px 0;
+}
+
+.Review__Title {
+  display:flex;
+  font-size: 2rem;
+  align-items: end;
+  background: linear-gradient(to right, #7048E9, #000 );
+  background-position: bottom;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  padding-bottom: 5px;
+}
+
+.Review__TagBox {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(31, 31, 31, 1);
+  border-radius: 10px;
+}
+
+.Review__TagCategory {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  height: 35px;
+  line-height: 35px;
+  background-color: rgba(41, 41, 41, 1);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.Review__TagCategory button {
+  appearance: none;
+  cursor: pointer;
+  border: 0px;
+  padding: 0;
+  color: #9b9b9b;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.Review__Category {
+  margin: 0 15px 0 15px;
+}
+
+.Review__TagList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.tag-label {
+  margin-left: 10px;
+}
+
+.rating_box {
+  display: flex;
+  align-items: center;
+}
+
+.rating {
+  position: relative;
+  color: #ddd;
+  font-size: 30px;
+  text-align: center;
+}
+
+.rating input {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.rating_star {
+  width: 0;
+  color: #ffc107;
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: width 0.3s ease;
+}
+
+.Review__ContentBox {
+  background-color: rgba(31, 31, 31, 1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.Review__ContentStat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Review__Spoiler{
+  margin: auto 0 auto 45px;
+  line-height: 50%;
+}
+
+.Review__TextLengthBox {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  margin-right: 25px;
+  margin-top: 8px;
+  line-height: 50%;
+  color: #DBDBDB;
+}
+
+.Review__Submit {
+  width: 200px;
+  height: 40px;
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-top: 10px;
+  border: 1px solid #E9E9E9;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  background-color: #E9E9E9;
+  cursor: not-allowed;
+}

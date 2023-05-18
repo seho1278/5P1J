@@ -177,12 +177,7 @@
       </div>
       </div>
     </section>
-
-
-
-
     {% if request.user.is_superuser %}
-    
     {% else %}
     <section class="recommend_container">
       <div class="Profile__RecommendBox">
@@ -249,6 +244,8 @@
                 <button type="button" class="" data-bs-toggle="modal" data-bs-target="#adminmessage{{ forloop.counter }}" style="color: red;">
                   !
                 </button>
+                {% else %}
+                <a href="{% url 'movies:detail' movie_id=review.post.movie_id %}">이동</a>
                 {% endif %}
 
                 <!-- Modal -->
