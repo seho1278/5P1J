@@ -5,7 +5,7 @@
 {% block style %}
   <style>
     .form-container {
-      height: 400px;
+      text-align: center;
       margin: 0 auto;
       padding: 20px;
       border-radius: 5px;
@@ -17,6 +17,7 @@
     }
     .report--submit--wrap{
       text-align: center;}
+
     #report--button {
       border-radius: 5px;
       background-color: #aa0000;
@@ -37,9 +38,8 @@
     <form action="{% url 'movies:review_report' movie_id review_id %}" method="post">
       {% csrf_token %}
       {{form.as_p}}
-      <input type="submit" value="신고하기" class="btn mt-4" style="width:180px; background-color: red;">
-        <input type="submit" value="신고하기" id="report--button">
-      </div>
+      {% comment %} <input type="submit" value="신고하기" class="btn mt-4" style="width:180px; background-color: red;"> {% endcomment %}
+      <input type="submit" value="신고하기" id="report--button">
     </form>
   </div>
 </article>

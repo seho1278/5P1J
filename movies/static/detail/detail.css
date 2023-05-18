@@ -6,38 +6,8 @@
     font-size: 14px;
 }
 
-.cidia--text--button {
-  font-size: 14px;
-  color: #7048E9;
-  border: 1.5px solid #7048E9;
-  border-radius: 5px;
-  padding: 0.2rem;
-  transition: color .30s ease-in-out, border-color .30s ease-in-out;
-}
-.cidia--text--button:hover {
-    color: #a182ff;
-    border-color:#a182ff;
-}
-.cidia--text--button2 {
-    color: #7048E9;
-    padding: 0.2rem;
-    transition: color .30s ease-in-out, border-color .30s ease-in-out;
-}
-.cidia--text--button2:hover {
-    color: #a182ff;
-}
-.report--text--button {
-    font-size: 14px;
-    color: #770000;
-    border: 1.5px solid #770000;
-    border-radius: 5px;
-    padding: 0.2rem;
-    transition: color .30s ease-in-out, border-color .30s ease-in-out;
-  }
-.report--text--button:hover {
-    color: #ee0000;
-    border-color:#ee0000;
-  }
+
+  
 .Detail__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -53,18 +23,22 @@
 
 }
 .detail-item-3 {
-    grid-column: span 2;
+    grid-column: span 3;
 
 }
 .detail-item-4 {
+    grid-column: span 2;
+
+}
+.detail-item-5 {
     grid-column: span 1;
  
 }
-.detail-item-5 {
+.detail-item-6 {
     grid-column: span 3;
   
 }
-.detail-item-6 {
+.detail-item-7 {
     grid-column: span 3;
 
 }
@@ -80,34 +54,33 @@
       grid-column: span 2;
       order:1;
   }
-  
   .detail-item-2 {
+      grid-column: span 1;
+      order: 5;
+  }
+  .detail-item-3 {
+    grid-column: span 2;
+    order: 2;
+  }
+  .detail-item-4 {
+    grid-column: span 2;
+    order: 3;
+  }
+  .detail-item-5 {
       grid-column: span 1;
       order: 4;
   }
-  
-  .detail-item-3 {
-      grid-column: span 2;
-      order: 2;
-  }
-  
-  .detail-item-4 {
-      grid-column: span 1;
-      order: 3;
-  }
-  
-  .detail-item-5 {
-      grid-column: span 2;
-      order: 5;
-  }
-  
   .detail-item-6 {
       grid-column: span 2;
       order: 6;
   }
+  .detail-item-7 {
+      grid-column: span 2;
+      order: 7;
+  }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 780px) {
 
     .Detail__list {
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -120,7 +93,7 @@
     
     .detail-item-2 {
         grid-column: span 2;
-        order: 6;
+        order: 7;
     }
     
     .detail-item-3 {
@@ -132,7 +105,7 @@
         grid-column: span 2;
         order: 3;
     }
-    
+
     .detail-item-5 {
         grid-column: span 2;
         order: 4;
@@ -141,6 +114,11 @@
     .detail-item-6 {
         grid-column: span 2;
         order: 5;
+    }
+    
+    .detail-item-7 {
+        grid-column: span 2;
+        order: 6;
     }
     .title--image--wrap {
       display: flex;
@@ -172,12 +150,19 @@
   display: flex;
   justify-content: center; 
   align-items: center;
-  border-bottom: 3px solid #555;
+  border: solid;
+  border-width: 0 0 2px 0;
+  border-image: linear-gradient(to right, #000,#7048E9,#a182ff, #c8c0e2,#a182ff,#7048E9, #000);
+  border-image-slice: 1;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
 }
 .title--image {
     object-fit: cover;
+}
+.deatil__score--watching--wrap {
+    display: flex;
+    justify-content: space-between;
 }
 .detail__info--score {
   font-size: 1.3rem;
@@ -186,18 +171,30 @@
     display: inline-flex;
 }
 #wants-form {
-  border: 1px solid #fff;
+    color:#a182ff;
+  border: 1px solid #a182ff;
   border-radius: 5px;
   padding: 0.2rem 0.4rem;
   margin-right: 0.5rem;
 }
+#wants-form:hover {
+    color: #c8c0e2;
+    border-color: #c8c0e2;
+    transition: border-color .45s ease-in-out, color .45s ease-in-out;
+}
 #watching-form {
-  border: 1px solid #fff;
+  color:#a182ff;
+  border: 1px solid #a182ff;
   border-radius: 5px;
   padding: 0.2rem 0.4rem;
 }
-/* 2. 지금 여기서 보기  */
+#watching-form:hover {
+    color: #c8c0e2;
+    border-color: #c8c0e2;
+    transition: border-color .45s ease-in-out, color .45s ease-in-out;
+}
 
+/* 2. 지금 여기서 보기  */
 .Detail__Info__Platform {
   display: flex;
   justify-content: space-between; 
@@ -209,11 +206,20 @@
 .Detail__Info__PlatformBox {
 
 }
+.Detail__NoPlatform {
+    position: apsolute;
+    top: 50%;
+    left: 50%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; */
+}
 .Detail__Info__PlatformImg {
     width: 32px;
     height: 32px;
     border-radius: 5px;
-    border: 0.5px solid #555;
+    border: 0.5px solid #000;
     margin-right: 1rem;
 }
 
@@ -224,8 +230,14 @@
 }
 
 
-
-
+/* 출연제작 */
+.detail--movie--info--list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
+}
+/*  object-fit:hidden */
 /* 3. 선호하는 태그 */
 .Detail__TagAndRatingBox {
     display: flex;
@@ -337,7 +349,7 @@
 .Detail__Review__User__Img {
     width: 2.5rem;
     height: 2.7rem;
-    border: 1px solid #555;
+    border: 1px solid #fff;
     border-radius: 10px;
 }
 
@@ -398,7 +410,10 @@
 
 /* 6-2 . 신고 삭제 수정 */
 .review__remove--wrap {
-  margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    margin: 1rem 1rem 0 0;
 }
 
 
