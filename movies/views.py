@@ -865,9 +865,8 @@ def watchings(request, post_pk):
 def review_detail(request, movie_id, review_id):
     post = Post.objects.get(movie_id=movie_id)
     review = Review.objects.get(id=review_id)
-    comment = review.reviews.all()
-    reviewall = Review.objects.all()
-    print(reviewall)
+    comments = review.reviews.all()
+    print(review)
 
     # 추가
     tags = []
@@ -875,10 +874,10 @@ def review_detail(request, movie_id, review_id):
     
     word = ""
     reviews = Review.objects.filter(post=post.pk)   
-    for review in reviews:
+    for i in reviews:
         tags1 = []
-        if review.tags is not None and  "[" in review.tags:
-            for tag in review.tags:    
+        if i.tags is not None and  "[" in i.tags:
+            for tag in i.tags:    
                 if tag in ["[", "'",]:
                     pass
                 elif tag in [",", "]"] :
@@ -888,18 +887,17 @@ def review_detail(request, movie_id, review_id):
                     
                 else:
                     word = word + tag            
-            r_tags[review.id] = tags1
+            r_tags[i.id] = tags1
             
-        elif review.tags is not None:
-            tags.append(review.tags)
+        elif i.tags is not None:
+            tags.append(i.tags)
 
     r_tags_list = []
     for value in r_tags.values():
         r_tags_list.append(value)
     # ---------------------------
-    
-    print(r_tags)
-    
+    print(review)
+        
     context = {
       'post':post,
       'review':review,
@@ -907,7 +905,7 @@ def review_detail(request, movie_id, review_id):
     # 추가
       'r_tags': r_tags,
       'review_id': review_id,
-      'comment': comment,
+      'comments': comments,
     }
     return render(request, 'movies/review_detail.html', context)
 

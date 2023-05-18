@@ -237,7 +237,7 @@
               <!-- 1-1. 유저 -->
               <div class="detail__user--wrap">
                 <a class="detail__user--list" href="{% url 'accounts:profile' review.user %}">
-                  {% if review.user.picture %}
+                  {% if review.user.image %}
                   <div class="Detail__Review__User__ImgBox">
                     <img class="Detail__Review__User__Img" src="{{ review.user.image.url }}" alt="유저 이미지">
                   </div>

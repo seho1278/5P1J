@@ -71,9 +71,9 @@
         <!-- 1-1. 유저 -->
         <div class="detail__user--wrap">
           <a class="detail__user--list" href="{% url 'accounts:profile' review.user %}">
-            {% if review.user.picture %}
+            {% if review.user.image %}
             <div class="Detail__Review__User__ImgBox">
-              <img class="Detail__Review__User__Img" src="{{ review.user.picture.url }}" alt="유저 이미지">
+              <img class="Detail__Review__User__Img" src="{{ review.user.image.url }}" alt="유저 이미지">
             </div>
             {% else %}
             <div class="Detail__Review__User__ImgBox">
@@ -176,7 +176,7 @@
         </form>
       </div>
     </div>    
-    {% for comment in review.reviews.all %}
+    {% for comment in comments %}
       {% if request.user == comment.user %}
       <div id="modal1{{comment.id}}" class="modal">
         <div class="modal-content">
@@ -202,9 +202,9 @@
     {% endif %}
     <div clss="comment--list" style="display:grid; grid-gap: 1rem; grid-template-columns: 110px 10fr; background-color: #111; margin-bottom: 1rem; padding: 10px;">
       <a class="detail__user--list" href="{% url 'accounts:profile' comment.user %}">
-        {% if review.user.picture %}
+        {% if comment.user.image %}
         <div class="Detail__Review__User__ImgBox">
-          <img class="Detail__Review__User__Img" src="{{ comment.user.picture.url }}" alt="유저 이미지">
+          <img class="Detail__Review__User__Img" src="{{ comment.user.image.url }}" alt="유저 이미지">
         </div>
         {% else %}
         <div class="Detail__Review__User__ImgBox">
